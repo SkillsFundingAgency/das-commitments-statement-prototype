@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+     <div class="govuk-width-container">
+
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-two-thirds">
+
+                    <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+                    <p></p>
+
+                    <span class="govuk-caption-m">Step 1 of 4</span>
+                    <h1 class="govuk-heading-xl">
+                         Your estimated weekly hours
+                    </h1>
+
+               </div>
+          </div>
+
+     </div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <form method="post" action="2-employer-details" class="check-answers-page">
+
+                    <p>
+                         At least 20% of your time will be on ‘off-the-job’ apprenticeship training. You may agree with your
+                         employer to train one day a week, one week out of the month, or to spread the equivalent hours across
+                         the week.
+                    </p>
+
+                    <table class="govuk-table">
+                         <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">On the job</th>
+                                   <td class="govuk-table__cell">32</td>
+                                   <td class="govuk-table__cell right-align"><a href="5-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Apprenticeship training</th>
+                                   <td class="govuk-table__cell">8</td>
+                                   <td class="govuk-table__cell right-align"><a href="5-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Total</th>
+                                   <td class="govuk-table__cell">40</td>
+                                   <td class="govuk-table__cell right-align"><a href="5-wrong-info">Change</a></td>
+                              </tr>
+                         </tbody>
+                    </table>
+
+                    <button class="govuk-button" data-module="govuk-button">Confirm</button>
+
+               </form>
+
+          </div>
+     </div>
+</div>
+{% endblock %}

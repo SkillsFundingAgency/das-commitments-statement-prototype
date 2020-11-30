@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+     <div class="govuk-width-container">
+
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-two-thirds">
+
+                    <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+                    <p></p>
+
+                    <span class="govuk-caption-m">Step 3 of 4</span>
+                    <h1 class="govuk-heading-xl">
+                         Training provider information
+                    </h1>
+
+               </div>
+          </div>
+
+     </div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <form method="post" action="4-confirm-details" class="check-answers-page">
+
+                    <p>
+                         We need you to review and confirm the information that your employer and training
+                         provider gave to us on your behalf.
+                    </p>
+
+                    <table class="govuk-table">
+                         <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Name</th>
+                                   <td class="govuk-table__cell">Janice Hepworth</td>
+                                   <td class="govuk-table__cell right-align"><a href="5-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Position</th>
+                                   <td class="govuk-table__cell">Tutor</td>
+                                   <td class="govuk-table__cell right-align"><a href="5-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Email</th>
+                                   <td class="govuk-table__cell">janice.hepworth@abingdon-witney.ac.uk</td>
+                                   <td class="govuk-table__cell right-align"><a href="5-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Telephone</th>
+                                   <td class="govuk-table__cell">01235 216 216</td>
+                                   <td class="govuk-table__cell right-align"><a href="5-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Company</th>
+                                   <td class="govuk-table__cell">Abingdon & Witney College</td>
+                                   <td class="govuk-table__cell right-align"><a href="5-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Address</th>
+                                   <td class="govuk-table__cell">
+                                        Abingdon Campus<br>
+                                        Wootton Road<br>
+                                        Abingdon<br>
+                                        OX14 1GG
+                                   </td>
+                                   <td class="govuk-table__cell right-align"><a href="5-wrong-info">Change</a></td>
+                              </tr>
+                         </tbody>
+                    </table>
+
+                    <button class="govuk-button" data-module="govuk-button">Confirm</button>
+
+               </form>
+
+          </div>
+     </div>
+</div>
+{% endblock %}

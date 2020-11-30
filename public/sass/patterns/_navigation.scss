@@ -7,6 +7,63 @@
      position: relative;
      z-index: 10;
      max-height: 4.075em;
+     &.landing-page {
+          background: none;
+          display: inline-block;
+          width: 100%;
+          .apprentice-details {
+               background: $govuk-link-colour;
+               color: white;
+               padding: 20px 0 15px 0;
+               margin-bottom: -4px;
+               display: inline-block;
+               width: 100%;
+               p, a {
+                    color: white;
+                    font-size: 14px;
+                    margin: 0;
+                    &.name {
+                         font-size: 22px;
+                    }
+               }
+               a {
+                    float: right;
+                    margin: 5px 0 0 15px;
+               }
+          }
+          .beta-details {
+               display: inline-block;
+               width: 100%;
+               .govuk-phase-banner {
+                    border-bottom: none;
+               }
+          }
+          .nav {
+               display: inline-block;
+               width: 100%;
+               background: #f0f3f7;
+               height: 2.85em;
+               border-bottom: 1px solid $govuk-border-colour;
+               ul li a.govuk-link {
+                    color: $govuk-link-colour;
+                    text-decoration: underline;
+                    padding: 10px 0;
+                    margin: 0 30px 0 0;
+                    border-bottom: 5px solid #f0f3f7;
+                    &:hover, &:active, &:focus {
+                         background: none;
+                         border-bottom: 5px solid darken($govuk-link-colour, 10%);
+                    }
+                    &.selected {
+                         background: none;
+                         border-bottom: 5px solid $govuk-link-colour;
+                         &:after {
+                              display: none;
+                         }
+                    }
+               }
+          }
+     }
      .govuk-width-container {
           text-align: left;
      }

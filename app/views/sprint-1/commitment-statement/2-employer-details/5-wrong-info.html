@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <h1 class="govuk-heading-xl">Change incorrect details</h1>
+
+               <!-- <p>
+                    Page to confirm personal details and the details of the apprenticeship they are about to confirm.
+               </p> -->
+
+          </div>
+     </div>
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <form method="post" action="../landing-page/index" class="check-answers-page">
+
+                    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+
+                    {{ govukTextarea({
+                         name: "more-detail",
+                         id: "more-detail",
+                         label: {
+                              text: "Provide more information so we can update your details for you.",
+                              isPageHeading: false
+                         },
+                         hint: {
+                              text: "Do not include personal or financial information, like your National Insurance number or credit card details."
+                         }
+                    }) }}
+
+                    <button class="govuk-button" data-module="govuk-button" id="employer-details-wrong">Confirm</button>
+                    <a href="#" onclick="history.go(-1)" class="secondary-link">Cancel</a>
+
+               </form>
+
+          </div>
+     </div>
+
+
+</div>
+{% endblock %}

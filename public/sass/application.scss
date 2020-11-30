@@ -18,6 +18,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/navigation";
 @import "patterns/tabs";
 @import "patterns/standard-details";
+@import "patterns/landing-page";
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
@@ -38,6 +39,10 @@ $govuk-assets-path: '/govuk/assets/';
      z-index: 20;
 }
 
+.govuk-heading-xl {
+    margin-bottom: 10px;
+}
+
 .govuk-width-container {
      &.title-overide {
           margin: 0;
@@ -45,7 +50,16 @@ $govuk-assets-path: '/govuk/assets/';
      }
 }
 
-#service-title-section {
+.secondary-link {
+     margin: 0.5em 0 0 1em;
+     display: inline-block;
+}
+
+.govuk-tag {
+     text-align: center;
+}
+
+#service-title-section, #action-title-section {
      background: #f0f3f7;
      padding: 0 0 3em 0;
      &.standard-details-page {
@@ -58,9 +72,32 @@ $govuk-assets-path: '/govuk/assets/';
           }
      }
      .dashboard-title {
-          margin-top: 1em;
+          margin-top: -0.25em;
+          .govuk-heading-xl {
+               margin-bottom: 0.5em;
+          }
+     }
+     details {
+          margin-bottom: 0;
+          .govuk-details__text {
+               padding-bottom: 0;
+               p {
+                    margin-bottom: 5px;
+               }
+          }
      }
 }
+
+#action-title-section {
+     padding: 0 0 2em 0;
+     .govuk-caption-m {
+          margin-top: 0.5em;
+     }
+     .govuk-heading-xl {
+          margin-top: 0;
+     }
+}
+
 
 hr {
      margin: 2.5em 0 2em 0;
@@ -183,4 +220,46 @@ hr {
 
 .highlight {
      color: $govuk-link-colour;
+}
+
+.password-wrapper {
+     position: relative;
+}
+
+.hide-show-password, .hide-show-confirm {
+     position: absolute;
+     display: inline-block;
+     width: 2.5em;
+     height: 2.5em;
+     bottom: 0em;
+     left: 21.5em;
+     background: red;
+     text-indent: -1000em;
+     background: url('../images/make-password-visible.svg') no-repeat 50% 50%;
+     background-size: 1.75em;
+     &:hover, &:active, &:focus {
+          cursor: pointer;
+     }
+     &.hide {
+          background: url('../images/make-password-invisible.svg') no-repeat 50% 50%;
+          background-size: 1.75em;
+     }
+}
+
+#hide-show-password, #hide-show-confirm {
+     display: none;
+}
+
+table {
+     tbody {
+          tr {
+               th {
+               }
+               td {
+                    &.right-align {
+                         text-align: right;
+                    }
+               }
+          }
+     }
 }
