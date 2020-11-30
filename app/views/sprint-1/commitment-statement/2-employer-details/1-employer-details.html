@@ -18,20 +18,20 @@
                     <h2 class="govuk-error-summary__title" id="error-summary-title">There is a problem</h2>
                     <div class="govuk-error-summary__body">
                          <ul class="govuk-list govuk-error-summary__list">
-                              <li><a href="#employer-issued-error">Check the employer and training provider details are correct</a></li>
+                              <li><a href="#employer-issued-error">Please check the box to agree that the employer and training provider details are correct</a></li>
                          </ul>
                     </div>
                </div>
 
                <!-- <span class="govuk-caption-m">Step 1 of 3</span> -->
                <h1 class="govuk-heading-xl">
-                    Employer and training provider information
+                    Check the employer and training provider information
                </h1>
 
                <form method="post" action="" class="employer-details check-answers-page">
 
                     <h2 class="govuk-heading-m" id="employer-details-text">
-                         Check the employer details are correct.
+                         Employer details
                     </h2>
 
                     <table class="govuk-table">
@@ -78,7 +78,7 @@
                     <p>&nbsp;</p>
 
                     <h2 class="govuk-heading-m" id="provider-details-text">
-                         Check the training provider details are correct.
+                         Training provider details
                     </h2>
 
                     <table class="govuk-table">
@@ -121,10 +121,11 @@
                          </tbody>
                     </table>
 
+                    <!-- CHECK BOX - CONFIRM - START -->
                     <div class="govuk-form-group check-to-confirm employer-error-panel">
                          <fieldset class="govuk-fieldset" aria-describedby="employer-hint">
                               <span id="employer-issued-error" class="govuk-error-message">
-                                   <span class="govuk-visually-hidden">Error:</span> Check the employer and training provider details are correct
+                                   <span class="govuk-visually-hidden">Error:</span> Please check the box to confirm the details are correct
                               </span>
                               <div class="govuk-checkboxes">
                                    <div class="govuk-checkboxes__item">
@@ -137,6 +138,7 @@
                               </div>
                          </fieldset>
                     </div>
+                    <!-- CHECK BOX - CONFIRM - END -->
 
                     <button class="govuk-button" data-module="govuk-button" id="employer-details">Confirm</button>
 

@@ -42,6 +42,25 @@
                          </ul>
                     </div>
 
+                    <!-- CHECK BOX - CONFIRM - START -->
+                    <div class="govuk-form-group check-to-confirm employer-error-panel">
+                         <fieldset class="govuk-fieldset" aria-describedby="employer-hint">
+                              <span id="employer-issued-error" class="govuk-error-message">
+                                   <span class="govuk-visually-hidden">Error:</span> Please check the box to confirm the details are correct
+                              </span>
+                              <div class="govuk-checkboxes">
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="employer-confirm" name="employer-confirm" type="checkbox" value="employer-confirm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="employer-confirm">
+                                             Please check the box to agree that the <a href="#employer-details-text">employer</a> and
+                                             <a href="#provider-details-text">training provider</a> details are correct
+                                        </label>
+                                   </div>
+                              </div>
+                         </fieldset>
+                    </div>
+                    <!-- CHECK BOX - CONFIRM - END -->
+
                     <button class="govuk-button" data-module="govuk-button">Confirm</button>
 
                </form>
