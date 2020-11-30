@@ -34,6 +34,7 @@
           margin: 0;
      }
      &:hover, &:focus, &:active {
+          background: white;
           // background: govuk-colour("light-grey");
           transition: all .3s ease;
           transform: scale(1.05);

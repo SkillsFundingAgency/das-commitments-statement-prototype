@@ -5,24 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-     <div class="govuk-width-container">
-
-          <div class="govuk-grid-row">
-               <div class="govuk-grid-column-two-thirds">
-
-                    <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
-
-                    <p></p>
-
-                    <span class="govuk-caption-m">Step 1 of 4</span>
-                    <h1 class="govuk-heading-xl">
-                         Your estimated weekly hours
-                    </h1>
-
-               </div>
-          </div>
-
-     </div>
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -30,6 +13,11 @@
 
      <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
+
+               <span class="govuk-caption-m">Step 1 of 4</span>
+               <h1 class="govuk-heading-xl">
+                    Your estimated weekly hours
+               </h1>
 
                <form method="post" action="2-employer-details" class="check-answers-page">
 

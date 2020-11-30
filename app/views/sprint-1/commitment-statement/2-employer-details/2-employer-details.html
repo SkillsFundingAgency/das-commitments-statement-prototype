@@ -5,24 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-     <div class="govuk-width-container">
-
-          <div class="govuk-grid-row">
-               <div class="govuk-grid-column-two-thirds">
-
-                    <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
-
-                    <p></p>
-
-                    <span class="govuk-caption-m">Step 2 of 4</span>
-                    <h1 class="govuk-heading-xl">
-                         Your employer information
-                    </h1>
-
-               </div>
-          </div>
-
-     </div>
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -31,11 +14,15 @@
      <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
 
+               <span class="govuk-caption-m">Step 2 of 4</span>
+               <h1 class="govuk-heading-xl">
+                    Employer information
+               </h1>
+
                <form method="post" action="3-provider-details" class="check-answers-page">
 
                     <p>
-                         We need you to review and confirm the information that your employer and training
-                         provider gave to us on your behalf.
+                         Check the employer details are correct.
                     </p>
 
                     <table class="govuk-table">

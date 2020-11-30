@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <span class="govuk-caption-m">Step 2 of 4</span>
+               <h1 class="govuk-heading-xl">
+                    Main provider - Roles and responsibilities
+               </h1>
+
+               <form method="post" action="4-confirm-details" class="check-answers-page">
+
+                    <p>
+                         The roles and responsibilities set out what is expected of you, your employer and training provider.
+                    </p>
+
+                    <div class="govuk-inset-text">
+
+                         <p>
+                              <strong>The employer (Manager of Apprentice) will:</strong>
+                         </p>
+
+                         <ul class="govuk-list govuk-list--bullet">
+                              <li>work with your training provider to select the most suitable apprenticeship standard or framework</li>
+                              <li>work with your training provider to check your eligibility</li>
+                              <li>confirm that your training provider has made the appropriate checks</li>
+                              <li>negotiate the cost of your apprenticeship with your training provider</li>
+                              <li>choose an end-point assessment organisation at least 3 months before you complete your training</li>
+                              <li>work with your training provider to develop and agree your training plan</li>
+                              <li>try to resolve any of your or your training provider’s complaints</li>
+                         </ul>
+                    </div>
+
+                    <button class="govuk-button" data-module="govuk-button">Confirm</button>
+
+               </form>
+
+          </div>
+     </div>
+</div>
+{% endblock %}

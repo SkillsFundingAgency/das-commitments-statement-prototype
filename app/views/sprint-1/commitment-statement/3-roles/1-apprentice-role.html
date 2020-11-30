@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <span class="govuk-caption-m">Step 1 of 4</span>
+               <h1 class="govuk-heading-xl">
+                    Apprentice - Roles and responsibilities
+               </h1>
+
+               <form method="post" action="2-employer-role" class="check-answers-page">
+
+                    <p>
+                         The roles and responsibilities set out what is expected of you, your employer and training provider.
+                    </p>
+
+                    <div class="govuk-inset-text">
+                         <p>
+                              <strong>You will:</strong>
+                         </p>
+
+                         <ul class="govuk-list govuk-list--bullet">
+                              <li>give your training provider the information they need to check your eligibility</li>
+                              <li>follow all the policies and procedures</li>
+                              <li>go to all your off-the-job training and workshops (you must let your training provider or employer know straight away if you cannot go)</li>
+                              <li>complete the learning activities for each module, including any self-study or research</li>
+                              <li>complete all your coursework, assignments and exams</li>
+                              <li>give your training provider all your off-the-job training evidence if they need it</li>
+                              <li>go to all your progress review meetings</li>
+                              <li>agree when you’re ready to complete your end-point assessment with your employer and training provider</li>
+                              <li>let your employer or training provider know if you have any learning support or health issues</li>
+                         </ul>
+                    </div>
+
+                    <hr>
+
+                    <button class="govuk-button" data-module="govuk-button">Confirm</button>
+
+               </form>
+
+          </div>
+     </div>
+</div>
+{% endblock %}
