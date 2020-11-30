@@ -263,3 +263,15 @@ table {
           }
      }
 }
+
+.check-to-confirm {
+     border-left: 10px solid $govuk-link-colour;
+     background: govuk-colour("light-grey");
+     padding: 1em;
+     margin: 1em 0 2.5em 0;
+     display: inline-block;
+     width: 100%;
+     &.govuk-form-group--error {
+          border-left: 10px solid govuk-colour("red");
+     }
+}
