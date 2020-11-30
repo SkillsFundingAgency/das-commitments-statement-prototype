@@ -34,7 +34,8 @@
           margin: 0;
      }
      &:hover, &:focus, &:active {
-          background: govuk-colour("light-grey");
+          background: white;
+          // background: govuk-colour("light-grey");
           transition: all .3s ease;
           transform: scale(1.05);
      }
@@ -52,6 +53,14 @@
                color: #942514;
           }
      }
+     &.started {
+          border: 2px solid #d2e2f1;
+          .number {
+               background: #d2e2f1;
+               color: #144e81;
+          }
+     }
+
      .number {
           display: flex;
           align-items: center;
@@ -84,6 +93,14 @@
                     margin: 0;
                     text-decoration: underline;
                     color: $govuk-link-colour;
+               }
+               .govuk-caption-m {
+                    display: none;
+                    b {
+                         background: none;
+                         font-weight: normal;
+                         color: $govuk-secondary-text-colour;
+                    }
                }
           }
           span {

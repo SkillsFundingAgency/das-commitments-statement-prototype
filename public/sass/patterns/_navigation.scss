@@ -108,7 +108,7 @@
                     &:hover, &:focus, &:active {
                          outline: none;
                          box-shadow: none;
-                         background: darken($govuk-link-colour, 5%);
+                         // background: darken($govuk-link-colour, 5%);
                     }
                     &.dropdown {
                          padding-right: 1em;
