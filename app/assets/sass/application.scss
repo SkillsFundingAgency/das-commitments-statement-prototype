@@ -264,7 +264,7 @@ table {
      }
 }
 
-.check-to-confirm {
+.check-to-confirm, .employer-confirmed, .provider-confirmed {
      border-left: 10px solid $govuk-link-colour;
      background: govuk-colour("light-grey");
      padding: 1em;
@@ -273,6 +273,22 @@ table {
      width: 100%;
      &.govuk-form-group--error {
           border-left: 10px solid govuk-colour("red");
+     }
+}
+
+.employer-confirmed, .provider-confirmed {
+     border-left: 10px solid govuk-colour("green");
+     .govuk-warning-text {
+          margin: 0;
+          .govuk-confirm__icon {
+               display: inline-block;
+               width: 35px;
+               height: 35px;
+               margin-top: -5px;
+               float: left;
+               background: url('../images/tick-green.svg') no-repeat 50% 50%;
+               background-size: contain;
+          }
      }
 }
 

@@ -46,25 +46,29 @@ if ($.cookie("employer-details-wrong") == 'true') {
 }
 
 // 3 - Roles and responsibilities - Correct
-$("#provider-role").on("click", function (e) {
+$('a.section-three .govuk-caption-m').show();
+
+$("#apprentice-role").on("click", function (e) {
      $.cookie("roles-and-responsibilities", true, {path:'/'});
      $.cookie("roles-and-responsibilities-wrong", false, {path:'/'});
 });
 
 if ($.cookie("roles-and-responsibilities") == 'true') {
-     $('a.section-three').addClass('complete');
+     $('a.section-three').addClass('complete').removeClass('started');
      $('a.section-three strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
+     $('.section-three .complete-number').text('3');
 }
 
 // 3 - Roles and responsibilities - Incorrect
-$("#provider-role-wrong").on("click", function (e) {
+$("#apprentice-role-wrong").on("click", function (e) {
      $.cookie("roles-and-responsibilities", false, {path:'/'});
      $.cookie("roles-and-responsibilities", true, {path:'/'});
 });
 
 if ($.cookie("roles-and-responsibilities-wrong") == 'true') {
-     $('a.section-three').addClass('wrong');
+     $('a.section-three').addClass('wrong').removeClass('started');
      $('a.section-three strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
+     $('.section-three .complete-number').text('2');
 }
 
 // 5 - Key policies
@@ -108,7 +112,7 @@ $("#key-policies").on("click", function (e) {
      }
 });
 
-$('.complete-number').text($.cookie("key-policies-counter"));
+$('.section-five .complete-number').text($.cookie("key-policies-counter"));
 
 if ($.cookie("policy-code-of-conduct") == 'true') {
      $('#code-of-conduct').attr('checked','checked');
@@ -139,6 +143,6 @@ if ($.cookie("policy-code-of-conduct") == 'true' || $.cookie("policy-health-and-
 }
 
 if ($.cookie("policy-code-of-conduct") == 'true' && $.cookie("policy-health-and-safety") == 'true' && $.cookie("policy-equality-and-diversity") == 'true' && $.cookie("policy-harassment-and-bullying") == 'true' && $.cookie("policy-safeguarding-and-prevent") == 'true' && $.cookie("policy-complaints-procedure") == 'true' && $.cookie("policy-business-continuity") == 'true') {
-     $('a.section-five').addClass('complete');
+     $('a.section-five').addClass('complete').removeClass('started');
      $('a.section-five strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
 }
