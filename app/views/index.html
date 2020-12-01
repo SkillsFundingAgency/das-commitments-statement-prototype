@@ -58,10 +58,11 @@
 
 </div>
 
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
 <div class="govuk-grid-row">
      <!-- Full width header section starts -->
      <div class="govuk-grid-column-full">
-          <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
           <h2 class="govuk-heading-m">
                What are our design goals and what are we doing?
           </h2>
@@ -88,10 +89,55 @@
      <!-- Full width header section ends -->
 </div>
 
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+     <!-- Full width header section starts -->
+     <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-m">
+               Latest prototype link
+          </h2>
+          <p class="govuk-body">
+               <a href="/sprint-2/commitment-statement/emails/index" class="govuk-link govuk-link--no-visited-state">Pre-programme apprentice -  Happy path</a>
+          </p>
+     </div>
+     <!-- Full width header section ends -->
+</div>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
 <div class="govuk-grid-row">
      <!-- Sprints section starts -->
      <div class="govuk-grid-column-two-thirds">
-          {% include './sprint-1/_summary.html' %}
+
+          {% include './sprint-2/_summary.html' %}
+
+          <h2 class="govuk-heading-l govuk-!-margin-top-9">
+               Extended-Alpha sprints
+          </h2>
+
+          {% set sprint1Html %}
+               {% include './sprint-1/_summary.html' %}
+          {% endset %}
+
+          {{ govukAccordion({
+               id: "accordion-default",
+               items: [
+                    {
+                         heading: {
+                              text: "Sprint 1"
+                         },
+                         content: {
+                              html: sprint1Html
+                         },
+                         summary: {
+                              html: '11th November — 24th November 2020'
+                         }
+                    }
+               ]
+          }) }}
+
+
      </div>
   <!-- Sprints section ends -->
 </div>

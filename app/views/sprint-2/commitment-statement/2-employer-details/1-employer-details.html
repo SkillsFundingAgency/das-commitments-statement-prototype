@@ -1,0 +1,152 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <!-- ERROR MESSAGE - START -->
+               <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+                    <h2 class="govuk-error-summary__title" id="error-summary-title">There is a problem</h2>
+                    <div class="govuk-error-summary__body">
+                         <ul class="govuk-list govuk-error-summary__list">
+                              <li><a href="#employer-issued-error">Please check the box to agree that the employer and training provider details are correct</a></li>
+                         </ul>
+                    </div>
+               </div>
+               <!-- ERROR MESSAGE - END -->
+
+               <!-- <span class="govuk-caption-m">Step 1 of 3</span> -->
+               <h1 class="govuk-heading-xl">
+                    Check the employer and training provider information
+               </h1>
+
+               <form method="post" action="" class="employer-details check-answers-page">
+
+                    <h2 class="govuk-heading-m" id="employer-details-text">
+                         Employer details
+                    </h2>
+
+                    <table class="govuk-table">
+                         <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Name</th>
+                                   <td class="govuk-table__cell">Michael Perkins</td>
+                                   <td class="govuk-table__cell right-align"><a href="2-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Position</th>
+                                   <td class="govuk-table__cell">Business Manager</td>
+                                   <td class="govuk-table__cell right-align"><a href="2-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Email</th>
+                                   <td class="govuk-table__cell"><a href="mailto:m.perkins@cfa.org.uk">m.perkins@cfa.org.uk</a></td>
+                                   <td class="govuk-table__cell right-align"><a href="2-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Telephone</th>
+                                   <td class="govuk-table__cell">0115 941 1126</td>
+                                   <td class="govuk-table__cell right-align"><a href="2-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Company</th>
+                                   <td class="govuk-table__cell">Contract Flooring Association</td>
+                                   <td class="govuk-table__cell right-align"><a href="2-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Address</th>
+                                   <td class="govuk-table__cell">
+                                        Unit 23<br>
+                                        Eldon Business Park<br>
+                                        Eldon Road<br>
+                                        Nottingham<br>
+                                        NG9 6DZ
+                                   </td>
+                                   <td class="govuk-table__cell right-align"><a href="2-wrong-info">Change</a></td>
+                              </tr>
+                         </tbody>
+                    </table>
+
+                    <p>&nbsp;</p>
+
+                    <h2 class="govuk-heading-m" id="provider-details-text">
+                         Training provider details
+                    </h2>
+
+                    <table class="govuk-table">
+                         <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Name</th>
+                                   <td class="govuk-table__cell">Janice Hepworth</td>
+                                   <td class="govuk-table__cell right-align"><a href="2-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Position</th>
+                                   <td class="govuk-table__cell">Tutor</td>
+                                   <td class="govuk-table__cell right-align"><a href="2-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Email</th>
+                                   <td class="govuk-table__cell"><a href="mailto:janice.hepworth@abingdon-witney.ac.uk">janice.hepworth@abingdon-witney.ac.uk</a></td>
+                                   <td class="govuk-table__cell right-align"><a href="2-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Telephone</th>
+                                   <td class="govuk-table__cell">01235 216 216</td>
+                                   <td class="govuk-table__cell right-align"><a href="2-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Company</th>
+                                   <td class="govuk-table__cell">Abingdon & Witney College</td>
+                                   <td class="govuk-table__cell right-align"><a href="2-wrong-info">Change</a></td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Address</th>
+                                   <td class="govuk-table__cell">
+                                        Abingdon Campus<br>
+                                        Wootton Road<br>
+                                        Abingdon<br>
+                                        OX14 1GG
+                                   </td>
+                                   <td class="govuk-table__cell right-align"><a href="2-wrong-info">Change</a></td>
+                              </tr>
+                         </tbody>
+                    </table>
+
+                    <!-- CHECK BOX - CONFIRM - START -->
+                    <div class="govuk-form-group check-to-confirm employer-error-panel">
+                         <fieldset class="govuk-fieldset" aria-describedby="employer-hint">
+                              <span id="employer-issued-error" class="govuk-error-message">
+                                   <span class="govuk-visually-hidden">Error:</span> Please check the box to confirm the details are correct
+                              </span>
+                              <div class="govuk-checkboxes">
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="employer-confirm" name="employer-confirm" type="checkbox" value="employer-confirm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="employer-confirm">
+                                             Please check the box to agree that the <a href="#employer-details-text">employer</a> and
+                                             <a href="#provider-details-text">training provider</a> details are correct
+                                        </label>
+                                   </div>
+                              </div>
+                         </fieldset>
+                    </div>
+                    <!-- CHECK BOX - CONFIRM - END -->
+
+                    <button class="govuk-button" data-module="govuk-button" id="employer-details">Confirm</button>
+
+               </form>
+
+          </div>
+     </div>
+</div>
+{% endblock %}
