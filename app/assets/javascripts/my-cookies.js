@@ -74,6 +74,51 @@ if ($.cookie("roles-and-responsibilities-wrong") == 'true') {
 // 4 - Skills
 $('a.section-four .govuk-caption-m').show();
 
+$("#knowledge-ksb").on("click", function (e) {
+     if ($('input[id=knowledge-ksb-confirm]').is(':checked')) {
+          $.cookie("knowledge-ksb-confirm", true, {path:'/'});
+     } else {
+          $.cookie("knowledge-ksb-confirm", false, {path:'/'});
+     }
+});
+
+$("#skills-ksb").on("click", function (e) {
+     if ($('input[id=skills-ksb-confirm]').is(':checked')) {
+          $.cookie("skills-ksb-confirm", true, {path:'/'});
+     } else {
+          $.cookie("skills-ksb-confirm", false, {path:'/'});
+     }
+});
+
+$("#behaviours-ksb").on("click", function (e) {
+     if ($('input[id=behaviours-ksb-confirm]').is(':checked')) {
+          $.cookie("behaviours-ksb-confirm", true, {path:'/'});
+     } else {
+          $.cookie("behaviours-ksb-confirm", false, {path:'/'});
+     }
+});
+
+var allSkills = parseInt($('.section-four .complete-number').text());
+$('.section-four .complete-number').text('0');
+
+if ($.cookie("knowledge-ksb-confirm") == 'true' || $.cookie("skills-ksb-confirm") == 'true' || $.cookie("behaviours-ksb-confirm") == 'true') {
+     $('a.section-four').addClass('started');
+     $('a.section-four strong').addClass('govuk-tag--blue').removeClass('govuk-tag--yellow').text('started');
+     $('a.section-four .govuk-caption-m').show();
+     $('.section-four .complete-number').text('1');
+}
+
+if ($.cookie("knowledge-ksb-confirm") == 'true' && $.cookie("skills-ksb-confirm") == 'true') {
+     $('.section-four .complete-number').text('2');
+}
+
+if ($.cookie("knowledge-ksb-confirm") == 'true' && $.cookie("skills-ksb-confirm") == 'true' && $.cookie("behaviours-ksb-confirm") == 'true') {
+     $('a.section-four').addClass('complete').removeClass('started');
+     $('a.section-four strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
+     $('.section-four .complete-number').text('3');
+}
+
+
 // 5 - Key policies
 $("#key-policies").on("click", function (e) {
      $.cookie("key-policies-counter", $('input[type="checkbox"]:checked').length, {path:'/'});

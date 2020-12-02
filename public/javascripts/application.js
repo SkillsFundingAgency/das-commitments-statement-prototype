@@ -114,6 +114,17 @@ $("#skills-ksb").on("click", function (e) {
      }
 });
 
+$("#behaviours-ksb").on("click", function (e) {
+     if ($('input[name=behaviours-ksb-confirm]').is(':checked')) {
+          $('form.behaviours-ksb').attr('action','../landing-page/index');
+     } else {
+          e.preventDefault();
+          $('.behaviours-ksb-error-panel').addClass('govuk-form-group--error');
+          $('.govuk-error-summary, .govuk-error-message').show();
+     }
+});
+
+
 
 // $("#employer-role").on("click", function (e) {
 //      if ($('input[name=employer-role-confirm]').is(':checked')) {
