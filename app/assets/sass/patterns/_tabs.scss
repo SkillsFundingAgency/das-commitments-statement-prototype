@@ -72,6 +72,7 @@
                               display: flex;
                               align-items: center;
                               justify-content: center;
+                              font-weight: bold;
                               float: left;
                               width: 1.5em;
                               height: 1.5em;
@@ -81,6 +82,10 @@
                               top: 0.1em;
                               &.alert {
                                    background: $govuk-error-colour;
+                              }
+                              &.old {
+                                   color: govuk-colour("dark-grey");
+                                   background: govuk-colour("light-grey");
                               }
                          }
                     }
