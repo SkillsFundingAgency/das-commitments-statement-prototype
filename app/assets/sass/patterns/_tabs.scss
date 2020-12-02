@@ -52,6 +52,7 @@
                          font-size: 1rem;
                          font-weight: bold;
                          color: black;
+                         min-height: 5em;
                          &:active, &:focus, &:hover {
                               outline: none;
                               box-shadow: none;
