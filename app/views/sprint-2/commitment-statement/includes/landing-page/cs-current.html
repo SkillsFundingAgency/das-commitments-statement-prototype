@@ -1,0 +1,100 @@
+<div class="govuk-grid-row tab-number" id="tab-landing-1">
+     <div class="govuk-grid-column-full">
+
+          <h2 class="govuk-heading-m">
+               Confirming your apprenticeship
+          </h2>
+
+          {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+          {{ govukWarningText({
+               text: "You have 14 days to confirm your apprenticeship",
+               iconFallbackText: "Warning"
+          }) }}
+
+          <!-- SECTION 1 - START -->
+          <a href="../1-apprentice-details/1-apprentice-details" class="section-item section-one govuk-link--no-visited-state">
+               <span class="number">1</span>
+               <div>
+                    <div class="text-wrapper">
+                         <h3 class="govuk-heading-m">Personal and apprenticeship details</h3>
+                         <!-- <span class="govuk-caption-m">Lorem ipsum</span> -->
+                    </div>
+                    <strong class="govuk-tag govuk-tag--yellow">incomplete</strong>
+               </div>
+          </a>
+          <!-- SECTION 1 - END -->
+
+          <!-- SECTION 2 - START -->
+          <a href="../2-employer-details/1-employer-details" class="section-item section-two govuk-link--no-visited-state">
+               <span class="number">2</span>
+               <div>
+                    <div class="text-wrapper">
+                         <h3 class="govuk-heading-m">Employer and training provider details</h3>
+                         <!-- <span class="govuk-caption-m">Lorem ipsum</span> -->
+                    </div>
+                    <strong class="govuk-tag govuk-tag--yellow">incomplete</strong>
+               </div>
+          </a>
+          <!-- SECTION 2 - END -->
+
+          <!-- SECTION 3 - START -->
+          <a href="../3-roles/1-apprentice-role" class="section-item section-three govuk-link--no-visited-state started">
+               <span class="number">3</span>
+               <div>
+                    <div class="text-wrapper">
+                         <h3 class="govuk-heading-m">Your roles and responsibilities</h3>
+                         <span class="govuk-caption-m"><b class="complete-number">2</b> of 3 roles agreed</span>
+                    </div>
+                    <strong class="govuk-tag govuk-tag--blue">started</strong>
+               </div>
+          </a>
+          <!-- SECTION 3 - END -->
+
+          <!-- SECTION 4 - START -->
+          <a href="../4-required-skills/1-knowledge" class="section-item section-four govuk-link--no-visited-state">
+               <span class="number">4</span>
+               <div>
+                    <div class="text-wrapper">
+                         <h3 class="govuk-heading-m">Your required skills</h3>
+                         <span class="govuk-caption-m"><b class="complete-number">0</b> of 3 skills reviewed</span>
+                    </div>
+                    <strong class="govuk-tag govuk-tag--yellow">incomplete</strong>
+               </div>
+          </a>
+          <!-- SECTION 4 - END -->
+
+          <!-- SECTION 5 - START -->
+          <a href="../5-key-policies/1-key-policies" class="section-item section-five govuk-link--no-visited-state">
+               <span class="number">5</span>
+               <div>
+                    <div class="text-wrapper">
+                         <h3 class="govuk-heading-m">Key employer policies</h3>
+                         <span class="govuk-caption-m"><b class="complete-number"></b> of 7 key policies reviewed</span>
+                    </div>
+                    <strong class="govuk-tag govuk-tag--yellow">incomplete</strong>
+               </div>
+          </a>
+          <!-- SECTION 5 - END -->
+
+          <!-- SECTION 6 - START -->
+          <a href="../6-employment-agreement/" class="section-item section-six govuk-link--no-visited-state">
+               <span class="number">6</span>
+               <div>
+                    <div class="text-wrapper">
+                         <h3 class="govuk-heading-m">Employment agreement</h3>
+                         <!-- <span class="govuk-caption-m">Lorem ipsum</span> -->
+                    </div>
+                    <strong class="govuk-tag govuk-tag--yellow">incomplete</strong>
+               </div>
+          </a>
+          <!-- SECTION 6 - END -->
+
+          <hr>
+
+          <p>
+               <a href="#" class="">Complaints procedure</a>
+          </p>
+
+     </div>
+</div>

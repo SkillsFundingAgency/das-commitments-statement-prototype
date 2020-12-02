@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <!-- ERROR MESSAGE - START -->
+               <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+                    <h2 class="govuk-error-summary__title" id="error-summary-title">There is a problem</h2>
+                    <div class="govuk-error-summary__body">
+                         <ul class="govuk-list govuk-error-summary__list">
+                              <li><a href="#knowledge-ksb-issued-error">Please check the box to agree to the knowledge</a></li>
+                         </ul>
+                    </div>
+               </div>
+               <!-- ERROR MESSAGE - END -->
+
+               <span class="govuk-caption-m">Step 1 of 3</span>
+               <h1 class="govuk-heading-xl" id="knowledge-ksb-text">
+                    Required skills - Knowledge
+               </h1>
+
+               <form method="post" action="" class="knowledge-ksb check-answers-page">
+
+                    <p>
+                         The skills.
+                    </p>
+
+                    <div class="specific-text">
+
+                         <p><strong>K1:</strong> The importance of site safety whilst being aware of the role of other site workers and their welfare</p>
+                         <p><strong>K2:</strong> The principles of waste management, disposal and environmental control in relation to environmental responsibilities, organisational procedures, manufacturers’ information, statutory regulations, official guidance and local requirements when working in foreign countries</p>
+                         <p><strong>K3:</strong> The different techniques and methods used to move, handle and store resources in the workplace and be aware of potential hazards involved with these resources</p>
+                         <p><strong>K4:</strong> Health and safety requirements for control equipment when undertaking work on site along with accident reporting when involved with, fires, spillages, injuries</p>
+                         <p><strong>K5:</strong> Safety requirements when working at height and below ground using relevant equipment</p>
+                         <p><strong>K6:</strong> The purpose of the work programme and why deadlines should be kept to in relation to progress charts, timetables and estimated times</p>
+                         <p><strong>K7:</strong> The importance of construction site reporting procedures and how changes in circumstances will impact on the works programme timetable</p>
+                         <p><strong>K8:</strong> The organisational procedures developed to report and rectify inappropriate information and unsuitable resources and how they can be implemented</p>
+                         <p><strong>K9:</strong> Organisational security procedures for tools, equipment and personal belongings in relation to site, workplace, unit, operative</p>
+                         <p><strong>K10:</strong> Complex first aid procedures in an emergency</p>
+                         <p><strong>K11:</strong> Safety and load bearing rules when constructing bridges to cross gaps of various sizes using existing materials and prefabricated sections</p>
+                         <p><strong>K12:</strong> Safety aspects and rules regarding the use of explosive and delivery of basic demolitions</p>
+                         <p><strong>K13:</strong> Environmental and health aspects needed for providing water supply to a given location including water storage</p>
+                         <p><strong>K14:</strong> The techniques of setting up and using of transportable cutting and shaping machines in the workplace</p>
+                         <p><strong>K15:</strong> First fixing components in the workplace including frames (door and/or window), linings (door and/or hatch), floor joist coverings (or flat roof decking), partitions (straight)</p>
+                         <p><strong>K16:</strong> Second fixing components in the workplace including side hung doors, mouldings (standard architrave, skirting), ironmongery, service encasement, wall and floor units/fitments, cladding</p>
+                         <p><strong>K17:</strong> Measuring, marking out, fitting, finishing, positioning and securing</p>
+                         <p><strong>K18:</strong> Characteristics, quality, uses, sustainability, limitations and defects associated with timber and timber based products and components, such as hardwood, softwood, Medium Density Fibreboard (MDF) and other materials</p>
+                         <p><strong>K19:</strong> Safe work practices when using tools, resources and equipment in a manner not likely to cause injury should they trip and fall</p>
+                         <p><strong>K20:</strong> Working with tools away from the body to avoid injury</p>
+                         <p><strong>K21:</strong> What safety guards should be in place in accordance with machine instructions</p>
+                         <p><strong>K22:</strong> The correct selection of accessories for machines and the work being undertaken</p>
+                         <p><strong>K23:</strong> Identifying the correct maintenance requirements for accessories and how to report defects</p>
+                         <p><strong>K24:</strong> The characteristics, quality, uses, sustainability, limitations and defects associated with resources such as timber, timber boarding, manufactured sheet material, plastics, doors, mouldings, ironmongery, metals, frames, linings, wall and floor units/fitments, adhesives, sealants, fixings, associated ancillary items, hand and/or power tools and equipment</p>
+                         <p><strong>K25:</strong> Safe working practices and procedures and how to report problems when working on site undertaking numerous procedures</p>
+                         <p><strong>K26:</strong> The specific hazards associated with carpentry and joinery resources and methods of work</p>
+                         <p><strong>K27:</strong> Techniques for setting out and erecting masonry structures in the workplace</p>
+                         <p><strong>K28:</strong> Techniques for placing and finishing non-specialist concrete in the workplace</p>
+                         <p><strong>K29:</strong> Characteristics, quality, uses, sustainability, limitations and defects associated with resources in relation to concreting, fabric reinforcing, timber, plywood, proprietary slab edgings, fixings, bricks, blocks, mortars, frames, insulation, damp-proof barriers, lintels, fixings, ties, hand and powered tools and equipmen</p>
+                         <p><strong>K30:</strong> The correct use of bricklaying and concreting resources and how problems associated with these specific resources are managed and reported</p>
+                         <p><strong>K31:</strong> Potential hazards associated with bricklaying and concreting resources and methods of work</p>
+                         <p><strong>K32:</strong> Specific health and safety practices that include any specific procedures, problem solving and the establishment of the authority needed to rectify them covering all aspects of the trade</p>
+                         <p><strong>K33:</strong> Examples of the above aspects transporting, laying, compacting, curing and protecting concrete with tamped, floated, brushed and towelled finishes, placing fabric reinforcement, concrete mix ratios (volume and gauge boxes), placing concrete into formwork and shuttering, forming slab edging, using hand tools and ancillary equipment and setting out and erecting structures</p>
+                         <p><strong>K34:</strong> Tools and equipment maintenance when setting out and erecting masonry structures</p>
+                         <p><strong>K35:</strong> Non-specialist concrete and be able to describe how to calculate quantity, length, area and wastage</p>
+                         <p><strong>K36:</strong> Field defence construction and the requirements for reinforcing and strengthening fortifications in a hostile environment</p>
+                         <p><strong>K37:</strong> Engineering principles to repair existing masonry structures to render them safe and prevent further collapse</p>
+                         <p><strong>K38:</strong> Access/working platforms in the workplace including for use in building maintenance (carpentry), building maintenance (painting & decorating), building maintenance (tiling), building maintenance (plastering), building maintenance (trowel occupations), building maintenance (roofing), building maintenance (glazing)</p>
+                         <p><strong>K39:</strong> The characteristics, quality, uses, limitations and defects associated with the following resources ladders/crawler boards, stepladders/platform steps, trestles, proprietary staging/podiums, proprietary towers, mobile scaffolding towers, protections equipment and notices, tools and ancillary equipment, water-borne and solvent- borne coatings</p>
+                         <p><strong>K40:</strong> Further characteristics, quality, uses, limitations and defects: primers, intermediate coatings (undercoats) and finishes (single pack coatings), single-product systems (e.g. emulsions, varnishes), solvent/thinners, knotting, proprietary sealers, brushes, rollers</p>
+                         <p><strong>K41:</strong> Final characteristics, quality, uses, limitations and defects: protective sheeting and masking, cleaning agents, stripping materials and equipment, fillers and bonding agents, primers, surface treatment materials and waterproofing agents, sand, cement, lime and plaster renders, mesh, trims and fixings, wall and floor tiles, grout, adhesives, accessories, hand and/or powered tools and associated equipment</p>
+                         <p><strong>K42:</strong> Specific safe working practices and procedures to include: erecting and dismantling access equipment, preparing and painting surfaces, plastering, tiling to all types and angles of walls, glazing windows and/or doors, roofing structures, applying cement and lime renders, using tools and resources</p>
+                         <p><strong>K43:</strong> Further specific safe working practices and procedures to include: using waterproof membranes, fixing proprietary mesh and trims, applying movement joints, removing existing tiles and preparing background, forming reveals, sills and soffits (door and window openings), forming internal and external angles, fixing channels/form drainage, outlets</p>
+                         <p><strong>K44:</strong> The requirements for completing and maintaining records of actions taken to be included as part of the site hand over procedures</p>
+                         <p><strong>K45:</strong> The requirements for maintaining tools and equipment used when erecting and dismantling access/working platforms, applying paint systems using rollers and associated tools and equipment, preparing background surfaces for plastering, panelling or painting/decorating tiling wall and floor surfaces, glazing windows and doors and roofing structures</p>
+                         <p><strong>K46:</strong> Health and safety requirements for structures built for temporary occupation in a military environment</p>
+                         <p><strong>K47:</strong> Heat calculations, task requirements and resource requirements for tasks</p>
+                         <p><strong>K48:</strong> Causes and prevention of corrosion in plumbing systems</p>
+                         <p><strong>K49:</strong> Plumbing materials, their properties and the effects of heating on them along with the principles of heat in plumbing systems</p>
+                         <p><strong>K50:</strong> Marking out techniques and allowances for bend calculations</p>
+                         <p><strong>K51:</strong> Copper tube/plastic pipe, measuring, cutting, bending and joint techniques along with steel pipe threading and joining techniques</p>
+                         <p><strong>K52:</strong> Pipework insulation and protection systems along with the identification of pipe freezing techniques</p>
+                         <p><strong>K53:</strong> Preparation of floors</p>
+                         <p><strong>K54:</strong> Water systems and hydraulic testing and equipment</p>
+                         <p><strong>K55:</strong> Soundness testing and commissioning checks for water systems along with flushing water systems</p>
+                         <p><strong>K56:</strong> Requirements for decommissioning of water systems</p>
+                         <p><strong>K57:</strong> Electrical resistance calculations</p>
+                         <p><strong>K58:</strong> Requirements of rainwater and associated guttering</p>
+                         <p><strong>K59:</strong> Test and commissioning of guttering systems, above and below ground drainage systems and the hazards when working with them along with the maintenance</p>
+                         <p><strong>K60:</strong> Storage of waste water and treatment systems</p>
+                         <p><strong>K61:</strong> Extracting task requirements from a briefing, plan for a plant task, inside and out by day and night and interpret engineer drawings, sketches and specifications</p>
+                         <p><strong>K62:</strong> All current and applicable legislation, regulations, standards and instructions relevant to the operation of different Plant vehicles individual expected to operate</p>
+                         <p><strong>K63:</strong> Harbour area drills/tasks</p>
+                         <p><strong>K64:</strong> The capabilities and working principles of systems and controls of the Medium Wheeled Tractor (MWT), Light Wheeled Tractor (LWT), Medium Crawler Tractor (MCT), Medium Crawler Excavatot (MCE), Excavator Towed Ultra Light (ETUL)</p>
+                         <p><strong>K65:</strong> The purpose and application of ancillaries for the Medium Wheeled Tractor (MWT), Light Wheeled Tractor (LWT), Medium Crawler Tractor (MCT), Medium Crawler Excavatot (MCE), Excavator Towed Ultra Light (ETUL)</p>
+                         <p><strong>K66:</strong> The various techniques of transporting the Medium Wheeled Tractor (MWT)</p>
+                         <p><strong>K67:</strong> The purpose of route denial for all Plant the individual is expected to use</p>
+                         <p><strong>K68:</strong> The purpose of various bucket configurations for the Medium Crawler Excavatot (MCE) and the process for self recovery</p>
+                         <p><strong>K69:</strong> The procedures/processes for crossing equipment bridges</p>
+                         <p><strong>K70:</strong> The basic principles of compaction</p>
+                         <p><strong>K71:</strong> The repair, accident and breakdown procedures along with the process for refueling equipment</p>
+                         <p><strong>K72:</strong> The purpose of inspecting Steel Wire Rope (SWR)</p>
+                         <p><strong>K73:</strong> The legal requirements of plant on the public highway</p>
+                         <p><strong>K74:</strong> The working systems and controls of roller(s) and the cab and controls for the Light Dump Truck (LDT) and the Medium Dump Truck (MDT)</p>
+                         <p><strong>K75:</strong> Understand the basic fault identification on the engine, the electrical system, the fuel system, the cooling system and the hydraulic system of the plant being used</p>
+
+                    </div>
+
+                    <!-- CHECK BOX - CONFIRM - START -->
+                    <div class="govuk-form-group check-to-confirm knowledge-ksb-error-panel">
+                         <fieldset class="govuk-fieldset" aria-describedby="knowledge-ksb-hint">
+                              <span id="knowledge-ksb-issued-error" class="govuk-error-message">
+                                   <span class="govuk-visually-hidden">Error:</span> Please check the box to confirm the knowledge
+                              </span>
+                              <div class="govuk-checkboxes">
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="knowledge-ksb-confirm" name="knowledge-ksb-confirm" type="checkbox" value="knowledge-ksb-confirm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="knowledge-ksb-confirm">
+                                             Please check the box to agree to the <a href="#knowledge-ksb-text">knowlegde</a>
+                                        </label>
+                                   </div>
+                              </div>
+                         </fieldset>
+                    </div>
+                    <!-- CHECK BOX - CONFIRM - END -->
+
+                    <button class="govuk-button" data-module="govuk-button" id="knowledge-ksb">Confirm</button>
+
+                    <a href="../landing-page/index" class="secondary-link">I want to complete this later</a>
+
+               </form>
+
+          </div>
+     </div>
+</div>
+{% endblock %}

@@ -71,6 +71,9 @@ if ($.cookie("roles-and-responsibilities-wrong") == 'true') {
      $('.section-three .complete-number').text('2');
 }
 
+// 4 - Skills
+$('a.section-four .govuk-caption-m').show();
+
 // 5 - Key policies
 $("#key-policies").on("click", function (e) {
      $.cookie("key-policies-counter", $('input[type="checkbox"]:checked').length, {path:'/'});

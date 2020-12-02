@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <!-- ERROR MESSAGE - START -->
+               <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+                    <h2 class="govuk-error-summary__title" id="error-summary-title">There is a problem</h2>
+                    <div class="govuk-error-summary__body">
+                         <ul class="govuk-list govuk-error-summary__list">
+                              <li><a href="#behaviours-ksb-issued-error">Please check the box to agree to the behaviours</a></li>
+                         </ul>
+                    </div>
+               </div>
+               <!-- ERROR MESSAGE - END -->
+
+               <span class="govuk-caption-m">Step 3 of 3</span>
+               <h1 class="govuk-heading-xl" id="behaviours-ksb-text">
+                    Required skills - Behaviours
+               </h1>
+
+               <form method="post" action="" class="behaviours-ksb check-answers-page">
+
+                    <p>
+                         The behaviours.
+                    </p>
+
+                    <div class="specific-text">
+
+                         <p><strong>B1:</strong> An alert and tactical awareness prior to, during and after any construction project in a hostile environment and be able to adapt to a changing environment</p>
+                         <p><strong>B2:</strong> The willingness to take charge of a situation should it be required</p>
+                         <p><strong>B3:</strong> The initiative to adapt, develop and overcome any situation that may arise during a task whilst maintaining a military approach</p>
+                         <p><strong>B4:</strong> A responsible attitude towards own and others safety in the workplace</p>
+                         <p><strong>B5:</strong> A strong Team spirit and Corps values</p>
+
+                    </div>
+
+                    <!-- CHECK BOX - CONFIRM - START -->
+                    <div class="govuk-form-group check-to-confirm behaviours-ksb-error-panel">
+                         <fieldset class="govuk-fieldset" aria-describedby="behaviours-ksb-hint">
+                              <span id="behaviours-ksb-issued-error" class="govuk-error-message">
+                                   <span class="govuk-visually-hidden">Error:</span> Please check the box to confirm the behaviours
+                              </span>
+                              <div class="govuk-checkboxes">
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="behaviours-ksb-confirm" name="behaviours-ksb-confirm" type="checkbox" value="behaviours-ksb-confirm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="behaviours-ksb-confirm">
+                                             Please check the box to agree to the <a href="#behaviours-ksb-text">behaviours</a>
+                                        </label>
+                                   </div>
+                              </div>
+                         </fieldset>
+                    </div>
+                    <!-- CHECK BOX - CONFIRM - END -->
+
+                    <button class="govuk-button" data-module="govuk-button" id="behaviours-ksb">Confirm</button>
+
+                    <a href="../landing-page/index" class="secondary-link">I want to complete this later</a>
+
+               </form>
+
+          </div>
+     </div>
+</div>
+{% endblock %}

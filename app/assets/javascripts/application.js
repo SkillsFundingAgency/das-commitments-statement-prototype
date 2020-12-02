@@ -31,7 +31,23 @@ $(document).ready(function () {
      $('.hide-show-password, .hide-show-confirm').on('click',function(e) {
           $(this).toggleClass('hide');
      });
+
+     $('.tabs ul.govuk-list li button.govuk-link').on('click',function(e) {
+          $('.tabs ul.govuk-list li button.govuk-link').removeClass('selected');
+          $(this).addClass('selected');
+     });
+
 })
+
+// Tabs
+function openTab(tabNumber) {
+     var i;
+     var x = document.getElementsByClassName("tab-number");
+     for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+     }
+     document.getElementById(tabNumber).style.display = "block";
+}
 
 $('#service-title-section, #action-title-section').parent().addClass('title-overide');
 
@@ -76,6 +92,28 @@ $("#apprentice-role").on("click", function (e) {
           $('.govuk-error-summary, .govuk-error-message').show();
      }
 });
+
+// 4
+$("#knowledge-ksb").on("click", function (e) {
+     if ($('input[name=knowledge-ksb-confirm]').is(':checked')) {
+          $('form.knowledge-ksb').attr('action','2-skills');
+     } else {
+          e.preventDefault();
+          $('.knowledge-ksb-error-panel').addClass('govuk-form-group--error');
+          $('.govuk-error-summary, .govuk-error-message').show();
+     }
+});
+
+$("#skills-ksb").on("click", function (e) {
+     if ($('input[name=skills-ksb-confirm]').is(':checked')) {
+          $('form.skills-ksb').attr('action','3-behaviours');
+     } else {
+          e.preventDefault();
+          $('.skills-ksb-error-panel').addClass('govuk-form-group--error');
+          $('.govuk-error-summary, .govuk-error-message').show();
+     }
+});
+
 
 // $("#employer-role").on("click", function (e) {
 //      if ($('input[name=employer-role-confirm]').is(':checked')) {
