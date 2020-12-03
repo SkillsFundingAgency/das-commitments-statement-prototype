@@ -212,3 +212,18 @@ if ($.cookie("cs-step-1") == 'true' && $.cookie("cs-step-2") == 'true' && $.cook
      $('#cs-signed').hide();
      $('.tabs ul.govuk-list li .tab-landing-1 .number').addClass('complete');
 }
+
+$("#confirm-and-sign").on("click", function (e) {
+     if ($('input[id=apprentice-sign-confirm]').is(':checked')) {
+          $.cookie("apprentice-sign-confirm", true, {path:'/'});
+     } else {
+          $.cookie("apprentice-sign-confirm", false, {path:'/'});
+     }
+});
+
+if ($.cookie("apprentice-sign-confirm") == 'true') {
+     $('#cs-not-agreed').hide();
+     $('#cs-agreed').hide();
+     $('#cs-signed').show();
+     $('.tabs ul.govuk-list li .tab-landing-1 .number').addClass('signed').text('');
+}

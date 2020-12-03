@@ -87,6 +87,10 @@
                               &.complete {
                                    background: govuk-colour("green");
                               }
+                              &.signed {
+                                   background: url('../images/tick-white.svg') no-repeat 50% 50% govuk-colour("green");
+                                   background-size: 0.75em;
+                              }
                               &.old {
                                    color: govuk-colour("dark-grey");
                                    background: govuk-colour("light-grey");
