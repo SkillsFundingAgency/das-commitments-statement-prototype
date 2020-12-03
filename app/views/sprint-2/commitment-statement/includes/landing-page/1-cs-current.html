@@ -1,16 +1,56 @@
 <div class="govuk-grid-row tab-number" id="tab-landing-1">
      <div class="govuk-grid-column-full">
 
-          <h2 class="govuk-heading-m">
-               Confirming your apprenticeship
-          </h2>
+          <!-- NOT AGREED - START -->
+          <div id="cs-not-agreed">
+               <h2 class="govuk-heading-m">
+                    Confirming your apprenticeship
+               </h2>
 
-          {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+               {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
-          {{ govukWarningText({
-               text: "You have 14 days to confirm your apprenticeship",
-               iconFallbackText: "Warning"
-          }) }}
+               {{ govukWarningText({
+                    text: "You have 14 days to confirm your apprenticeship",
+                    iconFallbackText: "Warning"
+               }) }}
+          </div>
+          <!-- NOT AGREED - END -->
+
+          <!-- AGREED - START -->
+          <div id="cs-agreed">
+               <h2 class="govuk-heading-m">
+                    Your apprenticeship is ready to sign
+               </h2>
+
+               <div class="govuk-form-group ready-to-sign">
+                    <div class="govuk-warning-text">
+                         <span class="govuk-confirm__icon" aria-hidden="true"></span>
+                         <strong class="govuk-warning-text__text">
+                              <span class="govuk-warning-text__assistive">Confirmed</span> Your apprenticeship is now ready for you to sign
+                         </strong>
+                    </div>
+                    <a href="../6-sign-commitment/1-check-answers-page" class="govuk-button" data-module="govuk-button">Confirm apprenticeship</a>
+               </div>
+          </div>
+          <!-- AGREED - START -->
+
+          <!-- AGREED - START -->
+          <div id="cs-signed">
+               <h2 class="govuk-heading-m">
+                    Your digital commitment statement
+               </h2>
+
+               <div class="govuk-form-group ready-to-sign">
+                    <div class="govuk-warning-text">
+                         <span class="govuk-confirm__icon" aria-hidden="true"></span>
+                         <strong class="govuk-warning-text__text">
+                              <span class="govuk-warning-text__assistive">Confirmed</span> Your apprenticeship has been signed, agreed and your ready to start
+                         </strong>
+                    </div>
+               </div>
+          </div>
+          <!-- AGREED - START -->
+
 
           <!-- SECTION 1 - START -->
           <a href="../1-apprentice-details/1-apprentice-details" class="section-item section-one govuk-link--no-visited-state">

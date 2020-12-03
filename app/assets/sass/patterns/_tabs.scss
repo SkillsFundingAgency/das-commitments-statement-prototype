@@ -84,6 +84,9 @@
                               &.alert {
                                    background: $govuk-error-colour;
                               }
+                              &.complete {
+                                   background: govuk-colour("green");
+                              }
                               &.old {
                                    color: govuk-colour("dark-grey");
                                    background: govuk-colour("light-grey");

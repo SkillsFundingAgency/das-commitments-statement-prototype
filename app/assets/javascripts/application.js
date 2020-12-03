@@ -124,7 +124,16 @@ $("#behaviours-ksb").on("click", function (e) {
      }
 });
 
-
+// 4
+$("#confirm-and-sign").on("click", function (e) {
+     if ($('input[name=apprentice-sign-confirm]').is(':checked')) {
+          $('form.apprentice-sign').attr('action','2-confirmation');
+     } else {
+          e.preventDefault();
+          $('.apprentice-not-signed-error-panel').addClass('govuk-form-group--error');
+          $('.govuk-error-summary, .govuk-error-message').show();
+     }
+});
 
 // $("#employer-role").on("click", function (e) {
 //      if ($('input[name=employer-role-confirm]').is(':checked')) {
