@@ -92,6 +92,9 @@ $govuk-assets-path: '/govuk/assets/';
           .govuk-heading-xl {
                margin-bottom: 0.5em;
           }
+          p {
+               margin-bottom: 0;
+          }
      }
      details {
           margin-bottom: 0;
