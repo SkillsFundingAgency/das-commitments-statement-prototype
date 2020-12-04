@@ -14,24 +14,13 @@
      <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
 
-               <!-- ERROR MESSAGE - START -->
-               <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
-                    <h2 class="govuk-error-summary__title" id="error-summary-title">There is a problem</h2>
-                    <div class="govuk-error-summary__body">
-                         <ul class="govuk-list govuk-error-summary__list">
-                              <li><a href="#apprentice-issued-error">Please check the box to agree that your personal details, the apprenticeship details and the estimated weekly hours are correct</a></li>
-                         </ul>
-                    </div>
-               </div>
-               <!-- ERROR MESSAGE - END -->
+               <h1 class="govuk-heading-xl">Personal and apprenticeship details</h1>
 
-               <h1 class="govuk-heading-xl">Confirm these details are correct</h1>
-
-               <form method="post" action="" class="apprentice-details check-answers-page">
+               <form method="post" action="../landing-page/index" class="check-answers-page">
 
                     <h2 class="govuk-heading-m" id="personal-details-text">
                          Personal details
-                         <a href="4-wrong-info" class="main-change-link">Change</a>
+                         <a href="2-wrong-info" class="main-change-link">Change</a>
                     </h2>
 
                     <table class="govuk-table data-table">
@@ -63,7 +52,7 @@
 
                     <h2 class="govuk-heading-m" id="apprenticeship-details-text">
                          Apprenticeship details
-                         <a href="4-wrong-info" class="main-change-link">Change</a>
+                         <a href="2-wrong-info" class="main-change-link">Change</a>
                     </h2>
 
                     <table class="govuk-table data-table">
@@ -111,7 +100,7 @@
 
                     <h2 class="govuk-heading-m" id="hours-details-text">
                          Estimated weekly hours
-                         <a href="4-wrong-info" class="main-change-link">Change</a>
+                         <a href="2-wrong-info" class="main-change-link">Change</a>
                     </h2>
 
                     <p>
@@ -137,27 +126,9 @@
                          </tbody>
                     </table>
 
-                    <!-- CHECK BOX - CONFIRM - START -->
-                    <div class="govuk-form-group check-to-confirm apprentice-error-panel">
-                         <fieldset class="govuk-fieldset" aria-describedby="apprentice-hint">
-                              <span id="apprentice-issued-error" class="govuk-error-message">
-                                   <span class="govuk-visually-hidden">Error:</span> Please check the box to confirm the details are correct
-                              </span>
-                              <div class="govuk-checkboxes">
-                                   <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="apprentice-confirm" name="apprentice-confirm" type="checkbox" value="apprentice-confirm">
-                                        <label class="govuk-label govuk-checkboxes__label" for="apprentice-confirm">
-                                             Please check the box to agree that your <a href="#personal-details-text">personal details</a>,
-                                             the <a href="#apprenticeship-details-text">apprenticeship details</a> and
-                                             <a href="#hours-details-text">estimated weekly hours</a> details are correct
-                                        </label>
-                                   </div>
-                              </div>
-                         </fieldset>
-                    </div>
-                    <!-- CHECK BOX - CONFIRM - END -->
-
-                    <button class="govuk-button" data-module="govuk-button" id="apprentice-details">Confirm</button>
+                    <p>
+                         <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back to landing page</a>
+                    </p>
 
                </form>
 

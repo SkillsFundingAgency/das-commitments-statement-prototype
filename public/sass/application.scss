@@ -34,6 +34,13 @@ $govuk-assets-path: '/govuk/assets/';
      margin-bottom: 0 !important;
 }
 
+p {
+     &.invitation-code {
+          background: govuk-colour("light-grey");
+          padding: 1em;
+     }
+}
+
 .govuk-header__container {
      border-bottom: 10px solid #134273;
      z-index: 20;
@@ -91,6 +98,9 @@ $govuk-assets-path: '/govuk/assets/';
           margin-top: -0.25em;
           .govuk-heading-xl {
                margin-bottom: 0.5em;
+          }
+          p {
+               margin-bottom: 0;
           }
      }
      details {

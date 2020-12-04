@@ -23,62 +23,89 @@ $("#apprentice-details-wrong").on("click", function (e) {
 if ($.cookie("apprentice-details-wrong") == 'true') {
      $('a.section-one').addClass('wrong');
      $('a.section-one strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
+     $('a.section-one').attr('href', '../sign-in/3-confirm-details');
 }
 
-// 2 - Employer details - Correct
-$("#employer-details").on("click", function (e) {
-     $.cookie("employer-details", true, {path:'/'});
-     $.cookie("employer-details-wrong", false, {path:'/'});
+// 2 - Apprenticeship details - Correct
+$("#apprenticeship-details").on("click", function (e) {
+     $.cookie("apprenticeship-details", true, {path:'/'});
+     $.cookie("apprenticeship-details-wrong", false, {path:'/'});
      $.cookie("cs-step-2", true, {path:'/'});
 });
 
-if ($.cookie("employer-details") == 'true') {
+if ($.cookie("apprenticeship-details") == 'true') {
      $('a.section-two').addClass('complete');
      $('a.section-two strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
+     // $('a.section-one').attr('href', '');
 }
 
-// 2 - Employer details - Incorrect
-$("#employer-details-wrong").on("click", function (e) {
-     $.cookie("employer-details", false, {path:'/'});
-     $.cookie("employer-details-wrong", true, {path:'/'});
+// 2 - Apprenticeship details - Incorrect
+$("#apprenticeship-details-wrong").on("click", function (e) {
+     $.cookie("apprenticeship-details", false, {path:'/'});
+     $.cookie("apprenticeship-details-wrong", true, {path:'/'});
      $.cookie("cs-step-2", false, {path:'/'});
 });
 
-if ($.cookie("employer-details-wrong") == 'true') {
+if ($.cookie("apprenticeship-details-wrong") == 'true') {
      $('a.section-two').addClass('wrong');
      $('a.section-two strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
+     $('a.section-two').attr('href', '../2-apprenticeship-details/1-apprenticeship-details');
 }
 
-// 3 - Roles and responsibilities - Correct
-$('a.section-three .govuk-caption-m').show();
+// 3 - Employer details - Correct
+$("#employer-details").on("click", function (e) {
+     $.cookie("employer-details", true, {path:'/'});
+     $.cookie("employer-details-wrong", false, {path:'/'});
+     $.cookie("cs-step-3", true, {path:'/'});
+});
+
+if ($.cookie("employer-details") == 'true') {
+     $('a.section-three').addClass('complete');
+     $('a.section-three strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
+}
+
+// 3 - Employer details - Incorrect
+$("#employer-details-wrong").on("click", function (e) {
+     $.cookie("employer-details", false, {path:'/'});
+     $.cookie("employer-details-wrong", true, {path:'/'});
+     $.cookie("cs-step-3", false, {path:'/'});
+});
+
+if ($.cookie("employer-details-wrong") == 'true') {
+     $('a.section-three').addClass('wrong');
+     $('a.section-three strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
+}
+
+// 4 - Roles and responsibilities - Correct
+$('a.section-four .govuk-caption-m').show();
 
 $("#apprentice-role").on("click", function (e) {
      $.cookie("roles-and-responsibilities", true, {path:'/'});
      $.cookie("roles-and-responsibilities-wrong", false, {path:'/'});
-     $.cookie("cs-step-3", true, {path:'/'});
+     $.cookie("cs-step-4", true, {path:'/'});
 });
 
 if ($.cookie("roles-and-responsibilities") == 'true') {
-     $('a.section-three').addClass('complete').removeClass('started');
-     $('a.section-three strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
-     $('.section-three .complete-number').text('3');
+     $('a.section-four').addClass('complete').removeClass('started');
+     $('a.section-four strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
+     $('.section-four .complete-number').text('3');
 }
 
-// 3 - Roles and responsibilities - Incorrect
+// 4 - Roles and responsibilities - Incorrect
 $("#apprentice-role-wrong").on("click", function (e) {
      $.cookie("roles-and-responsibilities", false, {path:'/'});
      $.cookie("roles-and-responsibilities", true, {path:'/'});
-     $.cookie("cs-step-3", false, {path:'/'});
+     $.cookie("cs-step-4", false, {path:'/'});
 });
 
 if ($.cookie("roles-and-responsibilities-wrong") == 'true') {
-     $('a.section-three').addClass('wrong').removeClass('started');
-     $('a.section-three strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
-     $('.section-three .complete-number').text('2');
+     $('a.section-four').addClass('wrong').removeClass('started');
+     $('a.section-four strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
+     $('.section-four .complete-number').text('2');
 }
 
-// 4 - Skills
-$('a.section-four .govuk-caption-m').show();
+// 5 - Skills
+$('a.section-five .govuk-caption-m').show();
 
 $("#knowledge-ksb").on("click", function (e) {
      if ($('input[id=knowledge-ksb-confirm]').is(':checked')) {
@@ -104,28 +131,30 @@ $("#behaviours-ksb").on("click", function (e) {
      }
 });
 
-var allSkills = parseInt($('.section-four .complete-number').text());
-$('.section-four .complete-number').text('0');
+var allSkills = parseInt($('.section-five .complete-number').text());
+$('.section-five .complete-number').text('0');
 
 if ($.cookie("knowledge-ksb-confirm") == 'true' || $.cookie("skills-ksb-confirm") == 'true' || $.cookie("behaviours-ksb-confirm") == 'true') {
-     $('a.section-four').addClass('started');
-     $('a.section-four strong').addClass('govuk-tag--blue').removeClass('govuk-tag--yellow').text('started');
-     $('a.section-four .govuk-caption-m').show();
-     $('.section-four .complete-number').text('1');
+     $('a.section-five').addClass('started');
+     $('a.section-five strong').addClass('govuk-tag--blue').removeClass('govuk-tag--yellow').text('started');
+     $('a.section-five .govuk-caption-m').show();
+     $('.section-five .complete-number').text('1');
 }
 
 if ($.cookie("knowledge-ksb-confirm") == 'true' && $.cookie("skills-ksb-confirm") == 'true') {
-     $('.section-four .complete-number').text('2');
+     $('.section-five .complete-number').text('2');
 }
 
 if ($.cookie("knowledge-ksb-confirm") == 'true' && $.cookie("skills-ksb-confirm") == 'true' && $.cookie("behaviours-ksb-confirm") == 'true') {
-     $('a.section-four').addClass('complete').removeClass('started');
-     $('a.section-four strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
-     $('.section-four .complete-number').text('3');
-     $.cookie("cs-step-4", true, {path:'/'});
+     $('a.section-five').addClass('complete').removeClass('started');
+     $('a.section-five strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
+     $('.section-five .complete-number').text('3');
+     $.cookie("cs-step-5", true, {path:'/'});
 }
 
-// 5 - Key policies
+// 6 - Key policies
+$('a.section-six .govuk-caption-m').show();
+
 $("#key-policies").on("click", function (e) {
      $.cookie("key-policies-counter", $('input[type="checkbox"]:checked').length, {path:'/'});
 
@@ -166,7 +195,7 @@ $("#key-policies").on("click", function (e) {
      }
 });
 
-$('.section-five .complete-number').text($.cookie("key-policies-counter"));
+$('.section-six .complete-number').text($.cookie("key-policies-counter"));
 
 if ($.cookie("policy-code-of-conduct") == 'true') {
      $('#code-of-conduct').attr('checked','checked');
@@ -191,22 +220,22 @@ if ($.cookie("policy-business-continuity") == 'true') {
 }
 
 if ($.cookie("policy-code-of-conduct") == 'true' || $.cookie("policy-health-and-safety") == 'true' || $.cookie("policy-equality-and-diversity") == 'true' || $.cookie("policy-harassment-and-bullying") == 'true' || $.cookie("policy-safeguarding-and-prevent") == 'true' || $.cookie("policy-complaints-procedure") == 'true' || $.cookie("policy-business-continuity") == 'true') {
-     $('a.section-five').addClass('started');
-     $('a.section-five strong').addClass('govuk-tag--blue').removeClass('govuk-tag--yellow').text('started');
-     $('a.section-five .govuk-caption-m').show();
+     $('a.section-six').addClass('started');
+     $('a.section-six strong').addClass('govuk-tag--blue').removeClass('govuk-tag--yellow').text('started');
+     $('a.section-six .govuk-caption-m').show();
 }
 
 if ($.cookie("policy-code-of-conduct") == 'true' && $.cookie("policy-health-and-safety") == 'true' && $.cookie("policy-equality-and-diversity") == 'true' && $.cookie("policy-harassment-and-bullying") == 'true' && $.cookie("policy-safeguarding-and-prevent") == 'true' && $.cookie("policy-complaints-procedure") == 'true' && $.cookie("policy-business-continuity") == 'true') {
-     $('a.section-five').addClass('complete').removeClass('started');
-     $('a.section-five strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
-     $.cookie("cs-step-5", true, {path:'/'});
+     $('a.section-six').addClass('complete').removeClass('started');
+     $('a.section-six strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
+     $.cookie("cs-step-6", true, {path:'/'});
 }
 
 // CS is agreed
 $('#cs-not-agreed').show();
 $('#cs-agreed').hide();
 $('#cs-signed').hide();
-if ($.cookie("cs-step-1") == 'true' && $.cookie("cs-step-2") == 'true' && $.cookie("cs-step-3") == 'true' && $.cookie("cs-step-4") == 'true' && $.cookie("cs-step-5") == 'true') {
+if ($.cookie("cs-step-1") == 'true' && $.cookie("cs-step-2") == 'true' && $.cookie("cs-step-3") == 'true' && $.cookie("cs-step-4") == 'true' && $.cookie("cs-step-5") == 'true' && $.cookie("cs-step-6") == 'true') {
      $('#cs-not-agreed').hide();
      $('#cs-agreed').show();
      $('#cs-signed').hide();

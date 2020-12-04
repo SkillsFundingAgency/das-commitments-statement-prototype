@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <h1 class="govuk-heading-xl">Identity assurance</h1>
+
+               <form method="post" action="3-create-account" class="check-answers-page">
+
+                    <div class="govuk-form-group">
+                         <label class="govuk-label" for="invitation-code">Invitation code</label>
+                         <input class="govuk-input govuk-input--width-20" id="invitation-code" name="invitation-code" type="text">
+                    </div>
+
+                    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                    {{ govukButton({
+                         text: "Continue",
+                         href: ""
+                    }) }}
+
+
+               </form>
+
+          </div>
+     </div>
+
+
+</div>
+{% endblock %}

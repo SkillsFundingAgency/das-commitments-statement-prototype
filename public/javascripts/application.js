@@ -72,6 +72,17 @@ $("#apprentice-details").on("click", function (e) {
 });
 
 // 2
+$("#apprenticeship-details").on("click", function (e) {
+     if ($('input[name=apprenticeship-confirm]').is(':checked')) {
+          $('form.apprenticeship-details').attr('action','../landing-page/index');
+     } else {
+          e.preventDefault();
+          $('.employer-error-panel').addClass('govuk-form-group--error');
+          $('.govuk-error-summary, .govuk-error-message').show();
+     }
+});
+
+// 3
 $("#employer-details").on("click", function (e) {
      if ($('input[name=employer-confirm]').is(':checked')) {
           $('form.employer-details').attr('action','../landing-page/index');
@@ -82,7 +93,7 @@ $("#employer-details").on("click", function (e) {
      }
 });
 
-// 3
+// 4
 $("#apprentice-role").on("click", function (e) {
      if ($('input[name=apprentice-role-confirm]').is(':checked')) {
           $('form.apprentice-role').attr('action','2-employer-role');
@@ -93,7 +104,7 @@ $("#apprentice-role").on("click", function (e) {
      }
 });
 
-// 4
+// 5
 $("#knowledge-ksb").on("click", function (e) {
      if ($('input[name=knowledge-ksb-confirm]').is(':checked')) {
           $('form.knowledge-ksb').attr('action','2-skills');
@@ -124,7 +135,7 @@ $("#behaviours-ksb").on("click", function (e) {
      }
 });
 
-// 4
+// 7
 $("#confirm-and-sign").on("click", function (e) {
      if ($('input[name=apprentice-sign-confirm]').is(':checked')) {
           $('form.apprentice-sign').attr('action','2-confirmation');
