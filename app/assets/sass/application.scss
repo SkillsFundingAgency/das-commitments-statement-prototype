@@ -297,7 +297,7 @@ table {
      }
 }
 
-.check-to-confirm, .employer-confirmed, .provider-confirmed, .ready-to-sign {
+.check-to-confirm, .employer-confirmed, .provider-confirmed, .ready-to-sign, .confirmed-panel {
      border-left: 10px solid $govuk-link-colour;
      background: govuk-colour("light-grey");
      padding: 1em 3.5%;
@@ -309,7 +309,7 @@ table {
      }
 }
 
-.employer-confirmed, .provider-confirmed, .ready-to-sign {
+.employer-confirmed, .provider-confirmed, .ready-to-sign, .confirmed-panel {
      border-left: 10px solid govuk-colour("green");
      .govuk-warning-text {
           margin: 0;
@@ -326,6 +326,10 @@ table {
      .govuk-button {
           margin: 0.5em 0 0.25em 0;
      }
+}
+
+.confirmed-panel {
+     margin-top: 0;
 }
 
 .key-policies {

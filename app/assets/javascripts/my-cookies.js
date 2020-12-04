@@ -1,6 +1,8 @@
 // =================================== MY COOKIES =================================== //
 
 // 1 - Personal details - Correct
+$('.personal-confirmed').hide();
+
 $("#apprentice-details").on("click", function (e) {
      $.cookie("apprentice-details", true, {path:'/'});
      $.cookie("apprentice-details-wrong", false, {path:'/'});
@@ -11,6 +13,9 @@ if ($.cookie("apprentice-details") == 'true') {
      $('a.section-one').addClass('complete');
      $('a.section-one strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
      // $('a.section-one').attr('href', '');
+     $('.personal-confirmed').show();
+     $('.personal-unconfirmed').hide();
+     $('.personal-confirmed-title').text('Your personal details');
 }
 
 // 1 - Personal details - Incorrect
@@ -24,9 +29,14 @@ if ($.cookie("apprentice-details-wrong") == 'true') {
      $('a.section-one').addClass('wrong');
      $('a.section-one strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
      $('a.section-one').attr('href', '../sign-in/3-confirm-details');
+     $('.personal-confirmed').hide();
+     $('.personal-unconfirmed').show();
+     $('.personal-confirmed-title').text('Confirm these details are correct');
 }
 
 // 2 - Apprenticeship details - Correct
+$('.apprenticeship-confirmed').hide();
+
 $("#apprenticeship-details").on("click", function (e) {
      $.cookie("apprenticeship-details", true, {path:'/'});
      $.cookie("apprenticeship-details-wrong", false, {path:'/'});
@@ -37,6 +47,9 @@ if ($.cookie("apprenticeship-details") == 'true') {
      $('a.section-two').addClass('complete');
      $('a.section-two strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
      // $('a.section-one').attr('href', '');
+     $('.apprenticeship-confirmed').show();
+     $('.apprenticeship-unconfirmed').hide();
+     $('.apprenticeship-confirmed-title').text('Your apprenticeship details');
 }
 
 // 2 - Apprenticeship details - Incorrect
@@ -50,9 +63,14 @@ if ($.cookie("apprenticeship-details-wrong") == 'true') {
      $('a.section-two').addClass('wrong');
      $('a.section-two strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
      $('a.section-two').attr('href', '../2-apprenticeship-details/1-apprenticeship-details');
+     $('.apprenticeship-confirmed').hide();
+     $('.apprenticeship-unconfirmed').show();
+     $('.apprenticeship-confirmed-title').text('Confirm these details are correct');
 }
 
 // 3 - Employer details - Correct
+$('.employer-provider-confirmed').hide();
+
 $("#employer-details").on("click", function (e) {
      $.cookie("employer-details", true, {path:'/'});
      $.cookie("employer-details-wrong", false, {path:'/'});
@@ -62,6 +80,9 @@ $("#employer-details").on("click", function (e) {
 if ($.cookie("employer-details") == 'true') {
      $('a.section-three').addClass('complete');
      $('a.section-three strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
+     $('.employer-provider-confirmed').show();
+     $('.employer-provider-unconfirmed').hide();
+     $('.employer-provider-confirmed-title').text('Your employer and training provider details');
 }
 
 // 3 - Employer details - Incorrect
@@ -74,6 +95,9 @@ $("#employer-details-wrong").on("click", function (e) {
 if ($.cookie("employer-details-wrong") == 'true') {
      $('a.section-three').addClass('wrong');
      $('a.section-three strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
+     $('.employer-provider-confirmed').hide();
+     $('.employer-provider-unconfirmed').show();
+     $('.employer-provider-confirmed-title').text('Check the employer and training provider information');
 }
 
 // 4 - Roles and responsibilities - Correct

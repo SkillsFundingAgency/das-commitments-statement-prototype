@@ -25,7 +25,16 @@
                </div>
                <!-- ERROR MESSAGE - END -->
 
-               <h1 class="govuk-heading-xl">Confirm these details are correct</h1>
+               <h1 class="govuk-heading-xl personal-confirmed-title">Confirm these details are correct</h1>
+
+               <div class="govuk-form-group confirmed-panel personal-confirmed">
+                    <div class="govuk-warning-text">
+                         <span class="govuk-confirm__icon" aria-hidden="true"></span>
+                         <strong class="govuk-warning-text__text">
+                              <span class="govuk-warning-text__assistive">Confirmed</span> You have confirmed that your personal details are correct
+                         </strong>
+                    </div>
+               </div>
 
                <form method="post" action="" class="apprentice-details check-answers-page">
 
@@ -60,7 +69,7 @@
                     </table>
 
                     <!-- CHECK BOX - CONFIRM - START -->
-                    <div class="govuk-form-group check-to-confirm apprentice-error-panel">
+                    <div class="govuk-form-group check-to-confirm apprentice-error-panel personal-unconfirmed">
                          <fieldset class="govuk-fieldset" aria-describedby="apprentice-hint">
                               <span id="apprentice-issued-error" class="govuk-error-message">
                                    <span class="govuk-visually-hidden">Error:</span> Please check the box to confirm the details are correct
@@ -77,9 +86,11 @@
                     </div>
                     <!-- CHECK BOX - CONFIRM - END -->
 
-                    <button class="govuk-button" data-module="govuk-button" id="apprentice-details">Confirm</button>
+                    <button class="govuk-button personal-unconfirmed" data-module="govuk-button" id="apprentice-details">Confirm</button>
 
-                    <a href="../landing-page/index" class="secondary-link">I want to complete this later</a>
+                    <a href="../landing-page/index" class="secondary-link personal-unconfirmed">I want to complete this later</a>
+
+                    <a href="#" onclick="history.go(-1)" class="govuk-back-link personal-confirmed">Back to landing page</a>
 
                </form>
 
