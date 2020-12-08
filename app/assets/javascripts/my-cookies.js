@@ -28,7 +28,7 @@ $("#apprentice-details-wrong").on("click", function (e) {
 if ($.cookie("apprentice-details-wrong") == 'true') {
      $('a.section-one').addClass('wrong');
      $('a.section-one strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
-     $('a.section-one').attr('href', '../sign-in/3-confirm-details');
+     $('a.section-one').attr('href', '../1-apprentice-details/1-apprentice-details');
      $('.personal-confirmed').hide();
      $('.personal-unconfirmed').show();
      $('.personal-confirmed-title').text('Confirm these details are correct');

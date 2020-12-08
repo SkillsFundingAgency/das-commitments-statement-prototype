@@ -328,6 +328,12 @@ table {
      }
 }
 
+#cs-signed, #cs-agreed {
+     .govuk-form-group {
+          margin-top: 0;
+     }
+}
+
 .confirmed-panel {
      margin-top: 0;
 }
