@@ -96,7 +96,7 @@ $("#employer-details").on("click", function (e) {
 // 4
 $("#apprentice-role").on("click", function (e) {
      if ($('input[name=apprentice-role-confirm]').is(':checked')) {
-          $('form.apprentice-role').attr('action','2-employer-role');
+          $('form.apprentice-role').attr('action','../landing-page/index');
      } else {
           e.preventDefault();
           $('.apprentice-role-error-panel').addClass('govuk-form-group--error');
@@ -105,35 +105,35 @@ $("#apprentice-role").on("click", function (e) {
 });
 
 // 5
-$("#knowledge-ksb").on("click", function (e) {
-     if ($('input[name=knowledge-ksb-confirm]').is(':checked')) {
-          $('form.knowledge-ksb').attr('action','2-skills');
-     } else {
-          e.preventDefault();
-          $('.knowledge-ksb-error-panel').addClass('govuk-form-group--error');
-          $('.govuk-error-summary, .govuk-error-message').show();
-     }
-});
+// $("#knowledge-ksb").on("click", function (e) {
+//      if ($('input[name=knowledge-ksb-confirm]').is(':checked')) {
+//           $('form.knowledge-ksb').attr('action','2-skills');
+//      } else {
+//           e.preventDefault();
+//           $('.knowledge-ksb-error-panel').addClass('govuk-form-group--error');
+//           $('.govuk-error-summary, .govuk-error-message').show();
+//      }
+// });
 
-$("#skills-ksb").on("click", function (e) {
-     if ($('input[name=skills-ksb-confirm]').is(':checked')) {
-          $('form.skills-ksb').attr('action','3-behaviours');
-     } else {
-          e.preventDefault();
-          $('.skills-ksb-error-panel').addClass('govuk-form-group--error');
-          $('.govuk-error-summary, .govuk-error-message').show();
-     }
-});
+// $("#skills-ksb").on("click", function (e) {
+//      if ($('input[name=skills-ksb-confirm]').is(':checked')) {
+//           $('form.skills-ksb').attr('action','3-behaviours');
+//      } else {
+//           e.preventDefault();
+//           $('.skills-ksb-error-panel').addClass('govuk-form-group--error');
+//           $('.govuk-error-summary, .govuk-error-message').show();
+//      }
+// });
 
-$("#behaviours-ksb").on("click", function (e) {
-     if ($('input[name=behaviours-ksb-confirm]').is(':checked')) {
-          $('form.behaviours-ksb').attr('action','../landing-page/index');
-     } else {
-          e.preventDefault();
-          $('.behaviours-ksb-error-panel').addClass('govuk-form-group--error');
-          $('.govuk-error-summary, .govuk-error-message').show();
-     }
-});
+// $("#behaviours-ksb").on("click", function (e) {
+//      if ($('input[name=behaviours-ksb-confirm]').is(':checked')) {
+//           $('form.behaviours-ksb').attr('action','../landing-page/index');
+//      } else {
+//           e.preventDefault();
+//           $('.behaviours-ksb-error-panel').addClass('govuk-form-group--error');
+//           $('.govuk-error-summary, .govuk-error-message').show();
+//      }
+// });
 
 // 7
 $("#confirm-and-sign").on("click", function (e) {
