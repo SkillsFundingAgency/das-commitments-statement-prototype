@@ -1,0 +1,79 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation.html" %}
+
+<div id="service-title-section" class="landing-page">
+
+
+     <div class="govuk-width-container">
+
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+
+                    <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+                    <h1 class="govuk-heading-xl">
+                         My apprenticeship
+                    </h1>
+
+                    <p>
+                         Confirm your apprenticeship and review all apprenticeship details.
+                    </p>
+
+                    <!-- <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details> -->
+
+               </div>
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container" id="landing-page-section">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+               <!-- {% include "../includes/landing-page/tabs-landing-page.html" %} -->
+
+               <!-- ======================================= TAB CONTENT - ONE - START ======================================= -->
+               {% include "../includes/landing-page/1-cs-current.html" %}
+               <!-- ======================================= TAB CONTENT - ONE - END ======================================= -->
+
+               <!-- ======================================= TAB CONTENT - TWO - START ======================================= -->
+               {% include "../includes/landing-page/2-cs-agreement.html" %}
+               <!-- ======================================= TAB CONTENT - TWO - END ======================================= -->
+
+               <!-- ======================================= TAB CONTENT - THREE - START ======================================= -->
+               {% include "../includes/landing-page/3-cs-employers.html" %}
+               <!-- ======================================= TAB CONTENT - THREE - END ======================================= -->
+
+               <!-- ======================================= TAB CONTENT - FOUR - START ======================================= -->
+               {% include "../includes/landing-page/4-cs-previous.html" %}
+               <!-- ======================================= TAB CONTENT - FOUR - END ======================================= -->
+
+          </div>
+     </div>
+</div>
+{% endblock %}

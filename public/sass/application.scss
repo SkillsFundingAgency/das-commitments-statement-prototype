@@ -94,6 +94,11 @@ p {
                margin-top: 0;
           }
      }
+     &.landing-page {
+          .govuk-back-link {
+               margin-bottom: 0;
+          }
+     }
      .dashboard-title {
           margin-top: -0.25em;
           .govuk-heading-xl {
@@ -279,6 +284,13 @@ hr {
 table {
      tbody {
           tr {
+               &.error-corrected {
+                    background: govuk-colour("light-grey");
+                    th {
+                         border-left: 10px solid $govuk-brand-colour;
+                         padding-left: 10px;
+                    }
+               }
                td {
                     &.right-align {
                          text-align: right;

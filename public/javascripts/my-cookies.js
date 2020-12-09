@@ -2,6 +2,8 @@
 
 // 1 - Personal details - Correct
 $('.personal-confirmed').hide();
+$('.personal-details-correct').hide();
+$('.personal-details-error').show();
 
 $("#apprentice-details").on("click", function (e) {
      $.cookie("apprentice-details", true, {path:'/'});
@@ -16,6 +18,8 @@ if ($.cookie("apprentice-details") == 'true') {
      $('.personal-confirmed').show();
      $('.personal-unconfirmed').hide();
      $('.personal-confirmed-title').text('Your personal details');
+     $('.personal-details-correct').show();
+     $('.personal-details-error').hide();
 }
 
 // 1 - Personal details - Incorrect
@@ -32,6 +36,8 @@ if ($.cookie("apprentice-details-wrong") == 'true') {
      $('.personal-confirmed').hide();
      $('.personal-unconfirmed').show();
      $('.personal-confirmed-title').text('Confirm these details are correct');
+     $('.personal-details-correct').show().addClass('error-corrected');
+     $('.personal-details-error').hide();
 }
 
 // 2 - Apprenticeship details - Correct

@@ -39,6 +39,17 @@ $(document).ready(function () {
 
 })
 
+// Navigation
+if ($('#dashboard-section').length) {
+     $('.nav ul li a').removeClass('selected');
+     $('.nav ul li a.link-one').addClass('selected');
+}
+
+if ($('#landing-page-section').length) {
+     $('.nav ul li a').removeClass('selected');
+     $('.nav ul li a.link-two').addClass('selected');
+}
+
 // Tabs
 function openTab(tabNumber) {
      var i;
@@ -50,11 +61,6 @@ function openTab(tabNumber) {
 }
 
 $('#service-title-section, #action-title-section').parent().addClass('title-overide');
-
-
-if ($('#landing-page').length) {
-     $('.nav ul li a.link-one').addClass('selected');
-}
 
 
 // Confirm journey
