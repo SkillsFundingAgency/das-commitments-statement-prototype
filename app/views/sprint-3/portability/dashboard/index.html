@@ -14,30 +14,14 @@
           <div class="govuk-grid-row dashboard-title">
                <div class="govuk-grid-column-two-thirds">
                     <h1 class="govuk-heading-xl">
-                         Weclome, Joe Bloggs
+                         Welcome, Joe Bloggs
                     </h1>
-
-                    <p>
-                         Here is your apprenticeship account, below are a list of actions you can take.
-                    </p>
-
-                    <!-- <details class="govuk-details" data-module="govuk-details">
-                         <summary class="govuk-details__summary">
-                              <span class="govuk-details__summary-text">What this service can do for you</span>
-                         </summary>
-                         <div class="govuk-details__text">
-                              <p class="govuk-body">You can use your apprenticeship account to:</p>
-                              <ul class="govuk-list govuk-list--bullet">
-                                   <li>track your apprenticeship progress estimate</li>
-                                   <li>get support with your apprenticeship</li>
-                                   <li>find out how to prepare for your next milestones</li>
-                                   <li>tell us how you feel about your apprenticeship</li>
-                              </ul>
-
-                         </div>
-                    </details> -->
-
                </div>
+
+               <div class="govuk-grid-column-full">
+                    {% include "../includes/progress-tracker.html" %}
+               </div>
+
           </div>
 
      </div>
@@ -55,7 +39,7 @@
 
                     <!-- DASHBOARD - 1 - START -->
                     <li>
-                         <a href="#">
+                         <a href="./dashboard/2-my-apprenticeships">
                               <h2 class="govuk-heading-m">My apprenticeship</h2>
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                          </a>

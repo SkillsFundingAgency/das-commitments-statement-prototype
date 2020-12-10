@@ -24,6 +24,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/cookie-banner";
 @import "components/pagination";
 @import "components/back-to-top";
+@import "components/progress-tracker";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 .no-top-margin {
@@ -38,6 +39,10 @@ p {
      &.invitation-code {
           background: govuk-colour("light-grey");
           padding: 1em;
+     }
+     &.small-text {
+          font-size: 14px;
+          color: govuk-colour("green");
      }
 }
 
@@ -104,17 +109,17 @@ p {
           .govuk-heading-xl {
                margin-bottom: 0.5em;
           }
-          p {
-               margin-bottom: 0;
-          }
+          // p {
+          //      margin-bottom: 0;
+          // }
      }
      details {
           margin-bottom: 0;
           .govuk-details__text {
                padding-bottom: 0;
-               p {
-                    margin-bottom: 5px;
-               }
+               // p {
+               //      margin-bottom: 5px;
+               // }
           }
      }
 }
