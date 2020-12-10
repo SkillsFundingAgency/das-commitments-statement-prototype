@@ -1,6 +1,6 @@
 .progress-tracker {
      position: relative;
-     margin-bottom: 2em;
+     margin-bottom: 0;
      padding: 1.5em 0;
      .timeline {
           display: inline-block;
@@ -60,6 +60,66 @@
                left: 2.25em;
                width: 2px;
                height: 2.75em;
+          }
+     }
+     .numbers {
+          margin: 0 0 0 0;
+          strong {
+               position: relative;
+               color: govuk-colour("dark-grey");
+               font-weight: normal;
+               font-size: 14px;
+               margin-left: -0.25em;
+               padding-top: 15px;
+               width: 17.65%;
+               display: inline-block;
+               &:nth-of-type(2) {
+                    // left: 15.5%;
+                    span {
+                         left: 0.5em;
+                    }
+               }
+               &:nth-of-type(3) {
+                    // left: 31%;
+                    span {
+                         left: 0.5em;
+                    }
+               }
+               &:nth-of-type(4) {
+                    // left: 46.5%;
+                    span {
+                         left: 0.5em;
+                    }
+               }
+               &:nth-of-type(5) {
+                    // left: 62%;
+                    span {
+                         left: 0.5em;
+                    }
+               }
+               &:nth-of-type(6) {
+                    width: 5.5%;
+                    span {
+                         left: 0.5em;
+                    }
+               }
+               span {
+                    position: absolute;
+                    height: 15px;
+                    left: 0.25em;
+                    top: 0;
+                    width: 2px;
+                    display: inline-block;
+                    background: #cfd8e5;
+                    &:nth-of-type(2) { left: 14.5%; height: 8px; }
+                    &:nth-of-type(3) { left: 25.6%; height: 8px; }
+                    &:nth-of-type(4) { left: 36.7%; height: 8px; }
+                    &:nth-of-type(5) { left: 47.8%; height: 8px; }
+                    &:nth-of-type(6) { left: 58.9%; height: 8px; }
+                    &:nth-of-type(7) { left: 71%; height: 8px; }
+                    &:nth-of-type(8) { left: 83.1%; height: 8px; }
+                    &:nth-of-type(9) { left: 95.2%; height: 8px; }
+               }
           }
      }
 }
