@@ -34,17 +34,17 @@
           display: inline-block;
           width: 100%;
           margin: 0;
-          border-bottom: 10px solid govuk-colour("light-grey");
+          // border-bottom: 10px solid govuk-colour("light-grey");
           li {
                display: inline-block;
                float: left;
-               width: 25%;
-               margin: 0 0 -10px 0;
+               width: 22.5%;
+               margin: 0 2% -10px 0;
                button {
                     &.govuk-link {
                          background: none;
                          border: none;
-                         // border-bottom: 10px solid govuk-colour("light-grey");
+                         border-bottom: 10px solid govuk-colour("light-grey");
                          border-radius: 0;
                          width: 100%;
                          padding: 0 0.5em 1em 0.5em;

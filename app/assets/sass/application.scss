@@ -25,6 +25,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/pagination";
 @import "components/back-to-top";
 @import "components/progress-tracker";
+@import "components/module-tracker";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 .no-top-margin {
@@ -102,6 +103,19 @@ p {
      &.landing-page {
           .govuk-back-link {
                margin-bottom: 0;
+          }
+     }
+     &.dashboard-page {
+          .govuk-heading-xl {
+               position: relative;
+               .download {
+                    font-size: 16px;
+                    padding-left: 1.5em;
+                    background: url('../images/download-blue.svg') no-repeat 0% 50%;
+                    background-size: contain;
+                    float: right;
+                    margin-top: 1.5em;
+               }
           }
      }
      .dashboard-title {
