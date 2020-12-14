@@ -155,9 +155,33 @@ ul.dashboard-nav {
           }
           a {
                text-decoration: none;
+               display: inline-block;
                .govuk-heading-m {
                     color: $govuk-link-colour;
                     text-decoration: underline;
+                    display: inline-block;
+                    width: 100%;
+                    span {
+                         float: left;
+                         display: inline-block;
+                         text-decoration: underline;
+                    }
+                    .number {
+                         display: inline-block;
+                         background: $govuk-brand-colour;
+                         width: 1.5em;
+                         height: 1.5em;
+                         position: relative;
+                         top: 0.1em;
+                         text-decoration: none;
+                         font-size: 20px;
+                         margin: 0 0 0 0.5em;
+                         color: white;
+                         border-radius: 50%;
+                         display: flex;
+                         align-items: center;
+                         justify-content: center;
+                    }
                }
                p {
                     color: $govuk-secondary-text-colour;

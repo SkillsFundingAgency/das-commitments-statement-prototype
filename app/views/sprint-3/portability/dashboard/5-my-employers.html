@@ -1,0 +1,130 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation.html" %}
+
+<div id="service-title-section" class="landing-page">
+
+
+     <div class="govuk-width-container">
+
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+
+                    <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+                    <h1 class="govuk-heading-xl">
+                         My employers
+                    </h1>
+
+                    <p>
+                         Your employers attached to your apprenticeship account
+                    </p>
+
+                    <!-- <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details> -->
+
+               </div>
+               <div class="govuk-grid-column-one-third">
+                    <div class="change-employer">
+                         <a href="#" class="govuk-button">Change employer</a>
+                    </div>
+               </div>
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container" id="employers-page-section">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+               <!-- /////////////////////// EMPLOYER - TWO - START /////////////////////// -->
+               <div class="employer-wrapper employer-info-one" style="display:none;">
+                    <div class="text-wrapper">
+                         <span class="govuk-tag govuk-tag--green">current</span>
+                         <h2 class="govuk-heading-l">
+                              Hilti GB
+                              <span class="govuk-caption-m">77 Tadcaster Rd, Pickletillem, Greater London, KY16 0SG</span>
+                         </h2>
+                         <p class="govuk-body-m">
+                              <span class="icon contact"></span> Sarah Rees
+                              <span class="icon telephone"></span> 0123 556 789
+                              <span class="icon email"></span> <a href="mailto:info@hiltigb.org">info@hiltigb.org</a>
+                         </p>
+                    </div>
+                    <div class="cta-wrapper">
+                         <p class="caption-s">Start date:<br><strong>01/10/2020</strong></p>
+                    </div>
+               </div>
+               <!-- /////////////////////// EMPLOYER - TWO - END /////////////////////// -->
+
+               <!-- /////////////////////// EMPLOYER - TWO - START /////////////////////// -->
+               <div class="employer-wrapper employer-info-two">
+                    <div class="text-wrapper">
+                         <span class="govuk-tag govuk-tag--green">current</span>
+                         <h2 class="govuk-heading-l">
+                              Babcock International
+                              <span class="govuk-caption-m">Burnthouse Ln, Whickham, Newcastle upon Tyne, NE16 5AR</span>
+                         </h2>
+                         <p class="govuk-body-m">
+                              <span class="icon contact"></span> Nicola Graham
+                              <span class="icon telephone"></span> 0191 496 0026
+                              <span class="icon email"></span> <a href="mailto:info@babcockinternational.org">info@babcockinternational.org</a>
+                         </p>
+                    </div>
+                    <div class="cta-wrapper">
+                         <p class="caption-s">Start date:<br><strong>01/10/2020</strong></p>
+                         <p class="caption-s">End date:<br><strong>01/10/2020</strong></p>
+                    </div>
+               </div>
+               <!-- /////////////////////// EMPLOYER - TWO - END /////////////////////// -->
+
+               <!-- /////////////////////// EMPLOYER - THREE - START /////////////////////// -->
+               <div class="employer-wrapper employer-info-two">
+                    <div class="text-wrapper">
+                         <span class="govuk-tag govuk-tag--yellow">PREVIOUS</span>
+                         <h2 class="govuk-heading-l">
+                              Jaguar Land Rover
+                              <span class="govuk-caption-m">Hills Road, Cambridge, Cambridgeshire, CB2 2QF</span>
+                         </h2>
+                         <p class="govuk-body-m">
+                              <span class="icon contact"></span> Steve Robins
+                              <span class="icon telephone"></span> 0213 456 7890
+                              <span class="icon email"></span> <a href="mailto:info@jaguarlandrover.org">info@jaguarlandrover.org</a>
+                         </p>
+                    </div>
+                    <div class="cta-wrapper">
+                         <p class="caption-s">Start date:<br><strong>12/04/2020</strong></p>
+                         <p class="caption-s">End date:<br><strong>31/09/2020</strong></p>
+                    </div>
+               </div>
+               <!-- /////////////////////// EMPLOYER - THREE - END /////////////////////// -->
+
+               <a href="./index" class="govuk-back-link">Back to dashboard</a>
+
+          </div>
+     </div>
+</div>
+{% endblock %}

@@ -28,7 +28,7 @@
                }
           }
      }
-     .end-point, .first-review, .employer-change {
+     .end-point, .first-review, .employer-change, .new-employer-change {
           display: inline-block;
           width: auto;
           position: absolute;
@@ -62,7 +62,7 @@
                height: 2.75em;
           }
      }
-     .employer-change {
+     .employer-change, .new-employer-change {
           right: auto;
           left: 28.85%;
           font-size: 12px;
@@ -70,6 +70,7 @@
           border-left: none;
           top: -2em;
           color: white;
+          text-align: center;
           background: rgba(0,0,0,0.6);
           padding: 0.5em;
           border-radius: 5px;
@@ -99,6 +100,9 @@
                background: black;border: 3px solid white;
                box-shadow: 0px 0px 0px 5px rgba(0,0,0,0.1);
           }
+     }
+     .new-employer-change {
+          left: 57.85%;
      }
      .numbers {
           margin: 0 0 0 0;

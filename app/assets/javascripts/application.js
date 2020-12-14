@@ -50,6 +50,11 @@ if ($('#landing-page-section').length) {
      $('.nav ul li a.link-two').addClass('selected');
 }
 
+if ($('#employers-page-section').length) {
+     $('.nav ul li a').removeClass('selected');
+     $('.nav ul li a.link-five').addClass('selected');
+}
+
 // Tabs
 function openTab(tabNumber) {
      var i;

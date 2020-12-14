@@ -405,3 +405,81 @@
           font-size: 1.25rem;
      }
 }
+
+.employer-wrapper {
+     display: flex;
+     width: 100%;
+     padding: 0%;
+     box-shadow: 0px 0px 10px 0px rgba(11, 12, 12, 0.2);
+     border-radius: 8px;
+     margin: 0 0 2em 0;
+     .text-wrapper {
+          border-radius: 8px 0 0 8px;
+          width: 82%;
+          padding: 2% 2%;
+          float: left;
+          display: inline-block;
+          .govuk-body-m {
+               margin: 0;
+               font-weight: bold;
+          }
+          .govuk-tag {
+               margin-bottom: 0.5em;
+               &.new {
+                    background: govuk-colour("green");
+               }
+               &.contacted {
+                    background: govuk-colour("blue");
+               }
+               &.lapsed {
+                    background: govuk-colour("orange");
+               }
+               &.rejected {
+                    background: govuk-colour("red");
+               }
+          }
+          p {
+               span {
+                    margin-left: 1em;
+                    &:first-of-type {
+                         margin-left: 0;
+                    }
+               }
+          }
+     }
+     .cta-wrapper {
+          border-radius: 0 8px 8px 0;
+          padding: 2% 2% 2% 2%;
+          width: 10%;
+          display: inline-block;
+          float: right;
+          background: lighten(govuk-colour("light-grey"), 2.5%);
+          text-align: right;
+          a {
+               float: right;
+               clear: both;
+          }
+          a.govuk-button {
+               margin-bottom: 10px;
+               &.govuk-button--secondary {
+                    background: darken(govuk-colour("light-grey"), 7.5%);
+                    &:hover, &:active, &:focus {
+                         background: darken(govuk-colour("light-grey"), 15%);
+                    }
+               }
+          }
+          a.govuk-link {
+               margin: 0 0 5px 0;
+               &:last-of-type {
+                    margin: 0 0 15px 0;
+               }
+          }
+          p.caption-s {
+               font-size: 16px;
+               color: $govuk-secondary-text-colour;
+               float: right;
+               margin: 0 0 0.75em 0;
+               width: 100%;
+          }
+     }
+}
