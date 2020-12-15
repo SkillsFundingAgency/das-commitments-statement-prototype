@@ -23,22 +23,13 @@
                </h1>
 
                <p class="govuk-body">
-                    Your current employment ends in four weeks, it is time begin searching for a new employer.
+                    You are starting a new apprenticeship. You will need to log in to your apprenticeship account and confirm your apprenticeship by confirming and agreeing to some details.
                </p>
-
-               <br>
-
-               <p class="govuk-body">
-                    You can do this by searching on xxxx. Once you have found an employer you will need to apply.
-               </p>
-
-               <br>
-               <br>
 
                {% from "govuk/components/button/macro.njk" import govukButton %}
 
                {{ govukButton({
-                    text: "Search for a new employer",
+                    text: "Log in to your account ",
                     classes: "no-bottom-margin",
                     href: "../sign-in/index"
                }) }}
