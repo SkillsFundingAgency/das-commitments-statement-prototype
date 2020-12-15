@@ -2,33 +2,60 @@
      <div class="govuk-grid-column-full">
 
           <h2 class="govuk-heading-m">
-               Signing your employment agreement
+               Previous commitment statements
           </h2>
 
-          {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
-
-          {{ govukWarningText({
-               text: "You have 14 days to confirm your employment agreement",
-               iconFallbackText: "Warning"
-          }) }}
-
-          <!-- SECTION 1 - START -->
-          <a href="../employment-agreement/" class="section-item section-six govuk-link--no-visited-state">
-               <span class="number">1</span>
-               <div>
-                    <div class="text-wrapper">
-                         <h3 class="govuk-heading-m">Employment agreement</h3>
-                         <!-- <span class="govuk-caption-m">Lorem ipsum</span> -->
-                    </div>
-                    <strong class="govuk-tag govuk-tag--yellow">incomplete</strong>
+          <!-- /////////////////////// COMMITMENT - ONE - START /////////////////////// -->
+          <div class="commitment-statement-wrapper commitment-statement-one">
+               <div class="text-wrapper">
+                    <h2 class="govuk-heading-m">
+                         <span class="govuk-caption-m">Babcock International</span>
+                         <a href="#" class="govuk-link--no-visited-state">Military Engineering Construction Technician</a>
+                    </h2>
+                    <p class="govuk-body-m">
+                         <span class="icon date"></span> Start date: <strong>01/10/2020</strong>
+                         <span class="icon date"></span> End date: <strong>01/10/2020</strong>
+                    </p>
                </div>
-          </a>
-          <!-- SECTION 1 - END -->
+               <div class="cta-wrapper">
+                    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                    {{ govukButton({
+                         text: "View commitment",
+                         href: "#",
+                         classes: "govuk-button"
+                    }) }}
+               </div>
+          </div>
+          <!-- /////////////////////// COMMITMENT - ONE - START /////////////////////// -->
+
+          <!-- /////////////////////// COMMITMENT - TWO - START /////////////////////// -->
+          <div class="commitment-statement-wrapper commitment-statement-two">
+               <div class="text-wrapper">
+                    <h2 class="govuk-heading-m">
+                         <span class="govuk-caption-m">Jaguar Land Rover</span>
+                         <a href="#" class="govuk-link--no-visited-state">Military Engineering Construction Technician</a>
+                    </h2>
+                    <p class="govuk-body-m">
+                         <span class="icon date"></span> Start date: <strong>01/10/2020</strong>
+                         <span class="icon date"></span> End date: <strong>01/10/2020</strong>
+                    </p>
+               </div>
+               <div class="cta-wrapper">
+                    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                    {{ govukButton({
+                         text: "View commitment",
+                         href: "#",
+                         classes: "govuk-button"
+                    }) }}
+               </div>
+          </div>
+          <!-- /////////////////////// COMMITMENT - TWO - START /////////////////////// -->
 
           <hr>
 
           <p>
-               <a href="#" class="">Complaints procedure</a>
           </p>
 
      </div>

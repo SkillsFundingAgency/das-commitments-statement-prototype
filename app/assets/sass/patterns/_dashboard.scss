@@ -406,7 +406,7 @@
      }
 }
 
-.employer-wrapper {
+.employer-wrapper, .commitment-statement-wrapper {
      display: flex;
      width: 100%;
      padding: 0%;
@@ -480,6 +480,21 @@
                float: right;
                margin: 0 0 0.75em 0;
                width: 100%;
+          }
+     }
+}
+
+.commitment-statement-wrapper {
+     .text-wrapper {
+          width: 72%;
+     }
+     .cta-wrapper {
+          width: 20%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .govuk-button {
+               margin: 0;
           }
      }
 }
