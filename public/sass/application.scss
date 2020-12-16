@@ -28,6 +28,12 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/module-tracker";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+h1 {
+     span {
+          color: #1d70b8;
+     }
+}
+
 .no-top-margin {
      margin-top: 0 !important;
 }
@@ -138,6 +144,19 @@ p {
                // p {
                //      margin-bottom: 5px;
                // }
+          }
+     }
+     .change-employer {
+          display: inline-block;
+          width: auto;
+          float: right;
+          border-radius: 8px;
+          background: darken(#f0f3f7,5%);
+          padding: 1.5em;
+          margin: 5em 0 0 0;
+          text-align: center;
+          .govuk-button {
+               margin: 0;
           }
      }
 }
