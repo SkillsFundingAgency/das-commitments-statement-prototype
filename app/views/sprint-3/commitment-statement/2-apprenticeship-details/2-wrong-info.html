@@ -16,21 +16,34 @@
 
                <h1 class="govuk-heading-xl">Change incorrect details</h1>
 
+               <p>
+                    Our opening times are 8am to 8pm Monday to Friday.
+               </p>
+
+          </div>
+
+          <div class="govuk-grid-column-full">
+
                <form method="post" action="../landing-page/index" class="check-answers-page">
 
-                    {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+                    <div class="das-cards">
+                         <div class="das-card">
+                              <h3 class="govuk-heading-m">Email</h3>
+                              <p class="govuk-body">Send an email to</p>
+                              <p class="govuk-body"><a href="mailto:helpdesk@manage-apprenticeships.service.gov.uk" class="govuk-link">helpdesk@manage-apprenticeships.service.gov.uk</a>.</p>
+                              <p class="govuk-body">During our opening times, we’ll reply within 4 hours.</p>
+                         </div>
 
-                    {{ govukTextarea({
-                         name: "more-detail",
-                         id: "more-detail",
-                         label: {
-                              text: "Provide more information so we can update your details for you.",
-                              isPageHeading: false
-                         },
-                         hint: {
-                              text: "Do not include personal or financial information, like your National Insurance number or credit card details."
-                         }
-                    }) }}
+                         <div class="das-card">
+                              <h3 class="govuk-heading-m">Phone</h3>
+                              <p class="govuk-body">Call us on 08000 150 600.</p>
+                              <p class="govuk-body">Text us on <a href="sms:07588690018" class="mobile-link">07588 690018</a>.</p>
+                              <p class="govuk-body">You cannot send us photos or videos via text.</p>
+                              <p class="govuk-body">Your phone company may charge you separately, standard <abbr>SMS</abbr> rates apply.</p>
+                              <p class="govuk-body"><a href="https://www.gov.uk/call-charges" class="govuk-link" target="_blank">Find out about call charges</a>.</p>
+                         </div>
+
+                    </div>
 
                     <button class="govuk-button" data-module="govuk-button" id="apprenticeship-details-wrong">Confirm</button>
                     <a href="#" onclick="history.go(-1)" class="secondary-link">Cancel</a>
