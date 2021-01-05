@@ -171,6 +171,15 @@ p {
      }
 }
 
+.govuk-caption-m {
+     ul.govuk-list {
+          margin-top: 1em;
+          li {
+               color: $govuk-secondary-text-colour;
+          }
+     }
+}
+
 
 hr {
      margin: 2.5em 0 2em 0;
@@ -302,20 +311,25 @@ hr {
 .hide-show-password, .hide-show-confirm {
      position: absolute;
      display: inline-block;
-     width: 2.5em;
+     width: 3em;
      height: 2.5em;
-     bottom: 0em;
-     left: 21.5em;
-     background: red;
-     text-indent: -1000em;
-     background: url('../images/make-password-visible.svg') no-repeat 50% 50%;
-     background-size: 1.75em;
+     bottom: -0.5em;
+     left: 24em;
+     font-size: 0.875rem;
+     line-height: 1;
+     margin: 0;
+
+     // background: red;
+     // text-indent: -1000em;
+     // content: 'SHOW';
+     // background: url('../images/make-password-visible.svg') no-repeat 50% 50%;
+     // background-size: 1.75em;
      &:hover, &:active, &:focus {
           cursor: pointer;
      }
      &.hide {
-          background: url('../images/make-password-invisible.svg') no-repeat 50% 50%;
-          background-size: 1.75em;
+          // background: url('../images/make-password-invisible.svg') no-repeat 50% 50%;
+          // background-size: 1.75em;
      }
 }
 

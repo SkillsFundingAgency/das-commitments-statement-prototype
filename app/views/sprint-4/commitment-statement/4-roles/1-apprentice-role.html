@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <!-- ERROR MESSAGE - START -->
+               <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+                    <h2 class="govuk-error-summary__title" id="error-summary-title">There is a problem</h2>
+                    <div class="govuk-error-summary__body">
+                         <ul class="govuk-list govuk-error-summary__list">
+                              <li><a href="#apprentice-role-issued-error">Please check the box to agree to the apprentice roles and responsibilities</a></li>
+                         </ul>
+                    </div>
+               </div>
+               <!-- ERROR MESSAGE - END -->
+
+               <!-- <span class="govuk-caption-m">Step 1 of 3</span> -->
+               <h1 class="govuk-heading-xl" id="apprentice-roles-text">
+                    Apprentice - Roles and responsibilities
+               </h1>
+
+               <div class="govuk-form-group confirmed-panel apprentice-role-confirmed">
+                    <div class="govuk-warning-text">
+                         <span class="govuk-confirm__icon" aria-hidden="true"></span>
+                         <strong class="govuk-warning-text__text">
+                              <span class="govuk-warning-text__assistive">Confirmed</span> You have confirmed your apprentice roles and responsibilities
+                         </strong>
+                    </div>
+               </div>
+
+               <form method="post" action="" class="apprentice-role check-answers-page">
+
+                    <p>
+                         The roles and responsibilities set out what is expected of you.
+                    </p>
+
+                    <div class="specific-text">
+                         <p>
+                              <strong>You will:</strong>
+                         </p>
+
+                         <ul class="govuk-list govuk-list--bullet">
+                              <li>give your training provider relevant information they need to check your eligibility</li>
+                              <li>follow all the policies and procedures</li>
+                              <li>go to all your off-the-job training and workshops (you must let your training provider or employer know straight away if you cannot go)</li>
+                              <li>complete the learning activities for each module, including any self-study or research</li>
+                              <li>complete all your coursework, assignments and exams</li>
+                              <li>give your training provider all your off-the-job training evidence if they need it</li>
+                              <li>go to all your progress review meetings</li>
+                              <li>agree when you’re ready to complete your end-point assessment with your employer and training provider</li>
+                              <li>let your employer or training provider know if you have any learning support or health issues</li>
+                         </ul>
+                    </div>
+
+                    <!-- CHECK BOX - CONFIRM - START -->
+                    <div class="govuk-form-group check-to-confirm apprentice-role-error-panel apprentice-role-unconfirmed">
+                         <fieldset class="govuk-fieldset" aria-describedby="apprentice-role-hint">
+                              <span id="apprentice-role-issued-error" class="govuk-error-message">
+                                   <span class="govuk-visually-hidden">Error:</span> Please check the box to confirm the details are correct
+                              </span>
+                              <div class="govuk-checkboxes">
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="apprentice-role-confirm" name="apprentice-role-confirm" type="checkbox" value="apprentice-role-confirm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="apprentice-role-confirm">
+                                             Please check the box to agree to the <a href="#apprentice-roles-text">apprentice roles and responsibilities</a>
+                                        </label>
+                                   </div>
+                              </div>
+                         </fieldset>
+                    </div>
+                    <!-- CHECK BOX - CONFIRM - END -->
+
+                    <button class="govuk-button apprentice-role-unconfirmed" data-module="govuk-button" id="apprentice-role">Confirm</button>
+
+                    <a href="../landing-page/index" class="secondary-link apprentice-role-unconfirmed">I want to complete this later</a>
+
+                    <a href="#" onclick="history.go(-1)" class="govuk-back-link apprentice-role-confirmed">Back to landing page</a>
+
+               </form>
+
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+               <div class="sticky-side-panel govuk-inset-text">
+
+                    <p><strong>All roles and responsibilities</strong></p>
+
+                    <ul class="govuk-list">
+                         <li>
+                              <a class="govuk-link" href="2-employer-role">Employer</a>
+                         </li>
+                         <li>
+                              <a class="govuk-link" href="3-provider-role">Training provider</a>
+                         </li>
+                    </ul>
+               </div>
+          </div>
+
+     </div>
+</div>
+{% endblock %}

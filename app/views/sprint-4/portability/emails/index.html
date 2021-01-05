@@ -1,0 +1,53 @@
+
+{% extends "layout-email.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+     <div class="email-banner">
+          <img src="/public/images/ESFA-logo.jpg" alt="Education & Skills Funding Agency">
+     </div>
+{% endblock %}
+
+{% block content %}
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+               <h1 class="govuk-heading-m">
+                    Apprentice commitment service
+                    <br>
+                    <br>
+                    Hi Joe Bloggs,
+               </h1>
+
+               <p class="govuk-body">
+                    Your current employment ends in four weeks, it is time begin searching for a new employer.
+               </p>
+
+               <br>
+
+               <p class="govuk-body">
+                    You can do this by searching on xxxx. Once you have found an employer you will need to apply.
+               </p>
+
+               <br>
+               <br>
+
+               {% from "govuk/components/button/macro.njk" import govukButton %}
+
+               {{ govukButton({
+                    text: "Search for a new employer",
+                    classes: "no-bottom-margin",
+                    href: "../sign-in/index"
+               }) }}
+
+               <br>
+               <br>
+
+          </div>
+
+     </div>
+
+{% endblock %}

@@ -171,6 +171,15 @@ p {
      }
 }
 
+.govuk-caption-m {
+     background: blue;
+     ul.govuk-list {
+          margin-top: 1em;
+          li {
+
+          }
+     }
+}
 
 hr {
      margin: 2.5em 0 2em 0;
@@ -410,6 +419,22 @@ table {
           font-size: 14px;
           li {
                margin: 0 0 0.75em 0;
+          }
+     }
+}
+
+.das-cards {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     .das-card {
+          width: 42.5%;
+          margin: 0 5% 3em 0;
+          padding: 2.5%;
+          border-bottom: 10px solid $govuk-link-colour;
+          background: #f8f8f8;
+          &:nth-of-type(2) {
+               margin-right: 0;
           }
      }
 }
