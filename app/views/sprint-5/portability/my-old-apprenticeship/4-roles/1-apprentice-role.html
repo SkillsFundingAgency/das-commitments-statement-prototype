@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <h1 class="govuk-heading-xl">Your roles and responsibilities</h1>
+
+               <div class="govuk-form-group confirmed-panel">
+                    <div class="govuk-warning-text">
+                         <span class="govuk-confirm__icon" aria-hidden="true"></span>
+                         <strong class="govuk-warning-text__text">
+                              <span class="govuk-warning-text__assistive">Confirmed</span> You have confirmed your apprentice roles and responsibilities
+                         </strong>
+                    </div>
+               </div>
+
+               <p>
+                    The roles and responsibilities set out what is expected of you.
+               </p>
+
+               <div class="specific-text">
+                    <p>
+                         <strong>You will:</strong>
+                    </p>
+
+                    <ul class="govuk-list govuk-list--bullet">
+                         <li>give your training provider relevant information they need to check your eligibility</li>
+                         <li>follow all the policies and procedures</li>
+                         <li>go to all your off-the-job training and workshops (you must let your training provider or employer know straight away if you cannot go)</li>
+                         <li>complete the learning activities for each module, including any self-study or research</li>
+                         <li>complete all your coursework, assignments and exams</li>
+                         <li>give your training provider all your off-the-job training evidence if they need it</li>
+                         <li>go to all your progress review meetings</li>
+                         <li>agree when you’re ready to complete your end-point assessment with your employer and training provider</li>
+                         <li>let your employer or training provider know if you have any learning support or health issues</li>
+                    </ul>
+               </div>
+
+               <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back to commitment statement</a>
+
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+               <div class="sticky-side-panel govuk-inset-text">
+
+                    <p><strong>All roles and responsibilities</strong></p>
+
+                    <ul class="govuk-list">
+                         <li>
+                              <a class="govuk-link" href="2-employer-role">Employer</a>
+                         </li>
+                         <li>
+                              <a class="govuk-link" href="3-provider-role">Training provider</a>
+                         </li>
+                    </ul>
+               </div>
+          </div>
+
+     </div>
+</div>
+{% endblock %}

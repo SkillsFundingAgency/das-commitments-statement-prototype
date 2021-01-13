@@ -1,0 +1,157 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <!-- ERROR MESSAGE - START -->
+               <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+                    <h2 class="govuk-error-summary__title" id="error-summary-title">There is a problem</h2>
+                    <div class="govuk-error-summary__body">
+                         <ul class="govuk-list govuk-error-summary__list">
+                              <li><a href="#skills-ksb-issued-error">Please check the box to agree to the required skills</a></li>
+                         </ul>
+                    </div>
+               </div>
+               <!-- ERROR MESSAGE - END -->
+
+               <span class="govuk-caption-m">Step 2 of 3</span>
+               <h1 class="govuk-heading-xl" id="skills-ksb-text">
+                    Required skills
+               </h1>
+
+               <form method="post" action="" class="skills-ksb check-answers-page">
+
+                    <!-- <p>
+                         The skills.
+                    </p> -->
+
+                    <div class="specific-text">
+
+                         <p><strong>S1:</strong> Carry out work to military standards, as laid down by the on-site military design team. All works must be of quality, within budget
+                         <p><strong>S2:</strong> Interpret information provided in drawings, specifications, schedules, method of statements, risk assessments, Manufacturers’ information and industry regulations governing construction</p>
+                         <p><strong>S3:</strong> Calculate quantity in relation to tools, resources, time, area and wastage associated with the work being undertaken</p>
+                         <p><strong>S4:</strong> Undertake basic project management process to include the bidding for necessary resources across long logistic chains, whilst avoiding wastage and all to be completed within the required time frame</p>
+                         <p><strong>S5:</strong> Undertake site supervision to ensure completion of task in a military (often hostile) environment , maintaining health and safety and a safe working environment</p>
+                         <p><strong>S6:</strong> Move, manage and store resources in the workplace in a safe manner</p>
+                         <p><strong>S7:</strong> Liaise with fellow workers, allied forces and outside agencies to meet local import/legislative requirements required when working in a foreign country</p>
+                         <p><strong>S8:</strong> Plan the sequence of work, using appropriate resources, in accordance with organisational procedures to ensure work is completed safely and efficiently</p>
+                         <p><strong>S9:</strong> Complete relevant documentation necessary to comply with local building regulations</p>
+                         <p><strong>S10:</strong> Demonstrate complex first aid procedures likely to save life in a given situation</p>
+                         <p><strong>S11:</strong> Oversee the preparation of resources safely for transport by land, sea or air and safely unload resources with the use of signaling</p>
+                         <p><strong>S12:</strong> Undertake core military combat engineering skills including:
+                              <br>a. develop protective shelters including trench construction being aware of the relevant safety aspects of working below ground
+                              <br>b. construct bridges to cross gaps of various sizes using improvised existing materials as well as prefabricated modular bridge components
+                              <br>c. use explosives to undertake basic demolitions d. be able to construct a water supply system from a raw source (such as a river) utilising engineering skills to provide water storage and delivery</p>
+                         <p><strong>S13:</strong> Use personal protective equipment relevant to the task and the tactical situation</p>
+                         <p><strong>S14:</strong> Communicate effectively to the rest of the team and with management</p>
+                         <p><strong>S15:</strong> Be adaptable to environment being worked in</p>
+                         <p><strong>S16:</strong> Select resources necessary to undertake a task which will include materials, components and fixings, tools, equipment and accessories</p>
+                         <p><strong>S17:</strong> Protect the work and its surrounding area whilst minimising damage and maintain a clean work space</p>
+                         <p><strong>S18:</strong> Prepare timber and timber structures to be included in engineering projects. This will include the ability to measure, mark out, fit, fix, position and secure fittings</p>
+                         <p><strong>S19:</strong> Set up and use transportable cutting and shaping machines in the workplace</p>
+                         <p><strong>S20:</strong> Demonstrate compliance with given information and relevant legislation in relation to the safe use of access equipment, safe handling of materials, safe use and storage of materials, tools, equipment and ancillaries</p>
+                         <p><strong>S21:</strong> Use, maintain and store materials, hand tools, portable power tools and ancillary equipment in a safe manner</p>
+                         <p><strong>S22:</strong> Set up and use safely drills, planes, biscuit joiners and disc cutters</p>
+                         <p><strong>S23:</strong> Set up and use safely cutting tools including saws such as: circular, chop, mitre, bench, jig, reciprocating, alligator and scroll saws</p>
+                         <p><strong>S24:</strong> Set up and use wood shaping tools including a thicknesser, sander (orbital, belt, disc), router, laminate trimmer, and grinder to given working instructions</p>
+                         <p><strong>S25:</strong> Install first fixing components according to instructions in the workplace including frames (door and window), door linings, floor joist coverings, partitions (straight)</p>
+                         <p><strong>S26:</strong> Install second fixing components in the workplace including measuring, marking out, fitting, finishing, positioning, securing side hung doors, mouldings (standard architrave), ironmongery, service encasement, wall and floor units/fitments, and cladding</p>
+                         <p><strong>S27:</strong> Construct field defences (i.e. trench work and sangers) using necessary wood reinforcing to strengthen the structure in the form of frameworks and shuttering</p>
+                         <p><strong>S28:</strong> Manufacture wooden shoring in unstable buildings to render buildings safe for temporary occupation</p>
+                         <p><strong>S29:</strong> Erect masonry structures in the workplace in brick and block and/or local materials for the cavity wall structures, block work structures, solid wall structures, door and window openings and joint finishes</p>
+                         <p><strong>S30:</strong> Set out regular shaped structures to given working instructions in brick, block and local material</p>
+                         <p><strong>S31:</strong> Lay concrete to given working instructions for concrete slabs/bases/foundations (footing, oversites or paths), form slab edging and position reinforcement</p>
+                         <p><strong>S32:</strong> When placing and finishing non-specialist concrete demonstrate measuring, marking out, laying, compacting, finishing, positioning and securing</p>
+                         <p><strong>S33:</strong> Finish concrete to the given working instructions for concrete slabs/bases (footing, oversites or paths), form slab edging, position reinforcement and form surface finish (tamped, floated, brushed and trowelled</p>
+                         <p><strong>S34:</strong> When field defences are required (i.e. trench work and sangers) construct the necessary brickwork to be undertaken to strengthen the structure using brick, block, local materials or concrete</p>
+                         <p><strong>S35:</strong> Demonstrate skills when erecting, moving, positioning, dismantle and store access/working platforms in the workplace for building maintenance (carpentry), building maintenance (painting & decorating), building maintenance (tiling), building maintenance (plastering)</p>
+                         <p><strong>S36:</strong> Further skills to demonstrate: building maintenance (trowel occupations) in a safe and efficient manner using ladders/crawler boards, stepladders/platform steps, proprietary towers, trestle platforms, mobile scaffold towers, proprietary staging/podiums</p>
+                         <p><strong>S37:</strong> Demonstrate work skills when mixing, pouring, diluting, loading, laying-on, laying-off, cutting and applying paint systems by brush and/or roller</p>
+                         <p><strong>S38:</strong> Apply water-borne and/or solvent-borne coatings to internal and/or external surfaces for industrial and/or non-industrial situations, to given working instructions, for linear/trim/narrow runs and broad areas by brush and/or roller</p>
+                         <p><strong>S39:</strong> Safely store the materials, tools and equipment used when applying paint systems by brush and/or roller and when preparing background surfaces for plastering, tiling, panelling or painting/decorating and when tiling wall and floor surfaces</p>
+                         <p><strong>S40:</strong> Prepare background surfaces for plastering, tiling, panelling or painting and decorating in the workplace</p>
+                         <p><strong>S41:</strong> Demonstrate measuring, marking out, washing, stripping/scraping, abrading/keying, hacking, cutting out, removing, mixing, filling, levelling/flattening, brushing down, priming when preparing background surfaces for plastering, tiling, panelling or painting/decorating</p>
+                         <p><strong>S42:</strong> Prepare new or existing background surfaces for plastering and/or tiling and/or panelling and/or painting/decorating to given working instructions for previously plastered, tiled, panelled or painted/decorated surfaces, brick, block, concrete, render or plaster, manufactured board, wood, metal</p>
+                         <p><strong>S43:</strong> Fix tiles to vertical, horizontal and inclined surfaces to given working instructions on wall and floor surfaces, reveals, sills and soffits (door and/or windows), floor drainage and outlets, fixture of appropriate accessories</p>
+                         <p><strong>S44:</strong> Erect a waste pipe frame</p>
+                         <p><strong>S45:</strong> Install a sink, wash hand basin and bath a close coupled toilet and cold water cistern, bowl urinal and trough urinal along with a boosted shower system and shower tray then connect shower, toilet, urinal, sink/basin and bath to primary ventilated stack system</p>
+                         <p><strong>S46:</strong> Check test and commission sanitation appliances, diagnose and repair faults on sanitation appliances, gravity shower unit and pumped shower unit</p>
+                         <p><strong>S47:</strong> Maintenance of cold water components and the repair of leaks on cold water systems and test cold water pipework along with soundness testing on cold water systems and install insulation</p>
+                         <p><strong>S48:</strong> Install an electric shower, conduct electrical tasks and connecting electric shower to power supply</p>
+                         <p><strong>S49:</strong> Install hot water system to components, storage cylinder, immersion heater and connect Y-plan and S-plan heating controls also test hot water pipework systems, carry out soundness testing and restore faulty hot water systems</p>
+                         <p><strong>S50:</strong> Install copper, steel and plastic pipework and hang a radiator</p>
+                         <p><strong>S51:</strong> Test and commission, power flush and restore faulty heating system</p>
+                         <p><strong>S52:</strong> Conduct heating calculations</p>
+                         <p><strong>S53:</strong> Calculate bend allowance and produce a slow bend in plastic pipework and carry out Butt welding on Medium Density Polyethyene (MDPE) and High Density Polythyene (HDPE) pipe</p>
+                         <p><strong>S54:</strong> Use hydraulic test equipment</p>
+                         <p><strong>S55:</strong> Commission and decommission water systems</p>
+                         <p><strong>S56:</strong> Procure materials and consumables for the task and select, inspect and use hand tools/equipment and power tools safely</p>
+                         <p><strong>S57:</strong> Cut copper tube to length</p>
+                         <p><strong>S58:</strong> Bend copper tube and Low Carbon Steel pipe 90’,double/double set, crank set, half crank, two angled set and bending in two plains</p>
+                         <p><strong>S59:</strong> Lift floorboards and notch joists</p>
+                         <p><strong>S60:</strong> Join copper tubes, plastic pipes and low carbon steel pipe</p>
+                         <p><strong>S61:</strong> Combine copper, plastic and Low Carbon Steeel frame</p>
+                         <p><strong>S62:</strong> Interpret working drawings, comply with task standards advise on plant tasks, carry out all tasks using safe working practices and applicable safety equipment and carry out harbour area drills/tasks</p>
+                         <p><strong>S63:</strong> Operate the current in-use Medium Wheeled Tractor (MWT), Light Wheeled Tractor (LWT), Medium Crawler Tractor (MCT), Medium Crawler Excavator (MCE), Excavator, Towed, Ultra Light (ETUL), Engineer Construction Plant (ECP), Light Dump Truck (LDT)</p>
+                         <p><strong>S64:</strong> Carry out pre-start and post start checks, stopping and closedown procedures on all vehicles to be operated by Military Engineering Construction Technician Plant Operator Mechanic along with periodic service and lubrication of all points of the ancillaries also carry out wheel changing procedures</p>
+                         <p><strong>S65:</strong> Operate travel controls, forks and bucket smoothly and safely and carry out banksman/operator duties on all relevant vehicles to be operated by Military Engineering Construction Technician Plant Operator Mechanic</p>
+                         <p><strong>S66:</strong> Level an area, form a stockpile, construct a raised platform, load dump trucks, lift transport and lower loads, using lifting eyes using the Medium Wheeled Tractor</p>
+                         <p><strong>S67:</strong> Prepare Medium Wheeled Tractor and Light Wheeled Tractor for road travel</p>
+                         <p><strong>S68:</strong> Operate the backactor of Light Wheeled Tractor in various roles and excavate various configurations of trench and various configurations of field defences</p>
+                         <p><strong>S69:</strong> Using the Light Wheeled Tractor level an area, form a stockpile, excavate below ground level (front end) and load dump trucks</p>
+                         <p><strong>S70:</strong> Load/unload Light Wheeled Tractor, Medium Crawler Tractor, Excavator Towed Ultra Light and Medium Crawler Excavator onto current in-use trailers</p>
+                         <p><strong>S71:</strong> Excavate below ground level, level an area, form a ditch by angle dozing, form a downhill/uphill cut. form a stockpile using a Medium Crawler Tractor and carry out winching/ripper operations</p>
+                         <p><strong>S72:</strong> Form a stockpile, excavate an anti-vehicle ditch, excavate below ground level, load dump trucks and bank batter slopes using Medium Crawler Excavator and set it up for lifting duties</p>
+                         <p><strong>S73:</strong> Use Personal Protective Equipment (PPE) for a plant task</p>
+                         <p><strong>S74:</strong> Make entries in plant documentation</p>
+                         <p><strong>S75:</strong> Check tools and equipment using Complete Equipment Schedule</p>
+                         <p><strong>S76:</strong> Identify the component parts of roads and airfields along with construction pegs and boards</p>
+                         <p><strong>S77:</strong> Carry out the process for demanding, receipting and returning C class vehicles</p>
+                         <p><strong>S78:</strong> Carry out operator servicing and maintenance on Steel Wire Ropes (SWR)</p>
+                         <p><strong>S79:</strong> Clean equipment using high pressure water jets and refuel equipment from static and mobile sources</p>
+                         <p><strong>S80:</strong> Carry out compaction task using Engineer Construction Plant</p>
+                         <p><strong>S81:</strong> Manoeuvre the Light Dump Truck on a construction site</p>
+                         <p><strong>S82:</strong> Carry out basic fault identification on the engine, the electrical system, the fuel system, the cooling system and the hydraulic system</p>
+                         <p><strong>S83:</strong> Determine Health & Safety requirements for plant tools, materials and storage and use common and current in-use tools and compressed air/hydraulic tools</p>
+
+                    </div>
+
+                    <!-- CHECK BOX - CONFIRM - START -->
+                    <div class="govuk-form-group check-to-confirm skills-ksb-error-panel">
+                         <fieldset class="govuk-fieldset" aria-describedby="skills-ksb-hint">
+                              <span id="skills-ksb-issued-error" class="govuk-error-message">
+                                   <span class="govuk-visually-hidden">Error:</span> Please check the box to confirm the required skills
+                              </span>
+                              <div class="govuk-checkboxes">
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="skills-ksb-confirm" name="skills-ksb-confirm" type="checkbox" value="skills-ksb-confirm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="skills-ksb-confirm">
+                                             Please check the box to agree to the <a href="#skills-ksb-text">required skills</a>
+                                        </label>
+                                   </div>
+                              </div>
+                         </fieldset>
+                    </div>
+                    <!-- CHECK BOX - CONFIRM - END -->
+
+                    <button class="govuk-button" data-module="govuk-button" id="skills-ksb">Confirm</button>
+
+                    <a href="../landing-page/index" class="secondary-link">I want to complete this later</a>
+
+               </form>
+
+          </div>
+     </div>
+</div>
+{% endblock %}
