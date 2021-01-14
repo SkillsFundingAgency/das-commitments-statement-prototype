@@ -1,14 +1,17 @@
-{% extends "layout.html" %}
+{% extends "layout-landing.html" %}
 
 {% block pageTitle %}
      GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% include "../includes/account-page/navigation.html" %}
+<div id="service-title-section" class="account-page"></div>
 {% endblock %}
 
 {% block content %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
 <div class="govuk-width-container">
 
      <div class="govuk-grid-row">

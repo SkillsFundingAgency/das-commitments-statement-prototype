@@ -19,6 +19,8 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/tabs";
 @import "patterns/standard-details";
 @import "patterns/landing-page";
+@import "patterns/tooltip";
+@import "patterns/side-nav";
 
 // Components that aren't in Frontend
 @import "components/cookie-banner";
@@ -36,6 +38,13 @@ h1 {
 
 .no-top-margin {
      margin-top: 0 !important;
+}
+
+#main-content {
+     padding-top: 0;
+     .govuk-back-link {
+          margin-bottom: 3em;
+     }
 }
 
 .no-bottom-margin {
@@ -97,6 +106,9 @@ p {
 #service-title-section, #action-title-section {
      background: #f0f3f7;
      padding: 0 0 3em 0;
+     &.account-page {
+          padding: 0;
+     }
      &.standard-details-page {
           // margin-bottom: 2em;
           .govuk-back-link {
@@ -131,7 +143,7 @@ p {
      .dashboard-title {
           margin-top: -0.25em;
           .govuk-heading-xl {
-               margin-bottom: 0.5em;
+               // margin-bottom: 0.5em;
           }
           // p {
           //      margin-bottom: 0;
@@ -414,17 +426,6 @@ table {
                padding-top: 0;
           }
           border-bottom: 1px solid $govuk-border-colour;
-     }
-}
-
-.sticky-side-panel {
-     padding-top: 0;
-     padding-bottom: 0;
-     ul.govuk-list {
-          font-size: 14px;
-          li {
-               margin: 0 0 0.75em 0;
-          }
      }
 }
 

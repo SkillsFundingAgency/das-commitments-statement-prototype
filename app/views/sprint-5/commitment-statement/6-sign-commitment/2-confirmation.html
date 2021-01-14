@@ -1,40 +1,45 @@
-{% extends "layout.html" %}
+{% extends "layout-landing.html" %}
 
 {% block pageTitle %}
      GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
+{% include "../includes/account-page/navigation.html" %}
+<div id="service-title-section" class="account-page"></div>
 {% endblock %}
-
 
 {% set mainClasses = "govuk-main-wrapper--l" %}
 
 {% block content %}
-<div class="govuk-grid-row">
-     <div class="govuk-grid-column-two-thirds">
+<div class="govuk-width-container">
 
-          <div class="govuk-panel govuk-panel--confirmation">
-               <h1 class="govuk-panel__title">You have confirmed your <strong>apprenticeship</strong></h1>
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
 
-               <div class="govuk-panel__body">
-                    The reference number is <strong>00021568</strong>
+               <div class="govuk-panel govuk-panel--confirmation">
+                    <h1 class="govuk-panel__title">You have confirmed your <strong>apprenticeship</strong></h1>
+
+                    <div class="govuk-panel__body">
+                         Military Engineering Construction Technician
+                         <!-- Your ULN is <strong>00021568</strong> -->
+                    </div>
                </div>
+
+
+               <h2 class="govuk-heading-m">What happens next?</h2>
+
+               <p class="govuk-body">
+                    We will send the confirmation of your apprenticeship to your employer and training provider and they will be in touch to start your apprenticeship.
+               </p>
+
+               <h2 class="govuk-heading-m">What do you want to do next?</h2>
+
+               <p class="govuk-body">
+                    <a href="../landing-page/index">Back to my apprenticeship account</a>
+               </p>
+
           </div>
-
-
-          <h2 class="govuk-heading-m">What happens next?</h2>
-
-          <p class="govuk-body">
-               We will send the confirmation of your apprenticeship to your employer and training provider and they will be in touch to start your apprenticeship.
-          </p>
-
-          <h2 class="govuk-heading-m">What do you want to do next?</h2>
-
-          <p class="govuk-body">
-               <a href="../landing-page/index">Back to my apprenticeship account</a>
-          </p>
-
      </div>
 </div>
 {% endblock %}

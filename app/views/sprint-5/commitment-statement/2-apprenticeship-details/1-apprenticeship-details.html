@@ -1,14 +1,17 @@
-{% extends "layout.html" %}
+{% extends "layout-landing.html" %}
 
 {% block pageTitle %}
      GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% include "../includes/account-page/navigation.html" %}
+<div id="service-title-section" class="account-page"></div>
 {% endblock %}
 
 {% block content %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
 <div class="govuk-width-container">
 
      <div class="govuk-grid-row">
@@ -40,7 +43,7 @@
 
                     <h2 class="govuk-heading-m" id="apprenticeship-details-text">
                          Apprenticeship details
-                         <a href="2-wrong-info" class="main-change-link">Change</a>
+                         <a href="2-wrong-info" class="main-change-link">These details aren't correct</a>
                     </h2>
 
                     <table class="govuk-table data-table">
@@ -66,7 +69,11 @@
                                    <td class="govuk-table__cell">3</td>
                               </tr>
                               <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">Version</th>
+                                   <th scope="row" class="govuk-table__header">
+                                        <div class="tooltip">Version
+                                             <span class="tooltiptext tooltip-right">Tooltip text</span>
+                                        </div>
+                                   </th>
                                    <td class="govuk-table__cell">1.2</td>
                               </tr>
                               <tr class="govuk-table__row">
@@ -74,19 +81,35 @@
                                    <td class="govuk-table__cell">1 year</td>
                               </tr>
                               <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">Planned start date</th>
+                                   <th scope="row" class="govuk-table__header">
+                                        <div class="tooltip">Planned start date
+                                             <span class="tooltiptext tooltip-right">Tooltip text</span>
+                                        </div>
+                                   </th>
                                    <td class="govuk-table__cell">2 March 2021</td>
                               </tr>
                               <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">Planned end date</th>
+                                   <th scope="row" class="govuk-table__header">
+                                        <div class="tooltip">Planned end date
+                                             <span class="tooltiptext tooltip-right">Tooltip text</span>
+                                        </div>
+                                   </th>
                                    <td class="govuk-table__cell">3 March 2022</td>
                               </tr>
                               <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">Practical start date</th>
+                                   <th scope="row" class="govuk-table__header">
+                                        <div class="tooltip">Practical start date
+                                             <span class="tooltiptext tooltip-right">Tooltip text</span>
+                                        </div>
+                                   </th>
                                    <td class="govuk-table__cell">20 March 2021</td>
                               </tr>
                               <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">Practical end date</th>
+                                   <th scope="row" class="govuk-table__header">
+                                        <div class="tooltip">Practical end date
+                                             <span class="tooltiptext tooltip-right">Tooltip text</span>
+                                        </div>
+                                   </th>
                                    <td class="govuk-table__cell">1 January 2022</td>
                               </tr>
                          </tbody>
@@ -96,7 +119,7 @@
 
                     <h2 class="govuk-heading-m" id="hours-details-text">
                          Estimated weekly hours
-                         <a href="2-wrong-info" class="main-change-link">Change</a>
+                         <a href="2-wrong-info" class="main-change-link">These details aren't correct</a>
                     </h2>
 
                     <p>
@@ -125,7 +148,11 @@
                     <p>&nbsp;</p>
 
                     <!-- //////////////////////////////// KSB's - START //////////////////////////////// -->
-                    <h2 class="govuk-heading-m" id="four-roles">Your knowledge, skills and behaviour</h2>
+                    <h2 class="govuk-heading-m" id="four-roles">Knowledge, skills and behaviours</h2>
+
+                    <p>
+                         These are the knowledge, skills and behaviours you will learn on your apprenticeship.
+                    </p>
 
                     <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-skills">
                          <div class="govuk-accordion__section">

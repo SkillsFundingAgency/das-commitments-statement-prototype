@@ -1,14 +1,17 @@
-{% extends "layout.html" %}
+{% extends "layout-landing.html" %}
 
 {% block pageTitle %}
      GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% include "../includes/account-page/navigation.html" %}
+<div id="service-title-section" class="account-page"></div>
 {% endblock %}
 
 {% block content %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
 <div class="govuk-width-container">
 
      <div class="govuk-grid-row">
@@ -40,7 +43,7 @@
 
                     <h2 class="govuk-heading-m" id="personal-details-text">
                          Personal details
-                         <a href="2-wrong-info" class="main-change-link">Change</a>
+                         <a href="2-wrong-info" class="main-change-link">These details aren't correct</a>
                     </h2>
 
                     <table class="govuk-table data-table">
@@ -82,7 +85,7 @@
                                    <div class="govuk-checkboxes__item">
                                         <input class="govuk-checkboxes__input" id="apprentice-confirm" name="apprentice-confirm" type="checkbox" value="apprentice-confirm">
                                         <label class="govuk-label govuk-checkboxes__label" for="apprentice-confirm">
-                                             Please check the box to agree that your <a href="#personal-details-text">personal details</a> are correct
+                                             Please check the box to agree that your personal details are correct
                                         </label>
                                    </div>
                               </div>

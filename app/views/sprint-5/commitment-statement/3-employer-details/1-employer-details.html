@@ -1,14 +1,17 @@
-{% extends "layout.html" %}
+{% extends "layout-landing.html" %}
 
 {% block pageTitle %}
      GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% include "../includes/account-page/navigation.html" %}
+<div id="service-title-section" class="account-page"></div>
 {% endblock %}
 
 {% block content %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
 <div class="govuk-width-container">
 
      <div class="govuk-grid-row">
@@ -43,7 +46,7 @@
 
                     <h2 class="govuk-heading-m" id="employer-details-text">
                          Employer details
-                         <a href="2-wrong-info" class="main-change-link">Change</a>
+                         <!-- <a href="2-wrong-info" class="main-change-link">Change</a> -->
                     </h2>
 
                     <table class="govuk-table data-table">
@@ -103,7 +106,7 @@
 
                     <h2 class="govuk-heading-m" id="provider-details-text">
                          Training provider details
-                         <a href="2-wrong-info" class="main-change-link">Change</a>
+                         <!-- <a href="2-wrong-info" class="main-change-link">Change</a> -->
                     </h2>
 
                     <table class="govuk-table data-table">
@@ -168,8 +171,8 @@
                                    <div class="govuk-checkboxes__item">
                                         <input class="govuk-checkboxes__input" id="employer-confirm" name="employer-confirm" type="checkbox" value="employer-confirm">
                                         <label class="govuk-label govuk-checkboxes__label" for="employer-confirm">
-                                             Please check the box to agree that the <a href="#employer-details-text">employer</a> and
-                                             <a href="#provider-details-text">training provider</a> details are correct
+                                             Please check the box to agree that the employer and
+                                             training provider names are correct
                                         </label>
                                    </div>
                               </div>
