@@ -119,6 +119,10 @@ p {
           }
      }
      &.landing-page {
+          padding: 0;
+          .govuk-heading-xl {
+               margin: 0;
+          }
           .govuk-back-link {
                margin-bottom: 0;
           }
@@ -142,8 +146,38 @@ p {
      }
      .dashboard-title {
           margin-top: -0.25em;
+          display: flex;
+          align-items: center;
           .govuk-heading-xl {
                // margin-bottom: 0.5em;
+          }
+          .confirmation {
+
+               margin: 1.5em 0;
+               background: darken(#f0f3f7,5%);
+               padding: 1em;
+               border-radius: 8px;
+               .govuk-heading-s {
+                    margin-bottom: 10px;
+               }
+               p {
+                    margin: 0 0 0.75em 0;
+                    font-size: 14px;
+                    .icon {
+                         margin-left: 0;
+                         margin-right: 0.5em;
+                         border-radius: 50px;
+                         &.tick {
+                              background-size: 0.85em;
+                         }
+                         &.cross {
+                              background-size: 0.65em;
+                         }
+                    }
+                    a {
+                         float: right;
+                    }
+               }
           }
           // p {
           //      margin-bottom: 0;
@@ -293,6 +327,16 @@ hr {
           height: 1.5em;
           margin: 0 0.25em -0.35em 1em;
           background: url('../images/tick-white.svg') no-repeat 50% 50%;
+          background-size: contain;
+          &.green {
+               background-color: govuk-colour("green");
+          }
+     }
+     &.cross {
+          width: 1.5em;
+          height: 1.5em;
+          margin: 0 0.25em -0.35em 1em;
+          background: url('../images/cross.svg') no-repeat 50% 50% govuk-colour("red");
           background-size: contain;
      }
      &.excel {
@@ -447,4 +491,9 @@ table {
 
 .govuk-panel--confirmation {
      margin-top: 3em;
+}
+
+.employer-landing-page {
+     margin-top: 3em;
+     margin-bottom: 3em;
 }
