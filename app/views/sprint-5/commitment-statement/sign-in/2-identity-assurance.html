@@ -20,7 +20,7 @@
                     Please confirm <strong>joe.bloggs@hotmail.com</strong> that this is you and enter your National Insurance number below.
                </p> -->
 
-               <form method="post" action="../landing-page/index" class="check-answers-page">
+               <form method="post" action="" class="check-answers-page" id="identity-assurance">
 
                     <!-- <div class="govuk-form-group">
                          <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -47,15 +47,15 @@
                                         <label class="govuk-label govuk-radios__label" for="email-correct-yes">Yes</label>
                                    </div>
                                    <div class="govuk-radios__item">
-                                        <input class="govuk-radios__input" id="email-correct-no" name="email-correct" type="radio" value="No" data-aria-controls="email-correct-no-answer">
+                                        <input class="govuk-radios__input" id="email-correct-no" name="email-correct" type="radio" value="No">
                                         <label class="govuk-label govuk-radios__label" for="email-correct-no">No</label>
                                    </div>
-                                   <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="email-correct-no-answer">
+                                   <!-- <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="email-correct-no-answer">
                                         <div class="govuk-form-group">
                                              <label class="govuk-label" for="email-correct-no">Please provid an alternative email address</label>
                                              <input class="govuk-input govuk-!-width-two-thirds" id="email-correct-no" name="email-correct-no" type="email">
                                         </div>
-                                   </div>
+                                   </div> -->
                               </div>
                          </fieldset>
                     </div>
@@ -70,12 +70,7 @@
 
                     <br>
 
-                    {% from "govuk/components/button/macro.njk" import govukButton %}
-
-                    {{ govukButton({
-                         text: "Continue",
-                         href: ""
-                    }) }}
+                    <button class="govuk-button" data-module="govuk-button" id="identity-assurance-btn">Continue</button>
 
                </form>
 

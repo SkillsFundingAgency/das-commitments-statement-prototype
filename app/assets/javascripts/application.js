@@ -39,6 +39,15 @@ $(document).ready(function () {
 
 })
 
+// Identity Assurance
+$("#identity-assurance-btn").on("click", function (e) {
+     if ($('input[id=email-correct-yes]').is(':checked')) {
+          $('form#identity-assurance').attr('action','../landing-page/index');
+     } else {
+          $('form#identity-assurance').attr('action','5-wrong-info');
+     }
+});
+
 // Navigation
 if ($('#dashboard-section').length) {
      $('.nav ul li a').removeClass('selected');
