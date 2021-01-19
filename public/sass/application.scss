@@ -167,8 +167,11 @@ p {
                          margin-left: 0;
                          margin-right: 0.5em;
                          border-radius: 50px;
-                         &.cross, &.tick {
+                         &.tick {
                               background-size: 0.85em;
+                         }
+                         &.cross {
+                              background-size: 0.65em;
                          }
                     }
                     a {
@@ -333,7 +336,7 @@ hr {
           width: 1.5em;
           height: 1.5em;
           margin: 0 0.25em -0.35em 1em;
-          background: url('../images/tick-white.svg') no-repeat 50% 50% govuk-colour("red");
+          background: url('../images/cross.svg') no-repeat 50% 50% govuk-colour("red");
           background-size: contain;
      }
      &.excel {

@@ -41,8 +41,8 @@ $(document).ready(function () {
 
 // Identity Assurance
 $("#identity-assurance-btn").on("click", function (e) {
-     if ($('input[id=email-correct-yes]').is(':checked')) {
-          $('form#identity-assurance').attr('action','../landing-page/index');
+     if ($('input[id=apprentice-email-correct-yes]').is(':checked')) {
+          $('form#identity-assurance').attr('action','../dashboard/index');
      } else {
           $('form#identity-assurance').attr('action','5-wrong-info');
      }
@@ -83,7 +83,7 @@ $('.govuk-error-summary, .govuk-error-message').hide();
 // 1
 $("#apprentice-details").on("click", function (e) {
      if ($('input[name=apprentice-confirm]').is(':checked')) {
-          $('form.apprentice-details').attr('action','../landing-page/index');
+          $('form.apprentice-details').attr('action','../dashboard/2-my-apprenticeships');
      } else {
           e.preventDefault();
           $('.apprentice-error-panel').addClass('govuk-form-group--error');
@@ -94,7 +94,7 @@ $("#apprentice-details").on("click", function (e) {
 // 2
 $("#apprenticeship-details").on("click", function (e) {
      if ($('input[name=apprenticeship-confirm]').is(':checked')) {
-          $('form.apprenticeship-details').attr('action','../landing-page/index');
+          $('form.apprenticeship-details').attr('action','../dashboard/2-my-apprenticeships');
      } else {
           e.preventDefault();
           $('.employer-error-panel').addClass('govuk-form-group--error');
@@ -105,7 +105,7 @@ $("#apprenticeship-details").on("click", function (e) {
 // 3
 $("#employer-details").on("click", function (e) {
      if ($('input[name=employer-confirm]').is(':checked')) {
-          $('form.employer-details').attr('action','../landing-page/index');
+          $('form.employer-details').attr('action','../dashboard/2-my-apprenticeships');
      } else {
           e.preventDefault();
           $('.employer-error-panel').addClass('govuk-form-group--error');
@@ -116,7 +116,7 @@ $("#employer-details").on("click", function (e) {
 // 4
 $("#apprentice-role").on("click", function (e) {
      if ($('input[name=apprentice-role-confirm]').is(':checked')) {
-          $('form.apprentice-role').attr('action','../landing-page/index');
+          $('form.apprentice-role').attr('action','../dashboard/2-my-apprenticeships');
      } else {
           e.preventDefault();
           $('.apprentice-role-error-panel').addClass('govuk-form-group--error');
@@ -147,7 +147,7 @@ $("#apprentice-role").on("click", function (e) {
 
 // $("#behaviours-ksb").on("click", function (e) {
 //      if ($('input[name=behaviours-ksb-confirm]').is(':checked')) {
-//           $('form.behaviours-ksb').attr('action','../landing-page/index');
+//           $('form.behaviours-ksb').attr('action','../dashboard/2-my-apprenticeships');
 //      } else {
 //           e.preventDefault();
 //           $('.behaviours-ksb-error-panel').addClass('govuk-form-group--error');
@@ -178,7 +178,7 @@ $("#confirm-and-sign").on("click", function (e) {
 
 // $("#provider-role").on("click", function (e) {
 //      if ($('input[name=provider-role-confirm]').is(':checked')) {
-//           $('form.provider-role').attr('action','../landing-page/index');
+//           $('form.provider-role').attr('action','../dashboard/2-my-apprenticeships');
 //      } else {
 //           e.preventDefault();
 //           $('.provider-role-error-panel').addClass('govuk-form-group--error');

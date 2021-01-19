@@ -292,4 +292,6 @@ if ($.cookie("apprentice-sign-confirm") == 'true') {
      $('#cs-agreed').hide();
      $('#cs-signed').show();
      $('.tabs ul.govuk-list li .tab-landing-1 .number').addClass('signed').text('');
+     $('#apprentice-committed').removeClass('cross').addClass('tick green');
+     $('ul.dashboard-nav li .dashboard-one strong').hide();
 }

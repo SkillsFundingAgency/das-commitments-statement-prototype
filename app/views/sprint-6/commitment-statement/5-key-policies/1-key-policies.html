@@ -1,0 +1,72 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/account-page/navigation.html" %}
+<div id="service-title-section" class="account-page"></div>
+{% endblock %}
+
+{% block content %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <h1 class="govuk-heading-xl">
+                    Key policies
+               </h1>
+
+               <form method="post" action="../dashboard/2-my-apprenticeships" class="check-answers-page">
+
+                    <div class="govuk-form-group">
+                         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                              <div id="waste-hint" class="govuk-hint">
+                                   Tick the boxes once you have discussed these with your training provider.
+                              </div>
+                              <div class="govuk-checkboxes key-policies">
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="code-of-conduct" name="key-policies" type="checkbox" value="Code of conduct">
+                                        <label class="govuk-label govuk-checkboxes__label" for="code-of-conduct">Code of conduct</label>
+                                   </div>
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="health-and-safety" name="key-policies" type="checkbox" value="Health and safety policy">
+                                        <label class="govuk-label govuk-checkboxes__label" for="health-and-safety">Health and safety policy</label>
+                                   </div>
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="equality-and-diversity" name="key-policies" type="checkbox" value="Equality and diversity policy">
+                                        <label class="govuk-label govuk-checkboxes__label" for="equality-and-diversity">Equality and diversity policy</label>
+                                   </div>
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="harassment-and-bullying" name="key-policies" type="checkbox" value="Harassment and bullying policy">
+                                        <label class="govuk-label govuk-checkboxes__label" for="harassment-and-bullying">Harassment and bullying policy</label>
+                                   </div>
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="safeguarding-and-prevent" name="key-policies" type="checkbox" value="Safeguarding and prevent information">
+                                        <label class="govuk-label govuk-checkboxes__label" for="safeguarding-and-prevent">Safeguarding and prevent information</label>
+                                   </div>
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="complaints-procedure" name="key-policies" type="checkbox" value="Complaints procedure">
+                                        <label class="govuk-label govuk-checkboxes__label" for="complaints-procedure">Complaints procedure</label>
+                                   </div>
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="business-continuity" name="key-policies" type="checkbox" value="Business continuity">
+                                        <label class="govuk-label govuk-checkboxes__label" for="business-continuity">Business continuity</label>
+                                   </div>
+                              </div>
+
+                         </fieldset>
+                    </div>
+
+                    <button class="govuk-button" data-module="govuk-button" id="key-policies">Save and continue</button>
+
+               </form>
+
+          </div>
+     </div>
+</div>
+{% endblock %}

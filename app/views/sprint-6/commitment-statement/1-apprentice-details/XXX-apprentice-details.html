@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <h1 class="govuk-heading-xl">Personal and apprenticeship details</h1>
+
+               <form method="post" action="../landing-page/index" class="check-answers-page">
+
+                    <h2 class="govuk-heading-m" id="personal-details-text">
+                         Personal details
+                         <a href="2-wrong-info" class="main-change-link">Change</a>
+                    </h2>
+
+                    <table class="govuk-table data-table">
+                         <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Name</th>
+                                   <td class="govuk-table__cell">Joe Bloggs</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Date of birth</th>
+                                   <td class="govuk-table__cell">24/08/1998</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Email</th>
+                                   <td class="govuk-table__cell">{{ data['apprentice-email'] }}</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Mobile</th>
+                                   <td class="govuk-table__cell">+44 7974 123 456</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Postcode</th>
+                                   <td class="govuk-table__cell">OX12 9FB</td>
+                              </tr>
+                         </tbody>
+                    </table>
+
+                    <p>&nbsp;</p>
+
+                    <h2 class="govuk-heading-m" id="apprenticeship-details-text">
+                         Apprenticeship details
+                         <a href="2-wrong-info" class="main-change-link">Change</a>
+                    </h2>
+
+                    <table class="govuk-table data-table">
+                         <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Apprenticeship</th>
+                                   <td class="govuk-table__cell">Military Engineering Construction Technician</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Option</th>
+                                   <td class="govuk-table__cell">
+                                        <ul class="govuk-list govuk-list--bullet">
+                                             <li>Carpenter & Joiner</li>
+                                             <li>Bricklayer & Concreter</li>
+                                             <li>Building & Structural Finisher</li>
+                                             <li>Plumbing & Heating Engineer</li>
+                                             <li>Plant Operator & Mechanic</li>
+                                        </ul>
+                                   </td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Level</th>
+                                   <td class="govuk-table__cell">3</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Version</th>
+                                   <td class="govuk-table__cell">1.2</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Duration</th>
+                                   <td class="govuk-table__cell">1 year</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Planned start date</th>
+                                   <td class="govuk-table__cell">2 March 2021</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Planned end date</th>
+                                   <td class="govuk-table__cell">3 March 2022</td>
+                              </tr>
+                         </tbody>
+                    </table>
+
+                    <p>&nbsp;</p>
+
+                    <h2 class="govuk-heading-m" id="hours-details-text">
+                         Estimated weekly hours
+                         <a href="2-wrong-info" class="main-change-link">Change</a>
+                    </h2>
+
+                    <p>
+                         At least 20% of your time will be on ‘off-the-job’ apprenticeship training. You may agree with your
+                         employer to train one day a week, one week out of the month, or to spread the equivalent hours across
+                         the week.
+                    </p>
+
+                    <table class="govuk-table data-table">
+                         <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">On the job</th>
+                                   <td class="govuk-table__cell">32</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Apprenticeship training</th>
+                                   <td class="govuk-table__cell">8</td>
+                              </tr>
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Total</th>
+                                   <td class="govuk-table__cell">40</td>
+                              </tr>
+                         </tbody>
+                    </table>
+
+                    <p>
+                         <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back to landing page</a>
+                    </p>
+
+               </form>
+
+          </div>
+     </div>
+
+
+</div>
+{% endblock %}

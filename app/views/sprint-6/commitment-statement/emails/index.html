@@ -1,0 +1,94 @@
+
+{% extends "layout-email.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+     <div class="email-banner">
+          <img src="/public/images/ESFA-logo.jpg" alt="Education & Skills Funding Agency">
+     </div>
+{% endblock %}
+
+{% block content %}
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+               <h1 class="govuk-heading-m">
+                    Apprentice commitment service
+                    <br>
+                    <br>
+                    Hi Joe Bloggs,
+                    <span class="govuk-caption-m">joe.bloggs@hotmail.com</span>
+               </h1>
+
+               <p class="govuk-body">
+                    <span class="govuk-caption-m">Organisation name:</span>
+                    <strong>Contract Flooring Association</strong>
+               </p>
+
+               <p class="govuk-body">
+                    <span class="govuk-caption-m">Apprenticeship:</span>
+                    <strong>Military Engineering Construction Technician</strong>
+               </p>
+
+               <p class="govuk-body">
+                    You are starting a new apprenticeship. You will need to create an apprenticeship account and confirm your apprenticeship by confirming and agreeing to some details.
+               </p>
+
+               <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text"><span class="govuk-warning-text__assistive">Warning</span>Before you start you will need your <strong>National Insurance Number</strong></strong>
+               </div>
+
+               <!-- <h2 class="govuk-heading-m">
+                    Before you start
+               </h2>
+
+               <p class="govuk-body">
+                    You will need your <strong>National Insurance Number</strong>
+               </p> -->
+
+               <!-- <p class="invitation-code">
+                    Type in this invitation code <strong>197830</strong> when asked.
+               </p>
+
+               <br> -->
+
+               {% from "govuk/components/button/macro.njk" import govukButton %}
+
+               {{ govukButton({
+                    text: "Create an account",
+                    classes: "no-bottom-margin",
+                    href: "../sign-in/index"
+               }) }}
+
+               <p></p>
+
+
+               <hr>
+
+               <!-- <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                         <span class="govuk-warning-text__assistive">Warning</span>
+                         Your invitation code will expire in 4 days
+                    </strong>
+               </div>
+
+               <br>
+               <br> -->
+
+               <h2 class="govuk-heading-m">
+                    Already have an account?
+               </h2>
+
+               <p><a href="../sign-in/4-sign-in">Sign in</a></p>
+
+          </div>
+
+     </div>
+
+{% endblock %}

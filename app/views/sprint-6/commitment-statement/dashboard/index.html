@@ -1,0 +1,102 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation.html" %}
+
+<div id="service-title-section" class="dashboard-page">
+
+     <div class="govuk-width-container">
+
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-full">
+                    <h1 class="govuk-heading-xl">
+                         Welcome, Joe Bloggs
+                         <!-- <a href="#" class="share">Share my progress</a> -->
+                         <span class="govuk-caption-m">Military Engineering Construction Technician apprenticeship</span>
+                    </h1>
+               </div>
+
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container" id="dashboard-section">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <ul class="dashboard-nav">
+
+                    <!-- DASHBOARD - 1 - START -->
+                    <li>
+                         <a href="./2-my-apprenticeships" class="dashboard-one">
+                              <strong class="govuk-tag govuk-tag--yellow">incomplete</strong>
+                              <h2 class="govuk-heading-m">My apprenticeship(s)</h2>
+                              <p>View your current commitment statement and the commitments of your employer and training provider.</p>
+                         </a>
+                    </li>
+                    <!-- DASHBOARD - 1 - END -->
+
+                    <!-- DASHBOARD - 2 - START -->
+                    <!-- <li>
+                         <a href="#" class="dashboard-two">
+                              <h2 class="govuk-heading-m">My progress</h2>
+                              <p>View the current progress of your apprenticeship, you can also send this to update people of your progress.</p>
+                         </a>
+                    </li> -->
+                    <!-- DASHBOARD - 2 - END -->
+
+                    <!-- DASHBOARD - 3 - START -->
+                    <!-- <li>
+                         <a href="#" class="dashboard-three">
+                              <h2 class="govuk-heading-m">My training provider</h2>
+                              <p>View the details of your training provider.</p>
+                         </a>
+                    </li> -->
+                    <!-- DASHBOARD - 3 - END -->
+
+                    <!-- DASHBOARD - 4 - START -->
+                    <!-- <li>
+                         <a href="./5-my-employers" class="dashboard-four">
+                              <h2 class="govuk-heading-m"><span>My employers</span> <span class="number">2</span></h2>
+                              <p>View the details of your employer.</p>
+                         </a>
+                    </li> -->
+                    <!-- DASHBOARD - 4 - END -->
+
+                    <!-- DASHBOARD - 5 - START -->
+                    <li>
+                         <a href="#" class="dashboard-five">
+                              <h2 class="govuk-heading-m">Help and support</h2>
+                              <p>As an apprentice you are not alone, we're here to help you.</p>
+                         </a>
+                    </li>
+                    <!-- DASHBOARD - 5 - END -->
+
+                    <!-- DASHBOARD - 6 - START -->
+                    <li>
+                         <a href="#" class="dashboard-six">
+                              <h2 class="govuk-heading-m">My account</h2>
+                              <p>View and edit your apprenticeship account details.</p>
+                         </a>
+                    </li>
+                    <!-- DASHBOARD - 6 - END -->
+
+               </ul>
+
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+          </div>
+
+     </div>
+</div>
+{% endblock %}

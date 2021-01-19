@@ -1,0 +1,53 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/landing-page/navigation.html" %}
+
+<div id="service-title-section" class="landing-page">
+
+     <div class="govuk-width-container">
+
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">
+                         <span class="govuk-caption-m">Military Engineering Construction Technician</span>
+                         Your commitment
+                    </h1>
+
+               </div>
+
+               <div class="govuk-grid-column-one-third">
+
+                    <div class="confirmation">
+                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                         <p><span class="icon cross"></span>You, the employer </p>
+                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                         <p><span class="icon cross"></span>The apprentice<a href="#">View commitment</a></p>
+                    </div>
+
+               </div>
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container" id="dashboard-section">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+               <!-- ======================================= TAB CONTENT - ONE - START ======================================= -->
+               {% include "../includes/landing-page/1-cs-current.html" %}
+               <!-- ======================================= TAB CONTENT - ONE - END ======================================= -->
+
+          </div>
+     </div>
+</div>
+{% endblock %}
