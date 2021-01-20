@@ -425,7 +425,7 @@ table {
      border-left: 10px solid $govuk-link-colour;
      background: govuk-colour("light-grey");
      padding: 1em 3.5%;
-     margin: 1em 0 2.5em 0;
+     margin: 1em 0 1.5em 0;
      display: inline-block;
      width: 92%;
      &.govuk-form-group--error {
@@ -462,7 +462,7 @@ table {
      margin-top: 0;
 }
 
-.key-policies {
+.key-policies, .agreements {
      .govuk-checkboxes__item {
           margin-top: 1em;
           padding-bottom: 1em;

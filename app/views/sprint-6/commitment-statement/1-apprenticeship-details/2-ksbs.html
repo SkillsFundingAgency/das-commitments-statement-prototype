@@ -22,104 +22,28 @@
                     <h2 class="govuk-error-summary__title" id="error-summary-title">There is a problem</h2>
                     <div class="govuk-error-summary__body">
                          <ul class="govuk-list govuk-error-summary__list">
-                              <li><a href="#apprenticeship-issued-error">Please check the box to agree that the apprenticeship details and the estimated weekly hours are correct</a></li>
+                              <li><a href="#training-issued-error">Please check the box to agree that the apprenticeship training details and the estimated weekly hours are correct</a></li>
                          </ul>
                     </div>
                </div>
                <!-- ERROR MESSAGE - END -->
 
-               <h1 class="govuk-heading-xl apprenticeship-confirmed-title">Confirm these details are correct</h1>
+               <h1 class="govuk-heading-xl">Your apprenticeship training details</h1>
 
-               <div class="govuk-form-group confirmed-panel apprenticeship-confirmed">
+               <div class="govuk-form-group confirmed-panel training-details-confirmed">
                     <div class="govuk-warning-text">
                          <span class="govuk-confirm__icon" aria-hidden="true"></span>
                          <strong class="govuk-warning-text__text">
-                              <span class="govuk-warning-text__assistive">Confirmed</span> You have confirmed that your apprenticeship details are correct
+                              <span class="govuk-warning-text__assistive">Confirmed</span> You have agreed to your apprenticeship training details and weekly hours
                          </strong>
                     </div>
                </div>
 
-               <form method="post" action="" class="apprenticeship-details check-answers-page">
-
-                    <h2 class="govuk-heading-m" id="apprenticeship-details-text">
-                         Apprenticeship details
-                         <a href="2-wrong-info" class="main-change-link">These details aren't correct</a>
-                    </h2>
-
-                    <table class="govuk-table data-table">
-                         <tbody class="govuk-table__body">
-                              <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">Apprenticeship</th>
-                                   <td class="govuk-table__cell">Military Engineering Construction Technician</td>
-                              </tr>
-                              <!-- <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">Option</th>
-                                   <td class="govuk-table__cell">
-                                        <ul class="govuk-list govuk-list--bullet">
-                                             <li>Carpenter & Joiner</li>
-                                             <li>Bricklayer & Concreter</li>
-                                             <li>Building & Structural Finisher</li>
-                                             <li>Plumbing & Heating Engineer</li>
-                                             <li>Plant Operator & Mechanic</li>
-                                        </ul>
-                                   </td>
-                              </tr> -->
-                              <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">Level</th>
-                                   <td class="govuk-table__cell">3</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">
-                                        <div class="tooltip">Version
-                                             <span class="tooltiptext tooltip-right">Tooltip text</span>
-                                        </div>
-                                   </th>
-                                   <td class="govuk-table__cell">1.2</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">Duration</th>
-                                   <td class="govuk-table__cell">1 year</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">
-                                        <div class="tooltip">Planned start date
-                                             <span class="tooltiptext tooltip-right">Tooltip text</span>
-                                        </div>
-                                   </th>
-                                   <td class="govuk-table__cell">2 March 2021</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">
-                                        <div class="tooltip">Planned end date
-                                             <span class="tooltiptext tooltip-right">Tooltip text</span>
-                                        </div>
-                                   </th>
-                                   <td class="govuk-table__cell">3 March 2022</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">
-                                        <div class="tooltip">Practical start date
-                                             <span class="tooltiptext tooltip-right">Tooltip text</span>
-                                        </div>
-                                   </th>
-                                   <td class="govuk-table__cell">20 March 2021</td>
-                              </tr>
-                              <tr class="govuk-table__row">
-                                   <th scope="row" class="govuk-table__header">
-                                        <div class="tooltip">Practical end date
-                                             <span class="tooltiptext tooltip-right">Tooltip text</span>
-                                        </div>
-                                   </th>
-                                   <td class="govuk-table__cell">1 January 2022</td>
-                              </tr>
-                         </tbody>
-                    </table>
-
-                    <p>&nbsp;</p>
+               <form method="post" action="" class="training-details check-answers-page">
 
                     <h2 class="govuk-heading-m" id="hours-details-text">
                          Estimated weekly hours
-                         <a href="2-wrong-info" class="main-change-link">These details aren't correct</a>
+                         <a href="3-wrong-info" class="main-change-link">These details aren't correct</a>
                     </h2>
 
                     <p>
@@ -358,16 +282,16 @@
                     <!-- //////////////////////////////// KSB's - END //////////////////////////////// -->
 
                     <!-- CHECK BOX - CONFIRM - START -->
-                    <div class="govuk-form-group check-to-confirm apprenticeship-error-panel apprenticeship-unconfirmed">
+                    <div class="govuk-form-group check-to-confirm apprenticeship-error-panel training-details-unconfirmed">
                          <fieldset class="govuk-fieldset" aria-describedby="apprenticeship-hint">
                               <span id="apprenticeship-issued-error" class="govuk-error-message">
                                    <span class="govuk-visually-hidden">Error:</span> Please check the box to confirm the details are correct
                               </span>
                               <div class="govuk-checkboxes">
                                    <div class="govuk-checkboxes__item">
-                                        <input class="govuk-checkboxes__input" id="apprenticeship-confirm" name="apprenticeship-confirm" type="checkbox" value="apprenticeship-confirm">
-                                        <label class="govuk-label govuk-checkboxes__label" for="apprenticeship-confirm">
-                                             I have read and understood the apprenticeship I am committing to.
+                                        <input class="govuk-checkboxes__input" id="training-confirm" name="training-confirm" type="checkbox" value="training-confirm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="training-confirm">
+                                             I have read and understood what apprenticeship training I am committing to.
                                              <!-- Please check the box to agree that your <a href="#apprenticeship-details-text">apprenticeship details</a> and
                                              <a href="#hours-details-text">estimated weekly hours</a> details are correct -->
                                         </label>
@@ -377,11 +301,11 @@
                     </div>
                     <!-- CHECK BOX - CONFIRM - END -->
 
-                    <button class="govuk-button apprenticeship-unconfirmed" data-module="govuk-button" id="apprenticeship-details">Confirm</button>
+                    <button class="govuk-button training-details-unconfirmed" data-module="govuk-button" id="training-details">Confirm</button>
 
-                    <a href="../dashboard/2-my-apprenticeships" class="secondary-link apprenticeship-unconfirmed">I want to complete this later</a>
+                    <a href="../dashboard/2-my-apprenticeships" class="secondary-link training-details-unconfirmed">I want to complete this later</a>
 
-                    <a href="#" onclick="history.go(-1)" class="govuk-back-link apprenticeship-confirmed">Back to landing page</a>
+                    <a href="#" onclick="history.go(-1)" class="govuk-back-link training-details-confirmed">Back to landing page</a>
 
                </form>
 

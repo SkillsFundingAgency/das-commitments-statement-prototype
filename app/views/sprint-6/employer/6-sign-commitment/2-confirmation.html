@@ -1,0 +1,46 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/account-page/navigation.html" %}
+<div id="service-title-section" class="account-page"></div>
+{% endblock %}
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <div class="govuk-panel govuk-panel--confirmation">
+                    <h1 class="govuk-panel__title">You have confirmed your <strong>apprenticeships</strong></h1>
+
+                    <div class="govuk-panel__body">
+                         Military Engineering Construction Technician
+                         <!-- <br>
+                         <br>Your ULN is <strong>00021568</strong> -->
+                    </div>
+               </div>
+
+
+               <h2 class="govuk-heading-m">What happens next?</h2>
+
+               <p class="govuk-body">
+                    We will send the confirmation of your apprenticeships to your training provider and for the apprentice to agree and sign there commitment.
+               </p>
+
+               <h2 class="govuk-heading-m">What do you want to do next?</h2>
+
+               <p class="govuk-body">
+                    <a href="../dashboard/index">Back to my account</a>
+               </p>
+
+          </div>
+     </div>
+</div>
+{% endblock %}

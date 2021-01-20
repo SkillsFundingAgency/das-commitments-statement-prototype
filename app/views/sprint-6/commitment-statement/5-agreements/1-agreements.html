@@ -1,0 +1,56 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/account-page/navigation.html" %}
+<div id="service-title-section" class="account-page"></div>
+{% endblock %}
+
+{% block content %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <h1 class="govuk-heading-xl">
+                    Agreements
+               </h1>
+
+               <form method="post" action="../dashboard/2-my-apprenticeships" class="check-answers-page">
+
+                    <div class="govuk-form-group">
+                         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                              <div id="waste-hint" class="govuk-hint">
+                                   Tick the boxes once you have discussed these with your training provider.
+                              </div>
+                              <div class="govuk-checkboxes agreements">
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="employer-agreement-1" name="agreements" type="checkbox" value="Employer agreement 1">
+                                        <label class="govuk-label govuk-checkboxes__label" for="employer-agreement-1">Employer agreement</label>
+                                   </div>
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="employer-agreement-2" name="agreements" type="checkbox" value="Employer agreement 2">
+                                        <label class="govuk-label govuk-checkboxes__label" for="employer-agreement-2">Agreement 2</label>
+                                   </div>
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="employer-agreement-3" name="agreements" type="checkbox" value="Employer agreement 3">
+                                        <label class="govuk-label govuk-checkboxes__label" for="employer-agreement-3">Agreement 3</label>
+                                   </div>
+                              </div>
+
+                         </fieldset>
+                    </div>
+
+                    <button class="govuk-button" data-module="govuk-button" id="agreements">Save and continue</button>
+
+               </form>
+
+          </div>
+     </div>
+</div>
+{% endblock %}

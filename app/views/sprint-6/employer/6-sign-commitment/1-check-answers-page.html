@@ -35,7 +35,7 @@
                <form method="post" action="" class="check-answers-page apprentice-sign">
 
                     <!-- //////////////////////////////// SECTION 1 - START //////////////////////////////// -->
-                    <!-- <section id="section-1">
+                    <section id="section-1">
                          <h2 class="govuk-heading-m">
                               1 - Personal details
                          </h2>
@@ -56,13 +56,25 @@
                                         <th scope="row" class="govuk-table__header">Email</th>
                                         <td class="govuk-table__cell">joe.bloggs@hotmail.co.uk</td>
                                    </tr>
+                                   <!-- <tr class="govuk-table__row">
+                                        <th scope="row" class="govuk-table__header">Mobile</th>
+                                        <td class="govuk-table__cell">+44 7974 123 456</td>
+                                   </tr> -->
+                                   <!-- <tr class="govuk-table__row">
+                                        <th scope="row" class="govuk-table__header">Postcode</th>
+                                        <td class="govuk-table__cell">OX12 9FB</td>
+                                   </tr> -->
                               </tbody>
                          </table>
-                    </section> -->
+                    </section>
+                    <!-- //////////////////////////////// SECTION 1 - END //////////////////////////////// -->
 
-                    <section id="section-1"
+                    <p>&nbsp;</p>
+
+                    <!-- //////////////////////////////// SECTION 2 - START //////////////////////////////// -->
+                    <section id="section-2"
                          <h2 class="govuk-heading-m">
-                              1 - Apprenticeship details
+                              2 - Apprenticeship details
                          </h2>
 
                          <table class="govuk-table data-table">
@@ -165,10 +177,6 @@
 
                          <!-- KSBs - START  -->
                          <h2 class="govuk-heading-s">Knowledge, skills and behaviours</h2>
-
-                         <p>
-                              These are the knowledge, skills and behaviours you will learn on your apprenticeship.
-                         </p>
 
                          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-skills">
                               <div class="govuk-accordion__section">
@@ -373,14 +381,14 @@
                          </div>
                          <!-- KSBs - END  -->
                     </section>
-                    <!-- //////////////////////////////// SECTION 1 - END //////////////////////////////// -->
+                    <!-- //////////////////////////////// SECTION 2 - END //////////////////////////////// -->
 
                     <p>&nbsp;</p>
 
-                    <!-- //////////////////////////////// SECTION 2 - START //////////////////////////////// -->
-                    <section id="section-2">
+                    <!-- //////////////////////////////// SECTION 3 - START //////////////////////////////// -->
+                    <section id="section-3">
                          <h2 class="govuk-heading-m">
-                              2 - Employer and training provider details
+                              3 - Employer and training provider details
                          </h2>
 
                          <h2 class="govuk-heading-s">Employer details</h2>
@@ -408,8 +416,8 @@
                                         <td class="govuk-table__cell">Contract Flooring Association</td>
                                    </tr>
                                    <tr class="govuk-table__row">
-                                        <th scope="row" class="govuk-table__header">Is the employer name correct?</th>
-                                        <td class="govuk-table__cell">{{ data['employer-name'] }}</td>
+                                        <th scope="row" class="govuk-table__header">Has your employer given you their contact details?</th>
+                                        <td class="govuk-table__cell">{{ data['employer-contact'] }}</td>
                                    </tr>
                                    <!-- <tr class="govuk-table__row">
                                         <th scope="row" class="govuk-table__header">Address</th>
@@ -451,8 +459,8 @@
                                         <td class="govuk-table__cell">Abingdon & Witney College</td>
                                    </tr>
                                    <tr class="govuk-table__row">
-                                        <th scope="row" class="govuk-table__header">Is the employer name correct?</th>
-                                        <td class="govuk-table__cell">{{ data['provider-name'] }}</td>
+                                        <th scope="row" class="govuk-table__header">Has your training provider given you their contact details and the contact details of any sub-contractors?</th>
+                                        <td class="govuk-table__cell">{{ data['provider-contact'] }}</td>
                                    </tr>
                                    <!-- <tr class="govuk-table__row">
                                         <th scope="row" class="govuk-table__header">Address</th>
@@ -466,14 +474,14 @@
                               </tbody>
                          </table>
                     </section>
-                    <!-- //////////////////////////////// SECTION 2 - END //////////////////////////////// -->
+                    <!-- //////////////////////////////// SECTION 3 - END //////////////////////////////// -->
 
                     <p>&nbsp;</p>
 
-                    <!-- //////////////////////////////// SECTION 3 - START //////////////////////////////// -->
-                    <section id="section-3">
+                    <!-- //////////////////////////////// SECTION 4 - START //////////////////////////////// -->
+                    <section id="section-4">
                          <h2 class="govuk-heading-m">
-                              3 - Roles and responsibilities
+                              4 - Roles and responsibilities
                          </h2>
 
                          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-roles">
@@ -607,14 +615,14 @@
                               </div>
                          </div>
                     </section>
-                    <!-- //////////////////////////////// SECTION 3 - END //////////////////////////////// -->
+                    <!-- //////////////////////////////// SECTION 4 - END //////////////////////////////// -->
 
                     <p>&nbsp;</p>
 
-                    <!-- //////////////////////////////// SECTION 4 - START //////////////////////////////// -->
-                    <section id="section-4">
+                    <!-- //////////////////////////////// SECTION 5 - START //////////////////////////////// -->
+                    <section id="section-5">
                          <h2 class="govuk-heading-m">
-                              4 - Key employer policies
+                              5 - Key employer policies
                          </h2>
 
                          <div class="govuk-checkboxes key-policies">
@@ -645,31 +653,6 @@
                               <div class="govuk-checkboxes__item">
                                    <input class="govuk-checkboxes__input" id="business-continuity" name="key-policies" type="checkbox" value="Business continuity" checked>
                                    <label class="govuk-label govuk-checkboxes__label" for="business-continuity">Business continuity</label>
-                              </div>
-                         </div>
-                    </section>
-                    <!-- //////////////////////////////// SECTION 4 - END //////////////////////////////// -->
-
-                    <p>&nbsp;</p>
-
-                    <!-- //////////////////////////////// SECTION 5 - START //////////////////////////////// -->
-                    <section id="section-5">
-                         <h2 class="govuk-heading-m">
-                              5 - Agreements
-                         </h2>
-
-                         <div class="govuk-checkboxes agreements">
-                              <div class="govuk-checkboxes__item">
-                                   <input class="govuk-checkboxes__input" id="employer-agreement-1" name="agreements" type="checkbox" value="Employer agreement 1" checked>
-                                   <label class="govuk-label govuk-checkboxes__label" for="employer-agreement-1">Employer agreement</label>
-                              </div>
-                              <div class="govuk-checkboxes__item">
-                                   <input class="govuk-checkboxes__input" id="employer-agreement-2" name="agreements" type="checkbox" value="Employer agreement 2" checked>
-                                   <label class="govuk-label govuk-checkboxes__label" for="employer-agreement-2">Agreement 2</label>
-                              </div>
-                              <div class="govuk-checkboxes__item">
-                                   <input class="govuk-checkboxes__input" id="employer-agreement-3" name="agreements" type="checkbox" value="Employer agreement 3" checked>
-                                   <label class="govuk-label govuk-checkboxes__label" for="employer-agreement-3">Agreement 3</label>
                               </div>
                          </div>
                     </section>
@@ -707,23 +690,20 @@
                     <p><strong>Jump to section</strong></p>
 
                     <ul class="govuk-list">
-                         <!-- <li>
+                         <li>
                               <a class="govuk-link" href="#section-1">1 - Personal details</a>
-                         </li> -->
-                         <li>
-                              <a class="govuk-link" href="#section-1">1 - Apprenticeship details</a>
                          </li>
                          <li>
-                              <a class="govuk-link" href="#section-2">2 - Employer and training provider details</a>
+                              <a class="govuk-link" href="#section-2">2 - Apprenticeship details</a>
                          </li>
                          <li>
-                              <a class="govuk-link" href="#section-3">3 - Your roles and responsibilities</a>
+                              <a class="govuk-link" href="#section-3">3 - Employer and training provider details</a>
                          </li>
                          <li>
-                              <a class="govuk-link" href="#section-4">4 - Key employer policies</a>
+                              <a class="govuk-link" href="#section-4">4 - Your roles and responsibilities</a>
                          </li>
                          <li>
-                              <a class="govuk-link" href="#section-5">5 - Agreements</a>
+                              <a class="govuk-link" href="#section-5">5 - Key employer policies</a>
                          </li>
                     </ul>
                </nav>
