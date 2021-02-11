@@ -54,8 +54,8 @@ if ($.cookie("apprenticeship-details") == 'true') {
      $('a.section-one strong').addClass('govuk-tag--blue').removeClass('govuk-tag--yellow').text('started');
      $('.apprenticeship-confirmed').show();
      $('.apprenticeship-unconfirmed').hide();
-     $('.apprenticeship-confirmed-title').text('Your apprenticeship details');
-     $('#apprenticeship-details').text('Continue to training details');
+     //$('.apprenticeship-confirmed-title').text('');//
+     //$('#apprenticeship-details').text('Continue to training details');//
      $('.apprenticeship-complete').hide();
 }
 

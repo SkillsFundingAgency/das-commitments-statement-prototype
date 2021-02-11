@@ -42,7 +42,7 @@ $(document).ready(function () {
 // Identity Assurance
 $("#identity-assurance-btn").on("click", function (e) {
      if ($('input[id=apprentice-name-correct-yes]').is(':checked') && $('input[id=apprentice-email-correct-yes]').is(':checked') && $('input[id=apprentice-birthday-correct-yes]').is(':checked')) {
-          $('form#identity-assurance').attr('action','../dashboard/index');
+          $('form#identity-assurance').attr('action','../dashboard/2-my-apprenticeships');
      } else {
           $('form#identity-assurance').attr('action','5-wrong-info');
      }
@@ -94,7 +94,7 @@ $("#training-details").on("click", function (e) {
 // 2
 $("#apprenticeship-details").on("click", function (e) {
      if ($('input[name=apprenticeship-confirm]').is(':checked')) {
-          $('form.apprenticeship-details').attr('action','2-ksbs');
+        //  $('form.apprenticeship-details').attr('action','2-ksbs');//
      } else {
           e.preventDefault();
           $('.employer-error-panel').addClass('govuk-form-group--error');

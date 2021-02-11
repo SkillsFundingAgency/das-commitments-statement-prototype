@@ -497,3 +497,35 @@ table {
      margin-top: 3em;
      margin-bottom: 3em;
 }
+
+////////// Alert /////////////
+.govuk-notification-banner{
+  border: 5px solid #1d70b8;
+  background-color: #1d70b8;
+  clear: both;
+  margin-bottom: 20px;  
+  .govuk-notification-banner__header{
+    padding: 2px 20px 5px;
+    border-bottom: 1px solid transparent;
+  }
+  .govuk-notification-banner__title{
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+  }
+  .govuk-notification-banner__content {
+    color: #0b0c0c;
+    padding: 20px;
+    background-color: #fff;
+  }
+  .govuk-notification-banner__heading {
+    font-size: 19px;
+    line-height: 1.25;
+    font-family: "GDS Transport",arial,sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+  }
+}
