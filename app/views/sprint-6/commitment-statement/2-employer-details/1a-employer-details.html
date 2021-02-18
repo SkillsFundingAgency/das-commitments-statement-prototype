@@ -1,0 +1,85 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/account-page/navigation.html" %}
+<div id="service-title-section" class="account-page"></div>
+{% endblock %}
+
+{% block content %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+
+
+
+                  <h1 class="govuk-heading-xl" id="">Confirm your employer</h1>
+
+                  <h2 class="govuk-heading-l" id="">Contract Flooring Association</h2>
+
+                  <p class="govuk-body"">
+                     This is the legal name. You might know them as something else.
+                    </p>
+
+
+<div class="govuk-inset-text">
+  <p class="govuk-body">Before starting your apprenticeship you should:</p>
+<ul class="govuk-list govuk-list--bullet">
+
+  <li>have a copy of your signed apprenticeship agreement </li>
+  <li>have a named day-to-day contact to answer your questions</li>
+</ul>
+</div>
+ <form method="post" action="/sprint-6/commitment-statement/dashboard/2-my-apprenticeships">
+
+  {{ govukRadios({
+    classes: "govuk-radios--inline",
+    idPrefix: "EmployerConfirm",
+    name: "EmployerConfirm",
+    fieldset: {
+      legend: {
+        text: "Is this your employer?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+    items: [
+      {
+        value: "yes",
+        text: "Yes"
+      },
+      {
+        value: "no",
+        text: "No"
+      }
+    ]
+  }) }}
+
+                    <button class="govuk-button" data-module="govuk-button" >Confirm</button>
+</form>
+<!--
+
+                    <a href="../dashboard/2-my-apprenticeships" class="govuk-button" data-module="govuk-button" >I can confirm this is my employer</a>
+<br />
+                  <a href="../dashboard/2-my-apprenticeships" class="govuk-button govuk-button--secondary" data-module="govuk-button" >This is not my employer</a>
+
+-->
+<br />
+<!--
+                    <a href="../dashboard/2-my-apprenticeships" class="secondary-link employer-provider-unconfirmed">I want to complete this later</a><br />
+
+                    <a href="#" onclick="history.go(-1)" class="govuk-back-link employer-provider-confirmed">Back to landing page</a>-->
+
+
+
+          </div>
+     </div>
+</div>
+{% endblock %}

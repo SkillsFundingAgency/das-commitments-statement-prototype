@@ -1,0 +1,151 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/account-page/navigation.html" %}
+<div id="service-title-section" class="account-page"></div>
+{% endblock %}
+
+{% block content %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <!-- ERROR MESSAGE - START -->
+               <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+                    <h2 class="govuk-error-summary__title" id="error-summary-title">There is a problem</h2>
+                    <div class="govuk-error-summary__body">
+                         <ul class="govuk-list govuk-error-summary__list">
+                              <li><a href="#employer-issued-error">Please check the box to agree that the employer and training provider details are correct</a></li>
+                         </ul>
+                    </div>
+               </div>
+               <!-- ERROR MESSAGE - END -->
+
+               <!-- <span class="govuk-caption-m">Step 1 of 3</span> -->
+               <h1 class="govuk-heading-xl employer-provider-confirmed-title">
+                    Confirm the employer and training provider information
+               </h1>
+
+               <div class="govuk-form-group confirmed-panel employer-provider-confirmed">
+                    <div class="govuk-warning-text">
+                         <span class="govuk-confirm__icon" aria-hidden="true"></span>
+                         <strong class="govuk-warning-text__text">
+                              <span class="govuk-warning-text__assistive">Confirmed</span> You have confirmed that your employer and training provider information details are correct
+                         </strong>
+                    </div>
+               </div>
+
+               <form method="post" action="" class="employer-details check-answers-page">
+
+                    <div class="govuk-form-group">
+                         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                   <h2 class="govuk-heading-m no-bottom-margin" id="employer-details-text">
+                                        Is the employer name correct?
+                                        <span class="govuk-caption-m">Contract Flooring Association</span>
+                                   </h2>
+                              </legend>
+                              <div class="govuk-radios govuk-radios--inline">
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="employer-name-yes" name="employer-name" type="radio" value="Yes">
+                                        <label class="govuk-label govuk-radios__label" for="employer-name-yes">Yes</label>
+                                   </div>
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="employer-name-no" name="employer-name" type="radio" value="No">
+                                        <label class="govuk-label govuk-radios__label" for="employer-name-no">No</label>
+                                   </div>
+                              </div>
+                         </fieldset>
+                    </div>
+
+                    <div class="govuk-form-group">
+                         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                   <h2 class="govuk-heading-m no-bottom-margin" id="provider-details-text">
+                                        Is the training provider correct?
+                                        <span class="govuk-caption-m">Abingdon & Witney College</span>
+                                   </h2>
+                              </legend>
+                              <div class="govuk-radios govuk-radios--inline">
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="provider-name-yes" name="provider-name" type="radio" value="Yes">
+                                        <label class="govuk-label govuk-radios__label" for="provider-name-yes">Yes</label>
+                                   </div>
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="provider-name-no" name="provider-name" type="radio" value="No">
+                                        <label class="govuk-label govuk-radios__label" for="provider-name-no">No</label>
+                                   </div>
+                              </div>
+                         </fieldset>
+                    </div>
+
+
+                    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+                    <div class="govuk-form-group">
+                         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                   <h2 class="govuk-heading-m no-bottom-margin" id="provider-details-text">
+                                        Your End Point Assessment Organisation (EPAO) is:
+                                        <span class="govuk-caption-m">Training Assessment UK</span>
+                                   </h2>
+                              </legend>
+
+                         </fieldset>
+                    </div>
+
+
+                    <!-- <div class="govuk-form-group">
+                         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                   <h1 class="govuk-fieldset__heading">Tick the box to confirm you have been given contact details for the above organisations.</h1>
+                              </legend>
+                              <div class="govuk-checkboxes">
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="contact-details" name="contact-details" type="checkbox" value="contact-details">
+                                        <label class="govuk-label govuk-checkboxes__label" for="contact-details">I have received contact details</label>
+                                   </div>
+                              </div>
+                         </fieldset>
+                    </div> -->
+
+                    <!-- CHECK BOX - CONFIRM - START -->
+                    <div class="govuk-form-group check-to-confirm employer-error-panel employer-provider-unconfirmed">
+                         <fieldset class="govuk-fieldset" aria-describedby="employer-hint">
+                              <span id="employer-issued-error" class="govuk-error-message">
+                                   <span class="govuk-visually-hidden">Error:</span> Please check the box to confirm the details are correct
+                              </span>
+                              <div class="govuk-checkboxes">
+                                   <div class="govuk-checkboxes__item">
+                                        <input class="govuk-checkboxes__input" id="employer-confirm" name="employer-confirm" type="checkbox" value="employer-confirm">
+                                        <label class="govuk-label govuk-checkboxes__label" for="employer-confirm">
+                                             Tick the box to confirm you have been given contact details for the above organisations.
+                                        </label>
+                                   </div>
+                              </div>
+                         </fieldset>
+                    </div>
+                    <!-- CHECK BOX - CONFIRM - END -->
+
+                    <br>
+
+                    <button class="govuk-button employer-provider-unconfirmed" data-module="govuk-button" id="employer-details">Confirm</button>
+
+                    <a href="../dashboard/2-my-apprenticeships" class="secondary-link employer-provider-unconfirmed">I want to complete this later</a>
+
+                    <a href="#" onclick="history.go(-1)" class="govuk-back-link employer-provider-confirmed">Back to landing page</a>
+
+               </form>
+
+          </div>
+     </div>
+</div>
+{% endblock %}
