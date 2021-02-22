@@ -20,7 +20,22 @@
 
 
 
-                  <h1 class="govuk-heading-xl" id="">Confirm your employer</h1>
+                  <h1 class="govuk-heading-xl" id="employer-provider-title">Confirm your employer</h1>
+
+
+
+                  <!-- Confirmation once selection has been made -->
+                  <div class="govuk-form-group confirmed-panel" id="employer-provider-title-confirmed">
+                       <div class="govuk-warning-text">
+                            <span class="govuk-confirm__icon" aria-hidden="true"></span>
+                            <strong class="govuk-warning-text__text">
+                                 <span class="govuk-warning-text__assistive">Confirmed</span> You have confirmed your employer
+                            </strong>
+                       </div>
+                  </div>
+
+
+
 
                   <h2 class="govuk-heading-l" id="">Contract Flooring Association</h2>
 
@@ -37,7 +52,7 @@
   <li>have a named day-to-day contact to answer your questions</li>
 </ul>
 </div>
- <form method="post" action="/sprint-6/commitment-statement/2-employer-details/1a-employer-details">
+ <form id="employer-form-hide" method="post" action="/sprint-6/commitment-statement/2-employer-details/1a-employer-details">
 
   {{ govukRadios({
     classes: "govuk-radios--inline",
@@ -62,7 +77,7 @@
     ]
   }) }}
 
-                    <button class="govuk-button" data-module="govuk-button" >Confirm</button>
+                    <button class="govuk-button" data-module="govuk-button" id="employer-provider-confirm">Confirm</button>
 </form>
 <!--
 
@@ -74,8 +89,10 @@
 <br />
 <!--
                     <a href="../dashboard/2-my-apprenticeships" class="secondary-link employer-provider-unconfirmed">I want to complete this later</a><br />
+-->
 
-                    <a href="#" onclick="history.go(-1)" class="govuk-back-link employer-provider-confirmed">Back to landing page</a>-->
+                    <a href="../dashboard/2-my-apprenticeships" class="govuk-button" data-module="govuk-button" id="employer-provider-confirmed" >Continue</a><br />
+                                      <a href="../dashboard/2-my-apprenticeships"  class="govuk-back-link employer-provider-confirmed">Back to landing page</a>
 
 
 

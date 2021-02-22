@@ -114,6 +114,80 @@ if ($.cookie("employer-details") == 'true') {
      $('.employer-provider-confirmed-title').text('Your employer and training provider details');
 }
 
+
+// Training Provider Confirm
+$('.training-provider-confirmed, #training-provider-confirmed, #training-provider-title-confirmed').hide();
+
+
+// Confirm Training Provider
+$("#training-provider-confirm").on("click", function (e) {
+
+     if ($('input[id=TrainingConfirm]').is(':checked')) {
+          $.cookie("training-confirm", true, {path:'/'});
+     } else {
+          $.cookie("training-confirm", false, {path:'/'});
+     }
+});
+if ($.cookie("training-confirm") == 'true') {
+       $('a.section-two').addClass('started');
+    $('.training-provider-confirmed, #training-provider-confirmed, #training-provider-title-confirmed').show();
+     $('#training-form-hide, #training-provider-title').hide();
+    $('.section-two .complete-number').text('1');
+      $('a.section-two strong').addClass('govuk-tag--blue').removeClass('govuk-tag--yellow').text('started');
+} else if ($.cookie("training-confirm") == 'false') {
+       $('a.section-two').addClass('wrong');
+       $('.section-two .complete-number').text('0');
+       $('a.section-two strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
+}
+
+
+
+
+
+
+
+
+
+// Employer Provider Confirm
+$('.employer-provider-confirmed, #employer-provider-confirmed, #employer-provider-title-confirmed').hide();
+
+
+// Confirm Employer Provider
+$("#employer-provider-confirm").on("click", function (e) {
+
+     if ($('input[id=EmployerConfirm]').is(':checked')) {
+          $.cookie("employer-confirm", true, {path:'/'});
+     } else {
+          $.cookie("employer-confirm", false, {path:'/'});
+     }
+});
+if ($.cookie("employer-confirm") == 'true') {
+     $('a.section-two').addClass('started');
+    $('.employer-provider-confirmed, #employer-provider-confirmed, #employer-provider-title-confirmed').show();
+     $('#employer-form-hide, #employer-provider-title, #employer-provider-confirm').hide();
+        $('.section-two .complete-number').text('1');
+          $('a.section-two strong').addClass('govuk-tag--blue').removeClass('govuk-tag--yellow').text('started');
+} else if ($.cookie("employer-confirm") == 'false') {
+       $('a.section-two').addClass('wrong');
+       $('.section-two .complete-number').text('0');
+       $('a.section-two strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
+}
+
+
+if ($.cookie("employer-confirm") == 'true' && $.cookie("training-confirm") == 'true') {
+  $('a.section-two').addClass('complete').removeClass('started');
+  $('a.section-two strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
+      $('.section-two .complete-number').text('2');
+}
+
+
+
+
+
+
+
+
+
 // 2 - Employer details - Incorrect
 $("#employer-details-wrong").on("click", function (e) {
      $.cookie("employer-details", false, {path:'/'});

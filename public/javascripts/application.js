@@ -80,6 +80,13 @@ $('#service-title-section, #action-title-section').parent().addClass('title-over
 // Confirm journey
 $('.govuk-error-summary, .govuk-error-message').hide();
 
+
+
+
+
+
+
+
 // 1
 $("#training-details").on("click", function (e) {
      if ($('input[name=training-confirm]').is(':checked')) {
