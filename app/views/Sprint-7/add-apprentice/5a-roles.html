@@ -1,0 +1,289 @@
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+
+               <!-- ERROR MESSAGE - START -->
+               <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+                    <h2 class="govuk-error-summary__title" id="error-summary-title">There is a problem</h2>
+                    <div class="govuk-error-summary__body">
+                         <ul class="govuk-list govuk-error-summary__list">
+                              <li><a href="#apprentice-role-issued-error">Please check the box to agree to the apprentice roles and responsibilities</a></li>
+                         </ul>
+                    </div>
+               </div>
+               <!-- ERROR MESSAGE - END -->
+
+               <!-- <span class="govuk-caption-m">Step 1 of 3</span> -->
+               <h1 class="govuk-heading-xl" id="apprentice-roles-text">
+                  Confirm your roles and responsibilities
+               </h1>
+
+
+               <div class="govuk-inset-text">
+<p>
+  Employers, providers and apprentices must be clear on their roles and responsibilities to ensure the success of the apprenticeship.
+  </p>
+  <p>
+    This does not replace your paper commitment statement that ensures you comply with funding rules.
+    </p>
+</div>
+
+               <div class="govuk-form-group confirmed-panel apprentice-role-confirmed">
+                    <div class="govuk-warning-text">
+                         <span class="govuk-confirm__icon" aria-hidden="true"></span>
+                         <strong class="govuk-warning-text__text">
+                              <span class="govuk-warning-text__assistive">Confirmed</span> You have confirmed your apprentice roles and responsibilities
+                         </strong>
+                    </div>
+               </div>
+
+          </div>
+
+          <div class="govuk-grid-column-full">
+
+               <form method="post" action="" class="apprentice-role check-answers-page">
+
+                    <div class="govuk-grid-row">
+
+                         <div class="govuk-grid-column-full">
+
+                              <div class="govuk-tabs" data-module="govuk-tabs">
+                                   <h2 class="govuk-tabs__title">Contents</h2>
+
+                                   <!-- TABS - START -->
+                                   <ul class="govuk-tabs__list">
+                                     <li class="govuk-tabs__list-item">
+                                          <a class="govuk-tabs__tab" href="#roles-provider">Provider</a>
+                                     </li>
+                                     <li class="govuk-tabs__list-item">
+                                          <a class="govuk-tabs__tab" href="#roles-employer">Employer</a>
+                                     </li>
+
+                                        <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                                             <a class="govuk-tabs__tab" href="#roles-apprentice">Apprentice</a>
+                                        </li>
+
+
+                                   </ul>
+                                   <!-- TABS - END -->
+
+
+
+
+                                   <!-- TAB 3 - CONTENT - START -->
+                                   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="roles-provider">
+                                        <h2 class="govuk-heading-m">Provider</h2>
+<!--
+                                        <div class="govuk-form-group confirmed-panel iprovider-confirmed">
+                                             <div class="govuk-warning-text">
+                                                  <span class="govuk-confirm__icon" aria-hidden="true"></span>
+                                                  <strong class="govuk-warning-text__text">
+                                                       <span class="govuk-warning-text__assistive">Confirmed</span> Your training provider has agreed to these roles and responsibilities
+                                                  </strong>
+                                             </div>
+                                        </div>
+
+            -->                            <h2 class="govuk-heading-m">Provider</h2>
+
+                                        <h2 class="govuk-heading-s">I have:</h2>
+
+                                        <ul class="govuk-list govuk-list--bullet">
+                                             <li>a copy of the apprenticeship agreement signed by my apprentice and their employer</li>
+                                             <li>given the key dates and milestones of the apprenticeship to my apprentice and their employer</li>
+                                             <li>explained how the apprenticeship will be delivered, including the use of sub-contracted providers where applicable</li>
+                                             <li>explained how the apprenticeship will be assessed by the end-point-assessment-organisation</li>
+                                             <li>agreed on and signed a training plan with my apprentice and their employer</li>
+                                             <li>discussed the training plan with all parties, ensuring it takes account of prior learning, English and maths needs and additional learning support.</li>
+                                        </ul>
+
+
+                                        <h2 class="govuk-heading-s">I will:-</h2>
+
+                                        <ul class="govuk-list govuk-list--bullet">
+                                             <li>manage the delivery and quality of the apprenticeship, including off-the-job training, as agreed in the training plan</li>
+                                             <li>be responsible for regular progress reviews between my apprentice, their employer and myself</li>
+                                             <li>make my apprentice and their employer aware of how they should address concerns or complaints regarding the apprenticeship </li>
+                                             <li>update or renew the commitment for my apprentice where needed</li>
+                                        </ul>
+
+                                   </div>
+                                   <!-- TAB 3 - CONTENT - END -->
+
+
+
+
+
+
+
+
+                                   <!-- TAB 1 - CONTENT - START -->
+                                   <div class="govuk-tabs__panel" id="roles-apprentice">
+                                     <h2 class="govuk-heading-m">Employer</h2>
+
+                                                             <h2 class="govuk-heading-s">I have:</h2>
+
+                                                             <ul class="govuk-list govuk-list--bullet">
+                                                                  <li>a signed apprenticeship agreement between my apprentice and myself</li>
+                                                                  <li>worked on a training plan with my apprentice and their training provider </li>
+                                                                  <li>signed the training plan together with my apprentice and their training provider</li>
+                                                                  <li>I understood and fully support my all my apprentice’s training needs </li>
+
+
+
+
+                                                             </ul>
+
+
+                                                             <h2 class="govuk-heading-s">I will:-</h2>
+
+                                                             <ul class="govuk-list govuk-list--bullet">
+                                                                  <li>will enable my apprentice to complete their off-the-job training during the working hours defined in the apprenticeship agreement </li>
+                                                                  <li>take part in regular progress reviews with my apprentice and their training provider</li>
+                                                                  <li>support my apprentice and their training provider in addressing and resolving any concerns or complaints </li>
+                                                                  <li>update or renew the commitment for my apprentice where needed</li>
+                                                                
+                                                             </ul>
+                                   </div>
+                                   <!-- TAB 1 - CONTENT - END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   <!-- TAB 2 - CONTENT - START -->
+                                   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="roles-employer">
+
+                                     <h2 class="govuk-heading-m">Apprentice</h2>
+
+                                                             <h2 class="govuk-heading-s">I have:</h2>
+
+                                                             <ul class="govuk-list govuk-list--bullet">
+                                                                  <li></li>
+                                                                  <li></li>
+                                                                  <li></li>
+                                                                  <li></li>
+                                                                  <li></li>
+                                                                  <li></li>
+                                                             </ul>
+
+
+                                                             <h2 class="govuk-heading-s">I will:-</h2>
+
+                                                             <ul class="govuk-list govuk-list--bullet">
+                                                                  <li></li>
+                                                                  <li></li>
+                                                                  <li></li>
+                                                                  <li></li>
+                                                             </ul>
+
+                                   </div>
+                                   <!-- TAB 2 - CONTENT - END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                              </div>
+
+                         </div>
+
+                         <div class="govuk-grid-column-two-thirds">
+
+                              <!-- CHECK BOX - CONFIRM - START -->
+                              <div class="govuk-form-group check-to-confirm apprentice-role-error-panel apprentice-role-unconfirmed">
+                                   <fieldset class="govuk-fieldset" aria-describedby="apprentice-role-hint">
+                                        <span id="apprentice-role-issued-error" class="govuk-error-message">
+                                             <span class="govuk-visually-hidden">Error:</span> Please check the box to confirm the details are correct
+                                        </span>
+                                        <div class="govuk-checkboxes">
+                                             <div class="govuk-checkboxes__item">
+                                                  <input class="govuk-checkboxes__input" id="apprentice-role-confirm" name="apprentice-role-confirm" type="checkbox" value="apprentice-role-confirm">
+                                                  <label class="govuk-label govuk-checkboxes__label" for="apprentice-role-confirm">
+                                                       Please check the box to agree to the apprentice roles and responsibilities
+                                                  </label>
+                                             </div>
+                                        </div>
+                                   </fieldset>
+                              </div>
+                              <!-- CHECK BOX - CONFIRM - END -->
+
+                              <button class="govuk-button apprentice-role-unconfirmed" data-module="govuk-button" id="apprentice-role">Confirm</button>
+
+                              <a href="../dashboard/2-my-apprenticeships" class="secondary-link apprentice-role-unconfirmed">I want to complete this later</a>
+
+                              <a href="#" onclick="history.go(-1)" class="govuk-back-link apprentice-role-confirmed">Back to landing page</a>
+
+                         </div>
+
+                    </div>
+
+               </form>
+
+          </div>
+
+          <!-- <div class="govuk-grid-column-one-third">
+               <div class="sticky-side-panel govuk-inset-text">
+
+                    <p><strong>All roles and responsibilities</strong></p>
+
+                    <ul class="govuk-list">
+                         <li>
+                              <a class="govuk-link" href="2-employer-role">Employer</a>
+                         </li>
+                         <li>
+                              <a class="govuk-link" href="3-provider-role">Training provider</a>
+                         </li>
+                    </ul>
+               </div>
+          </div> -->
+
+     </div>
+</div>
+
+{% endblock %}
