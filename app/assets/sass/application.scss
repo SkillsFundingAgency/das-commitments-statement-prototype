@@ -503,7 +503,7 @@ table {
   border: 5px solid #1d70b8;
   background-color: #1d70b8;
   clear: both;
-  margin-bottom: 20px;  
+  margin-bottom: 20px;
   .govuk-notification-banner__header{
     padding: 2px 20px 5px;
     border-bottom: 1px solid transparent;
@@ -528,4 +528,49 @@ table {
     -moz-osx-font-smoothing: grayscale;
     font-weight: 700;
   }
+}
+
+.autocomplete-suggestions {
+  box-sizing: border-box;
+  background: white;
+  overflow: scroll;
+  border: 2px solid $govuk-border-colour;
+  .autocomplete-suggestion {
+    @include govuk-font(19, $weight: normal);
+    padding: 0.25em;
+    &:hover,
+    &:active {
+      background: govuk-colour("light-grey");
+      cursor: pointer;
+    }
+  }
+}
+
+/* ====================================== Fixes for full images on Template ================================= */
+.govuk-header__container.remove-blue-line{
+      border-bottom: none;
+      padding-bottom: 10px;
+}
+.govuk-main-wrapper.top-space-fix{
+  margin-top: -10px;
+  padding-top: 0px;
+  margin-bottom: -14px;
+  a:focus{
+    background-color: white;
+    box-shadow: none;
+  }
+}
+.image-demo{
+  outline: none;
+  border: none;
+    margin-bottom: -14px;
+
+}
+
+.autocomplete__option {
+  @include govuk-font(19, $weight: normal);
+}
+
+.autocomplete-selected {
+  background:govuk-colour("light-grey");
 }
