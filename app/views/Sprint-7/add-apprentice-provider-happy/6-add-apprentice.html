@@ -1,14 +1,14 @@
 {% extends "layout-image.html" %}
 
 {% block pageTitle %}
-     GOV.UK Prototype Kit
+    GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
 {% endblock %}
 
 {% block content %}
-<img src="/public/images/Employer-Nav.png"  width="auto" height="auto" />
+<img src="/public/images/tp-header.png" width="auto" height="auto" />
 
 <p>
   &nbsp;
@@ -70,14 +70,13 @@
                                    <!-- TABS - START -->
                                    <ul class="govuk-tabs__list">
 
-                                       <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-                                          <a class="govuk-tabs__tab" href="#roles-employer">Employer</a>
-                                     </li>
-
-                                     <li class="govuk-tabs__list-item">
+                                     <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
                                           <a class="govuk-tabs__tab" href="#roles-provider">Provider</a>
                                      </li>
 
+                                     <li class="govuk-tabs__list-item">
+                                          <a class="govuk-tabs__tab" href="#roles-employer">Employer</a>
+                                     </li>
 
                                         <li class="govuk-tabs__list-item">
                                              <a class="govuk-tabs__tab" href="#roles-apprentice">Apprentice</a>
@@ -90,50 +89,8 @@
 
 
 
-
-
-
-
-
-                                                    <!-- TAB 1 - CONTENT - START -->
-                                                    <div class="govuk-tabs__panel" id="roles-employer">
-                                                      <h2 class="govuk-heading-m">Employer</h2>
-
-                                                                              <h2 class="govuk-heading-s">I have:</h2>
-
-                                                                              <ul class="govuk-list govuk-list--bullet">
-                                                                                   <li>a signed apprenticeship agreement between my apprentice and myself</li>
-                                                                                   <li>worked on a training plan with my apprentice and their training provider </li>
-                                                                                   <li>signed the training plan together with my apprentice and their training provider</li>
-                                                                                   <li>I understood and fully support my all my apprentice’s training needs </li>
-
-
-
-
-                                                                              </ul>
-
-
-                                                                              <h2 class="govuk-heading-s">I will:-</h2>
-
-                                                                              <ul class="govuk-list govuk-list--bullet">
-                                                                                   <li>will enable my apprentice to complete their off-the-job training during the working hours defined in the apprenticeship agreement </li>
-                                                                                   <li>take part in regular progress reviews with my apprentice and their training provider</li>
-                                                                                   <li>support my apprentice and their training provider in addressing and resolving any concerns or complaints </li>
-                                                                                   <li>update or renew the commitment for my apprentice where needed</li>
-
-                                                                              </ul>
-                                                    </div>
-                                                    <!-- TAB 1 - CONTENT - END -->
-
-
-
-
-
-
-
-
                                    <!-- TAB 3 - CONTENT - START -->
-                                   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="roles-provider">
+                                   <div class="govuk-tabs__panel" id="roles-provider">
 
 <!--
                                         <div class="govuk-form-group confirmed-panel iprovider-confirmed">
@@ -145,9 +102,7 @@
                                              </div>
                                         </div>
 
-            -->
-
-                              <h2 class="govuk-heading-m">Provider</h2>
+            -->                            <h2 class="govuk-heading-m">Provider</h2>
 
                                         <h2 class="govuk-heading-s">I have:</h2>
 
@@ -177,44 +132,39 @@
 
 
 
-                                   <!-- TAB 2 - CONTENT - START -->
-                                   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="roles-apprentice">
 
-                                     <h2 class="govuk-heading-m">Apprentice</h2>
+
+
+
+                                   <!-- TAB 1 - CONTENT - START -->
+                                   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="roles-employer" >
+                                     <h2 class="govuk-heading-m">Employer</h2>
 
                                                              <h2 class="govuk-heading-s">I have:</h2>
 
                                                              <ul class="govuk-list govuk-list--bullet">
-                                                                  <li>read through the details of my apprenticeship agreement</li>
-                                                                  <li>understood how it will be delivered by my employer and training provider</li>
-                                                                  <li>understood the key dates and milestones of my apprenticeship </li>
-                                                                  <li>understood the roles of my employer, training provider and end-point-assessment organisation
-                               </li>
-                                                                  <li>understood how my apprenticeship will be assessed by the end-point-assessment-organisation</li>
-                                                                  <li>been taken through a training plan for my apprenticeship</li>
+                                                                  <li>a signed apprenticeship agreement between my apprentice and myself</li>
+                                                                  <li>worked on a training plan with my apprentice and their training provider </li>
+                                                                  <li>signed the training plan together with my apprentice and their training provider</li>
+                                                                  <li>I understood and fully support my all my apprentice’s training needs </li>
 
-                                                                    <li>understood that the training plan will also account for prior learning, English and maths qualifications, and additional learning support</li>
-                                                                    <li>been given a copy of the training plan that I have signed together with my employer and training provider</li>
-                                                                    <li>understood that at least 20% of my apprenticeship hours will be used for off-the-job training </li>
-                                                                    <li>understood that my employer supports my off-the-job training</li>
-                                                                    <li>not been asked to pay for my apprenticeship by my employer or training provider </li>
+
+
+
                                                              </ul>
 
 
                                                              <h2 class="govuk-heading-s">I will:-</h2>
 
                                                              <ul class="govuk-list govuk-list--bullet">
-                                                                  <li>take part in regular progress reviews with my employer and provider</li>
-                                                                  <li>attend all learning and development activities, giving evidence where needed</li>
-                                                                  <li>let my employer or training provider know in advance when I cannot attend</li>
-                                                                  <li>agree with my employer and training provider when I am ready to complete my assessment</li>
-                                                                  <li>raise any concerns or complaints I have through my employer and provider’s official channels</li>
-                                                                  <li>take my concern or complaint further if I need to and know how to do this</li>
+                                                                  <li>will enable my apprentice to complete their off-the-job training during the working hours defined in the apprenticeship agreement </li>
+                                                                  <li>take part in regular progress reviews with my apprentice and their training provider</li>
+                                                                  <li>support my apprentice and their training provider in addressing and resolving any concerns or complaints </li>
+                                                                  <li>update or renew the commitment for my apprentice where needed</li>
 
                                                              </ul>
-
                                    </div>
-                                   <!-- TAB 2 - CONTENT - END -->
+                                   <!-- TAB 1 - CONTENT - END -->
 
 
 
@@ -222,19 +172,44 @@
 
 
 
+                                                                                                         <!-- TAB 2 - CONTENT - START -->
+                                                                                                         <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="roles-apprentice" >
+
+                                                                                                           <h2 class="govuk-heading-m">Apprentice</h2>
+
+                                                                                                                                   <h2 class="govuk-heading-s">I have:</h2>
+
+                                                                                                                                   <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                        <li>read through the details of my apprenticeship agreement</li>
+                                                                                                                                        <li>understood how it will be delivered by my employer and training provider</li>
+                                                                                                                                        <li>understood the key dates and milestones of my apprenticeship </li>
+                                                                                                                                        <li>understood the roles of my employer, training provider and end-point-assessment organisation
+                                                                      </li>
+                                                                                                                                        <li>understood how my apprenticeship will be assessed by the end-point-assessment-organisation</li>
+                                                                                                                                        <li>been taken through a training plan for my apprenticeship</li>
+
+                                                                                                                                          <li>understood that the training plan will also account for prior learning, English and maths qualifications, and additional learning support</li>
+                                                                                                                                          <li>been given a copy of the training plan that I have signed together with my employer and training provider</li>
+                                                                                                                                          <li>understood that at least 20% of my apprenticeship hours will be used for off-the-job training </li>
+                                                                                                                                          <li>understood that my employer supports my off-the-job training</li>
+                                                                                                                                          <li>not been asked to pay for my apprenticeship by my employer or training provider </li>
+                                                                                                                                   </ul>
 
 
+                                                                                                                                   <h2 class="govuk-heading-s">I will:-</h2>
 
+                                                                                                                                   <ul class="govuk-list govuk-list--bullet">
+                                                                                                                                        <li>take part in regular progress reviews with my employer and provider</li>
+                                                                                                                                        <li>attend all learning and development activities, giving evidence where needed</li>
+                                                                                                                                        <li>let my employer or training provider know in advance when I cannot attend</li>
+                                                                                                                                        <li>agree with my employer and training provider when I am ready to complete my assessment</li>
+                                                                                                                                        <li>raise any concerns or complaints I have through my employer and provider’s official channels</li>
+                                                                                                                                        <li>take my concern or complaint further if I need to and know how to do this</li>
 
+                                                                                                                                   </ul>
 
-
-
-
-
-
-
-
-
+                                                                                                         </div>
+                                                                                                         <!-- TAB 2 - CONTENT - END -->
 
 
 
@@ -274,7 +249,7 @@
                               </div>
                               <!-- CHECK BOX - CONFIRM - END -->
 
-                                <a href="6-approve"  class="govuk-button">Confirm</a>
+                                <a href="7-add-apprentice"  class="govuk-button">Confirm</a>
 
                             <!--  <button class="govuk-button apprentice-role-unconfirmed" data-module="govuk-button" id="apprentice-role">Confirm</button>
 
