@@ -121,7 +121,7 @@ if ($.cookie("employer-details") == 'true') {
 
 
 // Training Provider Confirm
-$('.training-provider-confirmed, #training-provider-confirmed, #training-provider-title-confirmed').hide();
+$('.training-provider-confirmed, #training-provider-confirmed, #training-provider-undo, #training-provider-title-confirmed').hide();
 
 
 // Confirm Training Provider
@@ -135,7 +135,7 @@ $("#training-provider-confirm").on("click", function (e) {
 });
 if ($.cookie("training-confirm") == 'true') {
        $('a.section-four').addClass('complete');
-    $('.training-provider-confirmed, #training-provider-confirmed, #training-provider-title-confirmed').show();
+    $('.training-provider-confirmed, #training-provider-undo, #training-provider-confirmed, #training-provider-title-confirmed').show();
      $('#training-form-hide, #training-provider-title').hide();
     $('.section-four .complete-number').text('1');
       $('a.section-four strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Completed');
@@ -154,7 +154,7 @@ if ($.cookie("training-confirm") == 'true') {
 
 
 // Employer Provider Confirm
-$('.employer-provider-confirmed, #employer-provider-confirmed, #employer-provider-title-confirmed').hide();
+$('.employer-provider-confirmed, #employer-provider-confirmed, #employer-provider-undo, #employer-provider-title-confirmed').hide();
 
 
 // Confirm Employer Provider
@@ -168,7 +168,7 @@ $("#employer-provider-confirm").on("click", function (e) {
 });
 if ($.cookie("employer-confirm") == 'true') {
      $('a.section-three').addClass('complete');
-    $('.employer-provider-confirmed, #employer-provider-confirmed, #employer-provider-title-confirmed').show();
+    $('.employer-provider-confirmed, #employer-provider-confirmed, #employer-provider-undo, #employer-provider-title-confirmed').show();
      $('#employer-form-hide, #employer-provider-title, #employer-provider-confirm').hide();
     $('.section-three .complete-number').text('1');
     $('a.section-three strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Completed');
@@ -184,7 +184,7 @@ if ($.cookie("employer-confirm") == 'true') {
 
 
 // Apprenticeship Details Confirm
-$('.app-details-confirmed, #app-details-confirmed, #app-details-title-confirmed').hide();
+$('.app-details-confirmed, #app-details-confirmed, #app-details-undo, #app-details-title-confirmed').hide();
 
 
 // Apprenticeship Details
@@ -198,7 +198,7 @@ $("#app-details-confirm").on("click", function (e) {
 });
 if ($.cookie("app-details-confirm") == 'true') {
      $('a.section-one').addClass('complete');
-    $('.app-details-confirmed, #app-details-confirmed, #app-details-title-confirmed').show();
+    $('.app-details-confirmed, #app-details-confirmed, #app-details-undo, #app-details-title-confirmed').show();
      $('#app-details-form-hide, #app-details-title, #app-details-confirm').hide();
     $('.section-one .complete-number').text('1');
     $('a.section-one strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Completed');
