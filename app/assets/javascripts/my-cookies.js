@@ -138,7 +138,7 @@ if ($.cookie("training-confirm") == 'true') {
     $('.training-provider-confirmed, #training-provider-undo, #training-provider-confirmed, #training-provider-title-confirmed').show();
      $('#training-form-hide, #training-provider-title').hide();
     $('.section-four .complete-number').text('1');
-      $('a.section-four strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Completed');
+      $('a.section-four strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
 } else if ($.cookie("training-confirm") == 'false') {
        $('a.section-four').addClass('wrong');
        $('.section-four .complete-number').text('0');
@@ -207,6 +207,76 @@ if ($.cookie("app-details-confirm") == 'true') {
        $('.section-one .complete-number').text('0');
        $('a.section-one strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
 }
+
+$("#app-details-undo").on("click", function (e) {
+
+      $.cookie("app-details-confirm", null, {path:'/'});
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Confirm Training Information No(2)
+$('.traininfo-confirmed, #traininfo-confirmed, #traininfo-undo, #traininfo-title-confirmed, .traininfo-title-confirmed').hide();
+
+
+// Apprenticeship Training
+$("#traininfo-confirm").on("click", function (e) {
+
+     if ($('input[id=TraininfoConfirm]').is(':checked')) {
+          $.cookie("traininfo-confirm", true, {path:'/'});
+     } else {
+          $.cookie("traininfo-confirm", false, {path:'/'});
+     }
+});
+if ($.cookie("traininfo-confirm") == 'true') {
+     $('a.section-two').addClass('complete');
+    $('.traininfo-confirmed, #traininfo-confirmed, #traininfo-undo, #traininfo-title-confirmed, .traininfo-title-confirmed').show();
+     $('#traininfo-form-hide, #traininfo-title, #traininfo-confirm').hide();
+    $('.section-two .complete-number').text('1');
+    $('a.section-two strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Completed');
+} else if ($.cookie("traininfo-confirm") == 'false') {
+       $('a.section-two').addClass('wrong');
+       $('.section-two .complete-number').text('0');
+       $('a.section-two strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
+}
+
+$("#traininfo-undo").on("click", function (e) {
+
+      $.cookie("traininfo-confirm", null, {path:'/'});
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -40,4 +40,19 @@ router.post('/sprint-6/commitment-statement/1-apprenticeship-details/1-apprentic
 })
 
 
+
+// 2 Training Info Re-direct from yes / no
+router.post('/sprint-6/commitment-statement/1-apprenticeship-details/1-apprenticeship-training', function (req, res) {
+    let TraininfoConfirm = req.session.data['TraininfoConfirm']
+
+    if (TraininfoConfirm === 'yes') {
+          res.redirect('/sprint-6/commitment-statement/dashboard/2-my-apprenticeships')
+    }
+    else if (TraininfoConfirm === 'no') {
+        res.redirect('/sprint-6/commitment-statement/1-apprenticeship-details/noconfirm-app-details')
+    }
+})
+
+
+
 module.exports = router
