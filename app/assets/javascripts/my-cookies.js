@@ -171,7 +171,7 @@ if ($.cookie("employer-confirm") == 'true') {
     $('.employer-provider-confirmed, #employer-provider-confirmed, #employer-provider-undo, #employer-provider-title-confirmed').show();
      $('#employer-form-hide, #employer-provider-title, #employer-provider-confirm').hide();
     $('.section-three .complete-number').text('1');
-    $('a.section-three strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Completed');
+    $('a.section-three strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
 } else if ($.cookie("employer-confirm") == 'false') {
        $('a.section-three').addClass('wrong');
        $('.section-three .complete-number').text('0');
@@ -201,7 +201,7 @@ if ($.cookie("app-details-confirm") == 'true') {
     $('.app-details-confirmed, #app-details-confirmed, #app-details-undo, #app-details-title-confirmed').show();
      $('#app-details-form-hide, #app-details-title, #app-details-confirm').hide();
     $('.section-one .complete-number').text('1');
-    $('a.section-one strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Completed');
+    $('a.section-one strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
 } else if ($.cookie("app-details-confirm") == 'false') {
        $('a.section-one').addClass('wrong');
        $('.section-one .complete-number').text('0');
@@ -250,7 +250,7 @@ if ($.cookie("traininfo-confirm") == 'true') {
     $('.traininfo-confirmed, #traininfo-confirmed, #traininfo-undo, #traininfo-title-confirmed, .traininfo-title-confirmed').show();
      $('#traininfo-form-hide, #traininfo-title, #traininfo-confirm').hide();
     $('.section-two .complete-number').text('1');
-    $('a.section-two strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Completed');
+    $('a.section-two strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
 } else if ($.cookie("traininfo-confirm") == 'false') {
        $('a.section-two').addClass('wrong');
        $('.section-two .complete-number').text('0');
