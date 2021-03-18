@@ -23,14 +23,19 @@
                               <div class="govuk-warning-text">
                                    <span class="govuk-confirm__icon" aria-hidden="true"></span>
                                    <strong class="govuk-warning-text__text">
-                                        <span class="govuk-warning-text__assistive">Confirmed</span> You have confirmed your apprenticeship details
+                                        <span class="govuk-warning-text__assistive">Confirmed</span> You have confirmed the details of your apprenticeship
                                    </strong>
                               </div>
                          </div>
 
 
-                          <h1 class="govuk-heading-xl">Your apprenticeship details</h1>
-
+                          <h1 class="govuk-heading-xl">Details of your apprenticeship</h1>
+                          <p>
+                            These are the details that your employer and training provider have given to us.
+                            </p>
+                            <p>
+                              You’ll be assessed against these details by an independent assessor at the end of your apprenticeship, <b>so it’s important to check that it’s right.</b>
+                              </p>
 
 
                           <table class="govuk-table data-table">
@@ -47,38 +52,40 @@
                                     </tr>
                                     <tr class="govuk-table__row">
                                          <th scope="row" class="govuk-table__header">Level</th>
-                                         <td class="govuk-table__cell">3</td>
+                                         <td class="govuk-table__cell">3 (equivalent to A-Level)</td>
                                     </tr>
-
+                                    <!--
                                     <tr class="govuk-table__row">
                                          <th scope="row" class="govuk-table__header">
                                               <div>Version
-                                                   <!--<span class="tooltiptext tooltip-right">Tooltip text</span>-->
+
                                               </div>
                                          </th>
                                          <td class="govuk-table__cell">1.2</td>
                                     </tr>
+
                                     <tr class="govuk-table__row">
                                          <th scope="row" class="govuk-table__header">
                                            Duration
                                          </th>
                                          <td class="govuk-table__cell">12 month(s)<br /></td>
                                     </tr>
+                                    -->
                                     <tr class="govuk-table__row">
                                          <th scope="row" class="govuk-table__header">
-                                              <div>Planned start date
+                                              <div>Planned start
 
                                               </div>
                                          </th>
-                                         <td class="govuk-table__cell">2 March 2021</td>
+                                         <td class="govuk-table__cell">March 2021</td>
                                     </tr>
                                     <tr class="govuk-table__row">
                                          <th scope="row" class="govuk-table__header">
-                                              <div>Planned end date
+                                              <div>Planned end
                                                    <!--<span class="tooltiptext tooltip-right">Tooltip text</span>-->
                                               </div>
                                          </th>
-                                         <td class="govuk-table__cell">3 March 2022</td>
+                                         <td class="govuk-table__cell">March 2022</td>
                                     </tr>
 
                                </tbody>
@@ -86,6 +93,16 @@
 
 
 
+                          <h3 class="govuk-heading-m" id="">Things you need to know</h3>
+
+                        <div class="govuk-inset-text">
+                          <p class="govuk-body">Your planned start and end dates:</p>
+                        <ul class="govuk-list govuk-list--bullet">
+
+                          <li>include the time spent in training and your assessment at the end of your apprenticeship.</li>
+                          <li>should match the start and end dates in your training plan given to you by your training provider.</li>
+                        </ul>
+                        </div>
 
                   </div>
 
@@ -102,7 +119,7 @@
 
                     <div class="govuk-grid-row">
                        <div class="govuk-grid-column-two-thirds">
-                        
+
 
 
                       <form id="app-details-form-hide" method="post" action="/sprint-6/commitment-statement/1-apprenticeship-details/1-apprenticeship-details">
@@ -113,7 +130,7 @@
                          name: "AppDetails",
                          fieldset: {
                            legend: {
-                             text: "Are your apprenticeship details correct?",
+                             text: "Are these details correct?",
                              isPageHeading: true,
                              classes: "govuk-fieldset__legend--l"
                            }
@@ -130,7 +147,7 @@
                          ]
                        }) }}
 
-                      <button class="govuk-button" data-module="govuk-button" id="app-details-confirm">Confirm</button>
+                      <button class="govuk-button" data-module="govuk-button" id="app-details-confirm">Continue</button>
                       </form>
 
 
@@ -140,7 +157,7 @@
                     <a href="../dashboard/2-my-apprenticeships" class="govuk-button" data-module="govuk-button" id="app-details-confirmed" >Continue</a><br />
 
 
-                    <a href="noconfirm-app-details" class="govuk-!-font-size-19" data-module="govuk-button" id="app-details-undo">These are not my apprenticeship details</a><br />
+                    <a href="noconfirm-app-details" class="govuk-!-font-size-19" data-module="govuk-button" id="app-details-undo">I want to change my answer</a><br />
 
 
 

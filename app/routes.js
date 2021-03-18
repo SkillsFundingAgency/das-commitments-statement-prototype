@@ -54,5 +54,30 @@ router.post('/sprint-6/commitment-statement/1-apprenticeship-details/1-apprentic
 })
 
 
+// KSB
+router.post('/sprint-6/commitment-statement/1-apprenticeship-details/1-apprenticeship-training-ksb', function (req, res) {
+    let TraininfoKSB = req.session.data['TraininfoKSB']
+
+    if (TraininfoKSB === 'yes') {
+          res.redirect('/sprint-6/commitment-statement/dashboard/2-my-apprenticeships')
+    }
+    else if (TraininfoKSB === 'no') {
+        res.redirect('/sprint-6/commitment-statement/1-apprenticeship-details/noconfirm-app-details')
+    }
+})
+
+
+// Re-direct from yes / no
+router.post('/sprint-6/commitment-statement/3-roles/1-apprentice-role', function (req, res) {
+    let RolesR = req.session.data['RolesRespons']
+
+    if (RolesR === 'yes') {
+        res.redirect('/sprint-6/commitment-statement/dashboard/2-my-apprenticeships')
+    }
+    else if (RolesR === 'no') {
+        res.redirect('/sprint-6/commitment-statement/2-employer-details/noconfirm-role')
+    }
+})
+
 
 module.exports = router

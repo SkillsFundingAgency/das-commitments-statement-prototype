@@ -134,15 +134,14 @@ $("#training-provider-confirm").on("click", function (e) {
      }
 });
 if ($.cookie("training-confirm") == 'true') {
-       $('a.section-four').addClass('complete');
+       $('a.section-two').addClass('complete');
     $('.training-provider-confirmed, #training-provider-undo, #training-provider-confirmed, #training-provider-title-confirmed').show();
      $('#training-form-hide, #training-provider-title').hide();
-    $('.section-four .complete-number').text('1');
-      $('a.section-four strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
+    $('.section-two .complete-number').text('1');
+      $('a.section-two strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
 } else if ($.cookie("training-confirm") == 'false') {
-       $('a.section-four').addClass('wrong');
-       $('.section-four .complete-number').text('0');
-       $('a.section-four strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
+       $('.section-two .complete-number').text('0');
+       $('a.section-two strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
 }
 
 
@@ -167,15 +166,15 @@ $("#employer-provider-confirm").on("click", function (e) {
      }
 });
 if ($.cookie("employer-confirm") == 'true') {
-     $('a.section-three').addClass('complete');
+     $('a.section-one').addClass('complete');
     $('.employer-provider-confirmed, #employer-provider-confirmed, #employer-provider-undo, #employer-provider-title-confirmed').show();
      $('#employer-form-hide, #employer-provider-title, #employer-provider-confirm').hide();
-    $('.section-three .complete-number').text('1');
-    $('a.section-three strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
+    $('.section-one .complete-number').text('1');
+    $('a.section-one strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
 } else if ($.cookie("employer-confirm") == 'false') {
-       $('a.section-three').addClass('wrong');
-       $('.section-three .complete-number').text('0');
-       $('a.section-three strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
+       $('a.section-one').addClass('wrong');
+       $('.section-one .complete-number').text('0');
+       $('a.section-one strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
 }
 
 
@@ -197,15 +196,15 @@ $("#app-details-confirm").on("click", function (e) {
      }
 });
 if ($.cookie("app-details-confirm") == 'true') {
-     $('a.section-one').addClass('complete');
+     $('a.section-three').addClass('complete');
     $('.app-details-confirmed, #app-details-confirmed, #app-details-undo, #app-details-title-confirmed').show();
      $('#app-details-form-hide, #app-details-title, #app-details-confirm').hide();
-    $('.section-one .complete-number').text('1');
-    $('a.section-one strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
+    $('.section-three .complete-number').text('1');
+    $('a.section-three strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
 } else if ($.cookie("app-details-confirm") == 'false') {
-       $('a.section-one').addClass('wrong');
-       $('.section-one .complete-number').text('0');
-       $('a.section-one strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
+       $('a.section-three').addClass('wrong');
+       $('.section-three .complete-number').text('0');
+       $('a.section-three strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
 }
 
 $("#app-details-undo").on("click", function (e) {
@@ -232,7 +231,7 @@ $("#app-details-undo").on("click", function (e) {
 
 
 
-// Confirm Training Information No(2)
+// Confirm your training
 $('.traininfo-confirmed, #traininfo-confirmed, #traininfo-undo, #traininfo-title-confirmed, .traininfo-title-confirmed').hide();
 
 
@@ -246,15 +245,15 @@ $("#traininfo-confirm").on("click", function (e) {
      }
 });
 if ($.cookie("traininfo-confirm") == 'true') {
-     $('a.section-two').addClass('complete');
+     $('a.section-four').addClass('complete');
     $('.traininfo-confirmed, #traininfo-confirmed, #traininfo-undo, #traininfo-title-confirmed, .traininfo-title-confirmed').show();
      $('#traininfo-form-hide, #traininfo-title, #traininfo-confirm').hide();
-    $('.section-two .complete-number').text('1');
-    $('a.section-two strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
+    $('.section-four .complete-number').text('1');
+    $('a.section-four strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
 } else if ($.cookie("traininfo-confirm") == 'false') {
-       $('a.section-two').addClass('wrong');
-       $('.section-two .complete-number').text('0');
-       $('a.section-two strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
+       $('a.section-four').addClass('wrong');
+       $('.section-four .complete-number').text('0');
+       $('a.section-four strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
 }
 
 $("#traininfo-undo").on("click", function (e) {
@@ -327,8 +326,8 @@ $("#apprentice-role").on("click", function (e) {
 });
 
 if ($.cookie("roles-and-responsibilities") == 'true') {
-     $('a.section-three').addClass('complete').removeClass('started');
-     $('a.section-three strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
+     $('a.section-five').addClass('complete').removeClass('started');
+     $('a.section-five strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('complete');
      $('.section-three .complete-number').text('3');
      $('.apprentice-role-confirmed').show();
      $('.apprentice-role-unconfirmed').hide();
@@ -343,9 +342,9 @@ $("#apprentice-role-wrong").on("click", function (e) {
 });
 
 if ($.cookie("roles-and-responsibilities-wrong") == 'true') {
-     $('a.section-three').addClass('wrong').removeClass('started');
-     $('a.section-three strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
-     $('.section-three .complete-number').text('2');
+     $('a.section-five').addClass('wrong').removeClass('started');
+     $('a.section-five strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
+     $('.section-five .complete-number').text('2');
      $('.apprentice-role-confirmed').hide();
      $('.apprentice-role-unconfirmed').show();
      $('.apprentice-role-confirmed-title').text('Apprentice - Roles and responsibilities');

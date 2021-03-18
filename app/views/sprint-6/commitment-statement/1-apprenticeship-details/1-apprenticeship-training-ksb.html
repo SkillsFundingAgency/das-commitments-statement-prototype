@@ -21,45 +21,19 @@
               <div class="govuk-grid-column-two-thirds">
 
 
-                <div class="govuk-form-group confirmed-panel traininfo-title-confirmed">
+                <div class="govuk-form-group confirmed-panel traininfo-ksb-confirmed">
                      <div class="govuk-warning-text">
                           <span class="govuk-confirm__icon" aria-hidden="true"></span>
                           <strong class="govuk-warning-text__text">
-                               <span class="govuk-warning-text__assistive">Confirmed</span> You have confirmed the details of your off-the-job training
+                               <span class="govuk-warning-text__assistive">Confirmed</span> You have confirmed that you understand these knowledge, skills and behaviours
                           </strong>
                      </div>
                 </div>
 
-                <h1 class="govuk-heading-xl">Your off-the-job training details</h1>
+                <h1 class="govuk-heading-xl">Knowledge, skills and behaviours</h1>
 
                 <p>
-                  Your employer knows that you must spend at <b>least 20% of your working hours </b>in off-the-job training. This may be with your training provider or at your place of work.
-                  </p>
-
-
-                  <table class="govuk-table data-table">
-                       <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                 <th scope="row" class="govuk-table__header">Total planned off-the-job training hours</th>
-                                 <td class="govuk-table__cell">900 hours</td>
-                            </tr>
-                       </tbody>
-                  </table>
-
-
-
-                  <h3 class="govuk-heading-m" id="">Things you need to know</h3>
-
-                <div class="govuk-inset-text">
-                  <p class="govuk-body">Your total planned off-the-job training hours:</p>
-                <ul class="govuk-list govuk-list--bullet">
-
-                  <li>represent the total number of hours you will spend in off-the-job training</li>
-                  <li>does not include the assessment at the end of your apprenticeship</li>
-                </ul>
-                </div>
-                <p>
-                  Your training plan, given to you by your training provider, will set out whether you do your training one day per week, one week per month, or spread the equivalent hours across the week.
+                These are the knowledge, skills and behaviours you will learn on your apprenticeship.
                   </p>
 
 
@@ -69,48 +43,7 @@
 
 
 
-
-
-
-
-
-
-
-
-                <!-- ////// > Estimated weekly hours < //////////////////////////////////////////////////////////////////////////////////////////
-                <div class="" id="apprentice-training">
-
-                  <h2 class="govuk-heading-m" id="hours-details-text">Estimated weekly hours</h2>
-
-                  <p> At least 20% of your time will be on ‘off-the-job’ apprenticeship training. You may agree with your
-                       employer to train one day a week, one week out of the month, or to spread the equivalent hours across
-                       the week.</p>
-
-                  <table class="govuk-table data-table">
-                       <tbody class="govuk-table__body">
-                            <tr class="govuk-table__row">
-                                 <th scope="row" class="govuk-table__header">On the job</th>
-                                 <td class="govuk-table__cell">32</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                 <th scope="row" class="govuk-table__header">Apprenticeship training</th>
-                                 <td class="govuk-table__cell">8</td>
-                            </tr>
-                            <tr class="govuk-table__row">
-                                 <th scope="row" class="govuk-table__header">Total</th>
-                                 <td class="govuk-table__cell">40</td>
-                            </tr>
-                       </tbody>
-                  </table>
--->
-
-
-
-
-
-
-
-                  <!-- ////// > KSB's < //////////////////////////////////////////////////////////////////////////////////////////
+                  <!-- ////// > KSB's < //////////////////////////////////////////////////////////////////////////////////////////-->
                   <h2 class="govuk-heading-m" id="four-roles">Knowledge, skills and behaviours</h2>
 
                   <p>
@@ -316,7 +249,7 @@
                                       <p><strong>B5:</strong> A strong Team spirit and Corps values</p>
                                  </div>
                             </div>
-                       </div>-->
+                       </div>
                   </div>
                   <!-- ////// > End KSB's < ////////////////////////////////////////////////////////////////////////////////////////// -->
 
@@ -340,16 +273,16 @@
 
 
 
-                <form method="post" id="traininfo-form-hide" action="/sprint-6/commitment-statement/1-apprenticeship-details/1-apprenticeship-training" class="apprenticeship-details check-answers-page">
+                <form method="post" id="traininfo-ksb-hide" action="/sprint-6/commitment-statement/1-apprenticeship-details/1-apprenticeship-training" class="apprenticeship-details check-answers-page">
 
 
                   {{ govukRadios({
                     classes: "govuk-radios--inline",
-                    idPrefix: "TraininfoConfirm",
-                    name: "TraininfoConfirm",
+                    idPrefix: "TraininfoKSB",
+                    name: "TraininfoKSB",
                     fieldset: {
                       legend: {
-                        text: "Are these details correct?",
+                        text: "Do you understand the knowledge skills and behaviours you will learn on your apprenticeship?",
                         isPageHeading: true,
                         classes: "govuk-fieldset__legend--l"
                       }
@@ -367,7 +300,7 @@
                   }) }}
 
 
-                    <button class="govuk-button apprenticeship-complete" data-module="govuk-button" id="traininfo-confirm">Continue</button>
+                    <button class="govuk-button apprenticeship-complete" data-module="govuk-button" id="traininfo-ksb">Continue</button>
 
 
 
@@ -384,10 +317,10 @@
                 <br />
 
 
-              <a href="../dashboard/2-my-apprenticeships" class="govuk-button" data-module="govuk-button" id="traininfo-confirmed">Continue</a><br />
+              <a href="../dashboard/2-my-apprenticeships" class="govuk-button" data-module="govuk-button" id="traininfo-ksb">Continue</a><br />
 
 
-              <a href="noconfirm-app-details" class="govuk-!-font-size-19" data-module="govuk-button" id="traininfo-undo">I want to change my answer</a><br />
+              <a href="noconfirm-app-details" class="govuk-!-font-size-19" data-module="govuk-button" id="traininfo-ksb">I want to change my answer</a><br />
 
 
 
