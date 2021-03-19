@@ -69,13 +69,13 @@ router.post('/sprint-6/commitment-statement/1-apprenticeship-details/1-apprentic
 
 // Re-direct from yes / no
 router.post('/sprint-6/commitment-statement/3-roles/1-apprentice-role', function (req, res) {
-    let RolesR = req.session.data['RolesRespons']
+    let RolesR = req.session.data['RolesR']
 
     if (RolesR === 'yes') {
         res.redirect('/sprint-6/commitment-statement/dashboard/2-my-apprenticeships')
     }
     else if (RolesR === 'no') {
-        res.redirect('/sprint-6/commitment-statement/2-employer-details/noconfirm-role')
+        res.redirect('/sprint-6/commitment-statement/3-roles/noconfirm-roles')
     }
 })
 

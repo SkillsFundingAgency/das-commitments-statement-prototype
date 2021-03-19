@@ -143,6 +143,11 @@ if ($.cookie("training-confirm") == 'true') {
        $('.section-two .complete-number').text('0');
        $('a.section-two strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
 }
+$("#training-provider-undo").on("click", function (e) {
+
+      $.cookie("training-confirm", null, {path:'/'});
+
+});
 
 
 
@@ -176,7 +181,11 @@ if ($.cookie("employer-confirm") == 'true') {
        $('.section-one .complete-number').text('0');
        $('a.section-one strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
 }
+$("#employer-provider-undo").on("click", function (e) {
 
+      $.cookie("employer-confirm", null, {path:'/'});
+
+});
 
 
 
@@ -263,6 +272,58 @@ $("#traininfo-undo").on("click", function (e) {
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Confirm your training
+$('.roles-confirmed, #roles-confirmed, #roles-undo, #roles-title-confirmed, .roles-title-confirmed').hide();
+
+
+// Roles
+$("#roles-confirm").on("click", function (e) {
+
+     if ($('input[id=RolesR]').is(':checked')) {
+          $.cookie("RolesR", true, {path:'/'});
+     } else {
+          $.cookie("RolesR", false, {path:'/'});
+     }
+});
+if ($.cookie("RolesR") == 'true') {
+     $('a.section-five').addClass('complete');
+    $('.roles-confirmed, #roles-confirmed, #roles-undo, #roles-title-confirmed, .roles-title-confirmed').show();
+     $('#roles-form-hide, #roles-title, #roles-confirm').hide();
+    $('.section-five .complete-number').text('1');
+    $('a.section-five strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
+} else if ($.cookie("RolesR") == 'false') {
+       $('a.section-five').addClass('wrong');
+       $('.section-five .complete-number').text('0');
+       $('a.section-five strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
+}
+
+$("#roles-undo").on("click", function (e) {
+
+      $.cookie("RolesR", null, {path:'/'});
+
+});
 
 
 
