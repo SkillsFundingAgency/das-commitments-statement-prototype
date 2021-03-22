@@ -37,10 +37,10 @@
                Who's working on this project?
           </h2>
           <ul class="govuk-list govuk-list--bullet">
-               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/people/5caf4ce4f4c2b72785f452e2" title="Link to Helen's profile on Confluence">Helen Dickerson</a> &ndash; Content Designer</li>
-               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/people/5bd824414d969945b2bead6b" title="Link to Chris's profile on Confluence">Chris  Hewison</a> &ndash; Interaction Designer</li>
-               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/people/5f50e398d0884f0049412877" title="Link to Chris's profile on Confluence">Hazel Fletcher</a> &ndash; Interaction Designer</li>
-               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/people/5f9c3ddab38e610071223a3d" title="Link to Kyle's profile on Confluence">Kyle Layland</a> &ndash; User Researcher</li>
+               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/spaces/NDL/pages/189759681/Content+design+team" title="Link to Tahi's profile on Confluence">Tahi Gichigi</a> &ndash; Content Designer</li>
+               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/spaces/DAS/pages/1070924516/Interaction+Design+Clan" title="Link to Darren's profile on Confluence">Darren</a> &ndash; Interaction Designer</li>
+
+               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/people/5f9c3ddab38e610071223a3d" title="Link to Andrew's profile on Confluence">Andrew Stocker</a> &ndash; User Researcher</li>
           </ul>
      </div>
      <!-- Two thirds header section ends -->
@@ -114,7 +114,7 @@
                <a href="/sprint-7/add-apprentice-provider-happy/1-add-apprentice" class="govuk-link govuk-link--no-visited-state">Test for provider journey</a>
                <br>
                <a href="/sprint-6/commitment-statement/emails/index" class="govuk-link govuk-link--no-visited-state">Email</a>
-              
+
           </p>
      </div>
      <!-- Full width header section ends -->
@@ -132,6 +132,18 @@
                Beta sprints
           </h2>
 
+          {% set sprint8Html %}
+               {% include './sprint-8/_summary.html' %}
+          {% endset %}
+
+          {% set sprint7Html %}
+               {% include './sprint-7/_summary.html' %}
+          {% endset %}
+
+          {% set sprint6Html %}
+               {% include './sprint-6/_summary.html' %}
+          {% endset %}
+
           {% set sprint5Html %}
                {% include './sprint-5/_summary.html' %}
           {% endset %}
@@ -143,6 +155,40 @@
           {{ govukAccordion({
                id: "accordion-beta",
                items: [
+
+               {
+                    heading: {
+                         text: "Sprint 8"
+                    },
+                    content: {
+                         html: sprint8Html
+                    },
+                    summary: {
+                         html: '6th January 2021 — 19th January 2021'
+                    }
+               },
+               {
+                    heading: {
+                         text: "Sprint 7"
+                    },
+                    content: {
+                         html: sprint7Html
+                    },
+                    summary: {
+                         html: '6th January 2021 — 19th January 2021'
+                    }
+               },
+               {
+                    heading: {
+                         text: "Sprint 6"
+                    },
+                    content: {
+                         html: sprint6Html
+                    },
+                    summary: {
+                         html: '6th January 2021 — 19th January 2021'
+                    }
+               },
                     {
                          heading: {
                               text: "Sprint 5"
