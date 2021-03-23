@@ -294,7 +294,7 @@ $("#traininfo-undo").on("click", function (e) {
 
 
 
-// Confirm your training
+// Roles
 $('.roles-confirmed, #roles-confirmed, #roles-undo, #roles-title-confirmed, .roles-title-confirmed').hide();
 
 
