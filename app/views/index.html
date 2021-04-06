@@ -126,7 +126,14 @@
      <!-- Sprints section starts -->
      <div class="govuk-grid-column-two-thirds">
 
-          {% include './sprint-9/_summary.html' %}
+       <h2 class="govuk-heading-l" id="sprint-6">
+            Sprint 10
+            <span class="govuk-caption-l">
+                 31st March &mdash; 15th April 2021
+            </span>
+       </h2>
+
+          {% include './sprint-10/_summary.html' %}
 
           <h2 class="govuk-heading-l govuk-!-margin-top-9">
                Beta sprints
@@ -159,8 +166,17 @@
           {{ govukAccordion({
                id: "accordion-beta",
                items: [
-            
-
+               {
+                    heading: {
+                         text: "Sprint 9"
+                    },
+                    content: {
+                         html: sprint9Html
+                    },
+                    summary: {
+                         html: '15th March - 30th March 2021'
+                    }
+               },
                {
                     heading: {
                          text: "Sprint 8"
@@ -172,6 +188,7 @@
                          html: '3rd March - 15th March 2021'
                     }
                },
+
                {
                     heading: {
                          text: "Sprint 7"
@@ -183,17 +200,17 @@
                          html: '17th January - 2nd February 2021'
                     }
                },
-               {
-                    heading: {
-                         text: "Sprint 6"
-                    },
-                    content: {
-                         html: sprint6Html
-                    },
-                    summary: {
-                         html: '6th January 2021 — 19th January 2021'
-                    }
-               },
+                  {
+                        heading: {
+                             text: "Sprint 6"
+                        },
+                        content: {
+                             html: sprint6Html
+                        },
+                        summary: {
+                             html: '6th January 2021 — 19th January 2021'
+                        }
+                      },
                     {
                          heading: {
                               text: "Sprint 5"
