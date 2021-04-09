@@ -11,15 +11,18 @@
 
 <a onClick='window.history.back()' class="image-demo">
 
-  <img src="/public/images/provider-manage.jpg" width="auto" height="auto" />
+  <img src="/public/images/employer-manage.jpg" width="auto" height="auto" />
 </a>
 <main class="govuk-main-wrapper employer-overide" id="main-content" role="main">
 
+<P>
+&nbsp;
+  </P>
 
 <h1 class="govuk-heading-xl">Manage your apprentices</h1>
 
         <form method="get" action="/10004112/apprentices">
-            <div class="govuk-grid-row">
+          <!--  <div class="govuk-grid-row">
                 <div class="govuk-grid-column-two-thirds">
                     <div class="govuk-form-group">
                         <label for="searchTerm" class="govuk-label">Search apprentice name or unique learner number (ULN)</label>
@@ -31,8 +34,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="govuk-grid-row">
+            </div>-->
+    <!--        <div class="govuk-grid-row">
                 <div class="govuk-grid-column-full">
                     <div class="das-pane govuk-!-margin-bottom-3">
                         <div class="govuk-grid-row">
@@ -170,7 +173,7 @@
                         <button class="govuk-button govuk-!-margin-0" type="submit">Apply filters</button>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </form>
         <div class="govuk-grid-row govuk-!-margin-bottom-2">
             <div class="govuk-grid-column-two-thirds">
@@ -189,16 +192,7 @@
                             Apprentice name
                         </a>
                     </th>
-                    <th scope="col" class="govuk-table__header">
-                        <a class="das-table__sort" title="Sort the table by name" href="">
-                            ULN
-                        </a>
-                    </th>
-                    <th scope="col" class="govuk-table__header">
-                        <a class="das-table__sort" title="Sort the table by name" href="">
-                            Employer
-                        </a>
-                    </th>
+
                     <th scope="col" class="govuk-table__header">
                         <a class="das-table__sort" title="Sort the table by name" href="">
                             Apprenticeship training course
@@ -214,6 +208,12 @@
                             Planned end date
                         </a>
                     </th>
+
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="">
+                            Training provider
+                        </a>
+                    </th>
                     <th scope="col" class="govuk-table__header">
                         <a class="das-table__sort" title="Sort the table by name" href="">
                             Status
@@ -226,19 +226,14 @@
                     </th>
                 </tr>
             </thead>
-            <tbody class="govuk-table__body">
+           <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell" data-label="Apprentice name">
                             <a class="govuk-link" href="details">
                                 Euan Gray
                             </a>
                         </td>
-                        <td class="govuk-table__cell" data-label="ULN">
-                            9900008005
-                        </td>
-                        <td class="govuk-table__cell" data-label="Employer">
-                            LOCKHEED MARTIN AERONAUTICAL SYSTEMS SUPPORT COMPANY
-                        </td>
+
                         <td class="govuk-table__cell" data-label="Apprenticeship training course">
                             Actuarial technician, Level: 4 (Standard)
                         </td>
@@ -247,6 +242,9 @@
                         </td>
                         <td class="govuk-table__cell" data-label="Planned end date">
                             Aug 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Loughborough College
                         </td>
                         <td class="govuk-table__cell" data-label="Status">
                             Stopped
@@ -260,12 +258,7 @@
                               Rufus Kelly
                             </a>
                         </td>
-                        <td class="govuk-table__cell" data-label="ULN">
-                            9900008102
-                        </td>
-                        <td class="govuk-table__cell" data-label="Employer">
-                            LOCKHEED MARTIN AERONAUTICAL SYSTEMS SUPPORT COMPANY
-                        </td>
+
                         <td class="govuk-table__cell" data-label="Apprenticeship training course">
                             Actuarial technician, Level: 4 (Standard)
                         </td>
@@ -275,7 +268,10 @@
                         <td class="govuk-table__cell" data-label="Planned end date">
                             Aug 2021
                         </td>
-                        <td class="govuk-table__cell" data-label="Status">
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Loughborough College
+                        </td>
+                         <td class="govuk-table__cell" data-label="Status">
                             Live
                         </td>
                         <td class="govuk-table__cell" data-label="Alerts">
@@ -288,12 +284,7 @@
                               Ellis Watts
                             </a>
                         </td>
-                        <td class="govuk-table__cell" data-label="ULN">
-                            9900008307
-                        </td>
-                        <td class="govuk-table__cell" data-label="Employer">
-                            LOCKHEED MARTIN AERONAUTICAL SYSTEMS SUPPORT COMPANY
-                        </td>
+
                         <td class="govuk-table__cell" data-label="Apprenticeship training course">
                             Actuarial technician, Level: 4 (Standard)
                         </td>
@@ -302,6 +293,9 @@
                         </td>
                         <td class="govuk-table__cell" data-label="Planned end date">
                             Aug 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Loughborough College
                         </td>
                         <td class="govuk-table__cell" data-label="Status">
                             Paused
@@ -318,12 +312,7 @@
                                 Toby Holland
                             </a>
                         </td>
-                        <td class="govuk-table__cell" data-label="ULN">
-                            9900007203
-                        </td>
-                        <td class="govuk-table__cell" data-label="Employer">
-                            LOCKHEED MARTIN AERONAUTICAL SYSTEMS SUPPORT COMPANY
-                        </td>
+
                         <td class="govuk-table__cell" data-label="Apprenticeship training course">
                             Actuarial technician, Level: 4 (Standard)
                         </td>
@@ -332,6 +321,9 @@
                         </td>
                         <td class="govuk-table__cell" data-label="Planned end date">
                             Aug 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Loughborough College
                         </td>
                         <td class="govuk-table__cell" data-label="Status">
                             Live
@@ -346,12 +338,7 @@
                               Cohen Powell
                             </a>
                         </td>
-                        <td class="govuk-table__cell" data-label="ULN">
-                            9900007300
-                        </td>
-                        <td class="govuk-table__cell" data-label="Employer">
-                            LOCKHEED MARTIN AERONAUTICAL SYSTEMS SUPPORT COMPANY
-                        </td>
+
                         <td class="govuk-table__cell" data-label="Apprenticeship training course">
                             Mineral Products Technology: Technical and Managerial Development in Mineral Products Technology Industry, Level: 4
                         </td>
@@ -360,6 +347,9 @@
                         </td>
                         <td class="govuk-table__cell" data-label="Planned end date">
                             Aug 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Loughborough College
                         </td>
                         <td class="govuk-table__cell" data-label="Status">
                             Live
@@ -373,12 +363,7 @@
                                 Zak Day
                             </a>
                         </td>
-                        <td class="govuk-table__cell" data-label="ULN">
-                            9900007408
-                        </td>
-                        <td class="govuk-table__cell" data-label="Employer">
-                            LOCKHEED MARTIN AERONAUTICAL SYSTEMS SUPPORT COMPANY
-                        </td>
+
                         <td class="govuk-table__cell" data-label="Apprenticeship training course">
                             Mineral Products Technology: Technical and Managerial Development in Mineral Products Technology Industry, Level: 4
                         </td>
@@ -387,6 +372,9 @@
                         </td>
                         <td class="govuk-table__cell" data-label="Planned end date">
                             Aug 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Loughborough College
                         </td>
                         <td class="govuk-table__cell" data-label="Status">
                             Live
@@ -400,12 +388,7 @@
                                 Joey Fraser
                             </a>
                         </td>
-                        <td class="govuk-table__cell" data-label="ULN">
-                            9900007505
-                        </td>
-                        <td class="govuk-table__cell" data-label="Employer">
-                            LOCKHEED MARTIN AERONAUTICAL SYSTEMS SUPPORT COMPANY
-                        </td>
+
                         <td class="govuk-table__cell" data-label="Apprenticeship training course">
                             Mineral Products Technology: Technical and Managerial Development in Mineral Products Technology Industry, Level: 4
                         </td>
@@ -414,6 +397,9 @@
                         </td>
                         <td class="govuk-table__cell" data-label="Planned end date">
                             Aug 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Loughborough College
                         </td>
                         <td class="govuk-table__cell" data-label="Status">
                             Live
@@ -427,12 +413,7 @@
                                 Hector Parker
                             </a>
                         </td>
-                        <td class="govuk-table__cell" data-label="ULN">
-                            9900007602
-                        </td>
-                        <td class="govuk-table__cell" data-label="Employer">
-                            LOCKHEED MARTIN AERONAUTICAL SYSTEMS SUPPORT COMPANY
-                        </td>
+
                         <td class="govuk-table__cell" data-label="Apprenticeship training course">
                             Actuarial technician, Level: 4 (Standard)
                         </td>
@@ -441,6 +422,9 @@
                         </td>
                         <td class="govuk-table__cell" data-label="Planned end date">
                             Aug 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Loughborough College
                         </td>
                         <td class="govuk-table__cell" data-label="Status">
                             Live
@@ -455,12 +439,7 @@
                                 Isaac Sutton
                             </a>
                         </td>
-                        <td class="govuk-table__cell" data-label="ULN">
-                            9900007807
-                        </td>
-                        <td class="govuk-table__cell" data-label="Employer">
-                            LOCKHEED MARTIN AERONAUTICAL SYSTEMS SUPPORT COMPANY
-                        </td>
+
                         <td class="govuk-table__cell" data-label="Apprenticeship training course">
                             Actuarial technician, Level: 4 (Standard)
                         </td>
@@ -469,6 +448,9 @@
                         </td>
                         <td class="govuk-table__cell" data-label="Planned end date">
                             Aug 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Loughborough College
                         </td>
                         <td class="govuk-table__cell" data-label="Status">
                             Live
@@ -482,12 +464,7 @@
                               Coby Harvey
                             </a>
                         </td>
-                        <td class="govuk-table__cell" data-label="ULN">
-                            9900007904
-                        </td>
-                        <td class="govuk-table__cell" data-label="Employer">
-                            LOCKHEED MARTIN AERONAUTICAL SYSTEMS SUPPORT COMPANY
-                        </td>
+
                         <td class="govuk-table__cell" data-label="Apprenticeship training course">
                             Actuarial technician, Level: 4 (Standard)
                         </td>
@@ -496,6 +473,9 @@
                         </td>
                         <td class="govuk-table__cell" data-label="Planned end date">
                             Aug 2021
+                        </td>
+                        <td class="govuk-table__cell" data-label="Planned end date">
+                            Loughborough College
                         </td>
                         <td class="govuk-table__cell" data-label="Status">
                             Live

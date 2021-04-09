@@ -166,6 +166,19 @@
                                     </select>
                                 </div>
                             </div>
+                            <div class="govuk-grid-column-one-third">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="selectedEndDate">Confirmation</label>
+                                    <select class="govuk-select govuk-!-width-full" id="selectedEndDate" name="selectedEndDate">
+                                        <option label="All" aria-label="All end dates" value="">All</option>
+                                                <option label="Unconfirmed" value="Unconfirmed">Unconfirmed</option>
+                                                <option label="Confirmed" value="Confirmed">Confirmed</option>
+                                                <option label="Expired" value="Expired">Expired</option>
+
+
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                         <button class="govuk-button govuk-!-margin-0" type="submit">Apply filters</button>
                     </div>
@@ -221,6 +234,11 @@
                     </th>
                     <th scope="col" class="govuk-table__header">
                         <a class="das-table__sort" title="Sort the table by name" href="">
+                            Confirmation
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="">
                             Alerts
                         </a>
                     </th>
@@ -229,7 +247,7 @@
             <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell" data-label="Apprentice name">
-                            <a class="govuk-link" href="details">
+                            <a class="govuk-link" href="details2">
                                 Euan Gray
                             </a>
                         </td>
@@ -251,12 +269,15 @@
                         <td class="govuk-table__cell" data-label="Status">
                             Stopped
                         </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Confirmed
+                        </td>
                         <td class="govuk-table__cell" data-label="Alerts">
                         </td>
                     </tr>
                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell" data-label="Apprentice name">
-                            <a class="govuk-link" href="details">
+                            <a class="govuk-link" href="details2">
                               Rufus Kelly
                             </a>
                         </td>
@@ -278,13 +299,16 @@
                         <td class="govuk-table__cell" data-label="Status">
                             Live
                         </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Confirmed
+                        </td>
                         <td class="govuk-table__cell" data-label="Alerts">
-                          <a class="govuk-link" href="details">Confirmation expired</a>
+
                         </td>
                     </tr>
                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell" data-label="Apprentice name">
-                            <a class="govuk-link" href="details">
+                            <a class="govuk-link" href="details2">
                               Ellis Watts
                             </a>
                         </td>
@@ -306,6 +330,9 @@
                         <td class="govuk-table__cell" data-label="Status">
                             Paused
                         </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Unconfirmed
+                        </td>
                         <td class="govuk-table__cell" data-label="Alerts">
                           <a class="govuk-link" href="details1">
                               Changes requested
@@ -314,7 +341,7 @@
                     </tr>
                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell" data-label="Apprentice name">
-                            <a class="govuk-link" href="details">
+                            <a class="govuk-link" href="details2">
                                 Toby Holland
                             </a>
                         </td>
@@ -336,13 +363,16 @@
                         <td class="govuk-table__cell" data-label="Status">
                             Live
                         </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Unconfirmed
+                        </td>
                         <td class="govuk-table__cell" data-label="Alerts">
-                          <a class="govuk-link" href="details">Confirmation expired</a>
+
                         </td>
                     </tr>
                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell" data-label="Apprentice name">
-                            <a class="govuk-link" href="details">
+                            <a class="govuk-link" href="details2">
                               Cohen Powell
                             </a>
                         </td>
@@ -364,12 +394,15 @@
                         <td class="govuk-table__cell" data-label="Status">
                             Live
                         </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Unconfirmed
+                        </td>
                         <td class="govuk-table__cell" data-label="Alerts">
                         </td>
                     </tr>
                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell" data-label="Apprentice name">
-                            <a class="govuk-link" href="details">
+                            <a class="govuk-link" href="details2">
                                 Zak Day
                             </a>
                         </td>
@@ -391,12 +424,15 @@
                         <td class="govuk-table__cell" data-label="Status">
                             Live
                         </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Expired
+                        </td>
                         <td class="govuk-table__cell" data-label="Alerts">
                         </td>
                     </tr>
                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell" data-label="Apprentice name">
-                            <a class="govuk-link" href="details">
+                            <a class="govuk-link" href="details2">
                                 Joey Fraser
                             </a>
                         </td>
@@ -418,12 +454,15 @@
                         <td class="govuk-table__cell" data-label="Status">
                             Live
                         </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Expired
+                        </td>
                         <td class="govuk-table__cell" data-label="Alerts">
                         </td>
                     </tr>
                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell" data-label="Apprentice name">
-                            <a class="govuk-link" href="details">
+                            <a class="govuk-link" href="details2">
                                 Hector Parker
                             </a>
                         </td>
@@ -445,13 +484,16 @@
                         <td class="govuk-table__cell" data-label="Status">
                             Live
                         </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Expired
+                        </td>
                         <td class="govuk-table__cell" data-label="Alerts">
-                          <a class="govuk-link" href="details">Confirmation expired</a>
+
                         </td>
                     </tr>
                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell" data-label="Apprentice name">
-                            <a class="govuk-link" href="details">
+                            <a class="govuk-link" href="details2">
                                 Isaac Sutton
                             </a>
                         </td>
@@ -473,12 +515,15 @@
                         <td class="govuk-table__cell" data-label="Status">
                             Live
                         </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Expired
+                        </td>
                         <td class="govuk-table__cell" data-label="Alerts">
                         </td>
                     </tr>
                     <tr class="govuk-table__row">
                         <td class="govuk-table__cell" data-label="Apprentice name">
-                            <a class="govuk-link" href="details">
+                            <a class="govuk-link" href="details2">
                               Coby Harvey
                             </a>
                         </td>
@@ -499,6 +544,9 @@
                         </td>
                         <td class="govuk-table__cell" data-label="Status">
                             Live
+                        </td>
+                        <td class="govuk-table__cell" data-label="Status">
+                            Unconfirmed
                         </td>
                         <td class="govuk-table__cell" data-label="Alerts">
                                 <a class="govuk-link" href="details1">

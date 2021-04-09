@@ -574,4 +574,151 @@ table {
 .autocomplete-selected {
   background:govuk-colour("light-grey");
 }
-/* ====================================== Step font overide ================================= */
+/* ====================================== Confirm / Expiry Employer overide ================================= */
+.employer-overide{
+  font-size: 1.1875rem;
+      line-height: 1.31579;
+
+      .das-search-form__group {
+          display: table;
+          width: 100%;
+      }
+      .das-search-form__input {
+    display: table-cell;
+    vertical-align: top;
+    padding-left: 5px;
+    border-right-width: 0;
+    width: 100%;
+    }
+    .das-search-form__button-wrap {
+    display: table-cell;
+    vertical-align: top;
+    width: 1%;
+    }
+
+  .das-search-form__button {
+      overflow: hidden;
+      text-indent: -9999px;
+      background-color: #1d70b8;
+      background-image: url(/public/images/icon-search--white.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 50%;
+      box-shadow: none;
+      width: 40px;
+      height: 40px;
+      margin: 0;
+  }
+  .govuk-button:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      bottom: -4px;
+      left: -2px;
+      background: transparent;
+  }
+      .das-pane {
+        padding: 15px;
+        background: #f3f2f1;
+    }
+    .das-table--condensed .govuk-table__cell {
+        padding: 7px 15px 7px 0;
+        font-size: 15px;
+    }
+    .das-table--condensed .govuk-table__header, .das-table--condensed .govuk-table__cell {
+        padding: 7px 15px 7px 0;
+        font-size: 15px;
+    }
+    .das-table--double-arrows .das-table__sort:after {
+        left: 2px;
+        top: 11px;
+        border-color: transparent;
+        border-width: 7px;
+        border-style: solid;
+        width: 0;
+        height: 0;
+        content: "";
+        border-width: 7px 4.04157px 0 4.04157px;
+        border-color: currentColor transparent transparent transparent;
+    }
+    .das-table--double-arrows .das-table__sort:before {
+      left: 2px;
+      top: 2px;
+      border-color: transparent;
+      border-width: 7px;
+      border-style: solid;
+      width: 0;
+      height: 0;
+      content: "";
+      border-width: 0 4.04157px 7px 4.04157px;
+      border-color: transparent transparent currentColor transparent;
+  }
+    .das-table--double-arrows .das-table__sort:before {
+    top: 5px;
+    }
+.das-table--double-arrows .das-table__sort:after {
+    left: 2px;
+    top: 11px;
+    border-color: transparent;
+    border-width: 7px;
+    border-style: solid;
+    width: 0;
+    height: 0;
+    content: "";
+    border-width: 7px 4.04157px 0 4.04157px;
+    border-color: currentColor transparent transparent transparent;
+}
+.das-table--double-arrows .das-table__sort:after {
+    top: 14px;
+}
+.das-table--condensed .das-table__sort {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.das-table--double-arrows .das-table__sort {
+    position: relative;
+    padding-left: 18px;
+}
+.das-table__sort:before, .das-table__sort:after {
+    position: absolute;
+}
+.das-table__sort:visited {
+    color: #1d70b8;
+}
+
+.das-table-cell-width-55 {
+    width: 55%;
+}
+.das-table-cell-width-45 {
+    width: 45%;
+}
+.das-table-cell-width-40 {
+    width: 40%;
+
+}
+.das-table-cell-width-15 {
+    width: 15%;
+}
+.das-\!-text-align-right--from-tablet {
+    text-align: right !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
