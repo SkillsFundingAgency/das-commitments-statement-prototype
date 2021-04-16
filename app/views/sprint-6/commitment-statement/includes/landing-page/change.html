@@ -25,35 +25,36 @@
                <h2 class="govuk-heading-l">
                     Confirm your apprenticeship
                </h2>
-
-               <p>
-                    Review all the details below to confirm your apprenticeship.
-               </p>
-
-               {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
-
-               {{ govukWarningText({
-                    text: "You have 14 days to confirm your apprenticeship",
-                    iconFallbackText: "Warning"
-               }) }}
-               
           </div>
 
-          <p>
-            We want to make sure you have everything you need for a successful apprenticeship.
-            </p>
+                <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                  <div class="govuk-notification-banner__header">
+                    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                      Important
+                    </h2>
+                  </div>
+                  <div class="govuk-notification-banner__content">
+                    <p class="govuk-notification-banner__heading">
+                      Changes have been made to your employer. Please review and confirm your new details.<br />
 
-            <p>
-              Read through each section below to confirm your apprenticeship with us. If you ever need to check on the details of your apprenticeship, you can come back here.
-              </p>
+                      You have 14 days to re-confirm your apprenticeship
 
-              <p>
-                Your answers are saved automatically, so you can go away and come back if you need to.
-                </p>
-          <!-- NOT AGREED - END -->
+                    </p>
+                  </div>
+                </div>
 
-          <!-- AGREED - START -->
-          <div id="<!--cs-agreed-->">
+                <p><!-- Check what's changed and re-confirm your apprenticeship with us.  -->
+                   Read through each section to re-confirm your apprenticeship with us. If you ever need to check on the details of your apprenticeship, you can come back here.
+                  </p>
+
+                    <p>
+                      Your answers are saved automatically, so you can go away and come back if you need to.
+                      </p>
+
+                          <!-- NOT AGREED - END -->
+
+          <!-- AGREED - START
+          <div id="cs-agreed">
                 <h2 class="govuk-heading-m">
                     Your apprenticeship is ready to confirm
                </h2>
@@ -68,7 +69,7 @@
                     <a href="/sprint-6/commitment-statement/6-sign-commitment/2-confirmation" class="govuk-button" data-module="govuk-button">Confirm your apprenticship</a>
                </div>
           </div>
-
+-->
 
 
 

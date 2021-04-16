@@ -122,6 +122,8 @@
                <a href="/sprint-10/employer/home" class="govuk-link govuk-link--no-visited-state">Employer - overdue confirmation via alert</a>
                <br />
                <a href="/sprint-10/employer/home1" class="govuk-link govuk-link--no-visited-state">Employer - confirmation status via column</a>
+               <br />
+               <a href="/sprint-6/commitment-statement/dashboard/change" class="govuk-link govuk-link--no-visited-state">Employment change- apprentice has to re-confirm </a>
 
           </p>
      </div>
@@ -135,17 +137,21 @@
      <div class="govuk-grid-column-two-thirds">
 
        <h2 class="govuk-heading-l" id="sprint-6">
-            Sprint 10
+            Sprint 11
             <span class="govuk-caption-l">
-                 31st March &mdash; 15th April 2021
+                 16th April &mdash; 30th April 2021
             </span>
        </h2>
 
-          {% include './sprint-10/_summary.html' %}
+          {% include './sprint-11/_summary.html' %}
 
           <h2 class="govuk-heading-l govuk-!-margin-top-9">
                Beta sprints
           </h2>
+
+          {% set sprint9Html %}
+               {% include './sprint-10/_summary.html' %}
+          {% endset %}
 
           {% set sprint9Html %}
                {% include './sprint-9/_summary.html' %}
@@ -174,6 +180,17 @@
           {{ govukAccordion({
                id: "accordion-beta",
                items: [
+               {
+                    heading: {
+                         text: "Sprint 10"
+                    },
+                    content: {
+                         html: sprint10Html
+                    },
+                    summary: {
+                         html: '31th March - 14th April 2021'
+                    }
+               },
                {
                     heading: {
                          text: "Sprint 9"
