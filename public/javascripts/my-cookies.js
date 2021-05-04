@@ -121,7 +121,7 @@ if ($.cookie("employer-details") == 'true') {
 
 
 // Training Provider Confirm
-$('.training-provider-confirmed, #training-provider-confirmed, #training-provider-undo, #training-provider-title-confirmed').hide();
+$('.training-provider-confirmed, #training-provider-confirmed, #training-provider-undo, #training-provider-title-confirmed, #training-change-answer').hide();
 
 
 // Confirm Training Provider
@@ -136,18 +136,31 @@ $("#training-provider-confirm").on("click", function (e) {
 if ($.cookie("training-confirm") == 'true') {
        $('a.section-two').addClass('complete');
     $('.training-provider-confirmed, #training-provider-undo, #training-provider-confirmed, #training-provider-title-confirmed').show();
-     $('#training-form-hide, #training-provider-title').hide();
+     $('#training-form-hide, #training-provider-title, #training-change-answer').hide();
     $('.section-two .complete-number').text('1');
       $('a.section-two strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
 } else if ($.cookie("training-confirm") == 'false') {
        $('.section-two .complete-number').text('0');
        $('a.section-two strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
 }
+
+
 $("#training-provider-undo").on("click", function (e) {
-
+      $.cookie("training-change-answer", true, {path:'/'});
       $.cookie("training-confirm", null, {path:'/'});
-
 });
+
+if ($.cookie("training-change-answer") == 'true') {
+      $('#training-change-answer').show();
+      $('#training-provider-undo').hide();
+}
+if ($.cookie("training-change-answer") == 'true' && $.cookie("training-confirm") == 'true') {
+      $('#training-change-answer').hide();
+}
+
+
+
+
 
 
 
@@ -158,7 +171,7 @@ $("#training-provider-undo").on("click", function (e) {
 
 
 // Employer Provider Confirm
-$('.employer-provider-confirmed, #employer-provider-confirmed, #employer-provider-undo, #employer-provider-title-confirmed').hide();
+$('.employer-provider-confirmed, #employer-provider-confirmed, #employer-provider-undo, #employer-provider-title-confirmed, #employer-change-answer').hide();
 
 
 // Confirm Employer Provider
@@ -173,7 +186,7 @@ $("#employer-provider-confirm").on("click", function (e) {
 if ($.cookie("employer-confirm") == 'true') {
      $('a.section-one').addClass('complete');
     $('.employer-provider-confirmed, #employer-provider-confirmed, #employer-provider-undo, #employer-provider-title-confirmed').show();
-     $('#employer-form-hide, #employer-provider-title, #employer-provider-confirm').hide();
+     $('#employer-form-hide, #employer-provider-title, #employer-provider-confirm, #employer-change-answer').hide();
     $('.section-one .complete-number').text('1');
     $('a.section-one strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
 } else if ($.cookie("employer-confirm") == 'false') {
@@ -181,18 +194,38 @@ if ($.cookie("employer-confirm") == 'true') {
        $('.section-one .complete-number').text('0');
        $('a.section-one strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
 }
+///Silks + 176 , 161
 $("#employer-provider-undo").on("click", function (e) {
-
+      $.cookie("employer-change-answer", true, {path:'/'});
       $.cookie("employer-confirm", null, {path:'/'});
 
 });
+
+if ($.cookie("employer-change-answer") == 'true') {
+      $('#employer-change-answer').show();
+      $('#employer-provider-undo').hide();
+}
+if ($.cookie("employer-change-answer") == 'true' && $.cookie("employer-confirm") == 'true') {
+      $('#employer-change-answer').hide();
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 // Apprenticeship Details Confirm
-$('.app-details-confirmed, #app-details-confirmed, #app-details-undo, #app-details-title-confirmed').hide();
+$('.app-details-confirmed, #app-details-confirmed, #app-details-undo, #app-details-title-confirmed, #app-details-change-answer').hide();
 
 
 // Apprenticeship Details
@@ -207,7 +240,7 @@ $("#app-details-confirm").on("click", function (e) {
 if ($.cookie("app-details-confirm") == 'true') {
      $('a.section-three').addClass('complete');
     $('.app-details-confirmed, #app-details-confirmed, #app-details-undo, #app-details-title-confirmed').show();
-     $('#app-details-form-hide, #app-details-title, #app-details-confirm').hide();
+     $('#app-details-form-hide, #app-details-title, #app-details-confirm, #app-details-change-answer').hide();
     $('.section-three .complete-number').text('1');
     $('a.section-three strong').addClass('govuk-tag--green').removeClass('govuk-tag--yellow').text('Complete');
 } else if ($.cookie("app-details-confirm") == 'false') {
@@ -216,11 +249,22 @@ if ($.cookie("app-details-confirm") == 'true') {
        $('a.section-three strong').addClass('govuk-tag--red').removeClass('govuk-tag--yellow').text('Waiting for correction');
 }
 
-$("#app-details-undo").on("click", function (e) {
 
+
+$("#app-details-undo").on("click", function (e) {
+      $.cookie("app-details-change-answer", true, {path:'/'});
       $.cookie("app-details-confirm", null, {path:'/'});
 
 });
+if ($.cookie("app-details-change-answer") == 'true') {
+      $('#app-details-change-answer').show();
+      $('#employer-provider-undo').hide();
+}
+if ($.cookie("app-details-change-answer") == 'true' && $.cookie("app-details-confirm") == 'true') {
+      $('#app-details-change-answer').hide();
+}
+
+
 
 
 
@@ -541,12 +585,13 @@ if ($.cookie("agreement-employer-agreement-1") == 'true' && $.cookie("agreement-
 $('#cs-not-agreed').show();
 $('#cs-agreed').hide();
 $('#cs-signed').hide();
-if ($.cookie("cs-step-1") == 'true' && $.cookie("cs-step-2") == 'true' && $.cookie("cs-step-3") == 'true' && $.cookie("cs-step-4") == 'true' && $.cookie("cs-step-5") == 'true') {
+if ($.cookie("employer-confirm") == 'true' && $.cookie("training-confirm") == 'true' && $.cookie("app-details-confirm") == 'true' && $.cookie("traininfo-confirm") == 'true' && $.cookie("RolesR") == 'true') {
      $('#cs-not-agreed').hide();
      $('#cs-agreed').show();
      $('#cs-signed').hide();
      $('.tabs ul.govuk-list li .tab-landing-1 .number').addClass('complete');
 }
+
 
 $("#confirm-and-sign").on("click", function (e) {
      if ($('input[id=apprentice-sign-confirm]').is(':checked')) {

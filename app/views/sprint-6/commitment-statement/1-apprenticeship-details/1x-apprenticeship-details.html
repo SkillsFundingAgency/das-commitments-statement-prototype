@@ -19,21 +19,11 @@
                <div class="govuk-grid-column-two-thirds">
 
                          <!-- Confirmation once selection has been made -->
-                         <div class="govuk-form-group confirmed-panel" id="app-details-title-confirmed">
+                         <div class="govuk-form-group confirmed-panel" >
                               <div class="govuk-warning-text">
                                    <span class="govuk-confirm__icon" aria-hidden="true"></span>
                                    <strong class="govuk-warning-text__text">
                                         <span class="govuk-warning-text__assistive">Confirmed</span> You have confirmed the details of your apprenticeship
-                                   </strong>
-                              </div>
-                         </div>
-
-                         <!-- Change answer -->
-                         <div class="govuk-form-group confirmed-panel" id="app-details-change-answer">
-                              <div class="govuk-warning-text">
-                                   <span class="govuk-confirm__icon" aria-hidden="true"></span>
-                                   <strong class="govuk-warning-text__text">
-                                        <span class="govuk-warning-text__assistive">Unlocked</span> You can now change your answer
                                    </strong>
                               </div>
                          </div>
@@ -148,43 +138,7 @@
 
 
 
-                      <form id="app-details-form-hide" method="post" action="/sprint-6/commitment-statement/1-apprenticeship-details/1-apprenticeship-details">
-
-                       {{ govukRadios({
-                         classes: "govuk-radios--inline",
-                         idPrefix: "AppDetails",
-                         name: "AppDetails",
-                         fieldset: {
-                           legend: {
-                             text: "Are these details correct?",
-                             isPageHeading: true,
-                             classes: "govuk-fieldset__legend--l"
-                           }
-                         },
-                         items: [
-                           {
-                             value: "yes",
-                             text: "Yes"
-                           },
-                           {
-                             value: "no",
-                             text: "No"
-                           }
-                         ]
-                       }) }}
-
-                      <button class="govuk-button" data-module="govuk-button" id="app-details-confirm">Confirm</button>
-                      </form>
-
-
-                      <br />
-
-
-                    <a href="../dashboard/2-my-apprenticeships" class="govuk-button" data-module="govuk-button" id="app-details-confirmed" >Continue</a><br />
-
-
-                    <a href="1-apprenticeship-details" class="govuk-!-font-size-19" data-module="govuk-button" id="app-details-undo">I want to change my answer</a><br />
-
+                    <a href="../dashboard/3-my-apprenticeships" class="govuk-button" data-module="govuk-button"  >Continue</a><br />
 
 
 

@@ -23,7 +23,7 @@
 
 
                   <!-- Confirmation once selection has been made -->
-                  <div class="govuk-form-group confirmed-panel" id="training-provider-title-confirmed">
+                  <div class="govuk-form-group confirmed-panel">
                        <div class="govuk-warning-text">
                             <span class="govuk-confirm__icon" aria-hidden="true"></span>
                             <strong class="govuk-warning-text__text">
@@ -32,18 +32,8 @@
                        </div>
                   </div>
 
-                  <!-- Change answer -->
-                  <div class="govuk-form-group confirmed-panel" id="training-change-answer">
-                       <div class="govuk-warning-text">
-                            <span class="govuk-confirm__icon" aria-hidden="true"></span>
-                            <strong class="govuk-warning-text__text">
-                                 <span class="govuk-warning-text__assistive">Unlocked</span> You can now change your answer
-                            </strong>
-                       </div>
-                  </div>
 
-      <h1 class="govuk-heading-xl" id="training-provider-title">My training provider</h1>
-
+              <h1 class="govuk-heading-xl" id="training-provider-title">My training provider</h1>
 
                   <h2 class="govuk-heading-l" id="">Heffield College</h2>
 
@@ -69,36 +59,6 @@ Your training provider is responsible for your off-the-job training, which you w
   </p>
 
 
-
-<form id="training-form-hide" method="post" action="/sprint-6/commitment-statement/2-employer-details/1a-training-details">
-
-
-
-  {{ govukRadios({
-    classes: "govuk-radios--inline",
-    idPrefix: "TrainingConfirm",
-    name: "TrainingConfirm",
-    fieldset: {
-      legend: {
-        text: "Is this your training provider?",
-        isPageHeading: true,
-        classes: "govuk-fieldset__legend--l"
-      }
-    },
-    items: [
-      {
-        value: "yes",
-        text: "Yes"
-      },
-      {
-        value: "no",
-        text: "No"
-      }
-    ]
-  }) }}
-
-  <button class="govuk-button" data-module="govuk-button" id="training-provider-confirm">Confirm</button>
-</form>
 <!--
 
                     <a href="../dashboard/2-my-apprenticeships" class="govuk-button" data-module="govuk-button" >I can confirm this is my employer</a>
@@ -110,9 +70,9 @@ Your training provider is responsible for your off-the-job training, which you w
 <!--
                     <a href="../dashboard/2-my-apprenticeships" class="secondary-link employer-provider-unconfirmed">I want to complete this later</a><br />
 -->
-  <a href="../dashboard/2-my-apprenticeships" class="govuk-button" data-module="govuk-button" id="training-provider-confirmed" >Continue</a><br />
+  <a href="../dashboard/3-my-apprenticeships" class="govuk-button" data-module="govuk-button" id="training-provider-confirmed" >Continue</a><br />
 
-    <a href="1a-training-details" class="govuk-!-font-size-19" data-module="govuk-button" id="training-provider-undo" >I want to change my answer</a><br />
+
 
 
                   <!--  <a href="../dashboard/2-my-apprenticeships"  class="govuk-back-link training-provider-confirmed">Back to landing page</a>-->

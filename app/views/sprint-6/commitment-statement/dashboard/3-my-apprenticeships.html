@@ -17,9 +17,10 @@
 {% endblock %}
 
 <div id="service-title-section" class="landing-page">
-
+<!--
      <div class="govuk-width-container">
-  <!--
+
+
           <div class="govuk-grid-row dashboard-title">
                <div class="govuk-grid-column-two-thirds">
                     <h1 class="govuk-heading-xl">
@@ -53,16 +54,17 @@
                          <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
                     </div>
 
-               </div>-->
+               </div>
 
           </div>
 
      </div>
-
+-->
 </div>
 {% endblock %}
 
 {% block content %}
+   <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
 <div class="govuk-width-container" id="landing-page-section">
 
      <div class="govuk-grid-row">
@@ -73,7 +75,7 @@
                  #}
 
                <!-- ======================================= TAB CONTENT - ONE - START ======================================= -->
-                {% include "../includes/landing-page/1-cs-current.html" %}
+                {% include "../includes/landing-page/1a-cs-current.html" %}
               {#     {% include "../includes/landing-page/2-cs-current.html" %} #}
                <!-- ======================================= TAB CONTENT - ONE - END ======================================= -->
 
