@@ -34,14 +34,19 @@
 
 
 
-                                    <h1 class="govuk-heading-xl" id="employer-provider-title">My employer</h1>
+                                    <h1 class="govuk-heading-xl" id="employer-provider-title">Confirm your employer</h1>
 
 
                   <h2 class="govuk-heading-l" id="">Bowen Joinery and Carpentry</h2>
 
-                  <p class="govuk-body"">
-                     This is their legal name registered with Companies House. You might know them by their trading name, which is how they’re known to the public.
-                    </p>
+                  {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+                  {{ govukDetails({
+                    summaryText: "Help if you do not recognise your employer’s name",
+                    text: "This is their legal name registered with Companies House. You might know them by their trading name, which is how they’re known to the public."
+                  }) }}
+
+
   <h3 class="govuk-heading-m" id="">Things you need to know</h3>
 
 <div class="govuk-inset-text">
@@ -52,9 +57,7 @@
   <li>day-to-day contact or manager who can answer any questions you might have</li>
 </ul>
 </div>
-<p>
-  Your employer knows you must spend <b>at least 20% of you working hours in off-the-job training.</b> Off-the-job training will be time spent during your normal working hours to learn new skills and knowledge relevant to your apprenticeship.
-  </p>
+
 
 
                     <a href="../dashboard/3-my-apprenticeships" class="govuk-button" data-module="govuk-button">Continue</a><br />

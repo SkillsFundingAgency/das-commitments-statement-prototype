@@ -23,29 +23,26 @@
           <!-- NOT AGREED - START -->
           <div id="cs-not-agreed">
                <h2 class="govuk-heading-l">
-                    My Apprenticeship Details
+                    Confirm my apprenticeship details
                </h2>
 
-               <p>
-                    Review all the details below to confirm your apprenticeship.
-               </p>
 
-               {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
-
-               {{ govukWarningText({
-                    text: "You have 14 days to your apprenticeship",
-                    iconFallbackText: "Warning"
-               }) }}
 
           </div>
 
-          <p>
-            We want to make sure you have everything you need for a successful apprenticeship.
-            </p>
+
 
             <p>
               Read through each section below to confirm your apprenticeship with us. If you ever need to check on the details of your apprenticeship, you can come back here.
               </p>
+
+                             {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+                             {{ govukWarningText({
+                                  text: "You have 14 days to your apprenticeship",
+                                  iconFallbackText: "Warning"
+                             }) }}
+
 
               <p>
                 Your answers are saved automatically, so you can go away and come back if you need to.
