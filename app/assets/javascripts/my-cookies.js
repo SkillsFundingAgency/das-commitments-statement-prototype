@@ -290,12 +290,12 @@ $('.traininfo-confirmed, #traininfo-confirmed, #traininfo-undo, #traininfo-title
 
 // Apprenticeship Training
 $("#traininfo-confirm").on("click", function (e) {
-
-     if ($('input[id=TraininfoConfirm]').is(':checked')) {
-          $.cookie("traininfo-confirm", true, {path:'/'});
-     } else {
-          $.cookie("traininfo-confirm", false, {path:'/'});
-     }
+  $.cookie("traininfo-confirm", true, {path:'/'});
+//     if ($('input[id=TraininfoConfirm]').is(':checked')) {
+//          $.cookie("traininfo-confirm", true, {path:'/'});
+//     } else {
+  //        $.cookie("traininfo-confirm", false, {path:'/'});
+  //   }
 });
 if ($.cookie("traininfo-confirm") == 'true') {
      $('a.section-four').addClass('complete');
@@ -344,12 +344,12 @@ $('.roles-confirmed, #roles-confirmed, #roles-undo, #roles-title-confirmed, .rol
 
 // Roles
 $("#roles-confirm").on("click", function (e) {
-
-     if ($('input[id=RolesR]').is(':checked')) {
-          $.cookie("RolesR", true, {path:'/'});
-     } else {
-          $.cookie("RolesR", false, {path:'/'});
-     }
+  $.cookie("RolesR", true, {path:'/'});
+//     if ($('input[id=RolesR]').is(':checked')) {
+//          $.cookie("RolesR", true, {path:'/'});
+//     } else {
+//          $.cookie("RolesR", false, {path:'/'});
+//     }
 });
 if ($.cookie("RolesR") == 'true') {
      $('a.section-five').addClass('complete');
