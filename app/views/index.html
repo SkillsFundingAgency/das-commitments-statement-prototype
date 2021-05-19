@@ -27,7 +27,7 @@
                What is {{serviceName}}?
           </h2>
           <p class="govuk-body">
-               All documents and links are being collected on <a href="#" class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank">a Confluence page</a>.
+               All documents and links are being collected on <a href="https://skillsfundingagency.atlassian.net/wiki/spaces/NDL/pages/2386296857/E+Digital+commitment+-+ECS" class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank">a Confluence page</a>.
           </p>
           <p class="govuk-body">
                This documents the pre-Alpha phase of the {{serviceName}} project, June 2020 onwards.
@@ -37,7 +37,7 @@
                Who's working on this project?
           </h2>
           <ul class="govuk-list govuk-list--bullet">
-               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/spaces/NDL/pages/189759681/Content+design+team" title="Link to Tahi's profile on Confluence">Tahi Gichigi</a> &ndash; Content Designer</li>
+               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/spaces/NDL/pages/189759681/Content+design+team" title="Link to Caitlin profile on Confluence">Caitlin Reidy</a> &ndash; Content Designer</li>
                <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/spaces/DAS/pages/1070924516/Interaction+Design+Clan" title="Link to Darren's profile on Confluence">Darren</a> &ndash; Interaction Designer</li>
 
                <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/people/5f9c3ddab38e610071223a3d" title="Link to Andrew's profile on Confluence">Andrew Stocker</a> &ndash; User Researcher</li>
@@ -143,19 +143,27 @@
      <div class="govuk-grid-column-two-thirds">
 
        <h2 class="govuk-heading-l" id="sprint-6">
-            Sprint 11
+            Sprint 13
             <span class="govuk-caption-l">
-                 16th April &mdash; 30th April 2021
+                 12th May &mdash; 30th May 2021
             </span>
        </h2>
 
-          {% include './sprint-11/_summary.html' %}
+          {% include './sprint-13/_summary.html' %}
 
           <h2 class="govuk-heading-l govuk-!-margin-top-9">
                Beta sprints
           </h2>
 
-          {% set sprint9Html %}
+          {% set sprint12Html %}
+               {% include './sprint-12/_summary.html' %}
+          {% endset %}
+
+          {% set sprint11Html %}
+               {% include './sprint-11/_summary.html' %}
+          {% endset %}
+
+          {% set sprint10Html %}
                {% include './sprint-10/_summary.html' %}
           {% endset %}
 
@@ -186,6 +194,29 @@
           {{ govukAccordion({
                id: "accordion-beta",
                items: [
+               {
+                    heading: {
+                         text: "Sprint 12"
+                    },
+                    content: {
+                         html: sprint12Html
+                    },
+                    summary: {
+                         html: '27th April - 12 May 2021'
+                    }
+               },
+
+               {
+                    heading: {
+                         text: "Sprint 11"
+                    },
+                    content: {
+                         html: sprint11Html
+                    },
+                    summary: {
+                         html: '14th April - 27th April 2021'
+                    }
+               },
                {
                     heading: {
                          text: "Sprint 10"
