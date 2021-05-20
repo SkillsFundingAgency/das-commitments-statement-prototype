@@ -42,10 +42,10 @@
                        </div>
                   </div>
 
-      <h1 class="govuk-heading-xl" id="training-provider-title">Confirm your training provider</h1>
+      <h1 class="govuk-heading-l" id="training-provider-title">Confirm your training provider</h1>
 
 
-                  <h2 class="govuk-heading-l" id="">Heffield College</h2>
+                  <h2 class="govuk-heading-m" id="">Screen skills</h2>
 
 
                     {% from "govuk/components/details/macro.njk" import govukDetails %}
@@ -77,28 +77,43 @@
 
 
 
-  {{ govukRadios({
-    classes: "govuk-radios--inline",
-    idPrefix: "TrainingConfirm",
-    name: "TrainingConfirm",
-    fieldset: {
-      legend: {
-        text: "Is this your training provider?",
-        isPageHeading: true,
-        classes: "govuk-fieldset__legend--l"
-      }
-    },
-    items: [
-      {
-        value: "yes",
-        text: "Yes"
-      },
-      {
-        value: "no",
-        text: "No"
-      }
-    ]
-  }) }}
+
+
+
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h3 class="govuk-fieldset__heading">
+              Is this your training provider?
+            </h3>
+          </legend>
+
+
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="TrainingConfirm" name="TrainingConfirm" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="AppDetails">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="TrainingConfirm-2" name="TrainingConfirm" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="AppDetails">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+
+
+
+
+
+
 
   <button class="govuk-button" data-module="govuk-button" id="training-provider-confirm">Confirm</button>
 </form>

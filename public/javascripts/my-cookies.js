@@ -582,11 +582,11 @@ if ($.cookie("agreement-employer-agreement-1") == 'true' && $.cookie("agreement-
 }
 
 // CS is agreed
-$('#cs-not-agreed').show();
+$('.cs-not-agreed').show();
 $('#cs-agreed').hide();
 $('#cs-signed').hide();
 if ($.cookie("employer-confirm") == 'true' && $.cookie("training-confirm") == 'true' && $.cookie("app-details-confirm") == 'true' && $.cookie("traininfo-confirm") == 'true' && $.cookie("RolesR") == 'true') {
-     $('#cs-not-agreed').hide();
+     $('.cs-not-agreed').hide();
      $('#cs-agreed').show();
      $('#cs-signed').hide();
      $('.tabs ul.govuk-list li .tab-landing-1 .number').addClass('complete');
@@ -602,7 +602,7 @@ $("#confirm-and-sign").on("click", function (e) {
 });
 
 if ($.cookie("apprentice-sign-confirm") == 'true') {
-     $('#cs-not-agreed').hide();
+     $('.cs-not-agreed').hide();
      $('#cs-agreed').hide();
      $('#cs-signed').show();
      $('.tabs ul.govuk-list li .tab-landing-1 .number').addClass('signed').text('');

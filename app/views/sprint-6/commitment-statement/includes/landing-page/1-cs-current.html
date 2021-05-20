@@ -1,5 +1,5 @@
 <div class="govuk-grid-row tab-number" id="tab-landing-1">
-     <div class="govuk-grid-column-full">
+     <div class="govuk-grid-column-two-thirds">
        <p>
          &nbsp;
          </p>
@@ -21,25 +21,26 @@
 
 
           <!-- NOT AGREED - START -->
-          <div id="cs-not-agreed">
+
                <h1 class="govuk-heading-l">
                     Confirm my apprenticeship details
                </h1>
 
 
-               
-          </div>
+              <div class="cs-not-agreed">
+
+              </div>
 
 
 
             <p>
-              Read through each section below to confirm your apprenticeship with us. If you ever need to check on the details of your apprenticeship, you can come back here.
+              <span class="cs-not-agreed">Read through each section below to confirm your apprenticeship with us.</span> If you ever need to check on the details of your apprenticeship, you can come back here.
               </p>
-
+              <div class="cs-not-agreed">
                              {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
                              {{ govukWarningText({
-                                  text: "You have 14 days to your apprenticeship",
+                                  text: "You have 14 days to confirm your apprenticeship",
                                   iconFallbackText: "Warning"
                              }) }}
 
@@ -47,13 +48,30 @@
               <p>
                 Your answers are saved automatically, so you can go away and come back if you need to.
                 </p>
-          <!-- NOT AGREED - END -->
+                </div>
+
+
+</div>
+</div>
+
+
+          <div class="govuk-grid-row tab-number" id="">
+               <div class="govuk-grid-column-full">
+
+
+
+
+
+
+
+
+
 
           <!-- AGREED - START -->
           <div id="cs-agreed">
-                <h2 class="govuk-heading-m">
+                <!--<h2 class="govuk-heading-m">
                     Your apprenticeship is ready to confirm
-               </h2>
+               </h2>-->
 
                <div class="govuk-form-group ready-to-sign">
                     <div class="govuk-warning-text">
@@ -62,7 +80,7 @@
                               <span class="govuk-warning-text__assistive">Confirmed</span> Your apprenticeship is now ready for you to check confirm
                          </strong>
                     </div>
-                    <a href="/sprint-6/commitment-statement/6-sign-commitment/2-confirmation" class="govuk-button" data-module="govuk-button">Confirm your apprenticship</a>
+                    <a href="/sprint-6/commitment-statement/6-sign-commitment/2-confirmation" class="govuk-button" data-module="govuk-button">Confirm my apprenticeship</a>
                </div>
           </div>
 
@@ -84,9 +102,6 @@
                </div>
           </div>
           <!-- AGREED - START -->
-
-
-
 
 
 

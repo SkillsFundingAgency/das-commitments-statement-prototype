@@ -45,9 +45,9 @@
                        </div>
                   </div>
 
-              <h1 class="govuk-heading-xl" id="employer-provider-title">Confirm your employer</h1>
+              <h1 class="govuk-heading-l" id="employer-provider-title">Confirm your employer</h1>
 
-                  <h2 class="govuk-heading-l" id="">Bowen Joinery and Carpentry</h2>
+                  <h2 class="govuk-heading-m " id="">BBC</h2>
 
                   {% from "govuk/components/details/macro.njk" import govukDetails %}
 
@@ -69,28 +69,36 @@
 
  <form id="employer-form-hide" method="post" action="/sprint-6/commitment-statement/2-employer-details/1a-employer-details">
 
-  {{ govukRadios({
-    classes: "govuk-radios--inline",
-    idPrefix: "EmployerConfirm",
-    name: "EmployerConfirm",
-    fieldset: {
-      legend: {
-        text: "Is this your employer?",
-        isPageHeading: true,
-        classes: "govuk-fieldset__legend--l"
-      }
-    },
-    items: [
-      {
-        value: "yes",
-        text: "Yes"
-      },
-      {
-        value: "no",
-        text: "No"
-      }
-    ]
-  }) }}
+
+
+  <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h3 class="govuk-fieldset__heading">
+            Is this your employer?
+          </h3>
+        </legend>
+
+
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="EmployerConfirm" name="EmployerConfirm" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="AppDetails">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="EmployerConfirm-2" name="EmployerConfirm" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="AppDetails">
+              No
+            </label>
+          </div>
+        </div>
+
+      </fieldset>
+    </div>
+
+
 
                     <button class="govuk-button" data-module="govuk-button" id="employer-provider-confirm">Confirm</button>
 </form>
