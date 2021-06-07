@@ -130,6 +130,10 @@
                <a href="/sprint-6/commitment-statement/dashboard/3-my-apprenticeships" class="govuk-link govuk-link--no-visited-state">Commitment - Once apprentice has confirmed </a>
                <br />
                <a href="/sprint-12/employer/home1" class="govuk-link govuk-link--no-visited-state">Employer - Confirmation status (Incorporating feedback) </a>
+               <br />
+               <a href="/sprint-6/commitment-statement/dashboard/index-stopped" class="govuk-link govuk-link--no-visited-state">Apprenticeship has been stopped</a>
+               <br />
+               <a href="/sprint-6/commitment-statement/dashboard/index-finished" class="govuk-link govuk-link--no-visited-state">Apprenticeship has been finished</a>
 
           </p>
      </div>
@@ -143,17 +147,21 @@
      <div class="govuk-grid-column-two-thirds">
 
        <h2 class="govuk-heading-l" id="sprint-6">
-            Sprint 13
+            Sprint 14
             <span class="govuk-caption-l">
-                 12th May &mdash; 30th May 2021
+                 26th May &mdash; 8th June 2021
             </span>
        </h2>
 
-          {% include './sprint-13/_summary.html' %}
+          {% include './sprint-14/_summary.html' %}
 
           <h2 class="govuk-heading-l govuk-!-margin-top-9">
                Beta sprints
           </h2>
+
+          {% set sprint13Html %}
+               {% include './sprint-13/_summary.html' %}
+          {% endset %}
 
           {% set sprint12Html %}
                {% include './sprint-12/_summary.html' %}
@@ -194,6 +202,17 @@
           {{ govukAccordion({
                id: "accordion-beta",
                items: [
+               {
+                    heading: {
+                         text: "Sprint 13"
+                    },
+                    content: {
+                         html: sprint13Html
+                    },
+                    summary: {
+                         html: '12th May - 26th May 2021'
+                    }
+               },
                {
                     heading: {
                          text: "Sprint 12"
