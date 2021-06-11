@@ -1,0 +1,72 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/account-page/navigation.html" %}
+<div id="service-title-section" class="account-page"></div>
+{% endblock %}
+
+{% block content %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+
+                  <!-- Confirmation once selection has been made -->
+                  <div class="govuk-form-group confirmed-panel" id="">
+                       <div class="govuk-warning-text">
+                            <span class="govuk-confirm__icon" aria-hidden="true"></span>
+                            <strong class="govuk-warning-text__text">
+                                 <span class="govuk-warning-text__assistive">Confirmed</span> You have confirmed that this is your employer
+                            </strong>
+                       </div>
+                  </div>
+
+
+
+                                    <h1 class="govuk-heading-l" id="employer-provider-title">Confirm your employer</h1>
+
+
+                  <h2 class="govuk-heading-m" id="">Star M+E Solutions</h2>
+
+                  {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+                  {{ govukDetails({
+                    summaryText: "Help if you do not recognise your employer’s name",
+                    text: "This is their legal name registered with Companies House. You might know them by their trading name, which is how they’re known to the public."
+                  }) }}
+
+
+  <h3 class="govuk-heading-m" id="">Things you need to know</h3>
+
+<div class="govuk-inset-text">
+  <p class="govuk-body">Before starting your apprenticeship your employer should’ve given you a:</p>
+<ul class="govuk-list govuk-list--bullet">
+
+  <li>copy of your apprenticeship agreement signed by you and them </li>
+  <li>day-to-day contact or manager who can answer any questions you might have</li>
+</ul>
+</div>
+
+
+
+                    <a href="../dashboard/3-my-apprenticeships" class="govuk-button" data-module="govuk-button">Continue</a><br />
+                                    <!--  <a href="../dashboard/3-my-apprenticeships"  class="govuk-back-link employer-provider-confirmed">Back to landing page</a>
+
+                                    <a href="noconfirm-employer" class="govuk-!-font-size-19" data-module="govuk-button" id="employer-provider-undo">I want to change my answer</a><br />-->
+
+
+          </div>
+     </div>
+</div>
+{% endblock %}
