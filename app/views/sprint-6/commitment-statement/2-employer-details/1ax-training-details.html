@@ -38,28 +38,27 @@
                   <h2 class="govuk-heading-m" id="">JTL</h2>
 
 
-                        {% from "govuk/components/details/macro.njk" import govukDetails %}
+                                      {{ govukDetails({
+                                        summaryText: "Help if you do not recognise your training provider's name",
+                                        text: "JTL is your training provider’s legal name registered with Companies House. You may know them by their trading name instead.
+                  "
+                                      }) }}
 
-                        {{ govukDetails({
-                          summaryText: "Help if you do not recognise your training provider's name",
-                          text: "  This is their legal name registered with Companies House. You might know them by their trading name, which is how they’re known to the public."
-                        }) }}
+                                      <p>
+                  Your off-the-job training will be <strong>at least 20% of your normal working hours</strong> spent learning new skills, knowledge and behaviours for your apprenticeship. Your off-the-job training will be managed by your training provider.                       </p>
 
-                        <p>
-                        Your off-the-job training will be <b>at least 20% of your working hours.</b> Off-the-job training will be time spent during your normal working hours to learn new skills and knowledge relevant to your apprenticeship.
-                           </p>
+                    <h3 class="govuk-heading-m" id="">Things you need to know</h3>
 
-  <h3 class="govuk-heading-m" id="">Things you need to know</h3>
+                  <div class="govuk-inset-text">
+                    <p class="govuk-body">Before starting your apprenticeship your training provider should have:</p>
+                  <ul class="govuk-list govuk-list--bullet">
+                    <li>told you if you’ll have any training delivered by another provider
+                  </li>
+                    <li>day-to-day contact or manager who will support you through your apprenticeship </li>
+                  </ul>
 
-<div class="govuk-inset-text">
-  <p class="govuk-body">Before starting your apprenticeship your training provider should have:</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>told you if you'll be working with any other training providers during your apprenticeship
-</li>
-  <li>given you a day-to-day contact who can answer any questions you might have</li>
-</ul>
-
-</div><!--
+                  </div>
+<!--
 <p>
 Your training provider is responsible for your off-the-job training, which you will be assessed against at the end of your apprenticeship by an end-point assessment organisation.
   </p>-->
