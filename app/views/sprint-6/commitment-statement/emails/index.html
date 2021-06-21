@@ -17,13 +17,14 @@
           <div class="govuk-grid-column-full">
 
                <h1 class="govuk-heading-m">
-                    Apprentice commitment service
+                    Confirm your apprenticeship details
                     <br>
                     <br>
-                    Hi Joe Bloggs,
-                    <span class="govuk-caption-m">joe.bloggs@hotmail.com</span>
-               </h1>
+                    Dear [first name] [lastname]
 
+
+               </h1>
+<!--
                <p class="govuk-body">
                     <span class="govuk-caption-m">Organisation name:</span>
                     <strong>Contract Flooring Association</strong>
@@ -33,10 +34,37 @@
                     <span class="govuk-caption-m">Apprenticeship:</span>
                     <strong>Military Engineering Construction Technician</strong>
                </p>
+-->
+               <p class="govuk-body">
+                 Your employer and training provider have entered your apprenticeship details into the ‘My apprenticeship’ portal. You need to review and confirm your apprenticeship details are correct at the beginning of your apprenticeship.
+                 <strong>You have 14 days to confirm your apprenticeship details</strong>
+               </p>
+
+
 
                <p class="govuk-body">
-                    You are starting a new apprenticeship. You will need to create an apprenticeship account and confirm your apprenticeship by confirming and agreeing to some details.
+                 Your employer:
+                 <strong>Contract Flooring Association</strong>
                </p>
+               <p class="govuk-body">
+                 Name of your apprenticeship:
+                 <strong>Military Engineering Construction Technician</strong>
+               </p>
+               <p class="govuk-body">
+                 To confirm your apprenticeship details, you need to:
+               </p>
+               <ul class="govuk-list govuk-list--bullet">
+                          <li>create a My apprenticeship account</li>
+                          <li>log on to the My apprenticeship portal</li>
+                          <li>confirm your apprenticeship details</li>
+                        </ul>
+
+
+
+
+
+
+
 <!--
                <div class="govuk-warning-text">
                     <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -60,7 +88,7 @@
                {% from "govuk/components/button/macro.njk" import govukButton %}
 
                {{ govukButton({
-                    text: "Create an account",
+                    text: "Create account",
                     classes: "no-bottom-margin",
                     href: "../sign-in/index"
                }) }}
