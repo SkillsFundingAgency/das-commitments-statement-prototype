@@ -1,42 +1,67 @@
-<div class="govuk-grid-row tab-number" id="tab-landing-1">
+<!--<div class="govuk-grid-row tab-number" id="tab-landing-1">-->
+
+<!--
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#past-day">
+        Current apprenticeship details
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-week">
+        Previous apprenticeship details
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="past-day">
 
 
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
 
+
+  </div>
+</div>
+-->
 
 
 
 
 
                <div class="govuk-grid-column-full">
+                 <p>&nbsp;</p>
+
+                    <h1 class="govuk-heading-l">
+                         Confirm my apprenticeship details
+                    </h1>
 
 
-                                            <h1 class="govuk-heading-l">
-                                                 Confirm my apprenticeship details
-                                            </h1>
+                   <div class="cs-not-agreed">
 
-
-                                           <div class="cs-not-agreed">
-
-                                           </div>
+                   </div>
 
 
 
-                                         <p>
-                                           <span class="cs-not-agreed">Read through each section below to confirm your apprenticeship. </span>  If you ever need to check on the details of your apprenticeship, you can come back here.
-                                           </p>
-                                           <div class="cs-not-agreed">
-                                                          {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+                 <p>
+                   <span class="cs-not-agreed">Read through each section below to confirm your apprenticeship. </span>  If you ever need to check on the details of your apprenticeship, you can come back here.
+                   </p>
+                   <div class="cs-not-agreed">
+                        {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
 
-                                                          {{ govukWarningText({
-                                                               text: "You have 14 days to confirm your apprenticeship",
-                                                               iconFallbackText: "Warning"
-                                                          }) }}
+                        {{ govukWarningText({
+                             text: "You have 14 days to confirm your apprenticeship",
+                             iconFallbackText: "Warning"
+                        }) }}
 
 
-                                           <p>
-                                             Your answers will save automatically, so you can leave and come back if you need to.
-                                             </p>
-                                             </div>
+                       <p>
+                         Your answers will save automatically, so you can leave and come back if you need to.
+                         </p>
+                  </div>
 
 
 
@@ -65,9 +90,6 @@
           </div>
 
 
-
-
-
           <!-- AGREED - START -->
           <div id="cs-signed">
 
@@ -82,8 +104,6 @@
                </div>
           </div>
           <!-- AGREED - START -->
-
-
 
 
 
@@ -140,21 +160,6 @@
                </div>
           </a>
 
-
-          <!-- ////// > Section Four ~ Details of Training < //////////////////////////////////////////////////////////////////////////////////////////
-          <a href="../1-apprenticeship-details/1-apprenticeship-training" class="section-item section-four govuk-link--no-visited-state">
-               <span class="number">*</span>
-               <div>
-                    <div class="text-wrapper">
-                         <h3 class="govuk-heading-m">Knowledge, skills and behaviours</h3>
-
-                    </div>
-                    <strong class="govuk-tag govuk-tag--yellow">incomplete</strong>
-               </div>
-          </a> -->
-
-
-
           <!-- ////// > Section Five ~ Role & Responsibilities < ////////////////////////////////////////////////////////////////////////////////////////// -->
           <a href="../3-roles/1-apprentice-role" class="section-item section-five govuk-link--no-visited-state">
                <span class="number">5</span>
@@ -169,18 +174,5 @@
 
 
 
-          <!-- ////// > Section Six ~ Support < //////////////////////////////////////////////////////////////////////////////////////////
-          <a href="../5-agreements/1-agreements" class="section-item section-six govuk-link--no-visited-state">
-               <span class="number">6</span>
-               <div>
-                    <div class="text-wrapper">
-                         <h3 class="govuk-heading-m">Help and support</h3>
-
-                    </div>
-                    <strong class="govuk-tag govuk-tag--yellow">incomplete</strong>
-               </div>
-          </a>-->
-
-
-     </div>
-</div>
+  </div>
+<!-- </div>-->
