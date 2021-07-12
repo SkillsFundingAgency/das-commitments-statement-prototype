@@ -37,8 +37,10 @@
      &:hover, &:focus, &:active {
           background: white;
           // background: govuk-colour("light-grey");
-          transition: all .3s ease;
-          transform: scale(1.05);
+          //transition: all .3s ease;
+          //transform: scale(1.05);
+
+          // Darren : Zoom commented out on summary page
      }
      &.complete {
           border: 2px solid #cce2d8;

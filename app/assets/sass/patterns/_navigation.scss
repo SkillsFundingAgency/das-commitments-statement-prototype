@@ -154,8 +154,8 @@ ul.dashboard-nav {
                margin-right: 0;
           }
           a {
-               text-decoration: none;
-               display: inline-block;
+               //text-decoration: none; Put underline back on homepage
+               //display: inline-block;  Darren comment to pull link up to next line
                strong {
                     margin-bottom: 0.5em;
                }
