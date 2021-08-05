@@ -1,0 +1,152 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+
+
+
+                    <h1 class="govuk-heading-l">Edit My Apprenticeship account</h1>
+                    <p></p>
+
+
+
+
+
+
+
+
+
+        <form method="post" action="created" >
+
+
+
+                <h2 class="govuk-heading-m">Account details</h2>
+
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="full-name">
+                          Full name
+                        </label>
+                        <input class="govuk-input govuk-!-width-three-quarters" id="full-name" name="full-name" value="Darren Joshua Silcox" type="text" spellcheck="false" autocomplete="name">
+                    </div>
+
+
+
+                    <div class="govuk-form-group">
+                      <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                        <legend class="govuk-fieldset__legend">
+                          Date of birth
+                        </legend>
+                        <div id="passport-issued-hint" class="govuk-hint">
+                          For example, 12 11 2007
+                        </div>
+                        <div class="govuk-date-input" id="passport-issued">
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                                Day
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" value="27" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                                Month
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" value="03" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                            <div class="govuk-form-group">
+                              <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                                Year
+                              </label>
+                              <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" value="1974" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                          </div>
+                        </div>
+
+                      </fieldset>
+                    </div>
+
+
+
+
+
+
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="email">
+                        Personal email address
+                      </label>
+                      <div id="email-hint" class="govuk-hint">
+                      These are used in case you change employer
+                      </div>
+                      <input class="govuk-input govuk-!-width-three-quarters" id="email" name="email" value="darren@darrensilcox.com" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+                    </div>
+
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+                         <h2 class="govuk-heading-m">Edit your password</h2>
+
+                         <span class="govuk-caption-m">
+                              Your password must:
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>be at least 8 characters</li>
+                                   <li>contain at least one letter (a-z)</li>
+                                   <li>contain at least one number (0-9)</li>
+                                   <li>match with the confirmed password</li>
+                              </ul>
+                         </span>
+
+                         <div class="govuk-form-group">
+                              <div class="password-wrapper">
+                                   <input class="govuk-input govuk-!-width-three-quarters" value="Passwored" id="apprentice-password" name="apprentice-password" type="password">
+                                   <input type="checkbox" onclick="showPassword()"   id="hide-show-password">
+                                   <label class="hide-show-password govuk-heading-m" for="hide-show-password" style="left: 30em">
+                                        SHOW
+                                   </label>
+                              </div>
+                         </div>
+
+                         <div class="govuk-form-group">
+                              <label class="govuk-label govuk-label--s" for="apprentice-confirm-password">Confirm your password</label>
+                              <div class="password-wrapper">
+                                   <input class="govuk-input govuk-!-width-three-quarters" id="apprentice-confirm-password"  value="Passwored" name="apprentice-confirm-password" type="password">
+                                   <input type="checkbox" onclick="showConfirm()" id="hide-show-confirm">
+                                   <label class="hide-show-confirm govuk-heading-m" for="hide-show-confirm" style="left: 30em">
+                                        SHOW
+                                   </label>
+                              </div>
+                         </div>
+
+                         {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                         {{ govukButton({
+                              text: "Submit",
+                              href: ""
+                         }) }}
+                    </form>
+
+<!--
+                    <a href="details-check" class="govuk-button" data-module="govuk-button" id="">Continue</a><br />
+-->
+
+
+          </div>
+     </div>
+
+
+</div>
+{% endblock %}
