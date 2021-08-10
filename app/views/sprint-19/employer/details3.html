@@ -1,0 +1,92 @@
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<a onClick='window.history.back()' class="image-demo">
+
+  <img src="/public/images/employer-manage.jpg" width="auto" height="auto" />
+</a>
+
+<main class="govuk-main-wrapper employer-overide" id="main-content" role="main">
+
+
+<div class="govuk-grid-row govuk-!-margin-bottom-2">
+    <div class="govuk-grid-column-two-thirds">
+      <p>&nbsp;</p>
+
+        <h1 class="govuk-heading-xl">Review changes</h1>
+
+
+
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header das-table-cell-width-45">Name</th>
+                    <td id="apprenticeship-status" class="govuk-table__cell das-table-cell-width-55">Darren Pilcox</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+<p>The apprentice has updated there account details, here is the update.</p>
+
+
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header das-table-cell-width-45">Name</th>
+                    <td id="apprenticeship-status" class="govuk-table__cell das-table-cell-width-55">Darren Silcox</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          idPrefix: "where-do-you-live",
+          name: "where-do-you-live",
+          fieldset: {
+            legend: {
+              text: "Are you happy to approve these changes?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--m"
+            }
+          },
+          items: [
+            {
+              value: "england",
+              text: "Yes, approve these changes"
+            },
+            {
+              value: "scotland",
+              text: "No, reject these changes"
+            }
+          ]
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+        <a href="" class="">
+          Cancel and return
+          </a>
+
+
+
+    </div>
+    </div>
+
+
+            </main>
+
+
+{% endblock %}

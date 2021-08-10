@@ -24,18 +24,27 @@
 
 
 
-        <form method="post" action="created" class="check-answers-page">
+        <form method="post" action="../dashboard/index-success" class="check-answers-page">
 
 
 
                 <h2 class="govuk-heading-m">Account details</h2>
 
-                    <div class="govuk-form-group">
-                        <label class="govuk-label" for="full-name">
-                          Full name
-                        </label>
-                        <input class="govuk-input govuk-!-width-three-quarters" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name">
-                    </div>
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="full-name">
+                      First name
+                    </label>
+                    <input class="govuk-input govuk-!-width-three-quarters" id="full-name" name="full-name" value="" type="text" spellcheck="false" autocomplete="name">
+                </div>
+
+                <div class="govuk-form-group">
+                    <label class="govuk-label" for="full-name">
+                      Last Name
+                    </label>
+                    <input class="govuk-input govuk-!-width-three-quarters" id="full-name" name="full-name" value="" type="text" spellcheck="false" autocomplete="name">
+                </div>
+
+
 
 
 
@@ -77,59 +86,10 @@
 
 
 
-
-
-                    <div class="govuk-form-group">
-                      <label class="govuk-label" for="email">
-                        Personal email address
-                      </label>
-                      <div id="email-hint" class="govuk-hint">
-                      These are used in case you change employer
-                      </div>
-                      <input class="govuk-input govuk-!-width-three-quarters" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
-                    </div>
-
-
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-
-
-                         <h2 class="govuk-heading-m">Create your password</h2>
-
-                         <span class="govuk-caption-m">
-                              Your password must:
-                              <ul class="govuk-list govuk-list--bullet">
-                                   <li>be at least 8 characters</li>
-                                   <li>contain at least one letter (a-z)</li>
-                                   <li>contain at least one number (0-9)</li>
-                                   <li>match with the confirmed password</li>
-                              </ul>
-                         </span>
-
-                         <div class="govuk-form-group">
-                              <div class="password-wrapper">
-                                   <input class="govuk-input govuk-!-width-three-quarters" id="apprentice-password" name="apprentice-password" type="password">
-                                   <input type="checkbox" onclick="showPassword()" id="hide-show-password">
-                                   <label class="hide-show-password govuk-heading-m" for="hide-show-password" style="left: 30em">
-                                        SHOW
-                                   </label>
-                              </div>
-                         </div>
-
-                         <div class="govuk-form-group">
-                              <label class="govuk-label govuk-label--s" for="apprentice-confirm-password">Confirm your password</label>
-                              <div class="password-wrapper">
-                                   <input class="govuk-input govuk-!-width-three-quarters" id="apprentice-confirm-password" name="apprentice-confirm-password" type="password">
-                                   <input type="checkbox" onclick="showConfirm()" id="hide-show-confirm">
-                                   <label class="hide-show-confirm govuk-heading-m" for="hide-show-confirm" style="left: 30em">
-                                        SHOW
-                                   </label>
-                              </div>
-                         </div>
-
                          {% from "govuk/components/button/macro.njk" import govukButton %}
 
                          {{ govukButton({
-                              text: "Submit",
+                              text: "Save and continue",
                               href: ""
                          }) }}
                     </form>
