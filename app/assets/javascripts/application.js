@@ -25,7 +25,7 @@ function showConfirm() {
      } else {
           x.type = "password";
      }
-}  
+}
 
 $(document).ready(function () {
      $('.hide-show-password, .hide-show-confirm').on('click',function(e) {
