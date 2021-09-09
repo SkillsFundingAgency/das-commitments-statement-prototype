@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <h1 class="govuk-heading-xl">Employer and training provider details</h1>
+
+               <div class="govuk-form-group confirmed-panel">
+                    <div class="govuk-warning-text">
+                         <span class="govuk-confirm__icon" aria-hidden="true"></span>
+                         <strong class="govuk-warning-text__text">
+                              <span class="govuk-warning-text__assistive">Confirmed</span> You have confirmed that your employer and training provider information details are correct
+                         </strong>
+                    </div>
+               </div>
+
+               <form method="post" action="" class="employer-details check-answers-page">
+
+                    <h2 class="govuk-heading-m" id="employer-details-text">
+                         Employer details
+                         <a href="2-wrong-info" class="main-change-link">Change</a>
+                    </h2>
+
+                    <table class="govuk-table data-table">
+                         <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Organisation name</th>
+                                   <td class="govuk-table__cell">Contract Flooring Association</td>
+                              </tr>
+                         </tbody>
+                    </table>
+
+                    <div class="govuk-form-group">
+                         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                              <h1 class="govuk-fieldset__heading">Has your employer given you their contact details?</h1>
+                              </legend>
+                              <div class="govuk-radios govuk-radios--inline">
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="employer-contact-yes" name="employer-contact" type="radio" value="Yes" checked>
+                                        <label class="govuk-label govuk-radios__label" for="employer-contact-yes">Yes</label>
+                                   </div>
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="employer-contact-no" name="employer-contact" type="radio" value="No">
+                                        <label class="govuk-label govuk-radios__label" for="employer-contact-no">No</label>
+                                   </div>
+                              </div>
+                         </fieldset>
+                    </div>
+
+                    <p>&nbsp;</p>
+
+                    <h2 class="govuk-heading-m" id="provider-details-text">
+                         Training provider details
+                         <a href="2-wrong-info" class="main-change-link">Change</a>
+                    </h2>
+
+                    <table class="govuk-table data-table">
+                         <tbody class="govuk-table__body">
+                              <tr class="govuk-table__row">
+                                   <th scope="row" class="govuk-table__header">Organisation name</th>
+                                   <td class="govuk-table__cell">Abingdon & Witney College</td>
+                              </tr>
+                         </tbody>
+                    </table>
+
+                    <div class="govuk-form-group">
+                         <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                              <h1 class="govuk-fieldset__heading">Has your training provider given you their contact details and the contact details of any sub-contractors?</h1>
+                              </legend>
+                              <div class="govuk-radios govuk-radios--inline">
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="provider-contact-yes" name="provider-contact" type="radio" value="Yes" checked>
+                                        <label class="govuk-label govuk-radios__label" for="provider-contact-yes">Yes</label>
+                                   </div>
+                                   <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="provider-contact-no" name="provider-contact" type="radio" value="No">
+                                        <label class="govuk-label govuk-radios__label" for="provider-contact-no">No</label>
+                                   </div>
+                              </div>
+                         </fieldset>
+                    </div>
+
+                    <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back to commitment statement</a>
+
+               </form>
+
+          </div>
+     </div>
+</div>
+{% endblock %}

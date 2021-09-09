@@ -1,0 +1,66 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/account-page/navigation.html" %}
+<div id="service-title-section" class="account-page"></div>
+{% endblock %}
+
+{% block content %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+
+
+
+                  <h1 class="govuk-heading-xl" id="">My Employer</h1>
+
+                  <h2 class="govuk-heading-m" id="">Contract Flooring Association</h2>
+
+                  <p class="govuk-body govuk-!-font-weight-bold"">
+                    This may be slightly different to the organisation's brand name.
+                    </p>
+
+                    <p>
+                      This will be your employer for your entire apprenticeship.
+                      </p>
+
+                      <p>
+                      Before your start date, you will sign an employment agreement and your employer will give you a signed copy.
+                        </p>
+
+                        <p>
+                          You should have a named day-to-day contact to answer any questions you might have.
+                          </p>
+
+                          <p class="govuk-body govuk-!-font-weight-bold"">
+                             If these details are wrong, you will need to speek with your employer to fix the mistake.
+                            </p>
+
+
+
+
+                    <a href="../dashboard/2-my-apprenticeships" class="govuk-button" data-module="govuk-button" >I can confirm this is my employer</a>
+<br />
+                  <a href="../dashboard/2-my-apprenticeships" class="govuk-button govuk-button--secondary" data-module="govuk-button" >This is not my employer</a>
+
+
+<br />
+<!--
+                    <a href="../dashboard/2-my-apprenticeships" class="secondary-link employer-provider-unconfirmed">I want to complete this later</a><br />
+
+                    <a href="#" onclick="history.go(-1)" class="govuk-back-link employer-provider-confirmed">Back to landing page</a>-->
+
+
+
+          </div>
+     </div>
+</div>
+{% endblock %}
