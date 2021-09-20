@@ -269,3 +269,16 @@ if(openHelp) {
           helpModal.classList.add('govuk-visually-hidden');
      })
 }
+const targetPage = document.getElementsByClassName('this-page')[0];
+const targetNavItems = document.getElementsByClassName('nav-link');
+
+if(targetPage) {
+
+     for(let x of targetNavItems) {
+          console.log(x);
+          if(x.classList.contains('link-six') || x.classList.contains('link-seven')){
+          x.classList.add('govuk-visually-hidden')
+
+          }
+}
+}
