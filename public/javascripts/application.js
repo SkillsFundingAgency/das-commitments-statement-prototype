@@ -256,3 +256,16 @@ $("#confirm-and-sign").on("click", function (e) {
  }
 
  stickyNav();
+
+ const openHelp = document.getElementsByClassName('open-help')[0];
+ const helpModal = document.getElementsByClassName('help-modal-container')[0];
+if(openHelp) {
+     openHelp.addEventListener('click', function (e) {
+          e.preventDefault();
+          helpModal.classList.remove('govuk-visually-hidden');
+
+     });
+     helpModal.addEventListener('click', function() {
+          helpModal.classList.add('govuk-visually-hidden');
+     })
+}
