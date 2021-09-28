@@ -1,0 +1,129 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page">
+<!--
+     <div class="govuk-width-container">
+
+
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">
+                         Your apprenticeship
+                    </h1>
+
+                   <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details>
+
+               </div>
+
+               <div class="govuk-grid-column-one-third">
+
+                    <div class="confirmation">
+                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                         <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                         <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                    </div>
+
+               </div>
+
+          </div>
+
+     </div>
+-->
+</div>
+{% endblock %}
+
+{% block content %}
+   <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+<div class="govuk-width-container" id="landing-page-section">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+               {#
+                 {% include "../includes/landing-page/tabs-landing-page.html" %}
+                 #}
+
+               <!-- ======================================= TAB CONTENT - ONE - START ======================================= -->
+                {% include "../includes/landing-page/1a-cs-current.html" %}
+              {#     {% include "../includes/landing-page/2-cs-current.html" %} #}
+               <!-- ======================================= TAB CONTENT - ONE - END ======================================= -->
+
+               <!-- ======================================= TAB CONTENT - TWO - START ======================================= -->
+               {% include "../includes/landing-page/2-cs-agreement.html" %}
+               <!-- ======================================= TAB CONTENT - TWO - END ======================================= -->
+
+               <!-- ======================================= TAB CONTENT - THREE - START ======================================= -->
+               {% include "../includes/landing-page/3-cs-employers.html" %}
+               <!-- ======================================= TAB CONTENT - THREE - END ======================================= -->
+
+               <!-- ======================================= TAB CONTENT - FOUR - START ======================================= -->
+               {% include "../includes/landing-page/4-cs-previous.html" %}
+               <!-- ======================================= TAB CONTENT - FOUR - END ======================================= -->
+
+                              <P>
+                                &nbsp;
+                                </P>
+
+                         </div>
+
+                    </div>
+
+
+
+
+
+
+                                 <div class="govuk-grid-row tab-number" id="">
+                                      <div class="govuk-grid-column-two-thirds">
+                                        <h3 class="govuk-heading-m" >Help and Support</h3>
+                                         <p>
+                                           If you have any questions or need support, guidance can be found in the <a class="govuk-link" href="../5-agreements/1-agreements.html">help and support section.</a>
+                                           </p>
+                                      </div>
+
+                                 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+               {% endblock %}

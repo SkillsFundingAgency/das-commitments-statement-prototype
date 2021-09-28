@@ -1,0 +1,151 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/account-page/navigation.html" %}
+<div id="service-title-section" class="account-page"></div>
+{% endblock %}
+
+{% block content %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <!-- ERROR MESSAGE - START
+               <div class="govuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary">
+                    <h2 class="govuk-error-summary__title" id="error-summary-title">There is a problem</h2>
+                    <div class="govuk-error-summary__body">
+                         <ul class="govuk-list govuk-error-summary__list">
+                              <li><a href="#apprentice-role-issued-error">Please check the box to agree to the apprentice roles and responsibilities</a></li>
+                         </ul>
+                    </div>
+               </div> -->
+               <!-- ERROR MESSAGE - END -->
+
+               <!-- <span class="govuk-caption-m">Step 1 of 3</span> -->
+               <h1 class="govuk-heading-l" id="roles-text">
+                   Your responsibilities as an apprentice
+                   <span class="govuk-hint">Step 1 of 3</span>
+               </h1>
+
+<!--               <div class="govuk-form-group confirmed-panel roles-confirmed">-->
+<!--                    <div class="govuk-warning-text">-->
+<!--                         <span class="govuk-confirm__icon" aria-hidden="true"></span>-->
+<!--                         <strong class="govuk-warning-text__text">-->
+<!--                              <span class="govuk-warning-text__assistive">Confirmed</span> You have read through roles and responsibilities-->
+<!--                         </strong>-->
+<!--                    </div>-->
+<!--               </div>-->
+<!--                 <p>Read through the roles and responsibilities.</p>-->
+          </div>
+
+          <div class="govuk-grid-column-full">
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+            <p>
+                These roles and responsibilities set out what is expected of you.
+            </p>
+            <p>
+                <strong>I have:</strong>
+            </p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>read and signed my <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">apprenticeship agreement</a></li>
+                <li>discussed my training plan with my employer and training provider</li>
+                <li>told my employer and training provider about any learning needs or health issues I have</li>
+                <li>been told when my apprenticeship training starts and ends</li>
+                <li>understood the roles of my employer and training provider during my apprenticeship</li>
+                <li>understood that at least 20% of my normal working hours will be off the job training</li>
+                <li>
+                    understood that I will be assessed by an end point assessor at the end of my apprenticeship training
+                </li>
+            </ul>
+            <p>
+                <strong>I will:</strong>
+            </p>
+            <ul class="govuk-list govuk-list--bullet">
+                <li>take part in regular progress reviews with my employer and training provider usually every 12 weeks</li>
+                <li>attend all my off-the-job training and provide evidence of my recorded hours where needed</li>
+                <li>complete all of my learning activities, assignments and exams</li>
+                <li>tell my employer in advance when I cannot attend work</li>
+                <li>tell my training provider in advance when I cannot attend my off-the-job training</li>
+                <li>agree with my employer and training provider when I am ready to complete my end point assessment</li>
+                <li>raise any concerns or complaints through my employer and training providers </li>
+            </ul>
+
+            <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+        </div>
+    </div>
+                    <div class="govuk-grid-row">
+                         <div class="govuk-grid-column-two-thirds">
+                           <!--
+                           <form id="roles-form-hide" method="post" action="/sprint-6/commitment-statement/3-roles/1-apprentice-role">
+
+                            {{ govukRadios({
+                              classes: "govuk-radios--inline",
+                              idPrefix: "RolesR",
+                              name: "RolesR",
+                              fieldset: {
+                                legend: {
+                                  text: "Do you understand your roles and responsibilities?",
+                                  isPageHeading: true,
+                                  classes: "govuk-fieldset__legend--l"
+                                }
+                              },
+                              items: [
+                                {
+                                  value: "yes",
+                                  text: "Yes"
+                                },
+                                {
+                                  value: "no",
+                                  text: "No"
+                                }
+                              ]
+                            }) }}
+
+                                              <button class="govuk-button" data-module="govuk-button" id="roles-confirm">Confirm</button>
+                           </form>
+
+                           <br />-->
+
+                                 <div class="govuk-form-group">
+                                     <fieldset class="govuk-fieldset">
+                                         <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                         <span class="govuk-fieldset__heading">
+                                            Confirmation
+                                         </span>
+                                         </legend>
+                                         <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                                             <div class="govuk-checkboxes__item">
+                                                 <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                                                 <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                                                     I confirm I have read the roles and responsibilities.
+                                                 </label>
+                                             </div>
+
+                                         </div>
+
+                                     </fieldset>
+                                 </div>
+
+
+                                              <a href="1-apprentice-role-3-2.html" class="govuk-button" data-module="govuk-button" id="roles-confirmed" >Continue</a><br />
+<!--
+<a href="noconfirm-roles" class="govuk-!-font-size-19" data-module="govuk-button" id="roles-undo">I want to change my answer</a><br />
+-->
+
+                                    </div>
+                               </div>
+                           </div>
+{% endblock %}

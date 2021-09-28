@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<!--<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>-->
+<p>&nbsp;</p>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+
+
+
+                    <h1 class="govuk-heading-l">Enter unique code</h1>
+
+
+
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="event-name">
+                        Enter the code provided in the email you received this will help us link your apprenticeship details to your account.
+                      </label>
+                      <input class="govuk-input 10 character govuk-input--width-10" id="event-name" name="event-name" type="text"></div>
+
+                    <a href="../dashboard/2-my-apprenticeships" class="govuk-button" data-module="govuk-button" id="">Continue</a><br />
+
+                    <p class="govuk-body"><a href="../dashboard/2-my-apprenticeships">I would like to enter the code later</a> (Your account will not have your latest apprentiship information)
+
+
+          </div>
+     </div>
+
+
+</div>
+{% endblock %}
