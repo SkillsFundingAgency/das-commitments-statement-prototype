@@ -72,13 +72,14 @@ function openTab(tabNumber) {
           x[i].style.display = "none";
      }
      document.getElementById(tabNumber).style.display = "block";
+
+// Confirm journey
+     $('.govuk-error-summary, .govuk-error-message').hide();
 }
 
 $('#service-title-section, #action-title-section').parent().addClass('title-overide');
 
 
-// Confirm journey
-$('.govuk-error-summary, .govuk-error-message').hide();
 
 
 
