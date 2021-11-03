@@ -1,0 +1,111 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                  <div class="govuk-notification-banner__header">
+                      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                          There seems to be a problem, we cannot find your apprenticeship.
+                      </h2>
+                  </div>
+                  <div class="govuk-notification-banner__content">
+                      <p class="govuk-notification-banner__heading">
+                          Check your name and date and birth details. If they are incorrect, please <a  class="govuk-notification-banner__link" href="edit-account.html">update your details</a>.
+
+                      </p>
+                  </div>
+              </div>
+<!--              <p>Check your name and date and birth details. If they are incorrect, please <a href="edit-account.html">update</a> them.</p>-->
+
+                    <h1 class="govuk-heading-l">Check your details</h1>
+
+
+                    <div>
+                        <table class="govuk-table data-table">
+                            <tbody class="govuk-table__body">
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">First name</th>
+                                <td class="govuk-table__cell">John</td>
+                            </tr>
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Last name</th>
+                                <td class="govuk-table__cell">Smith</td>
+                            </tr>
+
+                            <tr class="govuk-table__row">
+                                <th scope="row" class="govuk-table__header">Date of birth</th>
+                                <td class="govuk-table__cell">12 Jan 1990  </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                        <p class="govuk-inset-text">Contact your employer or training provider if your details are correct and we cannot find your apprenticeship.</p>
+                    </div>
+
+<!--<hr class="govuk-section-break govuk-section-break&#45;&#45;l govuk-section-break&#45;&#45;visible">-->
+
+
+<!--                         <h2 class="govuk-heading-m">Edit your password</h2>-->
+
+<!--                         <span class="govuk-caption-m">-->
+<!--                              Your password must:-->
+<!--                              <ul class="govuk-list govuk-list&#45;&#45;bullet">-->
+<!--                                   <li>be at least 8 characters</li>-->
+<!--                                   <li>contain at least one letter (a-z)</li>-->
+<!--                                   <li>contain at least one number (0-9)</li>-->
+<!--                                   <li>match with the confirmed password</li>-->
+<!--                              </ul>-->
+<!--                         </span>-->
+
+<!--                         <div class="govuk-form-group">-->
+<!--                              <div class="password-wrapper">-->
+<!--                                   <input class="govuk-input govuk-!-width-three-quarters" value="Passwored" id="apprentice-password" name="apprentice-password" type="password">-->
+<!--                                   <input type="checkbox" onclick="showPassword()"   id="hide-show-password">-->
+<!--                                   <label class="hide-show-password govuk-heading-m" for="hide-show-password" style="left: 30em">-->
+<!--                                        SHOW-->
+<!--                                   </label>-->
+<!--                              </div>-->
+<!--                         </div>-->
+
+<!--                         <div class="govuk-form-group">-->
+<!--                              <label class="govuk-label govuk-label&#45;&#45;s" for="apprentice-confirm-password">Confirm your password</label>-->
+<!--                              <div class="password-wrapper">-->
+<!--                                   <input class="govuk-input govuk-!-width-three-quarters" id="apprentice-confirm-password"  value="Passwored" name="apprentice-confirm-password" type="password">-->
+<!--                                   <input type="checkbox" onclick="showConfirm()" id="hide-show-confirm">-->
+<!--                                   <label class="hide-show-confirm govuk-heading-m" for="hide-show-confirm" style="left: 30em">-->
+<!--                                        SHOW-->
+<!--                                   </label>-->
+<!--                              </div>-->
+<!--                         </div>
+
+                         {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                         {{ govukButton({
+                              text: "Save and continue",
+                              href: ""
+                         }) }}
+
+
+
+                    <a href="details-check" class="govuk-button" data-module="govuk-button" id="">Continue</a><br />
+-->
+
+
+          </div>
+     </div>
+
+
+</div>
+{% endblock %}
