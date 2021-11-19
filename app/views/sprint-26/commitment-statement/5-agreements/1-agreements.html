@@ -1,0 +1,120 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page">
+
+     <div class="govuk-width-container">
+  <!--
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">
+                         Your apprenticeship
+                    </h1>
+
+                   <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details>
+
+               </div>
+
+               <div class="govuk-grid-column-one-third">
+
+                    <div class="confirmation">
+                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                         <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                         <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                    </div>
+
+               </div>-->
+
+          </div>
+
+     </div>
+
+
+{% endblock %}
+
+{% block content %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">
+    Help and support
+    </h1>
+<p>How to get help if you have questions or concerns during your apprenticeship.</p>
+  <h2 class="govuk-heading-m">Speak to your day-to-day contact at your employer</h2>
+    <p>You should have a day-to-day contact or manager who can answer any questions or concerns you may have. You can contact them by:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>arranging a face-to-face meeting</li>
+      <li>phone</li>
+      <li>email</li>
+    </ul>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <h2 class="govuk-heading-m">Speak to your training provider</h2>
+    <p>If you can’t resolve your questions or concerns with your employer, you should speak to your main contact at your training provider.</p>
+    <p>Speak to them next time you do your off-the-job training or by:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>phone</li>
+      <li>email</li>
+    </ul>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <h2 class="govuk-heading-m">Contact the Education Skills Funding Agency (ESFA)</h2>
+    <p>If you haven't been able to get the help you need from your training provider or employer, or if you need to make a complaint, you can contact us at the Education Skills Funding Agency (ESFA).</p>
+
+    <p><strong>Telephone</strong><br>If you have a unique reference number, have it with you when you call.</p>
+    <p>Available 8am to 8pm Monday to Friday. You can:</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>call us on 08000 150 600</li>
+      <li>text us on 07588 690018</li>
+    </ul>
+    <p>You cannot send us photos or videos via text.</p>
+    <p>Your phone company may charge you separately, standard SMS rates apply.<br><br>
+      <a class="govuk-link" href="https://www.gov.uk/call-charges">Find out about call charges.</a></p>
+
+    <p><strong>Email</strong><br>
+      Send an email to <a href="mailto: helpdesk@manage-apprenticeships.service.gov.uk">helpdesk@manage-apprenticeships.service.gov.uk</a>. </p>
+    <p>During our opening times, we’ll reply within 4 hours.</p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <a href="../dashboard/2-my-apprenticeships" class="govuk-button" data-module="govuk-button">
+      Go back to the dashboard
+    </a>
+
+  </div>
+</div>
+
+
+        </main>
+{% endblock %}

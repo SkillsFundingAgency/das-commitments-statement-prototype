@@ -1,0 +1,154 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation-confirmed.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+     <div class="govuk-width-container">
+  <!--
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">
+                         Your apprenticeship
+                    </h1>
+
+                   <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details>
+
+               </div>
+
+               <div class="govuk-grid-column-one-third">
+
+                    <div class="confirmation">
+                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                         <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                         <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                    </div>
+
+               </div>-->
+
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+     <div class="govuk-grid-row govuk-!-margin-top-6">
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Previous apprenticeships</h1>
+              <p class="govuk-body">
+                  Below is a list of your previous apprenticeships.
+              </p>
+              <div>
+                  <h2 class="govuk-heading-m"><a href="previous-apprenticeships.html">Electrical Installation NVQ Apprenticeship</a></h2>
+                  <ul class="govuk-list">
+                      <li>Employer: The Great Electric Company</li>
+                      <li>Level: 4</li><li>Status <span class="govuk-tag govuk-tag--green">Completed</span></li>
+                  </ul>
+              </div>  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+              <div>
+                  <h2 class="govuk-heading-m"><a href="previous-apprenticeships.html">Plumbing Installation NVQ Apprenticeship</a></h2>
+                  <ul class="govuk-list">
+                      <li>Employer: The Great Plumbing Company</li>
+                      <li>Level: 4</li>
+                      <li>Status <span class="govuk-tag govuk-tag--grey">Stopped</span></li>
+                  </ul>
+              </div>
+
+              <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<!--              <h2 class="govuk-heading-m">Electrical Installation NVQ Apprenticeship</h2>-->
+<!--              <table class="govuk-table data-table">-->
+<!--                  <tbody class="govuk-table__body">-->
+<!--                  <tr class="govuk-table__row">-->
+<!--                      <th scope="row" class="govuk-table__header">Apprenticeship</th>-->
+<!--                      <td class="govuk-table__cell">Electrical Installation NVQ Apprenticeship</td>-->
+<!--                  </tr>-->
+
+<!--                  <tr class="govuk-table__row">-->
+<!--                      <th scope="row" class="govuk-table__header">Level</th>-->
+<!--                      <td class="govuk-table__cell">Level 2 </td>-->
+<!--                  </tr>-->
+<!--                  <tr class="govuk-table__row">-->
+<!--                      <th scope="row" class="govuk-table__header">-->
+<!--                          Duration-->
+<!--                      </th>-->
+<!--                      <td class="govuk-table__cell">12 month(s)<br /></td>-->
+<!--                  </tr>-->
+
+<!--                  <tr class="govuk-table__row">-->
+<!--                      <th scope="row" class="govuk-table__header">-->
+<!--                          <div>Planned start date-->
+
+<!--                          </div>-->
+<!--                      </th>-->
+<!--                      <td class="govuk-table__cell"> January 2019</td>-->
+<!--                  </tr>-->
+<!--                  <tr class="govuk-table__row">-->
+<!--                      <th scope="row" class="govuk-table__header">-->
+<!--                          <div>Planned end date-->
+<!--                              &lt;!&ndash;<span class="tooltiptext tooltip-right">Tooltip text</span>&ndash;&gt;-->
+<!--                          </div>-->
+<!--                      </th>-->
+<!--                      <td class="govuk-table__cell">December 2023</td>-->
+<!--                  </tr>-->
+<!--                  <tr class="govuk-table__row">-->
+<!--                      <th scope="row" class="govuk-table__header">-->
+<!--                          <div>-->
+<!--                              Status-->
+<!--                          </div>-->
+<!--                      </th>-->
+<!--                      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag&#45;&#45;success">Completed</span> </td>-->
+<!--                  </tr>-->
+
+<!--                  </tbody>-->
+<!--              </table>-->
+              <div class="">
+                  <h3 class="govuk-heading-m" >Help and support</h3>
+                  <p>
+                      If you have any questions or need support using this service, you can  <a class="govuk-link open-help" href="../5-agreements/1-agreements.html">
+                      contact us</a>.
+                  </p>
+              </div>
+          </div>
+
+     </div>
+
+     </div>
+<div class="help-modal-container govuk-visually-hidden">
+    <div class="help-modal">
+    </div>
+</div>
+{% endblock %}

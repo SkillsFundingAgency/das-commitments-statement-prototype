@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <h1 class="govuk-heading-xl">Create your apprentice commitment account</h1>
+
+               <form method="post" action="../landing-page/index" class="check-answers-page">
+
+                    <div class="govuk-form-group">
+                         <label class="govuk-label" for="apprentice-email">Email address</label>
+                         <input class="govuk-input govuk-input--width-20" id="apprentice-email" name="apprentice-email" type="text">
+                    </div>
+
+                    <div class="govuk-form-group">
+                         <label class="govuk-label" for="apprentice-password">Password</label>
+                         <div class="password-wrapper">
+                              <input class="govuk-input govuk-input--width-20" id="apprentice-password" name="apprentice-password" type="password">
+                              <input type="checkbox" onclick="showPassword()" id="hide-show-password">
+                              <label class="hide-show-password govuk-heading-m" for="hide-show-password">
+                                   show
+                              </label>
+                         </div>
+                    </div>
+
+                    <div class="govuk-form-group">
+                         <label class="govuk-label" for="apprentice-confirm-password">Confirm password</label>
+                         <div class="password-wrapper">
+                              <input class="govuk-input govuk-input--width-20" id="apprentice-confirm-password" name="apprentice-confirm-password" type="password">
+                              <input type="checkbox" onclick="showConfirm()" id="hide-show-confirm">
+                              <label class="hide-show-confirm govuk-heading-m" for="hide-show-confirm">
+                                   SHOW
+                              </label>
+                         </div>
+                    </div>
+
+                    {% from "govuk/components/button/macro.njk" import govukButton %}
+
+                    {{ govukButton({
+                         text: "Create account",
+                         href: ""
+                    }) }}
+
+
+               </form>
+
+          </div>
+     </div>
+
+
+</div>
+{% endblock %}

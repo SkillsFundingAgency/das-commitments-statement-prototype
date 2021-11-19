@@ -1,0 +1,189 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation-confirmed.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+     <div class="govuk-width-container">
+
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+     <div class="govuk-grid-row govuk-!-margin-top-6">
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Previous apprenticeships</h1>
+              <p class="govuk-body">
+                  Below is a list of your previous apprenticeships.
+              </p>
+              <h2 class="govuk-heading-m">Electrical Installation NVQ Apprenticeship</h2>
+              <table class="govuk-table data-table">
+                  <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Employer</th>
+                      <td class="govuk-table__cell">JPG Electrical Installation</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Provider</th>
+                      <td class="govuk-table__cell">Quest training</td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Level</th>
+                      <td class="govuk-table__cell">Level 2 </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                       <th scope="row" class="govuk-table__header">
+                         Duration
+                       </th>
+                       <td class="govuk-table__cell">12 month(s)<br /></td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <div>Planned start date
+
+                          </div>
+                      </th>
+                      <td class="govuk-table__cell"> January 2019</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <div>Planned end date
+                              <!--<span class="tooltiptext tooltip-right">Tooltip text</span>-->
+                          </div>
+                      </th>
+                      <td class="govuk-table__cell">December 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                       <th scope="row" class="govuk-table__header">
+                            <div>
+                                Status
+                            </div>
+                       </th>
+                       <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Completed</span> </td>
+                  </tr>
+
+                  </tbody>
+              </table>
+              <hr class="govuk-section-break govuk-section-break--l">
+<!--              <h2 class="govuk-heading-m">Electrical Installation NVQ Apprenticeship</h2>-->
+<!--              <table class="govuk-table data-table">-->
+<!--                  <tbody class="govuk-table__body">-->
+<!--                  <tr class="govuk-table__row">-->
+<!--                      <th scope="row" class="govuk-table__header">Apprenticeship</th>-->
+<!--                      <td class="govuk-table__cell">Electrical Installation NVQ Apprenticeship</td>-->
+<!--                  </tr>-->
+
+<!--                  <tr class="govuk-table__row">-->
+<!--                      <th scope="row" class="govuk-table__header">Level</th>-->
+<!--                      <td class="govuk-table__cell">Level 2 </td>-->
+<!--                  </tr>-->
+<!--                  <tr class="govuk-table__row">-->
+<!--                      <th scope="row" class="govuk-table__header">-->
+<!--                          Duration-->
+<!--                      </th>-->
+<!--                      <td class="govuk-table__cell">12 month(s)<br /></td>-->
+<!--                  </tr>-->
+
+<!--                  <tr class="govuk-table__row">-->
+<!--                      <th scope="row" class="govuk-table__header">-->
+<!--                          <div>Planned start date-->
+
+<!--                          </div>-->
+<!--                      </th>-->
+<!--                      <td class="govuk-table__cell"> January 2019</td>-->
+<!--                  </tr>-->
+<!--                  <tr class="govuk-table__row">-->
+<!--                      <th scope="row" class="govuk-table__header">-->
+<!--                          <div>Planned end date-->
+<!--                              &lt;!&ndash;<span class="tooltiptext tooltip-right">Tooltip text</span>&ndash;&gt;-->
+<!--                          </div>-->
+<!--                      </th>-->
+<!--                      <td class="govuk-table__cell">December 2023</td>-->
+<!--                  </tr>-->
+<!--                  <tr class="govuk-table__row">-->
+<!--                      <th scope="row" class="govuk-table__header">-->
+<!--                          <div>-->
+<!--                              Status-->
+<!--                          </div>-->
+<!--                      </th>-->
+<!--                      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag&#45;&#45;success">Completed</span> </td>-->
+<!--                  </tr>-->
+
+<!--                  </tbody>-->
+<!--              </table>-->
+              <h2 class="govuk-heading-m">Confirmations/Change of circumstance</h2>
+              <div class="as-timeline govuk-!-margin-bottom-6">
+                  <div class="as-timeline__item">
+                      <h2 class="as-timeline__title">
+                          Change of employer
+                      </h2>
+                      <p class="as-timeline__date">
+                          <time datetime="2021-03-15T16:27:00.000Z">
+                              3/15/2021, 4:27:00 PM
+                          </time>
+                      </p>
+                  </div>
+                  <div class="as-timeline__item">
+                      <h2 class="as-timeline__title">
+                          Change of provider
+                      </h2>
+                      <p class="as-timeline__date">
+                          <time datetime="2021-03-15T10:04:00.000Z">
+                              3/15/2021, 10:04:00 AM
+                          </time>
+                      </p>
+
+                  </div>
+                  <div class="as-timeline__item">
+                      <h2 class="as-timeline__title">
+                          Initial confirmation
+                      </h2>
+                      <p class="as-timeline__date">
+                          <time datetime="2021-01-25T09:35:00.000Z">
+                              1/25/2021, 9:35:00 AM
+                          </time>
+                      </p>
+
+                  </div>
+              </div>
+
+              <div class="">
+                  <h3 class="govuk-heading-m" >Help and support</h3>
+                  <p>
+                      If you have any questions or need support using this service, you can  <a class="govuk-link open-help" href="../5-agreements/1-agreements.html">
+                      contact us</a>.
+                  </p>
+              </div>
+          </div>
+
+     </div>
+
+     </div>
+<div class="help-modal-container govuk-visually-hidden">
+    <div class="help-modal">
+    </div>
+</div>
+{% endblock %}
