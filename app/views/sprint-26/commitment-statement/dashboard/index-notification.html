@@ -1,0 +1,114 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation-confirmed.html" %}
+
+<div id="service-title-section" class="dashboard-page">
+
+     <div class="govuk-width-container">
+
+
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-full">
+                    <h1 class="govuk-heading-xl">
+                         Welcome, Joe Bloggs
+                         <!-- <a href="#" class="share">Share my progress</a> -->
+                         <span class="govuk-caption-m">Military Engineering Construction Technician apprenticeship</span>
+                    </h1>
+               </div>
+
+          </div>
+
+     </div>
+
+
+</div>
+
+<!--
+<div id="" class="time-left">
+
+     <div class="govuk-width-container">
+
+          <div class="govuk-grid-row">
+               <div class="govuk-grid-column-full">
+                    <div class="govuk-caption-m left-message">
+                         You have <b>1 year, 25 weeks and 3 days</b> left of your apprenticeship
+                    </div>
+               </div>
+
+          </div>
+
+     </div>
+
+
+</div>
+-->
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container" id="dashboard-section">
+    <div class="govuk-notification-banner govuk-!-margin-top-6" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                Important
+            </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+            <p class="govuk-notification-banner__heading">
+                You can now view details of your previous apprenticeships.
+                <a class="govuk-notification-banner__link" href="my-previous-apprenticeships.html">View previous apprenticeship</a>.
+            </p>
+        </div>
+    </div>
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+               <ul class="dashboard-nav">
+                   <li class="dashboard-one">
+                       <a href="">
+                           <h2 class="govuk-heading-m">Edit sign in details</h2>
+                           <p>View and edit your personal details, email address and password.</p>
+                       </a>
+                   </li>
+                   <li class="dashboard-one">
+                       <a href="my-apprenticeship-current.html">
+                           <h2 class="govuk-heading-m">My apprenticeship details</h2>
+                           <p>Details of your employer, training provider and apprenticeship.</p>
+                       </a>
+                   </li>
+
+                   <li class="dashboard-one">
+                       <a href="my-previous-apprenticeships.html">
+                           <h2 class="govuk-heading-m">My previous apprenticeships</h2>
+                           <p>Details of your previous apprenticeships.
+                           </p>
+                       </a>
+                   </li>
+                    <li class="dashboard-one">
+                      <a href="/sprint-23/commitment-statement/5-agreements/1-agreements">
+                              <h2 class="govuk-heading-m">Help and support</h2>
+                              <p>Who to contact if you have questions or concerns during your apprenticeship.</p>
+
+                              </a>
+                    </li>
+                   <li class="dashboard-one">
+                       <a href="https://help.apprenticeships.education.gov.uk/hc/en-gb/sections/4405114743698-Apprentice">
+                           <h2 class="govuk-heading-m">Understanding apprenticeships</h2>
+                           <p>Read articles on subjects like progress reviews and end-point assessments.
+                           </p>
+                       </a>
+                   </li>
+
+<!-- ////////////////////////////////////////////  -->
+               </ul>
+          </div>
+
+          <div class="govuk-grid-column-one-third">
+          </div>
+
+     </div>
+</div>
+{% endblock %}
