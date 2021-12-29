@@ -39,6 +39,16 @@ $(document).ready(function () {
 
 })
 
+const goback = document.getElementsByClassName("history")[0];
+
+if (goback) {
+     goback.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.history.back()
+          console.log(e);
+     })
+}
+
 // Identity Assurance
 $("#identity-assurance-btn").on("click", function (e) {
      if ($('input[id=apprentice-name-correct-yes]').is(':checked') && $('input[id=apprentice-email-correct-yes]').is(':checked') && $('input[id=apprentice-birthday-correct-yes]').is(':checked')) {

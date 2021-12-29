@@ -39,6 +39,16 @@ $(document).ready(function () {
 
 })
 
+const goback = document.getElementsByClassName("history")[0];
+
+if (goback) {
+     goback.addEventListener("click", (e) => {
+          e.preventDefault();
+          window.history.back()
+          console.log(e);
+     })
+}
+
 // Identity Assurance
 $("#identity-assurance-btn").on("click", function (e) {
      if ($('input[id=apprentice-name-correct-yes]').is(':checked') && $('input[id=apprentice-email-correct-yes]').is(':checked') && $('input[id=apprentice-birthday-correct-yes]').is(':checked')) {
@@ -72,13 +82,14 @@ function openTab(tabNumber) {
           x[i].style.display = "none";
      }
      document.getElementById(tabNumber).style.display = "block";
+
+// Confirm journey
+     $('.govuk-error-summary, .govuk-error-message').hide();
 }
 
 $('#service-title-section, #action-title-section').parent().addClass('title-overide');
 
 
-// Confirm journey
-$('.govuk-error-summary, .govuk-error-message').hide();
 
 
 

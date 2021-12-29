@@ -1,0 +1,148 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation-confirmed.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+     <div class="govuk-width-container">
+  <!--
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">
+                         Your apprenticeship
+                    </h1>
+
+                   <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details>
+
+               </div>
+
+               <div class="govuk-grid-column-one-third">
+
+                    <div class="confirmation">
+                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                         <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                         <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                    </div>
+
+               </div>-->
+
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+     <div class="govuk-grid-row govuk-!-margin-top-6">
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">My apprenticeship</h1>
+
+
+              <h2 class="govuk-heading-m">Electrical Installation NVQ Apprenticeship</h2>
+              <table class="govuk-table data-table">
+                  <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Employer</th>
+                      <td class="govuk-table__cell">JPG Electrical Installation</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Training provider</th>
+                      <td class="govuk-table__cell">Quest training</td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Level</th>
+                      <td class="govuk-table__cell">Level 4 </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                       <th scope="row" class="govuk-table__header">
+                         Estimated duration
+                       </th>
+                       <td class="govuk-table__cell">24 month(s)<br /></td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <div>Planned start date
+
+                          </div>
+                      </th>
+                      <td class="govuk-table__cell"> January 2021</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <div>Delivery method
+
+                          </div>
+                      </th>
+                      <td class="govuk-table__cell"> Portable</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                       <th scope="row" class="govuk-table__header">
+                            <div>
+                                Status
+                            </div>
+                       </th>
+                       <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--turquoise">Active</span> </td>
+                  </tr>
+
+                  </tbody>
+              </table>
+              <hr class="govuk-section-break govuk-section-break--l">
+              <div>
+                  <h2 class="govuk-heading-m">Roles and responsibilities</h2>
+                  <p>
+                      You can read through the <a href="../3-roles/1-apprentice-role-2a.html">roles and responsibilities</a> for you, your employer and your training provider.
+                  </p>
+
+              </div>
+              <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+              {% include "../includes/confirmations-and-changes-portable.html" %}
+
+
+
+          </div>
+         <div class="govuk-grid-column-one-third">
+             {%include "../includes/progress-snapshot-tags.html" %}
+         </div>
+     </div>
+
+     </div>
+<div class="help-modal-container govuk-visually-hidden">
+    <div class="help-modal">
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,143 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/account-page/navigation.html" %}
+<div id="service-title-section" class="account-page"></div>
+{% endblock %}
+
+{% block content %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+
+                  <!-- Confirmation once selection has been made -->
+                  <div class="govuk-form-group confirmed-panel" id="training-provider-title-confirmed">
+                       <div class="govuk-warning-text">
+                            <span class="govuk-confirm__icon" aria-hidden="true"></span>
+                            <strong class="govuk-warning-text__text">
+                                 <span class="govuk-warning-text__assistive">Confirmed</span> You have confirmed that this is your training provider
+                            </strong>
+                       </div>
+                  </div>
+
+                  <!-- Change answer -->
+                  <div class="govuk-form-group confirmed-panel" id="training-change-answer">
+                       <div class="govuk-warning-text">
+                            <span class="govuk-confirm__icon" aria-hidden="true"></span>
+                            <strong class="govuk-warning-text__text">
+                                 <span class="govuk-warning-text__assistive">Unlocked</span> You can now change your answer
+                            </strong>
+                       </div>
+                  </div>
+
+      <h1 class="govuk-heading-l" id="training-provider-title">Confirm your training provider</h1>
+
+
+                  <h2 class="govuk-heading-m" id="">JTL</h2>
+
+
+                    {% from "govuk/components/details/macro.njk" import govukDetails %}
+
+                    {{ govukDetails({
+                      summaryText: "Help if you do not recognise your training provider's name",
+                      text: "JTL is your training provider’s legal name registered with Companies House. You may know them by their trading name instead.
+"
+                    }) }}
+
+                    <p>
+Your off-the-job training will be <strong>at least 20% of your normal working hours</strong> spent learning new skills, knowledge and behaviours for your apprenticeship. Your off-the-job training will be managed by your training provider.                       </p>
+
+  <h3 class="govuk-heading-m" id="">Things you need to know</h3>
+
+<div class="govuk-inset-text">
+  <p class="govuk-body">Before starting your apprenticeship your training provider should have:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>told you if you’ll have any training delivered by another training provider
+</li>
+  <li>given you a day-to-day contact or manager who will support you through your apprenticeship</li>
+</ul>
+
+</div>
+
+
+
+<form id="training-form-hide" method="post" action="/sprint-6/commitment-statement/2-employer-details/1a-training-details">
+
+
+
+
+
+
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h3 class="govuk-fieldset__heading">
+              Is JTL your training provider?
+            </h3>
+          </legend>
+
+
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="TrainingConfirm" name="TrainingConfirm" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="AppDetails">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="TrainingConfirm-2" name="TrainingConfirm" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="AppDetails">
+                No
+              </label>
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+
+
+
+
+
+
+
+  <button class="govuk-button" data-module="govuk-button" id="training-provider-confirm">Confirm</button>
+</form>
+<!--
+
+                    <a href="../dashboard/2-my-apprenticeships" class="govuk-button" data-module="govuk-button" >I can confirm this is my employer</a>
+<br />
+                  <a href="../dashboard/2-my-apprenticeships" class="govuk-button govuk-button--secondary" data-module="govuk-button" >This is not my employer</a>
+
+-->
+<br />
+<!--
+                    <a href="../dashboard/2-my-apprenticeships" class="secondary-link employer-provider-unconfirmed">I want to complete this later</a><br />
+-->
+  <a href="../dashboard/2-my-apprenticeships" class="govuk-button" data-module="govuk-button" id="training-provider-confirmed" >Continue</a><br />
+
+    <a href="1a-training-details" class="govuk-!-font-size-19" data-module="govuk-button" id="training-provider-undo" >I want to change my answer</a><br />
+
+
+                  <!--  <a href="../dashboard/2-my-apprenticeships"  class="govuk-back-link training-provider-confirmed">Back to landing page</a>-->
+
+
+
+          </div>
+     </div>
+</div>
+{% endblock %}

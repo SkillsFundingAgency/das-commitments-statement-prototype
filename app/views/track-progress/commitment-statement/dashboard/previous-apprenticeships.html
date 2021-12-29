@@ -1,0 +1,94 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation-confirmed.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+     <div class="govuk-width-container">
+     </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+     <div class="govuk-grid-row govuk-!-margin-top-6">
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">Previous apprenticeship</h1>
+
+              <h2 class="govuk-heading-m">Electrical Installation NVQ Apprenticeship</h2>
+              <table class="govuk-table data-table">
+                  <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Employer</th>
+                      <td class="govuk-table__cell">JPG Electrical Installation</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Training provider</th>
+                      <td class="govuk-table__cell">Quest training</td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Level</th>
+                      <td class="govuk-table__cell">Level 2 </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                       <th scope="row" class="govuk-table__header">
+                         Duration
+                       </th>
+                       <td class="govuk-table__cell">12 month(s)<br /></td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <div>Planned start date
+
+                          </div>
+                      </th>
+                      <td class="govuk-table__cell"> January 2019</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <div>Planned end date
+                              <!--<span class="tooltiptext tooltip-right">Tooltip text</span>-->
+                          </div>
+                      </th>
+                      <td class="govuk-table__cell">December 2020</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                       <th scope="row" class="govuk-table__header">
+                            <div>
+                                Status
+                            </div>
+                       </th>
+                       <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--green">Completed</span> </td>
+                  </tr>
+
+                  </tbody>
+              </table>
+              <hr class="govuk-section-break govuk-section-break--l">
+              {% include "../includes/confirmations-and-changes.html" %}
+          </div>
+
+     </div>
+
+     </div>
+<div class="help-modal-container govuk-visually-hidden">
+    <div class="help-modal">
+    </div>
+</div>
+{% endblock %}

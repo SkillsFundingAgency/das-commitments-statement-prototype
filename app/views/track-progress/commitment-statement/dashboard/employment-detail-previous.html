@@ -1,0 +1,290 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation-confirmed.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+     <div class="govuk-width-container">
+  <!--
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">
+                         Your apprenticeship
+                    </h1>
+
+                   <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details>
+
+               </div>
+
+               <div class="govuk-grid-column-one-third">
+
+                    <div class="confirmation">
+                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                         <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                         <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                    </div>
+
+               </div>-->
+
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+     <div class="govuk-grid-row govuk-!-margin-top-6">
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">My placement</h1>
+
+
+              <h2 class="govuk-heading-m">Electrical Installation NVQ Apprenticeship</h2>
+              <table class="govuk-table data-table">
+                  <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Employer</th>
+                      <td class="govuk-table__cell">JPG Electrical Installation</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Training provider</th>
+                      <td class="govuk-table__cell">Quest training</td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Level</th>
+                      <td class="govuk-table__cell">Level 2 </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                       <th scope="row" class="govuk-table__header">
+                         Estimated duration
+                       </th>
+                       <td class="govuk-table__cell">3 months<br /></td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <div>Planned start date
+
+                          </div>
+                      </th>
+                      <td class="govuk-table__cell"> January 2021</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <div>End date
+
+                          </div>
+                      </th>
+                      <td class="govuk-table__cell"> April 2021</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <div>Delivery method
+
+                          </div>
+                      </th>
+                      <td class="govuk-table__cell"> Portable</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                       <th scope="row" class="govuk-table__header">
+                            <div>
+                                Status
+                            </div>
+                       </th>
+                       <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--blue">Completed</span> </td>
+                  </tr>
+
+                  </tbody>
+              </table>
+              <hr class="govuk-section-break govuk-section-break--l">
+              <div>
+                  <h2 class="govuk-heading-m">Roles and responsibilities</h2>
+                  <p>
+                      You can read through the <a href="../3-roles/1-apprentice-role-2a.html">roles and responsibilities</a> for you, your employer and your training provider.
+                  </p>
+              </div>
+              <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+              <div>
+                  <h2 class="govuk-heading-m">KSB's covered</h2>
+                  <table class="govuk-table data-tble">
+                      <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id=K1>
+                                  <strong>K1</strong>: How to approach the development of interactive, real-time applications for gaming platforms, including an awareness of industry-standard programming languages, application programming interfaces (APIs), tools, engines and frameworks.
+                              </p></th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--blue">Completed</span></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id=K2>
+                                  <strong>K2</strong>: The syntax and structure of an industry-standard programming language (above and beyond visual programming languages) used for the development of games (for example C++, C#).
+
+                                  <br />
+                              </p>
+                          </th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--blue">Completed</span></td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id=K1>
+                                  <strong>K1</strong>: How to approach the development of interactive, real-time applications for gaming platforms, including an awareness of industry-standard programming languages, application programming interfaces (APIs), tools, engines and frameworks.
+                              </p>
+                          </th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--blue">Completed</span></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id=K3>
+                                  <strong>K3</strong>: The fundamental graphical and mathematical principles that underpin the operation of real-time graphics in two and three-dimensions.
+
+                                  <br />
+                              </p>
+                          </th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--blue">Completed</span></td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id=K4>
+                                  <strong>K4</strong>: The characteristics of modern hardware platforms and how they support the efficient function of interactive, real-time graphical applications.
+                                  <br />
+                              </p>
+                          </th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--blue">Completed</span></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id=K4>
+                                  <strong>K4</strong>: The characteristics of modern hardware platforms and how they support the efficient function of interactive, real-time graphical applications.
+                                  <br />
+                              </p>
+                          </th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--blue">Completed</span></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id=K5>
+                                  <strong>K5</strong>: Approaches to balancing quality and performance requirements to achieve, monitor and maintain acceptable frame rates and memory footprints for a real-time interactive application.
+                                  <br />
+                              </p>
+                          </th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--blue">Completed</span> </td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id=S4>
+                                  <strong>S4</strong>: Track memory usage and identify opportunities for reducing requirements.
+
+                                  <br />
+                              </p>
+                          </th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--blue">Completed</span></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id=S2>
+                                  <strong>S2</strong>: Implement and adapt contemporary real-time algorithms in two and three-dimensional games.
+                              </p>
+                          </th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--blue">Completed</span> </td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id=S5>
+                                  <strong>S5</strong>: Write code informed by the characteristics of modern hardware platforms (e.g. shader programming, multi-threading).
+                              </p>
+                          </th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">to do</span> </td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id=S7>
+                                  <strong>S7</strong>: Use continuous integration workflow within the deployment lifecycle as part of a multi-disciplinary software team.
+                              </p>
+                          </th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">to do</span> </td>
+                      </tr>
+                      </tbody>
+                  </table>
+
+                  <a href="https://www.instituteforapprenticeships.org/apprenticeship-standards/game-programmer-v1-0#B3" class="govuk-link">view standard</a>
+              </div>
+
+
+          </div>
+
+         <div class="govuk-grid-column-one-third">
+             <table class="govuk-table data-table">
+                 <h2 class="govuk-heading-m">Your progress</h2>
+                 <tbody class="govuk-table__body">
+                 <tr class="govuk-table__row">
+                     <th scope="row" class="govuk-table__header">Completed</th>
+                     <td class="govuk-table__cell">25</td>
+                 </tr>
+                 <tr class="govuk-table__row">
+                     <th scope="row" class="govuk-table__header">In progress</th>
+                     <td class="govuk-table__cell">35</td>
+                 </tr>
+
+                 <tr class="govuk-table__row">
+                     <th scope="row" class="govuk-table__header">To do</th>
+                     <td class="govuk-table__cell">40</td>
+                 </tr>
+                 </tbody>
+             </table>
+             <details class="govuk-details" data-module="govuk-details">
+                 <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                     More about this table
+                    </span>
+                 </summary>
+                 <div class="govuk-details__text">
+                    Explainer here.
+                 </div>
+             </details>
+             <a class="govuk-link" href="your-progress.html">detail view</a>
+             <hr class="govuk-section-break govuk-section-break--l">
+         </div>
+     </div>
+
+     </div>
+<div class="help-modal-container govuk-visually-hidden">
+    <div class="help-modal">
+    </div>
+</div>
+{% endblock %}

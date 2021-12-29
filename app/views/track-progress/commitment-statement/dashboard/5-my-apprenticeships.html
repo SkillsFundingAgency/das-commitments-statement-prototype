@@ -1,0 +1,205 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page">
+
+     <div class="govuk-width-container">
+  <!--
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">
+                         Your apprenticeship
+                    </h1>
+
+                   <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details>
+
+               </div>
+
+               <div class="govuk-grid-column-one-third">
+
+                    <div class="confirmation">
+                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                         <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                         <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                    </div>
+
+               </div>-->
+
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container" id="landing-page-section">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+
+
+
+              <div class="govuk-grid-column-full">
+                 <p>&nbsp;</p>
+
+                    <h1 class="govuk-heading-l">
+                         Confirm my apprenticeship details
+                    </h1>
+
+
+                   <div class="cs-not-agreed">
+
+                   </div>
+
+
+
+                 <p>
+                   <span class="cs-not-agreed">Read through each section below to confirm your apprenticeship. </span>  If you ever need to check on the details of your apprenticeship, you can come back here.
+                   </p>
+                   <div class="cs-not-agreed">
+
+
+                        <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-warning-text__assistive">Warning</span>
+    You have 14 days to confirm your apprenticeship
+  </strong>
+</div>
+
+
+
+                       <p>
+                         Your answers will save automatically, so you can leave and come back if you need to.
+                         </p>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                  <ol class="app-task-list">
+                          <li>
+                            <h2 class="app-task-list__section">
+Read and confirm the below sections
+                            </h2>
+                            <ul class="app-task-list__items">
+                              <li class="app-task-list__item">
+                                <span class="app-task-list__task-name">
+                                  <a href="/sprint-6/commitment-statement//2-employer-details/1a-employer-details" aria-describedby="eligibility-status">
+                                    Your employer
+                                  </a>
+                                </span>
+                                <strong class="govuk-tag app-task-list__tag" id="eligibility-status">Completed</strong>
+                              </li>
+
+                              <li class="app-task-list__item">
+                                <span class="app-task-list__task-name">
+                                  <a href="/sprint-6/commitment-statement//2-employer-details/1a-training-details" aria-describedby="read-declaration-status">
+                                    Your training provider
+                                  </a>
+                                </span>
+                                <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+                              </li>
+                              <li class="app-task-list__item">
+                                <span class="app-task-list__task-name">
+                                  <a href="/sprint-6/commitment-statement//1-apprenticeship-details/1-apprenticeship-details" aria-describedby="read-declaration-status">
+                                    Details of your apprenticeship
+                                  </a>
+                                </span>
+                                <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+                              </li>
+                              <li class="app-task-list__item">
+                                <span class="app-task-list__task-name">
+                                  <a href="/sprint-6/commitment-statement//1-apprenticeship-details/1-apprenticeship-training" aria-describedby="read-declaration-status">
+                                    How your apprenticeship will be delivered
+                                  </a>
+                                </span>
+                                <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+                              </li>
+                              <li class="app-task-list__item">
+                                <span class="app-task-list__task-name">
+                                  <a href="/sprint-6/commitment-statement//3-roles/1-apprentice-role" aria-describedby="read-declaration-status">
+                                    Roles and responsibilities
+                                  </a>
+                                </span>
+                                <strong class="govuk-tag app-task-list__tag" id="read-declaration-status">Completed</strong>
+                              </li>
+                            </ul>
+                          </li>
+
+                        </ol>
+
+
+
+
+
+          </div>
+          <div class="govuk-grid-column-two-thirds">
+            <h3 class="govuk-heading-m" >Help and Support</h3>
+             <p>
+               If you have any questions or need support, guidance can be found in the <a class="govuk-link" href="../5-agreements/1-agreements.html">help and support section.</a>
+               </p>
+          </div>
+
+     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </div>
+{% endblock %}

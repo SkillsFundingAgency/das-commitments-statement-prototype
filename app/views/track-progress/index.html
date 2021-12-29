@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+
+{% block content %}
+<p>
+  &nbsp;
+  </p>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Prototypes</h1>
+      <h2 class="govuk-heading-m">Pages</h2>
+      <ul class="govuk-list ">
+        <li><a href="track-progress/commitment-statement/dashboard/my-apprenticeship-current">My apprenticeship </a></li>
+        <li><a href="track-progress/commitment-statement/dashboard/ksb-list-tracked">Tracked KSB's 1 </a></li>
+        <li><a href="track-progress/commitment-statement/dashboard/ksb-list-tracked-1">Tracked KSB's 2 full width page</a></li>
+        <li><a href="track-progress/commitment-statement/dashboard/ksb-list-tracked-2">Tracked KSB's 3 full width page</a></li>
+        <li><a href="track-progress/commitment-statement/dashboard/employment-detail">Current employer with detail of Duties </a></li>
+        <li><a href="track-progress/commitment-statement/dashboard/employment-detail-previous">Previous employer with detail of KSB's covered </a></li>
+        <li><a href="track-progress/commitment-statement/dashboard/your-progress">Duties accordion with KSB's as content</a></li>
+      </ul>
+      <h2 class="govuk-heading-m">Journeys</h2>
+      <ul class="govuk-list ">
+        <li><a href="track-progress/commitment-statement/dashboard/index.html">one</a> </li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}
