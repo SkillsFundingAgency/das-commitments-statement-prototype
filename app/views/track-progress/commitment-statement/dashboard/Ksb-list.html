@@ -366,36 +366,7 @@
           </div>
 
          <div class="govuk-grid-column-one-third">
-             <table class="govuk-table data-table">
-                 <h2 class="govuk-heading-m">Your progress</h2>
-                 <tbody class="govuk-table__body">
-                 <tr class="govuk-table__row">
-                     <th scope="row" class="govuk-table__header">Completed</th>
-                     <td class="govuk-table__cell">25</td>
-                 </tr>
-                 <tr class="govuk-table__row">
-                     <th scope="row" class="govuk-table__header">In progress</th>
-                     <td class="govuk-table__cell">35</td>
-                 </tr>
-
-                 <tr class="govuk-table__row">
-                     <th scope="row" class="govuk-table__header">To do</th>
-                     <td class="govuk-table__cell">40</td>
-                 </tr>
-                 </tbody>
-             </table>
-             <details class="govuk-details" data-module="govuk-details">
-                 <summary class="govuk-details__summary">
-                    <span class="govuk-details__summary-text">
-                     More about this table
-                    </span>
-                 </summary>
-                 <div class="govuk-details__text">
-                    Explainer here.
-                 </div>
-             </details>
-             <a class="govuk-link" href="#">detail view</a>
-             <hr class="govuk-section-break govuk-section-break--l">
+             {%include "../includes/progress-snapshot-tags.html" %}
          </div>
      </div>
 
