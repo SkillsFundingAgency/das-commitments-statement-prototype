@@ -1,14 +1,21 @@
 //derived from home office design  https://github.com/UKHomeOffice/design-system/blob/master/components/timeline/assets/Timeline.scss
 
+
+
 .as-timeline {
   overflow: hidden;
   position: relative;
+
+
 
   &__item {
     @include govuk-responsive-padding(2, "bottom");
     padding-left: 22px;
     position: relative;
 
+    &.milestone {
+      background-color: lightgray;
+    }
     &:before { /* styling for lines in margin */
       background-color: govuk-colour("mid-grey");
       content: "";

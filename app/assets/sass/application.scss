@@ -30,6 +30,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/module-tracker";
 @import "components/custom";
 @import "components/timeline";
+@import "components/accordion";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 h1 {
