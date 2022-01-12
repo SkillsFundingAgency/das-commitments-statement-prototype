@@ -76,10 +76,7 @@
 <!--              <h2 class="govuk-heading-m">Electrical Installation NVQ Apprenticeship</h2>-->
               <table class="govuk-table data-table">
                   <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Employer</th>
-                      <td class="govuk-table__cell">Electronic Arts</td>
-                  </tr>
+
                   <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Training provider</th>
                       <td class="govuk-table__cell">Quest training</td>
@@ -90,13 +87,6 @@
                       <td class="govuk-table__cell">Level 4 </td>
                   </tr>
                   <tr class="govuk-table__row">
-                       <th scope="row" class="govuk-table__header">
-                         Planned training end date
-                       </th>
-                       <td class="govuk-table__cell">January 2023<br /></td>
-                  </tr>
-
-                  <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">
                           <div>Planned start date
 
@@ -104,6 +94,14 @@
                       </th>
                       <td class="govuk-table__cell"> January 2021</td>
                   </tr>
+                  <tr class="govuk-table__row">
+                       <th scope="row" class="govuk-table__header">
+                         Planned training end date
+                       </th>
+                       <td class="govuk-table__cell">January 2023<br /></td>
+                  </tr>
+
+
                   <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">
                           <div>Delivery method
@@ -124,6 +122,9 @@
                   </tbody>
               </table>
               <hr class="govuk-section-break govuk-section-break--l">
+
+              {% include "../includes/confirmations-and-changes-portable-filter.html" %}
+
               <div>
                   <h2 class="govuk-heading-m">Roles and responsibilities</h2>
                   <p>
@@ -132,9 +133,6 @@
 
               </div>
               <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-              {% include "../includes/confirmations-and-changes-portable-filter.html" %}
-
-
 
           </div>
          <div class="govuk-grid-column-one-third">
