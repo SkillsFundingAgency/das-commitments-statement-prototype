@@ -8,6 +8,9 @@
      position: relative;
      z-index: 10;
      max-height: 4.075em;
+
+
+
      &.landing-page {
           background: none;
           display: inline-block;
@@ -19,6 +22,9 @@
                margin-bottom: -4px;
                display: inline-block;
                width: 100%;
+              &.provider {
+                background: #f47738;
+              }
                p, a {
                     color: white;
                     font-size: 14px;

@@ -68,6 +68,10 @@ p {
 .govuk-header__container {
      border-bottom: 10px solid #134273;
      z-index: 20;
+     &.provider {
+          border-bottom-color: #f47738;
+     }
+
 }
 
 .specific-text {
