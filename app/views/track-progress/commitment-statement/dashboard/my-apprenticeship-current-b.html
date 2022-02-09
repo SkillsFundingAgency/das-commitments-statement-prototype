@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block beforeContent %}
-{% include "../includes/navigation-confirmed.html" %}
+{% include "../includes/navigation-confirmed-b.html" %}
 
 {% block pageScripts %}
   <script src="/public/javascripts/step-by-step-nav.js"></script>
@@ -68,16 +68,15 @@
 
      <div class="govuk-grid-row govuk-!-margin-top-6">
           <div class="govuk-grid-column-two-thirds">
-            <h1 class="govuk-heading-l">My apprenticeship</h1>
+            <h1 class="govuk-heading-l">My apprenticeship
+            <span class="govuk-hint">Game programmer</span>
+            </h1>
 
 
-              <h2 class="govuk-heading-m">Electrical Installation NVQ Apprenticeship</h2>
+<!--              <h2 class="govuk-heading-m">Electrical Installation NVQ Apprenticeship</h2>-->
               <table class="govuk-table data-table">
                   <tbody class="govuk-table__body">
-                  <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Current employer</th>
-                      <td class="govuk-table__cell">JPG Electrical Installation</td>
-                  </tr>
+
                   <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Training provider</th>
                       <td class="govuk-table__cell">Quest training</td>
@@ -85,34 +84,31 @@
 
                   <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">Level</th>
-                      <td class="govuk-table__cell">Level 2 </td>
+                      <td class="govuk-table__cell">Level 4 </td>
                   </tr>
-                  <tr class="govuk-table__row">
-                      <th scope="row" class="govuk-table__header">Delivery model</th>
-                      <td class="govuk-table__cell">Portable flexi-job </td>
-                  </tr>
-                  <tr class="govuk-table__row">
-                       <th scope="row" class="govuk-table__header">
-                         Estimated apprenticeship duration
-                       </th>
-                       <td class="govuk-table__cell">24 month(s)<br /></td>
-                  </tr>
-
                   <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">
-                          <div>
-                              Planned training start date
+                          <div>Planned training start date
+
                           </div>
                       </th>
                       <td class="govuk-table__cell"> January 2021</td>
                   </tr>
                   <tr class="govuk-table__row">
+                       <th scope="row" class="govuk-table__header">
+                         Planned training end date
+                       </th>
+                       <td class="govuk-table__cell">January 2023<br /></td>
+                  </tr>
+
+
+                  <tr class="govuk-table__row">
                       <th scope="row" class="govuk-table__header">
-                          <div>Employment end date
+                          <div>Delivery model
 
                           </div>
                       </th>
-                      <td class="govuk-table__cell"> January 2023</td>
+                      <td class="govuk-table__cell">Portable flexi-jobs</td>
                   </tr>
                   <tr class="govuk-table__row">
                        <th scope="row" class="govuk-table__header">
@@ -126,74 +122,32 @@
                   </tbody>
               </table>
               <hr class="govuk-section-break govuk-section-break--l">
-              <div>
-                  <h2 class="govuk-heading-m">Roles and responsibilities</h2>
-                  <p>
-                      You can read through the <a href="../3-roles/1-apprentice-role-2a.html">roles and responsibilities</a> for you, your employer and your training provider.
-                  </p>
 
-              </div>
-              <hr class="govuk-section-break govuk-section-break--l">
+              {% include "../includes/confirmations-and-changes-portable-filter.html" %}
+
 <!--              <div>-->
-<!--                  <h2 class="govuk-heading-m">Employment history</h2>-->
+<!--                  <h2 class="govuk-heading-m">Roles and responsibilities</h2>-->
 <!--                  <p>-->
 <!--                      You can read through the <a href="../3-roles/1-apprentice-role-2a.html">roles and responsibilities</a> for you, your employer and your training provider.-->
 <!--                  </p>-->
 
 <!--              </div>-->
-              <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
-              {% include "../includes/confirmations-and-changes.html" %}
 
-
-<!--              <h2 class="govuk-heading-m">Electrical Installation NVQ Apprenticeship</h2>-->
-<!--              <table class="govuk-table data-table">-->
-<!--                  <tbody class="govuk-table__body">-->
-<!--                  <tr class="govuk-table__row">-->
-<!--                      <th scope="row" class="govuk-table__header">Apprenticeship</th>-->
-<!--                      <td class="govuk-table__cell">Electrical Installation NVQ Apprenticeship</td>-->
-<!--                  </tr>-->
-
-<!--                  <tr class="govuk-table__row">-->
-<!--                      <th scope="row" class="govuk-table__header">Level</th>-->
-<!--                      <td class="govuk-table__cell">Level 2 </td>-->
-<!--                  </tr>-->
-<!--                  <tr class="govuk-table__row">-->
-<!--                      <th scope="row" class="govuk-table__header">-->
-<!--                          Duration-->
-<!--                      </th>-->
-<!--                      <td class="govuk-table__cell">12 month(s)<br /></td>-->
-<!--                  </tr>-->
-
-<!--                  <tr class="govuk-table__row">-->
-<!--                      <th scope="row" class="govuk-table__header">-->
-<!--                          <div>Planned start date-->
-
-<!--                          </div>-->
-<!--                      </th>-->
-<!--                      <td class="govuk-table__cell"> January 2019</td>-->
-<!--                  </tr>-->
-<!--                  <tr class="govuk-table__row">-->
-<!--                      <th scope="row" class="govuk-table__header">-->
-<!--                          <div>Planned end date-->
-<!--                              &lt;!&ndash;<span class="tooltiptext tooltip-right">Tooltip text</span>&ndash;&gt;-->
-<!--                          </div>-->
-<!--                      </th>-->
-<!--                      <td class="govuk-table__cell">December 2023</td>-->
-<!--                  </tr>-->
-<!--                  <tr class="govuk-table__row">-->
-<!--                      <th scope="row" class="govuk-table__header">-->
-<!--                          <div>-->
-<!--                              Status-->
-<!--                          </div>-->
-<!--                      </th>-->
-<!--                      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag&#45;&#45;success">Completed</span> </td>-->
-<!--                  </tr>-->
-
-<!--                  </tbody>-->
-<!--              </table>-->
 
           </div>
+         <div class="govuk-grid-column-one-third">
+             <h2 class="govuk-heading-m">My previous employment</h2>
+             <p>previous employment during this apprenticeship</p>
+             <p>previous employment cards/links to go here......</p>
+             <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+             <div>
+                 <h2 class="govuk-heading-m">Roles and responsibilities</h2>
+                 <p>
+                     You can read through the <a href="../3-roles/1-apprentice-role-2a.html">roles and responsibilities</a> for you, your employer and your training provider.
+                 </p>
 
+             </div>
+         </div>
      </div>
 
      </div>
