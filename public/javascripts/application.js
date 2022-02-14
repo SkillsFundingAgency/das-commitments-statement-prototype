@@ -89,58 +89,50 @@ function openTab(tabNumber) {
 
 $('#service-title-section, #action-title-section').parent().addClass('title-overide');
 
-
-
-
-
-
-
-
-
-
 // 1
-$("#training-details").on("click", function (e) {
-     if ($('input[name=training-confirm]').is(':checked')) {
-          $('form.training-details').attr('action','../dashboard/2-my-apprenticeships');
-     } else {
-          e.preventDefault();
-          $('.training-error-panel').addClass('govuk-form-group--error');
-          $('.govuk-error-summary, .govuk-error-message').show();
-     }
-});
+     $("#training-details").on("click", function (e) {
+          if ($('input[name=training-confirm]').is(':checked')) {
+               $('form.training-details').attr('action', '../dashboard/2-my-apprenticeships');
+          } else {
+               e.preventDefault();
+               $('.training-error-panel').addClass('govuk-form-group--error');
+               $('.govuk-error-summary, .govuk-error-message').show();
+          }
+     });
 
 // 2
-$("#apprenticeship-details").on("click", function (e) {
-     if ($('input[name=apprenticeship-confirm]').is(':checked')) {
-        //  $('form.apprenticeship-details').attr('action','2-ksbs');//
-     } else {
-          e.preventDefault();
-          $('.employer-error-panel').addClass('govuk-form-group--error');
-          $('.govuk-error-summary, .govuk-error-message').show();
-     }
-});
+     $("#apprenticeship-details").on("click", function (e) {
+          if ($('input[name=apprenticeship-confirm]').is(':checked')) {
+               //  $('form.apprenticeship-details').attr('action','2-ksbs');//
+          } else {
+               e.preventDefault();
+               $('.employer-error-panel').addClass('govuk-form-group--error');
+               $('.govuk-error-summary, .govuk-error-message').show();
+          }
+     });
 
 // 3
-$("#employer-details").on("click", function (e) {
-     if ($('input[name=employer-confirm]').is(':checked')) {
-          $('form.employer-details').attr('action','../dashboard/2-my-apprenticeships');
-     } else {
-          e.preventDefault();
-          $('.employer-error-panel').addClass('govuk-form-group--error');
-          $('.govuk-error-summary, .govuk-error-message').show();
-     }
-});
+     $("#employer-details").on("click", function (e) {
+          if ($('input[name=employer-confirm]').is(':checked')) {
+               $('form.employer-details').attr('action', '../dashboard/2-my-apprenticeships');
+          } else {
+               e.preventDefault();
+               $('.employer-error-panel').addClass('govuk-form-group--error');
+               $('.govuk-error-summary, .govuk-error-message').show();
+          }
+     });
 
 // 4
-$("#apprentice-role").on("click", function (e) {
-     if ($('input[name=apprentice-role-confirm]').is(':checked')) {
-          $('form.apprentice-role').attr('action','../dashboard/2-my-apprenticeships');
-     } else {
-          e.preventDefault();
-          $('.apprentice-role-error-panel').addClass('govuk-form-group--error');
-          $('.govuk-error-summary, .govuk-error-message').show();
-     }
-});
+     $("#apprentice-role").on("click", function (e) {
+          if ($('input[name=apprentice-role-confirm]').is(':checked')) {
+               $('form.apprentice-role').attr('action', '../dashboard/2-my-apprenticeships');
+          } else {
+               e.preventDefault();
+               $('.apprentice-role-error-panel').addClass('govuk-form-group--error');
+               $('.govuk-error-summary, .govuk-error-message').show();
+          }
+     });
+
 
 // 5
 // $("#knowledge-ksb").on("click", function (e) {
