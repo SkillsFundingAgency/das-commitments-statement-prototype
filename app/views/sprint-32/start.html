@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+
+{% block content %}
+<p>
+  &nbsp;
+  </p>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Sign in to My apprenticeship</h1>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="email">
+          Email address
+        </label>
+
+        <input class="govuk-input govuk-input--width-20" id="email" name="event-name" type="text">
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--s" for="event-name">
+          Password
+        </label>
+
+        <input class="govuk-input govuk-input--width-20" id="event-name" name="event-name" type="password">
+      </div>
+
+
+      <a href="commitment-statement/sign-in/index" role="button" draggable="false" class="govuk-button" data-module="govuk-button">
+  Sign in
+</a>
+      <p>You can <a href="">change your password</a> if you've forgotten it.</p>
+      <p><a href="">Create an account</a> if you do not have one.</p>
+
+    </div>
+
+  </div>
+{% endblock %}

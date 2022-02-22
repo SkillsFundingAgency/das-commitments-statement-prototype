@@ -1,0 +1,113 @@
+{% extends "layout-landing-provider.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../provider/includes/navigation-provider.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+     <div class="govuk-width-container">
+  <!--
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">
+                         Your apprenticeship
+                    </h1>
+
+                   <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details>
+
+               </div>
+
+               <div class="govuk-grid-column-one-third">
+
+                    <div class="confirmation">
+                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                         <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                         <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                    </div>
+
+               </div>-->
+
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+     <div class="govuk-grid-row govuk-!-margin-top-6">
+          <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">Select the apprenticeship delivery model</h1>
+              <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                              <label class="govuk-label govuk-radios__label" for="changed-name">
+                                  Regular
+                              </label>
+                              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                                  The apprentice will have a single employment contract
+                              </div>
+                          </div>
+                          <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                  Portable flexi-job
+                              </label>
+                              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                                  The apprentice will move between multiple employment contracts
+                              </div>
+                          </div>
+                      </div>
+                  </fieldset>
+              </div>
+
+
+
+              <button class="govuk-button" data-module="govuk-button">
+                  Continue
+              </button>
+
+              <div class="govuk-form-group">
+
+              </div>
+          </div>
+
+
+     </div>
+
+     </div>
+
+{% endblock %}

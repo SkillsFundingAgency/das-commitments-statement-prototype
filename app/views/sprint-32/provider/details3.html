@@ -1,0 +1,137 @@
+{% extends "layout-landing-provider.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../provider/includes/navigation-provider.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+     <div class="govuk-width-container">
+  <!--
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">
+                         Your apprenticeship
+                    </h1>
+
+                   <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details>
+
+               </div>
+
+               <div class="govuk-grid-column-one-third">
+
+                    <div class="confirmation">
+                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                         <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                         <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                    </div>
+
+               </div>-->
+
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">Confirm the information before sending your request</h1>
+            <div class="govuk-grid-row govuk-!-padding-top-4">
+                <div class="govuk-grid-column-one-half">
+                    <p><strong>Apprentice name</strong></p>
+                </div>
+                <div class="govuk-grid-column-one-half">
+                    <p>Joe Bloggs</p>
+                </div>
+            </div>
+            <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--s govuk-!-margin-bottom-6">
+            <h2 class="govuk-heading-m">Current details</h2>
+            <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header das-table-cell-width-45">Employer</th>
+                        <td class="govuk-table__cell das-table-cell-width-55">Electronic arts</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header das-table-cell-width-45">Current employment start date</th>
+                        <td  class="govuk-table__cell das-table-cell-width-55">December 2021</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header das-table-cell-width-45">Current employment end date</th>
+                        <td  class="govuk-table__cell das-table-cell-width-55">April 2022</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header das-table-cell-width-45">Stop applies from</th>
+                        <td  class="govuk-table__cell das-table-cell-width-55">April 2022</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header das-table-cell-width-45">Total agreed price</th>
+                        <td  class="govuk-table__cell das-table-cell-width-55">1500</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="govuk-heading-m">Requested changes</h2>
+            <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header das-table-cell-width-45">New employer</th>
+                    <td class="govuk-table__cell das-table-cell-width-55">Microsoft</td>
+                    <td  class="govuk-table__cell das-table-cell-width-55"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header das-table-cell-width-45">New employment start date</th>
+                    <td  class="govuk-table__cell das-table-cell-width-55">May 2022</td>
+                    <td  class="govuk-table__cell das-table-cell-width-55"><a href="new-start-date.html" class="govuk-link">Change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header das-table-cell-width-45">New employment end date</th>
+                    <td  class="govuk-table__cell das-table-cell-width-55">September 2022</td>
+                    <td  class="govuk-table__cell das-table-cell-width-55"><a href="new-end-date.html" class="govuk-link">Change</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header das-table-cell-width-45">Agreed price for this employment contract</th>
+                    <td  class="govuk-table__cell das-table-cell-width-55">500</td>
+                    <td  class="govuk-table__cell das-table-cell-width-55"><a href="new-price.html" class="govuk-link">Change</a></td>
+                </tr>
+                </tbody>
+            </table>
+            <a href="" class="govuk-button">Save and send</a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
