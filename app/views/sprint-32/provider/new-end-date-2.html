@@ -1,0 +1,139 @@
+{% extends "layout-landing-provider.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../provider/includes/navigation-provider.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+     <div class="govuk-width-container">
+  <!--
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">
+                         Your apprenticeship
+                    </h1>
+
+                   <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details>
+
+               </div>
+
+               <div class="govuk-grid-column-one-third">
+
+                    <div class="confirmation">
+                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                         <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                         <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                    </div>
+
+               </div>-->
+
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l"> Record end dates</h1>
+            <p class="govuk-body">Explainer here</p>
+            <hr class="govuk-section-break govuk-section-break--visible ">
+            <div class="govuk-grid-row govuk-!-padding-top-4">
+                <div class="govuk-grid-column-one-half">
+                    <p>This employment start date</p>
+                </div>
+                <div class="govuk-grid-column-one-half">
+                    <p>May 2021</p>
+                </div>
+            </div>
+            <hr class="govuk-section-break govuk-section-break--visible">
+            <div class="govuk-form-group">
+                <div class="govuk-form-group govuk-!-margin-top-6 ">
+                    <fieldset class="govuk-fieldset" aria-describedby="finish-date-hint" role="group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                            Enter the end date for this employment
+                        </legend>
+                        <span id="finish-date-hint" class="govuk-hint">
+                            For example, 09 2019
+                        </span>
+                        <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate" data-valmsg-replace="true" id="error-message-EndDate"></span>
+                        <div class="govuk-date-input">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="EndMonth">Month</label>
+                                    <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="EndMonth" name="EndMonth" value="">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="EndYear">Year</label>
+                                    <input min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" id="EndYear" name="EndYear" value="">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="govuk-fieldset govuk-!-margin-top-6" aria-describedby="finish-date-hint" role="group">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                            Enter the end date for this training
+                        </legend>
+                        <span id="finish-date-hint" class="govuk-hint">
+                            For example, 09 2019
+                        </span>
+                        <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate" data-valmsg-replace="true" id="error-message-EndDate"></span>
+                        <div class="govuk-date-input">
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="EndMonth">Month</label>
+                                    <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number" id="EndMonth" name="EndMonth" value="">
+                                </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label govuk-date-input__label" for="EndYear">Year</label>
+                                    <input min="1900" max="9999" class="govuk-input govuk-date-input__input govuk-input--width-4" type="number" id="EndYear" name="EndYear" value="">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+            <a href="new-price-2.html" class="govuk-button">Continue</a>
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}
