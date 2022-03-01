@@ -28,6 +28,9 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/back-to-top";
 @import "components/progress-tracker";
 @import "components/module-tracker";
+@import "components/custom";
+@import "components/timeline";
+@import "components/accordion";
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 h1 {
@@ -65,6 +68,13 @@ p {
 .govuk-header__container {
      border-bottom: 10px solid #134273;
      z-index: 20;
+     &.provider {
+          border-bottom-color: #f47738;
+     }
+     &.provider {
+          border-bottom-color: #6F73AF;
+     }
+
 }
 
 .specific-text {
