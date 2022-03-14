@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <h1 class="govuk-heading-xl">You have confirmed that this is not your training provider.</h1>
+
+               <p>
+                  To change these details you need to speak to your employer. You’ll be alerted when your training provider’s been corrected.
+               </p>
+
+<p>
+  You should come back to confirm the rest of your apprenticeship details when your training provider’s been corrected.
+  </p>
+
+
+
+          </div>
+
+          <div class="govuk-grid-column-full">
+
+               <form method="post" action="../dashboard/2-my-apprenticeships" class="check-answers-page">
+
+                 <button class="govuk-button" data-module="govuk-button" >My apprenticeship details</button>
+
+               </form>
+
+          </div>
+     </div>
+
+
+</div>
+{% endblock %}

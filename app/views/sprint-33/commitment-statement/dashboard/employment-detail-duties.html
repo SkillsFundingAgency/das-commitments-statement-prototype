@@ -1,0 +1,214 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation-confirmed.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+     <div class="govuk-width-container">
+  <!--
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">
+                         Your apprenticeship
+                    </h1>
+
+                   <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details>
+
+               </div>
+
+               <div class="govuk-grid-column-one-third">
+
+                    <div class="confirmation">
+                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                         <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                         <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                    </div>
+
+               </div>-->
+
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+     <div class="govuk-grid-row govuk-!-margin-top-6">
+          <div class="govuk-grid-column-two-thirds">
+              <a href=""  class=" history govuk-back-link">Back</a>
+            <h1 class="govuk-heading-l">My current employment</h1>
+
+
+<!--              <h2 class="govuk-heading-m">Game programmer</h2>-->
+              <table class="govuk-table data-table">
+                  <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Employer</th>
+                      <td class="govuk-table__cell">Electronic Arts</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Training provider</th>
+                      <td class="govuk-table__cell">Quest training</td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Level</th>
+                      <td class="govuk-table__cell">Level 4 </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                       <th scope="row" class="govuk-table__header">
+                         Estimated duration
+                       </th>
+                       <td class="govuk-table__cell">3 months<br /></td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <div>Planned start date
+
+                          </div>
+                      </th>
+                      <td class="govuk-table__cell"> June 2021</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <div>Delivery method
+
+                          </div>
+                      </th>
+                      <td class="govuk-table__cell"> Flexi jobs</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                       <th scope="row" class="govuk-table__header">
+                            <div>
+                                Status
+                            </div>
+                       </th>
+                       <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--turquoise">Active</span> </td>
+                  </tr>
+
+                  </tbody>
+              </table>
+              <hr class="govuk-section-break govuk-section-break--l">
+              <div>
+                  <h2 class="govuk-heading-m">Roles and responsibilities</h2>
+                  <p>
+                      You can read through the <a href="../3-roles/1-apprentice-role-2a.html">roles and responsibilities</a> for you, your employer and your training provider.
+                  </p>
+              </div>
+              <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+              <div>
+                  <h2 class="govuk-heading-m">Duties in this employment</h2>
+                  <table class="govuk-table data-tble">
+                      <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id=K1>
+                                  <strong>Duty 1</strong>: Lead the development of technical systems governed by the principles and constraints of real-time graphical environments for contemporary gaming platforms (e.g. games consoles, desktop computers, tablets and phones).
+
+                              </p></th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--turquoise">In progress</span></td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id="Coreoccupationduties3">
+                                  <strong>Duty 3</strong>
+                                  Diagnose and fix errors in complex technical systems that involve many interacting factors, making use of automated testing systems to optimise workflows.
+                              </p>
+                          </th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--turquoise">In progress</span></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id="Coreoccupationduties4">
+                                  <strong>Duty 4</strong>
+                                  Lead the development of technical systems which feed directly or indirectly into the player experience, working iteratively to continuously adjust and refine their work. Initiate and implement modifications to software architectures to support future changes in design.
+                              </p>
+                          </th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--turquoise">In progress</span></td>
+                      </tr>
+
+
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id="Coreoccupationduties6">
+                                  <strong>Duty 6</strong>
+                                  Provide technical insight to a broad spectrum of creative disciplines from Game Programmers, Designers, Producers, Artists, Animators, Audio Engineers, QA staff, Project Managers, Analysts, Community Managers and Marketing  to communicate technical constraints and opportunities.
+                              </p>
+                          </th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--turquoise">In progress</span></td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id="Coreoccupationduties7">
+                                  <strong>Duty 7</strong>
+                                  Create and maintain technical standards across the project, organisation and its clients and stay informed of the latest technical requirements for gaming platforms. Undertake reviews of code, documentation, testing processes and methodologies to maintain good technical practice across the business.
+                              </p>
+                          </th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">to do</span> </td>
+                      </tr>
+
+                      <tr class="govuk-table__row">
+                          <th scope="row" class="govuk-table__header">
+                              <p id="Coreoccupationduties9">
+                                  <strong>Duty 9</strong>
+                                  Practice continuous self-learning to keep up to date with latest industry developments, and support their effective communication within the organisation.
+                              </p>
+                          </th>
+                          <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">to do</span> </td>
+                      </tr>
+
+                      </tbody>
+                  </table>
+
+              </div>
+
+
+          </div>
+
+         <div class="govuk-grid-column-one-third">
+             {%include "../includes/progress-snapshot-tags-duties.html" %}
+             <a href="https://www.instituteforapprenticeships.org/apprenticeship-standards/game-programmer-v1-0#B3" class="govuk-link">view standard</a>
+         </div>
+     </div>
+
+     </div>
+<div class="help-modal-container govuk-visually-hidden">
+    <div class="help-modal">
+    </div>
+</div>
+{% endblock %}

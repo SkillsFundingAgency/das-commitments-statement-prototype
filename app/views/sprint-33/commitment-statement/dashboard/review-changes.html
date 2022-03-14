@@ -1,0 +1,155 @@
+{% extends "layout-landing-provider.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation-provider.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+     <div class="govuk-width-container">
+  <!--
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">
+                         Your apprenticeship
+                    </h1>
+
+                   <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details>
+
+               </div>
+
+               <div class="govuk-grid-column-one-third">
+
+                    <div class="confirmation">
+                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                         <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                         <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                    </div>
+
+               </div>-->
+
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+     <div class="govuk-grid-row govuk-!-margin-top-6">
+          <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">
+                  Review changes
+              </h1>
+              <table class="govuk-table">
+
+                  <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header govuk-!-width-one-third">Name</th>
+                      <td class="govuk-table__cell">CMAD_LE..............</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Unique learner number</th>
+                      <td class="govuk-table__cell">674553322455</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Apprenticeship delivery model</th>
+                      <td class="govuk-table__cell">Flexi-job</td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">Apprenticeship training course</th>
+                      <td class="govuk-table__cell">Game programmer</td>
+                  </tr>
+                  </tbody>
+              </table>
+              <p class="govuk-body govuk-hint">
+                  SECOND LIMITED have suggested these changes:
+              </p>
+
+              <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                  <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header"></th>
+                      <th scope="col" class="govuk-table__header">Previous</th>
+                      <th scope="col" class="govuk-table__header">Changed to</th>
+                  </tr>
+                  </thead>
+
+                  <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header govuk-!-width-one-third">Planned training end date</th>
+                      <td class="govuk-table__cell">1 Dec 2022</td>
+                      <td class="govuk-table__cell">1 Nov 2022</td>
+                  </tr>
+                  </tbody>
+              </table>
+              <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset govuk-!-margin-bottom-6">
+                      <label class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                              Are you happy to approve these changes?
+                      </label>
+                      <div class="govuk-hint">
+                          This can be either a normal apprenticeship with a single employer or a flexi-job apprenticeship with multiple employers
+                      </div>
+                      <div class="govuk-radios" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                              <label class="govuk-label govuk-radios__label" for="changed-name">
+                                  Yes, approve these changes
+                              </label>
+                          </div>
+                          <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                  No, reject these changes
+                              </label>
+                          </div>
+                      </div>
+
+                  </fieldset>
+                    <div>
+                        <p>
+                            <a href="#" class="govuk-button govuk-!-margin-right-7">Continue</a> <span class="govuk-!-margin-top-8"><a href="#" class="govuk-link govuk-!-margin-top-4"> Cancel and return</a></span>
+                        </p>
+                    </div>
+              </div>
+          </div>
+
+<!--         <div class="govuk-grid-column-one-third">-->
+<!--             {%include "../includes/progress-snapshot-tags.html" %}-->
+<!--         </div>-->
+     </div>
+
+     </div>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <div class="govuk-panel govuk-panel--confirmation">
+                    <h1 class="govuk-panel__title">You have confirmed changes to your apprenticeship</h1>
+
+                    <div class="govuk-panel__body">
+                         Game programmer
+                         <br>
+
+                    </div>
+               </div>
+
+
+
+
+               <p class="govuk-body">We have sent you a confirmation email. </p>
+
+
+
+        <h2 class="govuk-heading-m">What happens next?</h2>
+
+        <p class="govuk-body">
+             We will send the confirmation of your apprenticeship to your employer and training provider and they will be in touch to start your apprenticeship, if they have not been already.
+        </p>
+
+        <p class="govuk-body">
+          <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)
+        </p>
+        <p>
+            <a href="../dashboard/index-b.html" class="govuk-link">Continue to your account</a>
+        </p>
+
+          </div>
+     </div>
+</div>
+{% endblock %}
