@@ -14,6 +14,24 @@
     var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
     stepByStepNavigation.start($element)
 
+
+
+    window.addEventListener('load', (event) => {
+       let items =  document.getElementsByClassName('govuk-tag--green');
+       const agreed = document.getElementById('cs-agreed');
+       let notAgreed = document.getElementsByClassName('cs-not-agreed');
+
+       if (items.length >= 3){
+
+           agreed.style.display="block"
+           for (let x of notAgreed) {
+               x.style.display="none"
+           }
+
+
+        }
+    });
+
   </script>
 {% endblock %}
 
