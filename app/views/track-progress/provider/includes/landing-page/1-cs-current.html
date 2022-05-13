@@ -1,0 +1,179 @@
+<!--<div class="govuk-grid-row tab-number" id="tab-landing-1">-->
+
+<!--
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#past-day">
+        Current apprenticeship details
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#past-week">
+        Previous apprenticeship details
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-tabs__panel" id="past-day">
+
+
+  </div>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+
+
+  </div>
+</div>
+-->
+
+
+
+
+
+               <div class="govuk-grid-column-full this-page">
+                 <p>&nbsp;</p>
+
+                    <h1 class="govuk-heading-l">
+                         Confirm my apprenticeship details
+                    </h1>
+
+
+                   <div class="cs-not-agreed">
+
+                   </div>
+
+
+
+                 <p>
+                   <span class="cs-not-agreed">Read through each section below to confirm your apprenticeship. </span>  If you ever need to check on the details of your apprenticeship, you can come back here.
+                   </p>
+                   <div class="cs-not-agreed">
+                        {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+                        {{ govukWarningText({
+                             text: "You have 14 days to confirm your apprenticeship",
+                             iconFallbackText: "Warning"
+                        }) }}
+
+
+                       <p>
+                         Your answers will save automatically, so you can leave and come back if you need to.
+                         </p>
+                  </div>
+
+
+
+
+
+
+
+
+
+
+          <!-- AGREED - START -->
+          <div id="cs-agreed">
+                <!--<h2 class="govuk-heading-m">
+                    Your apprenticeship is ready to confirm
+               </h2>-->
+
+               <div class="govuk-form-group ready-to-sign">
+                    <div class="govuk-warning-text">
+                         <span class="govuk-confirm__icon" aria-hidden="true"></span>
+                         <strong class="govuk-warning-text__text">
+                              <span class="govuk-warning-text__assistive">Confirmed</span> Your apprenticeship is now ready for you to check confirm
+                         </strong>
+                    </div>
+                    <a href="/sprint-31/commitment-statement/6-sign-commitment/2-confirmation" class="govuk-button" data-module="govuk-button">Confirm my apprenticeship</a>
+               </div>
+          </div>
+
+
+          <!-- AGREED - START -->
+          <div id="cs-signed">
+
+
+               <div class="govuk-form-group ready-to-sign">
+                    <div class="govuk-warning-text">
+                         <span class="govuk-confirm__icon" aria-hidden="true"></span>
+                         <strong class="govuk-warning-text__text">
+                              <span class="govuk-warning-text__assistive">Confirmed</span> Your apprenticeship has been agreed and your ready to start
+                         </strong>
+                    </div>
+               </div>
+          </div>
+          <!-- AGREED - START -->
+
+
+
+
+
+          <!-- ////// > Section One ~ Employer < ////////////////////////////////////////////////////////////////////////////////////////// -->
+<!--          <a href="../2-employer-details/1a-employer-details" class="section-item section-one govuk-link&#45;&#45;no-visited-state">-->
+          <a href="../../../commitment-statement/2-employer-details/1a-employer-details.html" class="section-item section-one govuk-link--no-visited-state">
+               <span class="number">1</span>
+               <div>
+                    <div class="text-wrapper">
+                         <h3 class="govuk-heading-m">Your employer</h3>
+                    </div>
+                    <strong class="govuk-tag govuk-tag--yellow">incomplete</strong>
+               </div>
+          </a>
+
+
+
+          <!-- ////// > Section Two ~ Training Provider < ////////////////////////////////////////////////////////////////////////////////////////// -->
+          <a href="../../../commitment-statement/2-employer-details/1a-training-details.html" class="section-item section-two govuk-link--no-visited-state">
+               <span class="number">2</span>
+               <div>
+                    <div class="text-wrapper">
+                         <h3 class="govuk-heading-m">Your training provider</h3>
+                    </div>
+                    <strong class="govuk-tag govuk-tag--yellow">incomplete</strong>
+               </div>
+          </a>
+
+
+
+          <!-- ////// > Section Three ~ Apprenticeship Details < ////////////////////////////////////////////////////////////////////////////////////////// -->
+          <a href="../../../commitment-statement/1-apprenticeship-details/1-apprenticeship-details.html" class="section-item section-three govuk-link--no-visited-state">
+               <span class="number">3</span>
+               <div>
+                    <div class="text-wrapper">
+                         <h3 class="govuk-heading-m">Details of your apprenticeship</h3>
+                         <!-- <span class="govuk-caption-m">Lorem ipsum</span> -->
+                    </div>
+                    <strong class="govuk-tag govuk-tag--yellow">incomplete</strong>
+               </div>
+          </a>
+
+
+          <!-- ////// > Section Four ~ Details of Training < ////////////////////////////////////////////////////////////////////////////////////////// -->
+          <a href="../1-apprenticeship-details/1-apprenticeship-training" class="section-item section-four govuk-link--no-visited-state">
+               <span class="number">4</span>
+               <div>
+                    <div class="text-wrapper">
+                         <h3 class="govuk-heading-m">How your apprenticeship will be delivered</h3>
+                         <span class="govuk-caption-m"><!--<b class="complete-number">1</b> of 2 confirmed</span>-->
+                    </div>
+                    <strong class="govuk-tag govuk-tag--yellow">incomplete</strong>
+               </div>
+          </a>
+
+          <!-- ////// > Section Five ~ Role & Responsibilities < ////////////////////////////////////////////////////////////////////////////////////////// -->
+          <a href="../3-roles/1-apprentice-role-3" class="section-item section-five govuk-link--no-visited-state">
+               <span class="number">5</span>
+               <div>
+                    <div class="text-wrapper">
+                         <h3 class="govuk-heading-m">Roles and responsibilities</h3>
+                         <!-- <span class="govuk-caption-m"><b class="complete-number">2</b> of 3 agreed</span> -->
+                    </div>
+                    <strong class="govuk-tag govuk-tag--yellow">incomplete</strong>
+               </div>
+          </a>
+
+
+
+  </div>
+<!-- </div>-->

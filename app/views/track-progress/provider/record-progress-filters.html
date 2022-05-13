@@ -1,0 +1,94 @@
+{% extends "layout-landing-provider.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../provider/includes/navigation-provider.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+     <div class="govuk-width-container">
+
+
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+     <div class="govuk-grid-row govuk-!-margin-top-6">
+         <h1 class="govuk-heading-l">Record progress for Rufus Kelly
+             <span class="govuk-hint">Game programmer</span>
+         </h1>
+         <div class="govuk-grid-column-one-quarter">
+             <div class="govuk-form-group">
+                 <fieldset class="govuk-fieldset">
+                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                         <span class="govuk-fieldset__heading">
+                             Filters
+                         </span>
+                     </legend>
+                     <span class="govuk-hint">Show</span>
+                     <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                         <div class="govuk-checkboxes__item">
+                             <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" >
+                             <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                                 All
+                             </label>
+                         </div>
+                         <div class="govuk-checkboxes__item">
+                             <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                             <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                                Knowledge (33)
+                             </label>
+                         </div>
+                         <div class="govuk-checkboxes__item">
+                             <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                             <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                                 Skills (24)
+                             </label>
+                         </div>
+                         <div class="govuk-checkboxes__item">
+                             <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                             <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                                Behaviours (9)
+                             </label>
+                         </div>
+                     </div>
+
+                 </fieldset>
+             </div>
+         </div>
+          <div class="govuk-grid-column-three-quarters">
+              <p>For each of the required knowledge skills and behaviours (KSBs), record whether the apprentice is on track or ready for end-point assessment (EPA).</p>
+              <div class="govuk-!-margin-top-6">
+                  {% include "../provider/includes/knowledge-list.html" %}
+                  <div>
+                      <a href="check-your-answers.html" class="govuk-button">Submit</a>
+                  </div>
+              </div>
+          </div>
+
+<!--         <div class="govuk-grid-column-one-third">-->
+
+<!--         </div>-->
+     </div>
+
+     </div>
+
+{% endblock %}

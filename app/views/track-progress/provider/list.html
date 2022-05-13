@@ -1,0 +1,204 @@
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<a onClick='window.history.back()' class="image-demo">
+
+  <img src="/public/images/provider-manage.jpg" width="auto" height="auto" />
+</a>
+
+<main class="govuk-main-wrapper employer-overide" id="main-content" role="main">
+
+
+<div class="govuk-grid-row govuk-!-margin-bottom-2">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <h1 class="govuk-heading-xl">Select an apprentice</h1>
+        <div class="govuk-form-group">
+            <label for="searchTerm" class="govuk-label">Search apprentice name or unique learner number (ULN)</label>
+            <div class="das-search-form__group">
+                <input class="govuk-input das-search-form__input" id="searchTerm" name="searchTerm" type="text">
+                <div class="das-search-form__button-wrap">
+                    <button class="govuk-button das-search-form__button" type="submit">Search</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <table class="govuk-table das-table--responsive das-table--double-arrows das-table--condensed">
+                <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="">
+                            Apprentice name
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="">
+                            ULN
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="">
+                            Employer
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="">
+                            Apprenticeship training course
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="">
+                            Planned start date
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="">
+                            Planned end date
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="">
+                            Status
+                        </a>
+                    </th>
+                    <th scope="col" class="govuk-table__header">
+                        <a class="das-table__sort" title="Sort the table by name" href="">
+                            Alerts
+                        </a>
+                    </th>
+                </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" data-label="Apprentice name">
+                        <a class="govuk-link" href="details">
+                            Euan Gray
+                        </a>
+                    </td>
+                    <td class="govuk-table__cell" data-label="ULN">
+                        9900008005
+                    </td>
+                    <td class="govuk-table__cell" data-label="Employer">
+                        LOCKHEED MARTIN AERONAUTICAL SYSTEMS SUPPORT COMPANY
+                    </td>
+                    <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                        Actuarial technician, Level: 4 (Standard)
+                    </td>
+                    <td class="govuk-table__cell" data-label="Planned start date">
+                        Jan 2019
+                    </td>
+                    <td class="govuk-table__cell" data-label="Planned end date">
+                        Aug 2021
+                    </td>
+                    <td class="govuk-table__cell" data-label="Status">
+                        Stopped
+                    </td>
+                    <td class="govuk-table__cell" data-label="Alerts">
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" data-label="Apprentice name">
+                        <a class="govuk-link" href="record-progress-tl-mvs.html">
+                            Rufus Kelly
+                        </a>
+                    </td>
+                    <td class="govuk-table__cell" data-label="ULN">
+                        9900008102
+                    </td>
+                    <td class="govuk-table__cell" data-label="Employer">
+                        LOCKHEED MARTIN AERONAUTICAL SYSTEMS SUPPORT COMPANY
+                    </td>
+                    <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                        Actuarial technician, Level: 4 (Standard)
+                    </td>
+                    <td class="govuk-table__cell" data-label="Planned start date">
+                        Jan 2019
+                    </td>
+                    <td class="govuk-table__cell" data-label="Planned end date">
+                        Aug 2021
+                    </td>
+                    <td class="govuk-table__cell" data-label="Status">
+                        Live
+                    </td>
+                    <td class="govuk-table__cell" data-label="Alerts">
+                        <a class="govuk-link" href="details">Confirmation overdue</a>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" data-label="Apprentice name">
+                        <a class="govuk-link" href="details">
+                            Ellis Watts
+                        </a>
+                    </td>
+                    <td class="govuk-table__cell" data-label="ULN">
+                        9900008307
+                    </td>
+                    <td class="govuk-table__cell" data-label="Employer">
+                        LOCKHEED MARTIN AERONAUTICAL SYSTEMS SUPPORT COMPANY
+                    </td>
+                    <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                        Actuarial technician, Level: 4 (Standard)
+                    </td>
+                    <td class="govuk-table__cell" data-label="Planned start date">
+                        Jan 2019
+                    </td>
+                    <td class="govuk-table__cell" data-label="Planned end date">
+                        Aug 2021
+                    </td>
+                    <td class="govuk-table__cell" data-label="Status">
+                        Paused
+                    </td>
+                    <td class="govuk-table__cell" data-label="Alerts">
+                        <a class="govuk-link" href="details1">
+                            Changes requested
+                        </a>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" data-label="Apprentice name">
+                        <a class="govuk-link" href="details">
+                            Toby Holland
+                        </a>
+                    </td>
+                    <td class="govuk-table__cell" data-label="ULN">
+                        9900007203
+                    </td>
+                    <td class="govuk-table__cell" data-label="Employer">
+                        LOCKHEED MARTIN AERONAUTICAL SYSTEMS SUPPORT COMPANY
+                    </td>
+                    <td class="govuk-table__cell" data-label="Apprenticeship training course">
+                        Actuarial technician, Level: 4 (Standard)
+                    </td>
+                    <td class="govuk-table__cell" data-label="Planned start date">
+                        Jan 2019
+                    </td>
+                    <td class="govuk-table__cell" data-label="Planned end date">
+                        Aug 2021
+                    </td>
+                    <td class="govuk-table__cell" data-label="Status">
+                        Live
+                    </td>
+                    <td class="govuk-table__cell" data-label="Alerts">
+                        <a class="govuk-link" href="details">Confirmation overdue</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+
+
+            </main>
+
+
+{% endblock %}
