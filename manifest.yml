@@ -1,0 +1,6 @@
+---
+applications:
+  - name: das-commitments-statement-prototype
+memory: 256M
+buildpacks:
+  - nodejs_buildpack
