@@ -1,20 +1,76 @@
-{% extends "layout-image.html" %}
+{% extends "layout-landing-provider.html" %}
 
 {% block pageTitle %}
-     GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
+{% include "../provider/includes/navigation-provider-rp.html" %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+    <div class="govuk-width-container">
+        <!--
+                <div class="govuk-grid-row dashboard-title">
+                     <div class="govuk-grid-column-two-thirds">
+                          <h1 class="govuk-heading-xl">
+                               Your apprenticeship
+                          </h1>
+
+                         <details class="govuk-details" data-module="govuk-details">
+                               <summary class="govuk-details__summary">
+                                    <span class="govuk-details__summary-text">What this service can do for you</span>
+                               </summary>
+                               <div class="govuk-details__text">
+                                    <p class="govuk-body">You can use your apprenticeship account to:</p>
+                                    <ul class="govuk-list govuk-list--bullet">
+                                         <li>track your apprenticeship progress estimate</li>
+                                         <li>get support with your apprenticeship</li>
+                                         <li>find out how to prepare for your next milestones</li>
+                                         <li>tell us how you feel about your apprenticeship</li>
+                                    </ul>
+
+                               </div>
+                          </details>
+
+                     </div>
+
+                     <div class="govuk-grid-column-one-third">
+
+                          <div class="confirmation">
+                               <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                               <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                               <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                               <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                          </div>
+
+                     </div>-->
+
+    </div>
+
+</div>
+
+</div>
 {% endblock %}
 
 {% block content %}
 
 <a onClick='window.history.back()' class="image-demo">
 
-  <img src="/public/images/provider-manage.jpg" width="auto" height="auto" />
+
 </a>
 
-<main class="govuk-main-wrapper employer-overide" id="main-content" role="main">
+<main class="govuk-main-wrapper employer-overide govuk-!-padding-top-6" id="main-content" role="main">
 
 
 <div class="govuk-grid-row govuk-!-margin-bottom-2">
