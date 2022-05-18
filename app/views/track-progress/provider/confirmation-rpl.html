@@ -1,0 +1,53 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+
+
+{% set mainClasses = "govuk-main-wrapper--l" %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+               <div class="govuk-panel govuk-panel--confirmation">
+                    <h1 class="govuk-panel__title">You have recorded progress for</h1>
+
+                    <div class="govuk-panel__body">
+                         Rufus Kelly
+                         <br>
+
+                    </div>
+               </div>
+
+
+
+               <h2 class="govuk-heading-m">What happens next?</h2>
+               <p class="govuk-body">The apprentice will be notified of the updated progress.
+               </p>
+
+               <ul class="govuk-list">
+                    <li><a href="alert-column1.html">Record progress for another apprentice</a></li>
+                    <li><a href="Home.html">Go to homepage</a></li>
+               </ul>
+
+
+
+<!--        <h2 class="govuk-heading-m">What happens next?</h2>-->
+
+<!--        <p class="govuk-body">-->
+<!--             We will send the confirmation of your apprenticeship to your employer and training provider and they will be in touch to start your apprenticeship, if they have not been already.-->
+<!--        </p>-->
+
+<!--        <p class="govuk-body">-->
+<!--          <a href="#" class="govuk-link">What did you think of this service?</a> (takes 30 seconds)-->
+<!--        </p>-->
+
+          </div>
+     </div>
+</div>
+{% endblock %}
