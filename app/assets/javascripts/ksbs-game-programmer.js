@@ -1,4 +1,13 @@
-
+const behaviourList2 = [
+    {
+        "id": "374c7f75-5f70-494d-9f03-7d595dae7bee",
+        "detail": "Reliable, objective and capable of independent working."
+    },
+    {
+        "id": "41e13048-a716-4789-b92c-f453adbdbb8c",
+        "detail": "Initiative and personal responsibility to overcome challenges and take ownership for project solutions."
+    }
+];
 const behaviourList = [
     {
         "id": "374c7f75-5f70-494d-9f03-7d595dae7bee",
@@ -249,6 +258,7 @@ const knowledgeList = [
 console.log("ee");
 document.addEventListener("DOMContentLoaded", function(){
     const bList = document.getElementsByClassName('ksb-b-list')[0];
+    const bList2 = document.getElementsByClassName('ksb-b-list2')[0];
     const sList = document.getElementsByClassName('ksb-s-list')[0];
     const kList = document.getElementsByClassName('ksb-k-list')[0];
 
@@ -305,6 +315,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
 
     createList(bList,behaviourList, "B")
+    createList(bList2,behaviourList2, "B")
     createList(sList,skillList, "S")
     createList(kList,knowledgeList, "K")
 });

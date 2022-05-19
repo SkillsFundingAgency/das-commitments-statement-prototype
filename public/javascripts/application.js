@@ -66,7 +66,7 @@ if ($('#dashboard-section').length) {
 
 if ($('#landing-page-section').length) {
      $('.nav ul li a').removeClass('selected');
-     $('.nav ul li a.link-two').addClass('selected');
+     $('.nav ul li a.link-one').addClass('selected');
 }
 
 if ($('#employers-page-section').length) {
