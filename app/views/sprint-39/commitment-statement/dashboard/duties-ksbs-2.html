@@ -1,0 +1,876 @@
+{% extends "layout-landing-provider.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation-provider.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+     <div class="govuk-width-container">
+  <!--
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">
+                         Your apprenticeship
+                    </h1>
+
+                   <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details>
+
+               </div>
+
+               <div class="govuk-grid-column-one-third">
+
+                    <div class="confirmation">
+                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                         <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                         <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                    </div>
+
+               </div>-->
+
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">GAME PROGRAMMER
+                <span class="govuk-hint">Game software programmer (option)</span>
+            </h1>
+        </div>
+    </div>
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-one-third">
+            <h2 class="govuk-heading-m">
+                Duty 1
+            </h2>
+            <p class="" >
+                Lead the development of technical systems governed by the principles and constraints of real-time graphical environments for contemporary gaming platforms (e.g. games consoles, desktop computers, tablets and phones).
+            </p>
+            <p class="govuk-hint">7 of 24 KSBs met</p>
+            <progress value = "7" max = "24"/>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-duty-1">
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                                Knowledge
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                        <ul class="govuk-list">
+                            <li>
+                                <p id=S1>
+                                    <strong>S1</strong>: Program interactive, real-time applications for gaming platforms using an industry-standard programming language, incorporating APIs, tools, engines or frameworks appropriate to employer requirements.
+                                </p>
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                            <span class="govuk-fieldset__heading">
+                                                Has the apprentice met this target
+                                            </span>
+                                        </legend>
+                                        <div id="changed-name-hint" class="govuk-hint">
+                                            Please record the apprentices progress
+                                        </div>
+                                        <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="unmet" name="k1" type="radio" value="yes">
+                                                <label class="govuk-label govuk-radios__label" for="unmet">
+                                                    Unmet
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="partially-met" name="k1" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="partially-met">
+                                                    Partially met
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="met" name="k1" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="met">
+                                                    Met
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+                            </li>
+                            <li>
+                                <p id="S2">
+                                    <strong>S2</strong>: Implement and adapt contemporary real-time algorithms in two and three-dimensional games.
+                                </p>
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                            <span class="govuk-fieldset__heading">
+                                                Has the apprentice met this target
+                                            </span>
+                                        </legend>
+                                        <div id="changed-name-hint" class="govuk-hint">
+                                            Please record the apprentices progress
+                                        </div>
+                                        <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="unmet" name="k2" type="radio" value="yes">
+                                                <label class="govuk-label govuk-radios__label" for="unmet">
+                                                    Unmet
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="partially-met" name="k2" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="partially-met">
+                                                    Partially met
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="met" name="k2" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="met">
+                                                    Met
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+                            </li>
+                            <li>
+                                <p id=S3>
+                                    <strong>S3</strong>: Use profiling tools and techniques to achieve, monitor and maintain an acceptable real-time framerate for an interactive game.
+                                </p>
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                            <span class="govuk-fieldset__heading">
+                                                Has the apprentice met this target
+                                            </span>
+                                        </legend>
+                                        <div id="changed-name-hint" class="govuk-hint">
+                                            Please record the apprentices progress
+                                        </div>
+                                        <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="unmet" name="k3" type="radio" value="yes">
+                                                <label class="govuk-label govuk-radios__label" for="unmet">
+                                                    Unmet
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="partially-met" name="k3" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="partially-met">
+                                                    Partially met
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="met" name="k3" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="met">
+                                                    Met
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+                            </li>
+                            <li>
+                                <p id=S4>
+                                    <strong>S4</strong>: Track memory usage and identify opportunities for reducing requirements.
+                                </p>
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                            <span class="govuk-fieldset__heading">
+                                                Has the apprentice met this target
+                                            </span>
+                                        </legend>
+                                        <div id="changed-name-hint" class="govuk-hint">
+                                            Please record the apprentices progress
+                                        </div>
+                                        <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="unmet" name="k4" type="radio" value="yes">
+                                                <label class="govuk-label govuk-radios__label" for="unmet">
+                                                    Unmet
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="partially-met" name="k4" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="partially-met">
+                                                    Partially met
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="met" name="k4" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="met">
+                                                    Met
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+                            </li>
+                            <li>
+                                <p id=S5>
+                                    <strong>S5</strong>: Write code informed by the characteristics of modern hardware platforms (e.g. shader programming, multi-threading).
+                                </p>
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                            <span class="govuk-fieldset__heading">
+                                                Has the apprentice met this target
+                                            </span>
+                                        </legend>
+                                        <div id="changed-name-hint" class="govuk-hint">
+                                            Please record the apprentices progress
+                                        </div>
+                                        <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="unmet" name="k5" type="radio" value="yes">
+                                                <label class="govuk-label govuk-radios__label" for="unmet">
+                                                    Unmet
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="partially-met" name="k5" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="partially-met">
+                                                    Partially met
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="met" name="k5" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="met">
+                                                    Met
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                              Skills
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                        <p class='govuk-body'>This is the content for Writing well for specialists.</p>
+                        <ul class="govuk-list">
+                            <li><p id=K1>
+                                <strong>K1</strong>: How to approach the development of interactive, real-time applications for gaming platforms, including an awareness of industry-standard programming languages, application programming interfaces (APIs), tools, engines and frameworks.
+                                <br />
+                            </p></li>
+                            <li><p id=K2>
+                                <strong>K2</strong>: The syntax and structure of an industry-standard programming language (above and beyond visual programming languages) used for the development of games (for example C++, C#).
+                                <br />
+                            </p></li>
+                            <li><p id=K3>
+                                <strong>K3</strong>: The fundamental graphical and mathematical principles that underpin the operation of real-time graphics in two and three-dimensions.
+                                <br />
+                            </p></li>
+                            <li><p id=K4>
+                                <strong>K4</strong>: The characteristics of modern hardware platforms and how they support the efficient function of interactive, real-time graphical applications.
+                                <br />
+                            </p></li>
+                            <li><p id=K5>
+                                <strong>K5</strong>: Approaches to balancing quality and performance requirements to achieve, monitor and maintain acceptable frame rates and memory footprints for a real-time interactive application.
+                                <br />
+                            </p></li>
+                            <li><p id=K6>
+                                <strong>K6</strong>: How to use tools to identify and optimise performance bottlenecks in real-time applications.
+                                <br />
+                            </p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                              Behaviours
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                        <p class='govuk-body'>This is the content for Know your audience.</p>
+                        <ul class="govuk-list">
+                            <li><p id=B1>
+                                <strong>B1</strong>: Reliable, objective and capable of independent working.
+                                <br />
+                            </p></li>
+                            <li><p id=B2>
+                                <strong>B2</strong>: Initiative and personal responsibility to overcome challenges and take ownership for project solutions.
+                                <br />
+                            </p></li>
+                            <li><p id=B3>
+                                <strong>B3</strong>: Respect for other disciplines and an understanding of the role of diverse experiences and backgrounds in a successful creative process.
+                                <br />
+                            </p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-one-third">
+            <h2 class="govuk-heading-m">
+                Duty 2
+            </h2>
+            <p class="" >
+                Engineer robust, performance-driven software using programming languages, game engines and frameworks appropriate to the requirements of the projects being developed (for example C++, C#). Conceptualise and address performance bottlenecks and optimize complex software systems and resource pipelines.            </p>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-duty-2">
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                                Knowledge
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                        <ul class="govuk-list">
+                            <li><p id=S1>
+                                <strong>S1</strong>: Program interactive, real-time applications for gaming platforms using an industry-standard programming language, incorporating APIs, tools, engines or frameworks appropriate to employer requirements.
+
+                                <br />
+                            </p></li>
+                            <li><p id=S2>
+                                <strong>S2</strong>: Implement and adapt contemporary real-time algorithms in two and three-dimensional games.
+
+                                <br />
+                            </p>
+                            <li><p id=S3>
+                                <strong>S3</strong>: Use profiling tools and techniques to achieve, monitor and maintain an acceptable real-time framerate for an interactive game.
+
+                                <br />
+                            </p></li>
+                            <li><p id=S4>
+                                <strong>S4</strong>: Track memory usage and identify opportunities for reducing requirements.
+
+                                <br />
+                            </p></li>
+                            <li><p id=S5>
+                                <strong>S5</strong>: Write code informed by the characteristics of modern hardware platforms (e.g. shader programming, multi-threading).
+
+                                <br />
+                            </p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                              Skills
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                        <p class='govuk-body'>This is the content for Writing well for specialists.</p>
+                        <ul class="govuk-list">
+                            <li><p id=K1>
+                                <strong>K1</strong>: How to approach the development of interactive, real-time applications for gaming platforms, including an awareness of industry-standard programming languages, application programming interfaces (APIs), tools, engines and frameworks.
+                                <br />
+                            </p></li>
+                            <li><p id=K2>
+                                <strong>K2</strong>: The syntax and structure of an industry-standard programming language (above and beyond visual programming languages) used for the development of games (for example C++, C#).
+                                <br />
+                            </p></li>
+                            <li><p id=K3>
+                                <strong>K3</strong>: The fundamental graphical and mathematical principles that underpin the operation of real-time graphics in two and three-dimensions.
+                                <br />
+                            </p></li>
+                            <li><p id=K4>
+                                <strong>K4</strong>: The characteristics of modern hardware platforms and how they support the efficient function of interactive, real-time graphical applications.
+                                <br />
+                            </p></li>
+                            <li><p id=K5>
+                                <strong>K5</strong>: Approaches to balancing quality and performance requirements to achieve, monitor and maintain acceptable frame rates and memory footprints for a real-time interactive application.
+                                <br />
+                            </p></li>
+                            <li><p id=K6>
+                                <strong>K6</strong>: How to use tools to identify and optimise performance bottlenecks in real-time applications.
+                                <br />
+                            </p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                              Behaviours
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                        <p class='govuk-body'>This is the content for Know your audience.</p>
+                        <ul class="govuk-list">
+                            <li><p id=B1>
+                                <strong>B1</strong>: Reliable, objective and capable of independent working.
+                                <br />
+                            </p></li>
+                            <li><p id=B2>
+                                <strong>B2</strong>: Initiative and personal responsibility to overcome challenges and take ownership for project solutions.
+                                <br />
+                            </p></li>
+                            <li><p id=B3>
+                                <strong>B3</strong>: Respect for other disciplines and an understanding of the role of diverse experiences and backgrounds in a successful creative process.
+                                <br />
+                            </p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-one-third">
+            <h2 class="govuk-heading-m">
+                Duty 3
+            </h2>
+            <p class="" >
+                Diagnose and fix errors in complex technical systems that involve many interacting factors, making use of automated testing systems to optimise workflows.
+            </p>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-duty-3">
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                                Knowledge
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                        <ul class="govuk-list">
+                            <li><p id=S1>
+                                <strong>S1</strong>: Program interactive, real-time applications for gaming platforms using an industry-standard programming language, incorporating APIs, tools, engines or frameworks appropriate to employer requirements.
+
+                                <br />
+                            </p></li>
+                            <li><p id=S2>
+                                <strong>S2</strong>: Implement and adapt contemporary real-time algorithms in two and three-dimensional games.
+
+                                <br />
+                            </p>
+                            <li><p id=S3>
+                                <strong>S3</strong>: Use profiling tools and techniques to achieve, monitor and maintain an acceptable real-time framerate for an interactive game.
+
+                                <br />
+                            </p></li>
+                            <li><p id=S4>
+                                <strong>S4</strong>: Track memory usage and identify opportunities for reducing requirements.
+
+                                <br />
+                            </p></li>
+                            <li><p id=S5>
+                                <strong>S5</strong>: Write code informed by the characteristics of modern hardware platforms (e.g. shader programming, multi-threading).
+
+                                <br />
+                            </p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                              Skills
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                        <p class='govuk-body'>This is the content for Writing well for specialists.</p>
+                        <ul class="govuk-list">
+                            <li><p id=K1>
+                                <strong>K1</strong>: How to approach the development of interactive, real-time applications for gaming platforms, including an awareness of industry-standard programming languages, application programming interfaces (APIs), tools, engines and frameworks.
+                                <br />
+                            </p></li>
+                            <li><p id=K2>
+                                <strong>K2</strong>: The syntax and structure of an industry-standard programming language (above and beyond visual programming languages) used for the development of games (for example C++, C#).
+                                <br />
+                            </p></li>
+                            <li><p id=K3>
+                                <strong>K3</strong>: The fundamental graphical and mathematical principles that underpin the operation of real-time graphics in two and three-dimensions.
+                                <br />
+                            </p></li>
+                            <li><p id=K4>
+                                <strong>K4</strong>: The characteristics of modern hardware platforms and how they support the efficient function of interactive, real-time graphical applications.
+                                <br />
+                            </p></li>
+                            <li><p id=K5>
+                                <strong>K5</strong>: Approaches to balancing quality and performance requirements to achieve, monitor and maintain acceptable frame rates and memory footprints for a real-time interactive application.
+                                <br />
+                            </p></li>
+                            <li><p id=K6>
+                                <strong>K6</strong>: How to use tools to identify and optimise performance bottlenecks in real-time applications.
+                                <br />
+                            </p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                              Behaviours
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                        <p class='govuk-body'>This is the content for Know your audience.</p>
+                        <ul class="govuk-list">
+                            <li><p id=B1>
+                                <strong>B1</strong>: Reliable, objective and capable of independent working.
+                                <br />
+                            </p></li>
+                            <li><p id=B2>
+                                <strong>B2</strong>: Initiative and personal responsibility to overcome challenges and take ownership for project solutions.
+                                <br />
+                            </p></li>
+                            <li><p id=B3>
+                                <strong>B3</strong>: Respect for other disciplines and an understanding of the role of diverse experiences and backgrounds in a successful creative process.
+                                <br />
+                            </p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-one-third">
+            <h2 class="govuk-heading-m">
+                Duty 4
+            </h2>
+            <p class="" >
+                Lead the development of technical systems governed by the principles and constraints of real-time graphical environments for contemporary gaming platforms (e.g. games consoles, desktop computers, tablets and phones).
+            </p>
+        </div>
+        <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-duty-4">
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                                Knowledge
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+                        <ul class="govuk-list">
+                            <li>
+                                <p id=S1>
+                                    <strong>S1</strong>: Program interactive, real-time applications for gaming platforms using an industry-standard programming language, incorporating APIs, tools, engines or frameworks appropriate to employer requirements.
+                                </p>
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                            <span class="govuk-fieldset__heading">
+                                                Has the apprentice met this target
+                                            </span>
+                                        </legend>
+                                        <div id="changed-name-hint" class="govuk-hint">
+                                            Please record the apprentices progress
+                                        </div>
+                                        <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="unmet" name="changed-name" type="radio" value="yes">
+                                                <label class="govuk-label govuk-radios__label" for="unmet">
+                                                    Unmet
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="partially-met" name="changed-name" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="partially-met">
+                                                    Partially met
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="met" name="changed-name" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="met">
+                                                    Met
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+                            </li>
+                            <li>
+                                <p id=S2>
+                                    <strong>S2</strong>: Implement and adapt contemporary real-time algorithms in two and three-dimensional games.
+                                </p>
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                            <span class="govuk-fieldset__heading">
+                                                Has the apprentice met this target
+                                            </span>
+                                        </legend>
+                                        <div id="changed-name-hint" class="govuk-hint">
+                                            Please record the apprentices progress
+                                        </div>
+                                        <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="unmet" name="changed-name" type="radio" value="yes">
+                                                <label class="govuk-label govuk-radios__label" for="unmet">
+                                                    Unmet
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="partially-met" name="changed-name" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="partially-met">
+                                                    Partially met
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="met" name="changed-name" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="met">
+                                                    Met
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+                            </li>
+                            <li>
+                                <p id=S3>
+                                    <strong>S3</strong>: Use profiling tools and techniques to achieve, monitor and maintain an acceptable real-time framerate for an interactive game.
+                                </p>
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                            <span class="govuk-fieldset__heading">
+                                                Has the apprentice met this target
+                                            </span>
+                                        </legend>
+                                        <div id="changed-name-hint" class="govuk-hint">
+                                            Please record the apprentices progress
+                                        </div>
+                                        <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="unmet" name="changed-name" type="radio" value="yes">
+                                                <label class="govuk-label govuk-radios__label" for="unmet">
+                                                    Unmet
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="partially-met" name="changed-name" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="partially-met">
+                                                    Partially met
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="met" name="changed-name" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="met">
+                                                    Met
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+                            </li>
+                            <li>
+                                <p id=S4>
+                                    <strong>S4</strong>: Track memory usage and identify opportunities for reducing requirements.
+                                </p>
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                            <span class="govuk-fieldset__heading">
+                                                Has the apprentice met this target
+                                            </span>
+                                        </legend>
+                                        <div id="changed-name-hint" class="govuk-hint">
+                                            Please record the apprentices progress
+                                        </div>
+                                        <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="unmet" name="changed-name" type="radio" value="yes">
+                                                <label class="govuk-label govuk-radios__label" for="unmet">
+                                                    Unmet
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="partially-met" name="changed-name" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="partially-met">
+                                                    Partially met
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="met" name="changed-name" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="met">
+                                                    Met
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+                            </li>
+                            <li>
+                                <p id=S5>
+                                    <strong>S5</strong>: Write code informed by the characteristics of modern hardware platforms (e.g. shader programming, multi-threading).
+                                </p>
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                            <span class="govuk-fieldset__heading">
+                                                Has the apprentice met this target
+                                            </span>
+                                        </legend>
+                                        <div id="changed-name-hint" class="govuk-hint">
+                                            Please record the apprentices progress
+                                        </div>
+                                        <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="unmet" name="changed-name" type="radio" value="yes">
+                                                <label class="govuk-label govuk-radios__label" for="unmet">
+                                                    Unmet
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="partially-met" name="changed-name" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="partially-met">
+                                                    Partially met
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="met" name="changed-name" type="radio" value="no">
+                                                <label class="govuk-label govuk-radios__label" for="met">
+                                                    Met
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </fieldset>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                              Skills
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                        <p class='govuk-body'>This is the content for Writing well for specialists.</p>
+                        <ul class="govuk-list">
+                            <li><p id=K1>
+                                <strong>K1</strong>: How to approach the development of interactive, real-time applications for gaming platforms, including an awareness of industry-standard programming languages, application programming interfaces (APIs), tools, engines and frameworks.
+                                <br />
+                            </p></li>
+                            <li><p id=K2>
+                                <strong>K2</strong>: The syntax and structure of an industry-standard programming language (above and beyond visual programming languages) used for the development of games (for example C++, C#).
+                                <br />
+                            </p></li>
+                            <li><p id=K3>
+                                <strong>K3</strong>: The fundamental graphical and mathematical principles that underpin the operation of real-time graphics in two and three-dimensions.
+                                <br />
+                            </p></li>
+                            <li><p id=K4>
+                                <strong>K4</strong>: The characteristics of modern hardware platforms and how they support the efficient function of interactive, real-time graphical applications.
+                                <br />
+                            </p></li>
+                            <li><p id=K5>
+                                <strong>K5</strong>: Approaches to balancing quality and performance requirements to achieve, monitor and maintain acceptable frame rates and memory footprints for a real-time interactive application.
+                                <br />
+                            </p></li>
+                            <li><p id=K6>
+                                <strong>K6</strong>: How to use tools to identify and optimise performance bottlenecks in real-time applications.
+                                <br />
+                            </p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="govuk-accordion__section ">
+                    <div class="govuk-accordion__section-header">
+                        <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                              Behaviours
+                            </span>
+                        </h2>
+                    </div>
+                    <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+                        <p class='govuk-body'>This is the content for Know your audience.</p>
+                        <ul class="govuk-list">
+                            <li><p id=B1>
+                                <strong>B1</strong>: Reliable, objective and capable of independent working.
+                                <br />
+                            </p></li>
+                            <li><p id=B2>
+                                <strong>B2</strong>: Initiative and personal responsibility to overcome challenges and take ownership for project solutions.
+                                <br />
+                            </p></li>
+                            <li><p id=B3>
+                                <strong>B3</strong>: Respect for other disciplines and an understanding of the role of diverse experiences and backgrounds in a successful creative process.
+                                <br />
+                            </p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     </div>
+
+{% endblock %}

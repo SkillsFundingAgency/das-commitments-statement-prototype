@@ -1,0 +1,180 @@
+{% extends "layout-landing-employer.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../employer/includes/navigation-employer.html" %}
+
+<div id="service-title-section" class="landing-page  ">
+</div>
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <a href="approve-rpl.html" class="govuk-back-link">Back</a>
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+
+
+
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds">
+
+
+
+
+
+
+
+
+                    <h1 class="govuk-heading-xl" id="learnerName">Ash CMADUserOnPP</h1>
+
+                    <p class="govuk-body">
+                        Edit details if there's a change in apprentice or apprenticeship circumstances.
+                    </p>
+
+                    <table id="app-status" class="govuk-table govuk-!-margin-bottom-8">
+                        <tbody>
+                        <tr>
+                            <th scope="row" class="govuk-table__header das-table-cell-width-45">Status</th>
+
+                            <td class="govuk-table__cell das-table-cell-width-40">
+                                <strong class="govuk-tag govuk-tag--blue">
+                                    Live
+                                </strong>
+                            </td>
+
+                            <td id="editStatusLink" class="govuk-table__cell das-table-cell-width-15 govuk-table__cell--numeric">
+                                <a id="edit-status-link" href="/WRN97X/apprentices/XYY77K/details/changestatus?ApprenticeshipId=0" class="govuk-link">Edit status</a>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <th scope="row" class="govuk-table__header">Apprentice confirmation</th>
+                            <td id="confirationStatus" class="govuk-table__cell" colspan="2">
+                                Confirmed
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="govuk-table__header">Training provider</th>
+                            <td class="govuk-table__cell">EDUC8 TRAINING (ENGLAND) LIMITED</td>
+                            <td class="govuk-table__cell govuk-table__cell--numeric">
+                                <a id="change-training-provider-link" class="govuk-link" href="/WRN97X/apprentices/XYY77K/change-provider">Change<span class="govuk-visually-hidden" style=""> training provider</span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="govuk-table__header">Cohort reference</th>
+                            <td id="cohort-reference" class="govuk-table__cell">8NW6X4</td>
+                            <td class="govuk-table__cell"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="govuk-grid-row govuk-!-margin-bottom-2">
+                        <div class="govuk-grid-column-two-thirds">
+                            <h2 class="govuk-heading-m">Apprentice details</h2>
+                        </div>
+                        <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet">
+                            <a id="edit-apprentice-link" href="/WRN97X/apprentices/XYY77K/edit" class="govuk-link govuk-body">Edit<span class="govuk-visually-hidden" style=""> apprentice details</span></a>
+                        </div>
+                    </div>
+                    <table class="govuk-table govuk-!-margin-bottom-8">
+                        <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header  das-table-cell-width-45">Name</th>
+                            <td id="apprentice-name" class="govuk-table__cell das-table-cell-width-55">Ash CMADUserOnPP</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Email address</th>
+
+                            <td class="govuk-table__cell">
+                                <table>
+                                    <tbody><tr>
+                                        <td id="email-address">AshCMADUserOnPP@mailinator.com</td>
+                                    </tr>
+                                    </tbody></table>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Unique learner number</th>
+                            <td id="uln" class="govuk-table__cell">4628355184</td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Date of birth</th>
+                            <td id="date-of-birth" class="govuk-table__cell">
+                                1 Jan 1990                    </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <h2 class="govuk-heading-m">
+                        Apprenticeship details
+                    </h2>
+                    <table class="govuk-table  govuk-!-margin-bottom-8">
+                        <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header das-table-cell-width-45">Apprenticeship training course </th>
+                            <td class="govuk-table__cell das-table-cell-width-55" colspan="2">Actuary, Level: 7 </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header"> Version </th>
+                            <td id="version" class="govuk-table__cell" colspan="2">1.0 </td>
+                            <td class="govuk-table__cell"></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Planned training start date</th>
+                            <td id="start-date" class="govuk-table__cell" colspan="2">
+                                Dec 2021                    </td>
+                            <td class="govuk-table__cell"></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Planned training finish date</th>
+                            <td id="end-date" class="govuk-table__cell" colspan="2">
+                                Feb 2023                    </td>
+                            <td class="govuk-table__cell"></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Duration reduction due to prior learning</th>
+                            <td id="rpl-duration" class="govuk-table__cell" colspan="2">
+                                13 weeks
+                            </td>
+                            <td class="govuk-table__cell"></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Price reduction due to prior learning</th>
+                            <td id="rpl-cost" class="govuk-table__cell" colspan="2">
+                                £2,000                    </td>
+                            <td class="govuk-table__cell"></td>
+                        </tr>
+
+
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Total agreed apprenticeship price</th>
+                            <td id="apprentice-cost" class="govuk-table__cell" colspan="2">£2,222</td>
+                            <td class="govuk-table__cell"></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">Reference </th>
+                            <td id="employer-reference" class="govuk-table__cell" colspan="2"></td>
+                            <td class="govuk-table__cell"></td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <th scope="row" class="govuk-table__header">End-point assessor</th>
+                            <td id="end-point-assessor" class="govuk-table__cell" colspan="2">The end-point assessor has not been declared</td>
+                            <td class="govuk-table__cell"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+        </main>
+    </div>
+</div>
+
+
+
+{% endblock %}

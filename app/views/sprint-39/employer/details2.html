@@ -1,0 +1,164 @@
+{% extends "layout-image.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+<a onClick='window.history.back()' class="image-demo">
+
+  <img src="/public/images/employer-manage.jpg" width="auto" height="auto" />
+</a>
+
+<main class="govuk-main-wrapper employer-overide" id="main-content" role="main">
+
+
+<div class="govuk-grid-row govuk-!-margin-bottom-2">
+    <div class="govuk-grid-column-two-thirds">
+
+
+        <h1 class="govuk-heading-xl">Rufus Kelly</h1>
+
+            <details id="change-of-employer-details" class="govuk-details" data-module="govuk-details">
+    <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+            Help with changes in apprentice's circumstances
+        </span>
+    </summary>
+    <div class="govuk-details__text">
+
+        <p class="govuk-body">
+            If an apprentice you're training needs to move to a new employer, you should:
+
+            </p><ul class="govuk-list govuk-list--bullet">
+                <li>contact their original employer and ask them to stop the apprentice record</li>
+                <li>speak to the new employer to agree new training dates, price and request permission to move the apprentice to their apprenticeship service account</li>
+            </ul>
+
+            Once you've agreed these details, you can change the employer.<br><br>
+
+            Non-levy employers will not need apprenticeship funding reserved when taking on an apprentice from another employer.
+        <p></p>
+    </div>
+</details>
+
+        <h2 class="govuk-heading-m">Apprentice status</h2>
+        <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet">
+        </div>
+
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header das-table-cell-width-45">Status</th>
+                    <td id="apprenticeship-status" class="govuk-table__cell das-table-cell-width-55">Live</td>
+                </tr>
+                <tr class="govuk-table__row">
+                     <th scope="row" class="govuk-table__header das-table-cell-width-45">Confirmation</th>
+                     <td id="apprenticeship-status" class="govuk-table__cell das-table-cell-width-55">Confirmed</td>
+                 </tr>
+
+
+
+
+            </tbody>
+        </table>
+
+        <div class="govuk-grid-row govuk-!-margin-bottom-2">
+            <div class="govuk-grid-column-two-thirds">
+                <h2 class="govuk-heading-m">Overview</h2>
+            </div>
+            <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet">
+            </div>
+        </div>
+
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+
+                <tr class="govuk-table__row">
+
+                    <th scope="row" class="govuk-table__header das-table-cell-width-45">Employer</th>
+                    <td id="apprenticeship-employer" class="govuk-table__cell das-table-cell-width-40">ESFA  LTD</td>
+                    <td class="govuk-table__cell das-table-cell-width-15 govuk-table__cell--numeric">
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Reference</th>
+                    <td id="apprenticeship-reference" class="govuk-table__cell">VBPW7N</td>
+                    <td class="govuk-table__cell"></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Agreement ID</th>
+                    <td id="apprenticeship-agreement-id" class="govuk-table__cell">N4E66Y</td>
+                    <td class="govuk-table__cell"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="govuk-grid-row govuk-!-margin-bottom-2">
+            <div class="govuk-grid-column-two-thirds">
+                <h2 class="govuk-heading-m">Apprentice</h2>
+            </div>
+            <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet">
+                    <a id="edit-apprentice-link" href="https://test2-pas.apprenticeships.education.gov.uk/10004112/apprentices/manage/D9NDND/edit" class="govuk-link govuk-body">Edit apprentice</a>
+            </div>
+        </div>
+
+        <table class="govuk-table">
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header das-table-cell-width-45">Name</th>
+                    <td id="apprentice-name" class="govuk-table__cell das-table-cell-width-55">Rufus Kelly</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Email</th>
+                    <td id="apprentice-uln" class="govuk-table__cell"><a href="">rufus.kelly@gmail.com</a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Date of birth</th>
+                    <td id="apprentice-dob" class="govuk-table__cell">18 Feb 1995</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Unique learner number</th>
+                    <td id="apprentice-uln" class="govuk-table__cell">7230452014</td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Apprenticeship training course</th>
+                    <td id="apprentice-course" class="govuk-table__cell">Able seafarer (deck), Level: 2 (Standard)</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Training start date</th>
+                    <td id="apprentice-start-date" class="govuk-table__cell">May 2020</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Training end date</th>
+                    <td id="apprentice-end-date" class="govuk-table__cell">Aug 2021</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Planned total off-the-job training hours</th>
+                    <td id="apprentice-price" class="govuk-table__cell">300</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Total agreed apprenticeship price</th>
+                    <td id="apprentice-price" class="govuk-table__cell">£1,791</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Your reference</th>
+                    <td id="apprentice-reference" class="govuk-table__cell"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+
+            </main>
+
+
+{% endblock %}

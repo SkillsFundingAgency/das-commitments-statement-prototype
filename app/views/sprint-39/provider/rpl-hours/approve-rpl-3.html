@@ -1,0 +1,170 @@
+{% extends "layout-landing-provider.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../provider/includes/navigation-provider.html" %}
+
+<a onClick='window.history.back()' class="image-demo">
+
+
+</a>
+
+
+<div id="service-title-section" class="landing-page  ">
+</div>
+    <div class="govuk-width-container">
+        <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+
+            <div class="govuk-notification-banner govuk-!-margin-top-6">
+                <div class="govuk-notification-banner__header">
+                    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                        Important
+                    </h2>
+                </div>
+                <div class="govuk-notification-banner__content">
+                    <p class="govuk-notification-banner__heading">
+                        You can’t approve this apprentice request until:
+                    </p>
+                    <ul>
+                        <li>all apprentice records are complete</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h1 class="govuk-heading-xl">Approve 2 apprentices' details</h1>
+
+            <dl class="das-definition-list das-definition-list--inline govuk-body">
+                <span class="das-definition-list__title govuk-!-margin-bottom-4  govuk-!-margin-0"><strong>Organisation</strong></span>
+
+                <span class="das-definition-list__definition govuk-!-margin-bottom-4">USER LIMITED</span>
+                <br>
+                <span class="das-definition-list__title"><strong>Reference</strong></span>
+                <span class="das-definition-list__definition">N4YLKY</span>
+            </dl>
+
+
+
+
+            <h3 class="govuk-heading-m">1 x Game programmer, Level: 7
+            </h3>
+            <div class="govuk-inset-text das-inset-text--highlight">
+                <h3 class="govuk-heading-s">Apprentice record incomplete</h3>
+                <p>
+                    You must complete the apprentice record to be able to approve
+                </p>
+            </div>
+            <table class="govuk-table das-table--responsive">
+                <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Name</th>
+                    <th scope="col" class="govuk-table__header">Date of birth</th>
+                    <th scope="col" class="govuk-table__header">Training dates</th>
+                    <th scope="col" class="govuk-table__header govuk-table__header--numeric">Price</th>
+                    <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Action</span></th>
+                </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+
+                <tr class="govuk-table__row">
+                    <td class="govuk-table__cell" data-label="Name">
+                        <span class="das-table-cell--highlight das-breakable">test tester</span>
+                    </td>
+                    <td class="govuk-table__cell" data-label="Date of birth">31 Mar 2000</td>
+                    <td class="govuk-table__cell" data-label="Training dates">
+                      May 2022  to May 2025</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Price">
+                        £10,000                   </td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                        <a class="govuk-link edit-apprentice" href="/DDGB8B/unapproved/N4YLKY/apprentices/XYN94W">
+                            Edit
+                            <span class="govuk-visually-hidden">test tester's details</span>
+                        </a>
+                        <br><br>
+                        <a class="govuk-link delete-apprentice" href="/DDGB8B/unapproved/N4YLKY/apprentices/XYN94W/Delete?Origin=CohortDetails">
+                            Delete <span class="govuk-visually-hidden">test tester's details</span>
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th class="govuk-table__header das-table-cell-width-80" scope="row">Total apprenticeship training price <br>(excluding VAT)</th>
+                    <td class="govuk-table__cell govuk-table__header--numeric das-table-cell-width-10"><strong>£10,000</strong></td>
+                    <td class="govuk-table__cell das-table-cell-width-10" aria-hidden="true"></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p>
+                <a href="https://securefunding.pp-eas.apprenticeships.education.gov.uk/accounts/DDGB8B/reservations/YG5NR6/select?cohortReference=N4YLKY&amp;transferSenderId=&amp;encodedPledgeApplicationId=" class="govuk-link add-apprentice">Add another apprentice</a>
+                <a class="govuk-link das-float-right" href="/DDGB8B/unapproved/N4YLKY/delete">Delete this group</a>
+            </p>
+            <hr class="govuk-section-break govuk-section-break--l">
+            <form id="submitCohort" novalidate="" method="post">
+                <div class="govuk-form-group  ">
+
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h3 class="govuk-fieldset__heading">Submit to employer?</h3>
+                        </legend>
+                        <span class="field-validation-valid govuk-error-message" data-valmsg-for="Selection" data-valmsg-replace="true" id="error-message-Selection"></span>
+                        <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+
+
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-approve">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="approve-details">
+                                         Leave EDUC8 TRAINING (ENGLAND) LIMITED a message (optional)
+                                    </label>
+                                    <textarea class="govuk-textarea" id="approve-details" name="approvemessage" rows="5"></textarea>
+                                </div>
+                            </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="radio-send" name="selection" type="radio" value="Send" aria-controls="conditional-send" aria-expanded="false">
+                                <label class="govuk-label govuk-radios__label" for="radio-send">
+                                    Yes, send to employer to review or add details
+                                </label>
+                            </div>
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-send">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="send-details">
+                                        Leave EDUC8 TRAINING (ENGLAND) LIMITED a message (optional)
+                                    </label>
+                                    <textarea class="govuk-textarea" id="send-details" name="sendmessage" rows="5"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="radio-home" name="selection" type="radio" value="Homepage">
+                                <label class="govuk-label govuk-radios__label" for="radio-home">
+                                    No, save and return to apprentice requests
+                                </label>
+                            </div>
+
+                        </div>
+                    </fieldset>
+                </div>
+
+                <button type="submit" id="continue-button" class="govuk-button">Save and submit</button>
+
+                <p>
+                    <a href="/DDGB8B/unapproved/review" class="govuk-link">Save and exit</a>
+                </p>
+
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8CDvJ8JOSXJHgE01o9RQjU38uLuRCrB2JvxICp4dzFBcEcMyC7jRATAfWtf6SbMsabBn6_OhuW_q6s5h2z-WCuF2aHkZkQSO21jO4-s2_HXVM8YJhPhtKTcVzfdLSL1PPSZDZ50JA-BHdjVfv2GT2NJr0_wSe2d9J6x12SSW94K1zCcT7ocv2LQ4iNarq03JhA"></form>
+
+        </div>
+    </div>
+
+    </div>
+
+
+
+{% endblock %}

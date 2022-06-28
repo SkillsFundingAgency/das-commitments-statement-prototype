@@ -1,0 +1,924 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation-confirmed.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+     <div class="govuk-width-container">
+  <!--
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">
+                         Your apprenticeship
+                    </h1>
+
+                   <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details>
+
+               </div>
+
+               <div class="govuk-grid-column-one-third">
+
+                    <div class="confirmation">
+                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                         <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                         <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                    </div>
+
+               </div>-->
+
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+     <div class="govuk-grid-row govuk-!-margin-top-6">
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">GAME PROGRAMMER</h1>
+              <p>Game software programmer (option)</p>
+              <h2 class="govuk-heading-m">Occupation duties</h2>
+
+              <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
+                  <div class="govuk-accordion__section ">
+                      <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                              Duty 1
+                            </span>
+                          </h2>
+                          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                              Lead the development of technical systems governed by the principles and constraints of real-time graphical environments for contemporary gaming platforms (e.g. games consoles, desktop computers, tablets and phones).
+                          </div>
+                      </div>
+                      <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1">
+                          <h3 class="govuk-heading-s">Skills</h3>
+                          <ul class="govuk-list">
+                              <li><p id=K1>
+                                  <strong>K1</strong>: How to approach the development of interactive, real-time applications for gaming platforms, including an awareness of industry-standard programming languages, application programming interfaces (APIs), tools, engines and frameworks.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K2>
+                                  <strong>K2</strong>: The syntax and structure of an industry-standard programming language (above and beyond visual programming languages) used for the development of games (for example C++, C#).
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K3>
+                                  <strong>K3</strong>: The fundamental graphical and mathematical principles that underpin the operation of real-time graphics in two and three-dimensions.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K4>
+                                  <strong>K4</strong>: The characteristics of modern hardware platforms and how they support the efficient function of interactive, real-time graphical applications.
+                                  <br />
+                              </p></li>
+                              <li><p id=K5>
+                                  <strong>K5</strong>: Approaches to balancing quality and performance requirements to achieve, monitor and maintain acceptable frame rates and memory footprints for a real-time interactive application.
+                                  <br />
+                              </p></li>
+                              <li><p id=K6>
+                                  <strong>K6</strong>: How to use tools to identify and optimise performance bottlenecks in real-time applications.
+                                  <br />
+                              </p></li>
+                              <li><p id=K7>
+                                  <strong>K7</strong>: The role of  debugging tools, crash reports, automated testing and continuous integration workflows in creating robust software.
+                                  <br />
+                              </p></li>
+                              <li><p id=K8>
+                                  <strong>K8</strong>: The role of staged deployment, monitoring and analytics in releasing, tracking and refining games.
+                                  <br />
+                              </p></li>
+                              <li><p id=K9>
+                                  <strong>K9</strong>: Common principles of good software design applied in the games industry including contrasting approaches and priorities (e.g. object-oriented vs. data-oriented)
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K10>
+                                  <strong>K10</strong>: How a complete asset pipeline for a game operates, including the technical requirements, processing stages and tools involved in bringing assets into the game.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K11>
+                                  <strong>K11</strong>: How to use version control and project management tools to plan and coordinate the delivery of development tasks.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K12>
+                                  <strong>K12</strong>: Common development methodologies and how they are applied in game development.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K13>
+                                  <strong>K13</strong>: The broad range of roles involved in the game development process, and the different strengths and perspectives that multi-disciplinary teams bring to the creative process.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K14>
+                                  <strong>K14</strong>: Where to find information on the latest technological innovations for the games industry.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K15>
+                                  <strong>K15</strong>: The role of rapid prototyping and agile approaches in innovation.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K16>
+                                  <strong>K16</strong>: The organisation’s standards with respect to coding, documentation and issue tracking, and how they relate to wider practice in the software industries.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K17>
+                                  <strong>K17</strong>: Publisher’s technical requirements for target platforms, where to obtain them and the tools and systems available to support developers to meet those requirements.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K18>
+                                  <strong>K18</strong>: The business stakeholders in a project and how multi-disciplinary development teams can generate value within the context of different business models.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K19>
+                                  <strong>K19</strong>: Relevant data protection laws including GDPR.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K20>
+                                  <strong>K20</strong>: Security approaches to prevent products being compromised, and everyday good practice in security including password policies, phishing and use of VPNs.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6" id=K21>
+                                  <strong>K21</strong>: The relative merits of different game engines, third-party frameworks and tools, and when to use them to speed up the development process.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6" id=K22>
+                                  <strong>K22</strong>: How to balance the requirements and availability of team resources (for example staff time, software licencing) with respect to the engineering and maintenance of a game’s asset pipeline.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6" id=K23>
+                                  <strong>K23</strong>: The range of different disciplines involved in the development process and their typical skillsets and expectations in terms of technologies, tools and asset formats.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=K24>
+                                  <strong>K24</strong>: The specialist operation of a specific hardware architecture or gaming platform and how to engineer efficient solutions which target its specific capabilities.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=K25>
+                                  <strong>K25</strong>: How to balance the requirements and availability of team resources (staff time, software licencing) with respect to providing the maximum benefit to their users.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=K26>
+                                  <strong>K26</strong>: How to use externally facing support portals and project tracking tools in order to effectively track and document technologies for sharing with a wide user-base.
+
+                                  <br />
+                              </p></li>
+                          </ul>
+                          <h3 class="govuk-heading-s">Knowledge</h3>
+                          <ul class="govuk-list">
+                              <li><p id=S1>
+                                  <strong>S1</strong>: Program interactive, real-time applications for gaming platforms using an industry-standard programming language, incorporating APIs, tools, engines or frameworks appropriate to employer requirements.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S2>
+                                  <strong>S2</strong>: Implement and adapt contemporary real-time algorithms in two and three-dimensional games.
+
+                                  <br />
+                              </p>
+                              <li><p id=S3>
+                                  <strong>S3</strong>: Use profiling tools and techniques to achieve, monitor and maintain an acceptable real-time framerate for an interactive game.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S4>
+                                  <strong>S4</strong>: Track memory usage and identify opportunities for reducing requirements.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S5>
+                                  <strong>S5</strong>: Write code informed by the characteristics of modern hardware platforms (e.g. shader programming, multi-threading).
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S6>
+                                  <strong>S6</strong>: Use debugging tools and automated testing systems to develop robust code bases.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S7>
+                                  <strong>S7</strong>: Use continuous integration workflow within the deployment lifecycle as part of a multi-disciplinary software team.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S8>
+                                  <strong>S8</strong>: Write robust, well-tested, maintainable code which is easy to adapt to changing requirements.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S9>
+                                  <strong>S9</strong>: Use an industry-standard version control system.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S10>
+                                  <strong>S10</strong>: Use an industry-standard project management system from the perspective of a developer.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S11>
+                                  <strong>S11</strong>: Adapt or extend existing tool chains to support new features and/or optimise workflows.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S12>
+                                  <strong>S12</strong>: Apply industry-standard development methodologies within day-to-day working practice.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S13>
+                                  <strong>S13</strong>: Manage complex relationships with diverse stakeholders and communicate information effectively to different audiences.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S14>
+                                  <strong>S14</strong>: Provide technical leadership and direction with respect to the workflow of other team members.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S15>
+                                  <strong>S15</strong>: Research, document and articulate the opportunities and threats presented by new industry technologies.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S16>
+                                  <strong>S16</strong>: Follow studio coding best-practices and participate in keeping them relevant and up to date.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S17>
+                                  <strong>S17</strong>: Give and receive feedback in code reviews in an objective and professional manner.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6,f312b99f-27aa-49a1-801d-9fb36f4404d6" id=S18>
+                                  <strong>S18</strong>: Develop games and/or prototypes using an industry-standard or in-house game engine.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6,f312b99f-27aa-49a1-801d-9fb36f4404d6" id=S19>
+                                  <strong>S19</strong>: Make justified choices about the implementation of different features and tools and their effect on the overall workload of the team.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=S20>
+                                  <strong>S20</strong>: Write software which contributes to the player experience while balancing the extensibility and performance requirements for an evolving game design.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6" id=S21>
+                                  <strong>S21</strong>: Work as part of interdisciplinary teams, collaborating closely with disciplines outside programming, for example artists, game designers and audio engineers.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6" id=S22>
+                                  <strong>S22</strong>: Create innovative game mechanics for which solutions are unknown.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=S23>
+                                  <strong>S23</strong>: Develop reusable technologies targeting specific hardware architectures or gaming platforms.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291,cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=S24>
+                                  <strong>S24</strong>: Make justified decisions about the implementation of different features and their effect on quality and workload for their technology’s user base.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=S25>
+                                  <strong>S25</strong>: Work as part of a user-focused product team, incorporating multi-disciplinary input from outside of the team, for example from game software programmers, artists, game designers and audio engineers.
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=S26>
+                                  <strong>S26</strong>: Communicate and evangelise technology solutions to promote engagement and uptake among the user-base.
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=S27>
+                                  <strong>S27</strong>: Profile and optimise code created by their technology users.
+                                  <br />
+                              </p></li>
+                          </ul>
+                          <h3 class="govuk-heading-s">Behaviours</h3>
+                          <ul class="govuk-list">
+                              <li><p id=B1>
+                                  <strong>B1</strong>: Reliable, objective and capable of independent working.
+                                  <br />
+                              </p></li>
+                              <li><p id=B2>
+                                  <strong>B2</strong>: Initiative and personal responsibility to overcome challenges and take ownership for project solutions.
+                                  <br />
+                              </p></li>
+                              <li><p id=B3>
+                                  <strong>B3</strong>: Respect for other disciplines and an understanding of the role of diverse experiences and backgrounds in a successful creative process.
+                                  <br />
+                              </p></li>
+                              <li><p id=B4>
+                                  <strong>B4</strong>: Commitment to continuous professional development; maintaining their knowledge and skills in relation to technology developments, and sharing best practice in their organisation around all aspects of game development.
+                                  <br />
+                              </p></li>
+                              <li><p id=B5>
+                                  <strong>B5</strong>: Maintains awareness of trends and innovations in the subject area, utilizing a range of academic literature, online sources, community interaction and conference attendance.
+                                  <br />
+                              </p></li>
+                              <li><p id=B6>
+                                  <strong>B6</strong>: Acts with integrity with respect to ethical, legal and regulatory ensuring the protection of personal data, safety and security.
+                                  <br />
+                              </p>
+                              <li><p id=B7>
+                                  <strong>B7</strong>: A strong work ethic and commitment in order to meet the standards required.
+                                  <br />
+                              </p></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                      <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-2">
+                              Duty 2
+                            </span>
+                          </h2>
+                          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-2">
+                              Engineer robust, performance-driven software using programming languages, game engines and frameworks appropriate to the requirements of the projects being developed (for example C++, C#). Conceptualise and address performance bottlenecks and optimize complex software systems and resource pipelines.</div>
+                      </div>
+                      <div id="accordion-with-summary-sections-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-2">
+                          <ul class="govuk-list">
+                              <li><p id=K1>
+                                  <strong>K1</strong>: How to approach the development of interactive, real-time applications for gaming platforms, including an awareness of industry-standard programming languages, application programming interfaces (APIs), tools, engines and frameworks.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K2>
+                                  <strong>K2</strong>: The syntax and structure of an industry-standard programming language (above and beyond visual programming languages) used for the development of games (for example C++, C#).
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K3>
+                                  <strong>K3</strong>: The fundamental graphical and mathematical principles that underpin the operation of real-time graphics in two and three-dimensions.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K4>
+                                  <strong>K4</strong>: The characteristics of modern hardware platforms and how they support the efficient function of interactive, real-time graphical applications.
+                                  <br />
+                              </p></li>
+                              <li><p id=K5>
+                                  <strong>K5</strong>: Approaches to balancing quality and performance requirements to achieve, monitor and maintain acceptable frame rates and memory footprints for a real-time interactive application.
+                                  <br />
+                              </p></li>
+                              <li><p id=K6>
+                                  <strong>K6</strong>: How to use tools to identify and optimise performance bottlenecks in real-time applications.
+                                  <br />
+                              </p></li>
+                              <li><p id=K7>
+                                  <strong>K7</strong>: The role of  debugging tools, crash reports, automated testing and continuous integration workflows in creating robust software.
+                                  <br />
+                              </p></li>
+                              <li><p id=K8>
+                                  <strong>K8</strong>: The role of staged deployment, monitoring and analytics in releasing, tracking and refining games.
+                                  <br />
+                              </p></li>
+                              <li><p id=K9>
+                                  <strong>K9</strong>: Common principles of good software design applied in the games industry including contrasting approaches and priorities (e.g. object-oriented vs. data-oriented)
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K10>
+                                  <strong>K10</strong>: How a complete asset pipeline for a game operates, including the technical requirements, processing stages and tools involved in bringing assets into the game.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K11>
+                                  <strong>K11</strong>: How to use version control and project management tools to plan and coordinate the delivery of development tasks.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K12>
+                                  <strong>K12</strong>: Common development methodologies and how they are applied in game development.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K13>
+                                  <strong>K13</strong>: The broad range of roles involved in the game development process, and the different strengths and perspectives that multi-disciplinary teams bring to the creative process.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K14>
+                                  <strong>K14</strong>: Where to find information on the latest technological innovations for the games industry.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K15>
+                                  <strong>K15</strong>: The role of rapid prototyping and agile approaches in innovation.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K16>
+                                  <strong>K16</strong>: The organisation’s standards with respect to coding, documentation and issue tracking, and how they relate to wider practice in the software industries.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K17>
+                                  <strong>K17</strong>: Publisher’s technical requirements for target platforms, where to obtain them and the tools and systems available to support developers to meet those requirements.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K18>
+                                  <strong>K18</strong>: The business stakeholders in a project and how multi-disciplinary development teams can generate value within the context of different business models.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K19>
+                                  <strong>K19</strong>: Relevant data protection laws including GDPR.
+
+                                  <br />
+                              </p></li>
+                              <li><p id=K20>
+                                  <strong>K20</strong>: Security approaches to prevent products being compromised, and everyday good practice in security including password policies, phishing and use of VPNs.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6" id=K21>
+                                  <strong>K21</strong>: The relative merits of different game engines, third-party frameworks and tools, and when to use them to speed up the development process.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6" id=K22>
+                                  <strong>K22</strong>: How to balance the requirements and availability of team resources (for example staff time, software licencing) with respect to the engineering and maintenance of a game’s asset pipeline.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6" id=K23>
+                                  <strong>K23</strong>: The range of different disciplines involved in the development process and their typical skillsets and expectations in terms of technologies, tools and asset formats.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=K24>
+                                  <strong>K24</strong>: The specialist operation of a specific hardware architecture or gaming platform and how to engineer efficient solutions which target its specific capabilities.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=K25>
+                                  <strong>K25</strong>: How to balance the requirements and availability of team resources (staff time, software licencing) with respect to providing the maximum benefit to their users.
+
+                                  <br />
+                              </p></li>
+                              <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=K26>
+                                  <strong>K26</strong>: How to use externally facing support portals and project tracking tools in order to effectively track and document technologies for sharing with a wide user-base.
+
+                                  <br />
+                              </p></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                      <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-3">
+                              Duty 3
+                            </span>
+                          </h2>
+                          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-3">
+                              Diagnose and fix errors in complex technical systems that involve many interacting factors, making use of automated testing systems to optimise workflows.
+                          </div>
+                      </div>
+                      <div id="accordion-with-summary-sections-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-3">
+                          <ul class="govuk-list">
+                              <li>
+                                  <a class="govuk-link" href="#">Governance principles for agile service delivery</a>
+                              </li>
+                              <li>
+                                  <a class="govuk-link" href="#">Measuring and reporting progress</a>
+                              </li>
+                              <li>
+                                  <a class="govuk-link" href="#">Spend controls: check if you need approval to spend money on a service</a>
+                              </li>
+                              <li>
+                                  <a class="govuk-link" href="#">Spend controls: apply for approval to spend money on a service</a>
+                              </li>
+                              <li>
+                                  <a class="govuk-link" href="#">Spend controls: the new pipeline process</a>
+                              </li>
+                              <li>
+                                  <a class="govuk-link" href="#">Working across organisational boundaries</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="govuk-accordion__section ">
+                      <div class="govuk-accordion__section-header">
+                          <h2 class="govuk-accordion__section-heading">
+                            <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-4">
+                              Duty 4
+                            </span>
+                          </h2>
+                          <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-4">
+                              Lead the development of technical systems which feed directly or indirectly into the player experience, working iteratively to continuously adjust and refine their work. Initiate and implement modifications to software architectures to support future changes in design.
+                          </div>
+                      </div>
+                      <div id="accordion-with-summary-sections-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-4">
+                          <ul class="govuk-list">
+                              <li>
+                                  <a class="govuk-link" href="#">How the discovery phase works</a>
+                              </li>
+                              <li>
+                                  <a class="govuk-link" href="#">How the alpha phase works</a>
+                              </li>
+                              <li>
+                                  <a class="govuk-link" href="#">How the beta phase works</a>
+                              </li>
+                              <li>
+                                  <a class="govuk-link" href="#">How the live phase works</a>
+                              </li>
+                              <li>
+                                  <a class="govuk-link" href="#">Retiring your service</a>
+                              </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+
+<!--              <ul class="govuk-list">-->
+<!--                  <li><p id=K1>-->
+<!--                      <strong>K1</strong>: How to approach the development of interactive, real-time applications for gaming platforms, including an awareness of industry-standard programming languages, application programming interfaces (APIs), tools, engines and frameworks.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K2>-->
+<!--                      <strong>K2</strong>: The syntax and structure of an industry-standard programming language (above and beyond visual programming languages) used for the development of games (for example C++, C#).-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K3>-->
+<!--                      <strong>K3</strong>: The fundamental graphical and mathematical principles that underpin the operation of real-time graphics in two and three-dimensions.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K4>-->
+<!--                      <strong>K4</strong>: The characteristics of modern hardware platforms and how they support the efficient function of interactive, real-time graphical applications.-->
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K5>-->
+<!--                      <strong>K5</strong>: Approaches to balancing quality and performance requirements to achieve, monitor and maintain acceptable frame rates and memory footprints for a real-time interactive application.-->
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K6>-->
+<!--                      <strong>K6</strong>: How to use tools to identify and optimise performance bottlenecks in real-time applications.-->
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K7>-->
+<!--                      <strong>K7</strong>: The role of  debugging tools, crash reports, automated testing and continuous integration workflows in creating robust software.-->
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K8>-->
+<!--                      <strong>K8</strong>: The role of staged deployment, monitoring and analytics in releasing, tracking and refining games.-->
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K9>-->
+<!--                      <strong>K9</strong>: Common principles of good software design applied in the games industry including contrasting approaches and priorities (e.g. object-oriented vs. data-oriented)-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K10>-->
+<!--                      <strong>K10</strong>: How a complete asset pipeline for a game operates, including the technical requirements, processing stages and tools involved in bringing assets into the game.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K11>-->
+<!--                      <strong>K11</strong>: How to use version control and project management tools to plan and coordinate the delivery of development tasks.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K12>-->
+<!--                      <strong>K12</strong>: Common development methodologies and how they are applied in game development.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K13>-->
+<!--                      <strong>K13</strong>: The broad range of roles involved in the game development process, and the different strengths and perspectives that multi-disciplinary teams bring to the creative process.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K14>-->
+<!--                      <strong>K14</strong>: Where to find information on the latest technological innovations for the games industry.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K15>-->
+<!--                      <strong>K15</strong>: The role of rapid prototyping and agile approaches in innovation.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K16>-->
+<!--                      <strong>K16</strong>: The organisation’s standards with respect to coding, documentation and issue tracking, and how they relate to wider practice in the software industries.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K17>-->
+<!--                      <strong>K17</strong>: Publisher’s technical requirements for target platforms, where to obtain them and the tools and systems available to support developers to meet those requirements.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K18>-->
+<!--                      <strong>K18</strong>: The business stakeholders in a project and how multi-disciplinary development teams can generate value within the context of different business models.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K19>-->
+<!--                      <strong>K19</strong>: Relevant data protection laws including GDPR.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <li><p id=K20>-->
+<!--                      <strong>K20</strong>: Security approaches to prevent products being compromised, and everyday good practice in security including password policies, phishing and use of VPNs.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6" id=K21>-->
+<!--                      <strong>K21</strong>: The relative merits of different game engines, third-party frameworks and tools, and when to use them to speed up the development process.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6" id=K22>-->
+<!--                      <strong>K22</strong>: How to balance the requirements and availability of team resources (for example staff time, software licencing) with respect to the engineering and maintenance of a game’s asset pipeline.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6" id=K23>-->
+<!--                      <strong>K23</strong>: The range of different disciplines involved in the development process and their typical skillsets and expectations in terms of technologies, tools and asset formats.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=K24>-->
+<!--                      <strong>K24</strong>: The specialist operation of a specific hardware architecture or gaming platform and how to engineer efficient solutions which target its specific capabilities.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=K25>-->
+<!--                      <strong>K25</strong>: How to balance the requirements and availability of team resources (staff time, software licencing) with respect to providing the maximum benefit to their users.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=K26>-->
+<!--                      <strong>K26</strong>: How to use externally facing support portals and project tracking tools in order to effectively track and document technologies for sharing with a wide user-base.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--              </ul>-->
+<!--              <ul class="govuk-list">-->
+<!--                 <li><p id=S1>-->
+<!--                      <strong>S1</strong>: Program interactive, real-time applications for gaming platforms using an industry-standard programming language, incorporating APIs, tools, engines or frameworks appropriate to employer requirements.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S2>-->
+<!--                      <strong>S2</strong>: Implement and adapt contemporary real-time algorithms in two and three-dimensional games.-->
+
+<!--                      <br />-->
+<!--                  </p>-->
+<!--                 <li><p id=S3>-->
+<!--                      <strong>S3</strong>: Use profiling tools and techniques to achieve, monitor and maintain an acceptable real-time framerate for an interactive game.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S4>-->
+<!--                      <strong>S4</strong>: Track memory usage and identify opportunities for reducing requirements.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S5>-->
+<!--                      <strong>S5</strong>: Write code informed by the characteristics of modern hardware platforms (e.g. shader programming, multi-threading).-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S6>-->
+<!--                      <strong>S6</strong>: Use debugging tools and automated testing systems to develop robust code bases.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S7>-->
+<!--                      <strong>S7</strong>: Use continuous integration workflow within the deployment lifecycle as part of a multi-disciplinary software team.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S8>-->
+<!--                      <strong>S8</strong>: Write robust, well-tested, maintainable code which is easy to adapt to changing requirements.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S9>-->
+<!--                      <strong>S9</strong>: Use an industry-standard version control system.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S10>-->
+<!--                      <strong>S10</strong>: Use an industry-standard project management system from the perspective of a developer.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S11>-->
+<!--                      <strong>S11</strong>: Adapt or extend existing tool chains to support new features and/or optimise workflows.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S12>-->
+<!--                      <strong>S12</strong>: Apply industry-standard development methodologies within day-to-day working practice.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S13>-->
+<!--                      <strong>S13</strong>: Manage complex relationships with diverse stakeholders and communicate information effectively to different audiences.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S14>-->
+<!--                      <strong>S14</strong>: Provide technical leadership and direction with respect to the workflow of other team members.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S15>-->
+<!--                      <strong>S15</strong>: Research, document and articulate the opportunities and threats presented by new industry technologies.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S16>-->
+<!--                      <strong>S16</strong>: Follow studio coding best-practices and participate in keeping them relevant and up to date.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S17>-->
+<!--                      <strong>S17</strong>: Give and receive feedback in code reviews in an objective and professional manner.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6,f312b99f-27aa-49a1-801d-9fb36f4404d6" id=S18>-->
+<!--                      <strong>S18</strong>: Develop games and/or prototypes using an industry-standard or in-house game engine.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6,f312b99f-27aa-49a1-801d-9fb36f4404d6" id=S19>-->
+<!--                      <strong>S19</strong>: Make justified choices about the implementation of different features and tools and their effect on the overall workload of the team.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=S20>-->
+<!--                      <strong>S20</strong>: Write software which contributes to the player experience while balancing the extensibility and performance requirements for an evolving game design.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6" id=S21>-->
+<!--                      <strong>S21</strong>: Work as part of interdisciplinary teams, collaborating closely with disciplines outside programming, for example artists, game designers and audio engineers.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <p data-ksb-filter="f312b99f-27aa-49a1-801d-9fb36f4404d6" id=S22>-->
+<!--                      <strong>S22</strong>: Create innovative game mechanics for which solutions are unknown.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=S23>-->
+<!--                      <strong>S23</strong>: Develop reusable technologies targeting specific hardware architectures or gaming platforms.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291,cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=S24>-->
+<!--                      <strong>S24</strong>: Make justified decisions about the implementation of different features and their effect on quality and workload for their technology’s user base.-->
+
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=S25>-->
+<!--                      <strong>S25</strong>: Work as part of a user-focused product team, incorporating multi-disciplinary input from outside of the team, for example from game software programmers, artists, game designers and audio engineers.-->
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=S26>-->
+<!--                      <strong>S26</strong>: Communicate and evangelise technology solutions to promote engagement and uptake among the user-base.-->
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                  <p data-ksb-filter="cc98d9c9-e9ce-4a24-804e-8c7d1ba11291" id=S27>-->
+<!--                      <strong>S27</strong>: Profile and optimise code created by their technology users.-->
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--              </ul>-->
+<!--              <ul class="govuk-list">-->
+<!--                 <li><p id=B1>-->
+<!--                      <strong>B1</strong>: Reliable, objective and capable of independent working.-->
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=B2>-->
+<!--                      <strong>B2</strong>: Initiative and personal responsibility to overcome challenges and take ownership for project solutions.-->
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=B3>-->
+<!--                      <strong>B3</strong>: Respect for other disciplines and an understanding of the role of diverse experiences and backgrounds in a successful creative process.-->
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=B4>-->
+<!--                      <strong>B4</strong>: Commitment to continuous professional development; maintaining their knowledge and skills in relation to technology developments, and sharing best practice in their organisation around all aspects of game development.-->
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=B5>-->
+<!--                      <strong>B5</strong>: Maintains awareness of trends and innovations in the subject area, utilizing a range of academic literature, online sources, community interaction and conference attendance.-->
+<!--                      <br />-->
+<!--                  </p></li>-->
+<!--                 <li><p id=B6>-->
+<!--                      <strong>B6</strong>: Acts with integrity with respect to ethical, legal and regulatory ensuring the protection of personal data, safety and security.-->
+<!--                      <br />-->
+<!--                  </p>-->
+<!--                 <li><p id=B7>-->
+<!--                      <strong>B7</strong>: A strong work ethic and commitment in order to meet the standards required.-->
+<!--                      <br />-->
+<!--              </p></li>-->
+<!--              </ul>-->
+
+          </div>
+
+         <div class="govuk-grid-column-one-third">
+             <table class="govuk-table data-table">
+                 <h2 class="govuk-heading-m">Your progress</h2>
+                 <tbody class="govuk-table__body">
+                 <tr class="govuk-table__row">
+                     <th scope="row" class="govuk-table__header">Completed</th>
+                     <td class="govuk-table__cell">25</td>
+                 </tr>
+                 <tr class="govuk-table__row">
+                     <th scope="row" class="govuk-table__header">In progress</th>
+                     <td class="govuk-table__cell">35</td>
+                 </tr>
+
+                 <tr class="govuk-table__row">
+                     <th scope="row" class="govuk-table__header">To do</th>
+                     <td class="govuk-table__cell">40</td>
+                 </tr>
+                 </tbody>
+             </table>
+             <details class="govuk-details" data-module="govuk-details">
+                 <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                     More about this table
+                    </span>
+                 </summary>
+                 <div class="govuk-details__text">
+                    Explainer here.
+                 </div>
+             </details>
+             <a class="govuk-link" href="#">detail view</a>
+             <hr class="govuk-section-break govuk-section-break--l">
+         </div>
+     </div>
+
+     </div>
+<div class="help-modal-container govuk-visually-hidden">
+    <div class="help-modal">
+    </div>
+</div>
+{% endblock %}

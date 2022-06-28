@@ -1,0 +1,186 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<!--<a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>-->
+<p>&nbsp;<p>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+              <h1 class="govuk-heading-l">Confirm or update your details</h1>
+
+            <h2 class="govuk-heading-s">  Hi Darren</h2>
+
+              <p class="govuk-body">
+                Here are the details that have been provided to us by the employer or the training provider. We appreciate details can be entered wrong initially and apologise if any details appear incorrect.
+              </p>
+
+
+              <h2 class="govuk-heading-m">These are the details we have been given</h2>
+              <p class="govuk-body govuk-hint">
+                At this point you can correct these details if needed
+              </p>
+
+              {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% set emailHtml %}
+{{ govukInput({
+  id: "contact-by-email",
+  name: "contact-by-email",
+  type: "email",
+  autocomplete: "email",
+  spellcheck: false,
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: "Enter the correct spelling"
+  }
+}) }}
+{% endset -%}
+
+{% set phoneHtml %}
+{{ govukInput({
+  id: "contact-by-phone",
+  name: "contact-by-phone",
+  type: "tel",
+  autocomplete: "tel",
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: "Enter your personal email"
+  }
+}) }}
+{% endset -%}
+
+{% set dobHtml %}
+{{ govukDateInput({
+  id: "passport-issued",
+  namePrefix: "passport-issued",
+  fieldset: {
+    legend: {
+      text: "Enter you correct date of birth"
+    }
+  },
+  hint: {
+    text: "For example, 12 11 2007"
+  }
+}) }}
+{% endset -%}
+
+
+
+
+
+{{ govukRadios({
+  idPrefix: "contact",
+  name: "contact",
+  fieldset: {
+    legend: {
+      text: "Is your surname 'silcod' spelt correctly?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--s"
+    }
+  },
+
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "change",
+      text: "I would like to change the spelling",
+      conditional: {
+        html: emailHtml
+      }
+    },
+    {
+      value: "no",
+      text: "This is not my surname"
+    }
+  ]
+}) }}
+
+
+
+
+
+
+
+
+{{ govukRadios({
+  idPrefix: "contact1",
+  name: "contact1",
+  fieldset: {
+    legend: {
+      text: "Is 'darren@darrensilcox.com' your correct email?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--s"
+    }
+  },
+  hint: {
+      text: "This should be your personal email address"
+    },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No, I would like to change it to my personal one",
+      conditional: {
+        html: phoneHtml
+      }
+    },
+    {
+      value: "norecog",
+      text: "This is not my email"
+    }
+  ]
+}) }}
+
+
+
+
+{{ govukRadios({
+  idPrefix: "contact2",
+  name: "contact2",
+  fieldset: {
+    legend: {
+      text: "Is your date of birth 27/03/1794?",
+      isPageHeading: true,
+      classes: "govuk-fieldset__legend--s"
+    }
+  },
+  items: [
+    {
+      value: "yes",
+      text: "Yes"
+    },
+    {
+      value: "no",
+      text: "No"
+
+    }
+  ]
+}) }}
+
+        <a href="details-check" class="govuk-button" data-module="govuk-button" id="">Continue</a><br />
+
+
+
+
+          </div>
+     </div>
+
+
+</div>
+{% endblock %}

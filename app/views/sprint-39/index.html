@@ -1,0 +1,144 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Prototypes</h1>
+        <h2 class="govuk-heading-m">Sprint 40</h2>
+        <ul class="govuk-list">
+            <li><h3>Apprentice: view progress</h3>
+                <ul>
+                    <li>
+                        <p>PA-313 time line component <a href="/sprint-39/commitment-statement/dashboard/my-apprenticeship-current-c">view</a></p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h2 class="govuk-heading-m">Sprint 39</h2>
+        <ul class="govuk-list">
+            <li><h3>Apprentice: view progress</h3>
+                <ul>
+                    <li>
+                        <p>
+                            <b>Scenario</b> Apprentice has logged onto the service and wants to view their progress.
+                            <a href="/track-progress/commitment-statement/dashboard/index-b">view progress journey</a>simple view
+                        </p>
+                    </li>
+                    <li><a href="/track-progress/commitment-statement/dashboard/Ksb-list-tracked-3-c">view progress page</a> simple view</li>
+                    <li><a href="/track-progress/commitment-statement/dashboard/Ksb-list-tracked-3-b">view progress page</a> view with filters and tags </li>
+
+                </ul>
+            </li>
+        </ul>
+        <h3 class="govuk-heading-m">Provider: View and Edit progress</h3>
+        <p><b>Scenario</b>: user needs to change the recorded progress of behaviour 2 (B2) from not on track to on track</p>
+        <ul class="">
+            <li>
+                <p><b>Design 1</b>: Exploring the use of editing against recorded progress
+                <a class="govuk-link"  href="/track-progress/provider/pas-view-progress/Home.html">View</a>.</p>
+            </li>
+            <li>
+                <p><b>Design 2</b>: Exploring the use of static view page and renaming the record progress CTA
+                <a class="govuk-link" href="/track-progress/provider/pas-view-progressv2/Home.html">View</a>.</p>
+            </li>
+        </ul>
+
+      <h2 class="govuk-heading-m">Sprint 38</h2>
+      <ul class="govuk-list ">
+          <li><h3>View progress</h3>
+          <ul>
+            <li>
+              <p><b>Scenario</b>: user needs to change the recorded progress of behaviour 2 (B2) from not on track to on track
+              <a href="/track-progress/provider/pas-view-progress/Home.html">View</a>.
+              </p>
+            </li>
+          </ul>
+        </li>
+          <li><h3>Record progress</h3>
+          <ul>
+<!--            <li><a href="">Version 1</a>: New card on PAS homepage</li>-->
+            <li>
+                <p><b>Scenario</b>: DAS account holder needs to record progress against an apprentice <a href="/track-progress/provider/Home.html">view</a>: Using Manage apprentice</p></li>
+          </ul>
+        </li>
+          <li><h3>RPL</h3><br>
+            Must haves
+          <ul class="govuk-list">
+            <li>
+                <p>DAS account holder needs to record RPL information when adding a new apprentice.
+                    The add apprentice journey has been update to capture RPL. We have two tests one using weeks as a measure
+                    of time and another using hours.
+            </p><a href="/track-progress/provider/Home-rpl.html">Version 1</a>: Weeks</li>
+            <li><a href="/track-progress/provider/rpl-hours/Home-rpl.html">Version 2</a>: Hours</li>
+          </ul>
+            Should haves
+            <ul>
+                <li><p>Changes to apprentice approvals page <a href="/track-progress/provider/approve-rpl.html">view</a>. </p> </li>
+                <li><p>Changes to apprentice details page <a href="/track-progress/provider/details-rp-7.html">view</a>.</p></li>
+            </ul>
+              To do:
+              <ul>
+                  <li>
+                  <p>Edit RPL data</p>
+                </li>
+              </ul>
+        </li>
+      </ul>
+        <hr>
+      <h2 class="govuk-heading-m">Design concepts</h2>
+      <ul class="govuk-list ">
+        <li>
+          <strong>CMAD</strong>
+          <ul class="govuk-list ">
+            <li><a href="/track-progress/commitment-statement/dashboard/my-apprenticeship-current">My apprenticeship </a></li>
+            <li><a href="/track-progress/commitment-statement/dashboard/my-apprenticeship-current-duties">My apprenticeship using duties </a></li>
+            <li><a href="/track-progress/commitment-statement/dashboard/my-apprenticeship-current-filter">My apprenticeship filter timeline by key events </a></li>
+            <li><a href="/track-progress/commitment-statement/dashboard/my-apprenticeship-current-milestones">My apprenticeship milestones</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong>Tracking progress</strong>
+          <ul class="govuk-list ">
+            <li><a href="/track-progress/commitment-statement/dashboard/Ksb-list-tracked">Tracked KSB's 1 </a></li>
+            <li><a href="/track-progress/commitment-statement/dashboard/Ksb-list-tracked-1">Tracked KSB's 2</a></li>
+            <li><a href="/track-progress/commitment-statement/dashboard/Ksb-list-tracked-2">Tracked KSB's 3 full width page</a></li>
+            <li><a href="/track-progress/commitment-statement/dashboard/Ksb-list-tracked-3">Tracked KSB's 4 add filters</a></li>
+            <li><a href="/track-progress/commitment-statement/dashboard/employment-detail">Current employer with detail of Duties </a></li>
+            <li><a href="/track-progress/commitment-statement/dashboard/employment-detail-previous">Previous employer with detail of KSB's covered </a></li>
+            <li><a href="/track-progress/commitment-statement/dashboard/your-progress">Duties accordion with KSB's as content</a></li>
+          </ul>
+        </li>
+        <li> <strong>Record progress</strong>
+          <p>Concepts:<i>completely assumption based</i></p>
+          <ul class="govuk-list ">
+            <li><a href="/track-progress/provider/manage">Record progress journey</a></li>
+            <li><a href="/track-progress/commitment-statement/dashboard/duties-ksbs-2">Record progress by duties</a></li>
+            <li><a href="/track-progress/commitment-statement/dashboard/record-progress">Record progress by KSBs</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <h2 class="govuk-heading-m">Journeys</h2>
+      <ul class="govuk-list ">
+        <li><a href="/track-progress/commitment-statement/dashboard/index.html">using KSBs</a> </li>
+        <li><a href="/track-progress/commitment-statement/dashboard/index-duties.html">using Duties</a> </li>
+        <li><a href="/track-progress/commitment-statement/dashboard/my-apprenticeship-current-milestones">Milestones</a></li>
+      </ul>
+
+
+      <h2 class="govuk-heading-m">Usability testing</h2>
+      <ul class="govuk-list ">
+        <li><a href="/track-progress/commitment-statement/dashboard/index.html">initial concept</a> </li>
+        <li><a href="/track-progress/commitment-statement/dashboard/index-b.html">iteration 1</a> </li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}

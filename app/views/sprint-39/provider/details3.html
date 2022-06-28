@@ -1,0 +1,273 @@
+{% extends "layout-landing-provider.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../provider/includes/navigation-provider-rp.html" %}
+
+{% block pageScripts %}
+<script src="/public/javascripts/step-by-step-nav.js"></script>
+<script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+</script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+    <div class="govuk-width-container">
+        <!--
+                <div class="govuk-grid-row dashboard-title">
+                     <div class="govuk-grid-column-two-thirds">
+                          <h1 class="govuk-heading-xl">
+                               Your apprenticeship
+                          </h1>
+
+                         <details class="govuk-details" data-module="govuk-details">
+                               <summary class="govuk-details__summary">
+                                    <span class="govuk-details__summary-text">What this service can do for you</span>
+                               </summary>
+                               <div class="govuk-details__text">
+                                    <p class="govuk-body">You can use your apprenticeship account to:</p>
+                                    <ul class="govuk-list govuk-list--bullet">
+                                         <li>track your apprenticeship progress estimate</li>
+                                         <li>get support with your apprenticeship</li>
+                                         <li>find out how to prepare for your next milestones</li>
+                                         <li>tell us how you feel about your apprenticeship</li>
+                                    </ul>
+
+                               </div>
+                          </details>
+
+                     </div>
+
+                     <div class="govuk-grid-column-one-third">
+
+                          <div class="confirmation">
+                               <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                               <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                               <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                               <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                          </div>
+
+                     </div>-->
+
+    </div>
+
+</div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<main class="govuk-main-wrapper  govuk-!-padding-top-6" id="main-content" role="main">
+
+
+
+
+
+    <div class="govuk-grid-row govuk-!-margin-bottom-2">
+        <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+                <div class="govuk-notification-banner__header">
+                    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+                        Action required
+                    </h2>
+                </div>
+                <div class="govuk-notification-banner__content">
+                    <p class="govuk-notification-banner__heading">
+
+
+
+                    </p><p class="govuk-notification-banner__heading">
+                    <span>ILR data mismatch: Payment for ABCD ABCD can't be made until this is resolved. </span>
+                    <a id="triage-link-update" href="/10005310/apprentices/7Y4DDB/datalock" class="govuk-notification-banner__link">View details</a>
+                </p>
+
+                    <p></p>
+                </div>
+            </div>
+
+
+            <h1 class="govuk-heading-xl">ABCD ABCD</h1>
+
+
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Help with your apprentice’s overdue confirmation
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <p class="govuk-body">
+                        If your apprentice has not confirmed their apprenticeship details within the 14 day deadline, you should:
+
+                    </p><ul class="govuk-list govuk-list--bullet">
+                    <li>
+                        contact the apprentice to complete their apprenticeship confirmation
+                    </li>
+                    <div>
+                        Or
+                    </div>
+                    <li>
+                        contact the apprentice’s employer to ask the apprentice to complete their apprenticeship confirmation
+                    </li>
+                </ul>
+                    <p></p>
+                </div>
+            </details>
+
+            <h2 class="govuk-heading-m">Apprentice status</h2>
+            <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet">
+            </div>
+
+            <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header das-table-cell-width-45">Status</th>
+                    <td id="apprenticeship-status" class="govuk-table__cell das-table-cell-width-55">Live</td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header das-table-cell-width-45">Apprentice confirmation</th>
+                    <td id="apprenticeship-status" class="govuk-table__cell das-table-cell-width-55">Overdue</td>
+                </tr>
+
+
+                </tbody>
+            </table>
+
+            <div class="govuk-grid-row govuk-!-margin-bottom-2">
+                <div class="govuk-grid-column-two-thirds">
+                    <h2 class="govuk-heading-m">Overview</h2>
+                </div>
+                <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet">
+                </div>
+            </div>
+
+            <table class="govuk-table">
+                <tbody class="govuk-table__body">
+
+                <tr class="govuk-table__row">
+
+                    <th scope="row" class="govuk-table__header das-table-cell-width-45">Employer</th>
+                    <td id="apprenticeship-employer" class="govuk-table__cell das-table-cell-width-40">ESFA  LTD</td>
+                    <td class="govuk-table__cell das-table-cell-width-15 govuk-table__cell--numeric">
+                    </td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Reference</th>
+                    <td id="apprenticeship-reference" class="govuk-table__cell">4RKN8Y</td>
+                    <td class="govuk-table__cell"></td>
+                </tr>
+
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Agreement ID</th>
+                    <td id="apprenticeship-agreement-id" class="govuk-table__cell">7GJDM6</td>
+                    <td class="govuk-table__cell"></td>
+                </tr>
+
+                </tbody>
+            </table>
+
+            <div class="govuk-grid-row govuk-!-margin-bottom-2">
+                <div class="govuk-grid-column-two-thirds">
+                    <h2 class="govuk-heading-m">Apprentice</h2>
+                </div>
+                <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet">
+                </div>
+            </div>
+
+            <table class="govuk-table">
+                <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-!-width-one-third">Name</th>
+                    <td id="apprentice-name" class="govuk-table__cell ">ABCD ABCD</td>
+                    <td class="govuk-table__cell"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Email address</th>
+                    <td class="govuk-table__cell ">
+                        <table>
+                            <tbody><tr>
+                                <td id="apprentice-email">test@email.com</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a id="resend-email-invitation-link" href="/10005310/apprentices/7Y4DDB/details/resend-email-invitation?ApprenticeshipId=0" class="govuk-link">Resend invitation email</a>
+                                </td>
+                            </tr>
+                            </tbody></table>
+                    </td>
+
+                    <td class="govuk-table__cell"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header govuk-!-width-one-quarter">Date of birth</th>
+                    <td id="apprentice-dob" class="govuk-table__cell">24 Jan 1991</td>
+                    <td class="govuk-table__cell"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Unique learner number</th>
+                    <td id="apprentice-uln" class="govuk-table__cell">6330680689</td>
+                    <td class="govuk-table__cell"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header ">Apprenticeship training course</th>
+                    <td id="apprentice-course" class="govuk-table__cell">Able seafarer (deck), Level: 2</td>
+                    <td class="govuk-table__cell"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Version</th>
+                    <td id="apprentice-course" class="govuk-table__cell">1.0</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric">
+                    </td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Training start date</th>
+                    <td id="apprentice-start-date" class="govuk-table__cell">Aug 2021</td>
+                    <td class="govuk-table__cell"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Training end date</th>
+                    <td id="apprentice-end-date" class="govuk-table__cell">Nov 2022</td>
+                    <td class="govuk-table__cell"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Duration reduction due to prior learning</th>
+                    <td id="apprentice-end-date" class="govuk-table__cell">26 weeks</td>
+                    <td class="govuk-table__cell"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Price reduction due to prior learning</th>
+                    <td id="apprentice-end-date" class="govuk-table__cell">£2,000</td>
+                    <td class="govuk-table__cell"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Total agreed apprenticeship price</th>
+                    <td id="apprentice-price" class="govuk-table__cell">£20,051</td>
+                    <td class="govuk-table__cell"></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Your reference</th>
+                    <td id="apprentice-reference" class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+</main>
+
+
+{% endblock %}
