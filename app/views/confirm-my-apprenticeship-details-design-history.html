@@ -1,0 +1,405 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+<!-- Main content starts -->
+
+<!-- Full width heading starts -->
+<div class="govuk-grid-row">
+     <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-xl">
+               <p></p>
+               <p><br></p>
+               <!--<span class="govuk-tag">ALPHA</span><br>-->
+               Confirm my apprenticeship details <br /> design history
+          </h1>
+     </div>
+</div>
+<!-- Full width heading ends -->
+
+<!-- Two thirds header section starts -->
+<div class="govuk-grid-row">
+     <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-m govuk-!-margin-top-6">
+               What is Confirm my apprenticeship details?
+          </h2>
+          <p class="govuk-body">
+               All documents and links are being collected on <a href="https://skillsfundingagency.atlassian.net/wiki/spaces/NDL/pages/2386296857/E+Digital+commitment+-+ECS" class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank">a Confluence page</a>.
+          </p>
+          <p class="govuk-body">
+               This documents the pre-Alpha phase of the {{serviceName}} project, June 2020 onwards.
+          </p>
+
+          <h2 class="govuk-heading-m govuk-!-margin-top-6">
+               Who's working on this project?
+          </h2>
+          <ul class="govuk-list govuk-list--bullet">
+               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/spaces/NDL/pages/189759681/Content+design+team" title="Link to Caitlin profile on Confluence">Caitlin Reidy</a> &ndash; Content Designer</li>
+               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/spaces/DAS/pages/1070924516/Interaction+Design+Clan" title="Link to Darren's profile on Confluence">Darren</a> &ndash; Interaction Designer</li>
+
+               <li><a class="govuk-link govuk-link--no-visited-state" rel="external" target="_blank" href="https://skillsfundingagency.atlassian.net/wiki/people/5f9c3ddab38e610071223a3d" title="Link to Andrew's profile on Confluence">Andrew Stocker</a> &ndash; User Researcher</li>
+          </ul>
+     </div>
+     <!-- Two thirds header section ends -->
+
+     <!-- One third header section starts -->
+     <div class="govuk-grid-column-one-third">
+          <!--<h2 class="govuk-heading-m">
+               <br>Design artefacts
+          </h2>
+          <div class="govuk-inset-text">
+               <ul class='govuk-list govuk-list--bullet'>
+                    <li><a href='#' class='govuk-link govuk-link--no-visited-state'>Thing #1</a></li>
+               </ul>
+          </div>-->
+     </div>
+     <!-- One third header section ends -->
+
+</div>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+     <!-- Full width header section starts -->
+     <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-m">
+               What are our design goals and what are we doing?
+          </h2>
+          <p class="govuk-body">
+               {{ govukDetails({
+                    summaryText: "Project design goals",
+                    html: "<table class='govuk-table'>
+                         <thead class='govuk-table__head'>
+                              <tr class='govuk-table__row'>
+                                   <th scope='col' class='govuk-table__header'>What we're doing</th>
+                                   <th scope='col' class='govuk-table__header'>Why we're doing it</th>
+                              </tr>
+                         </thead>
+                         <tbody class='govuk-table__body'>
+                              <tr class='govuk-table__row'>
+                                   <td class='govuk-table__cell'>---</td>
+                                   <td class='govuk-table__cell'>---</td>
+                              </tr>
+                         </tbody>
+                    </table>"
+               }) }}
+          </p>
+     </div>
+     <!-- Full width header section ends -->
+</div>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+     <!-- Full width header section starts -->
+     <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-m">
+               Latest prototype link
+          </h2>
+          <p class="govuk-body"><!-- -->
+               <a href="/sprint-20/start" class="govuk-link govuk-link--no-visited-state">Start page *latest</a>
+               <br>
+                <a href="/sprint-6/start" class="govuk-link govuk-link--no-visited-state">Start page</a>
+                <br>
+               <a href="/sprint-6/commitment-statement/emails/index" class="govuk-link govuk-link--no-visited-state">MVS - digital commitment</a>
+               <br>
+               <a href="/sprint-6/portability/sign-in/index" class="govuk-link govuk-link--no-visited-state">BETA - portability</a>
+               <br>
+               <a href="/sprint-6/employer/landing-page/index" class="govuk-link govuk-link--no-visited-state">Employer journey</a>
+
+               <br>
+               <a href="/sprint-7/add-apprentice/1-add-apprentice" class="govuk-link govuk-link--no-visited-state">Test for employer journey</a>
+               <br>
+               <a href="/sprint-7/add-apprentice-provider-happy/1-add-apprentice" class="govuk-link govuk-link--no-visited-state">Test for provider journey</a>
+               <br>
+               <a href="/sprint-6/commitment-statement/emails/index" class="govuk-link govuk-link--no-visited-state">Email</a>
+               <br />
+               <a href="/sprint-10/provider/manage" class="govuk-link govuk-link--no-visited-state">Provider - overdue confirmation via alert</a>
+               <br />
+               <a href="/sprint-10/provider/manage1" class="govuk-link govuk-link--no-visited-state">Provider - confirmation status via column</a>
+               <br />
+               <a href="/sprint-10/employer/home" class="govuk-link govuk-link--no-visited-state">Employer - overdue confirmation via alert</a>
+               <br />
+               <a href="/sprint-10/employer/home1" class="govuk-link govuk-link--no-visited-state">Employer - confirmation status via column</a>
+               <br />
+               <a href="/sprint-6/commitment-statement/dashboard/change" class="govuk-link govuk-link--no-visited-state">Employment change- apprentice has to re-confirm </a>
+               <br />
+               <a href="/sprint-6/commitment-statement/dashboard/index" class="govuk-link govuk-link--no-visited-state">Homepage - Once apprentice has confirmed </a>
+               <br />
+               <a href="/sprint-6/commitment-statement/dashboard/3-my-apprenticeships" class="govuk-link govuk-link--no-visited-state">Commitment - Once apprentice has confirmed </a>
+               <br />
+               <a href="/sprint-12/employer/home1" class="govuk-link govuk-link--no-visited-state">Employer - Confirmation status (Incorporating feedback) </a>
+               <br />
+               <a href="/sprint-6/commitment-statement/dashboard/index-stopped" class="govuk-link govuk-link--no-visited-state">Apprenticeship has been stopped</a>
+               <br />
+               <a href="/sprint-6/commitment-statement/dashboard/index-finished" class="govuk-link govuk-link--no-visited-state">Apprenticeship has been finished</a>
+
+               <br />
+               <a href="/sprint-6/commitment-statement/dashboard/4-my-apprenticeships" class="govuk-link govuk-link--no-visited-state">The confirmation of your apprenticeship details is overdue. </a>
+
+               <br />
+               <a href="/sprint-6/commitment-statement/dashboard/messages" class="govuk-link govuk-link--no-visited-state">All apprentice in service messagess</a>
+
+               <br />
+               <a href="/sprint-6/commitment-statement/dashboard/5-my-apprenticeships" class="govuk-link govuk-link--no-visited-state">GDS task list page for AB  test</a>
+               <br />
+               <a href="/sprint-6/commitment-statement/5-agreements/1-agreements" class="govuk-link govuk-link--no-visited-state">Support page</a>
+
+               <br />
+               <a href="/sprint-6/commitment-statement/emails/code" class="govuk-link govuk-link--no-visited-state">New account and code entry journey</a>
+               <br />
+               <a href="/sprint-6/commitment-statement/dashboard/index-not-added" class="govuk-link govuk-link--no-visited-state">Code entry unhappy path</a>
+               <br />
+               <a href="/sprint-19/employer/home1" class="govuk-link govuk-link--no-visited-state">Code entry, employer journey with aprentice update</a>
+               <br />
+               <a href="/sprint-6/commitment-statement/dashboard/help-support" class="govuk-link govuk-link--no-visited-state">Help and support - Vanilla</a>
+               <br />
+               <a href="/sprint-6/commitment-statement/dashboard/help-support1" class="govuk-link govuk-link--no-visited-state">Help and support - Different Layout</a>
+
+          </p>
+     </div>
+     <!-- Full width header section ends -->
+</div>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<div class="govuk-grid-row">
+     <!-- Sprints section starts -->
+     <div class="govuk-grid-column-two-thirds">
+
+       <h2 class="govuk-heading-l" id="sprint-6">
+            Sprint 14
+            <span class="govuk-caption-l">
+                 26th May &mdash; 8th June 2021
+            </span>
+       </h2>
+
+          {% include './sprint-14/_summary.html' %}
+
+          <h2 class="govuk-heading-l govuk-!-margin-top-9">
+               Beta sprints
+          </h2>
+
+          {% set sprint13Html %}
+               {% include './sprint-13/_summary.html' %}
+          {% endset %}
+
+          {% set sprint12Html %}
+               {% include './sprint-12/_summary.html' %}
+          {% endset %}
+
+          {% set sprint11Html %}
+               {% include './sprint-11/_summary.html' %}
+          {% endset %}
+
+          {% set sprint10Html %}
+               {% include './sprint-10/_summary.html' %}
+          {% endset %}
+
+          {% set sprint9Html %}
+               {% include './sprint-9/_summary.html' %}
+          {% endset %}
+
+          {% set sprint8Html %}
+               {% include './sprint-8/_summary.html' %}
+          {% endset %}
+
+          {% set sprint7Html %}
+               {% include './sprint-7/_summary.html' %}
+          {% endset %}
+
+          {% set sprint6Html %}
+               {% include './sprint-6/_summary.html' %}
+          {% endset %}
+
+          {% set sprint5Html %}
+               {% include './sprint-5/_summary.html' %}
+          {% endset %}
+
+          {% set sprint4Html %}
+               {% include './sprint-4/_summary.html' %}
+          {% endset %}
+
+          {{ govukAccordion({
+               id: "accordion-beta",
+               items: [
+               {
+                    heading: {
+                         text: "Sprint 13"
+                    },
+                    content: {
+                         html: sprint13Html
+                    },
+                    summary: {
+                         html: '12th May - 26th May 2021'
+                    }
+               },
+               {
+                    heading: {
+                         text: "Sprint 12"
+                    },
+                    content: {
+                         html: sprint12Html
+                    },
+                    summary: {
+                         html: '27th April - 12 May 2021'
+                    }
+               },
+
+               {
+                    heading: {
+                         text: "Sprint 11"
+                    },
+                    content: {
+                         html: sprint11Html
+                    },
+                    summary: {
+                         html: '14th April - 27th April 2021'
+                    }
+               },
+               {
+                    heading: {
+                         text: "Sprint 10"
+                    },
+                    content: {
+                         html: sprint10Html
+                    },
+                    summary: {
+                         html: '31th March - 14th April 2021'
+                    }
+               },
+               {
+                    heading: {
+                         text: "Sprint 9"
+                    },
+                    content: {
+                         html: sprint9Html
+                    },
+                    summary: {
+                         html: '15th March - 30th March 2021'
+                    }
+               },
+               {
+                    heading: {
+                         text: "Sprint 8"
+                    },
+                    content: {
+                         html: sprint8Html
+                    },
+                    summary: {
+                         html: '3rd March - 15th March 2021'
+                    }
+               },
+
+               {
+                    heading: {
+                         text: "Sprint 7"
+                    },
+                    content: {
+                         html: sprint7Html
+                    },
+                    summary: {
+                         html: '17th January - 2nd February 2021'
+                    }
+               },
+                  {
+                        heading: {
+                             text: "Sprint 6"
+                        },
+                        content: {
+                             html: sprint6Html
+                        },
+                        summary: {
+                             html: '6th January 2021 — 19th January 2021'
+                        }
+                      },
+                    {
+                         heading: {
+                              text: "Sprint 5"
+                         },
+                         content: {
+                              html: sprint5Html
+                         },
+                         summary: {
+                              html: '6th January 2021 — 19th January 2021'
+                         }
+                    },
+                    {
+                         heading: {
+                              text: "Sprint 4"
+                         },
+                         content: {
+                              html: sprint4Html
+                         },
+                         summary: {
+                              html: '23rd December 2020 — 5th January 2021'
+                         }
+                    }
+               ]
+          }) }}
+
+          <h2 class="govuk-heading-l govuk-!-margin-top-9">
+               Extended-Alpha sprints
+          </h2>
+
+          {% set sprint3Html %}
+               {% include './sprint-3/_summary.html' %}
+          {% endset %}
+
+          {% set sprint2Html %}
+               {% include './sprint-2/_summary.html' %}
+          {% endset %}
+
+          {% set sprint1Html %}
+               {% include './sprint-1/_summary.html' %}
+          {% endset %}
+
+          {{ govukAccordion({
+               id: "accordion-extended-alpha",
+               items: [
+                    {
+                         heading: {
+                              text: "Sprint 3"
+                         },
+                         content: {
+                              html: sprint3Html
+                         },
+                         summary: {
+                              html: '9th December — 22nd December 2020'
+                         }
+                    },
+                    {
+                         heading: {
+                              text: "Sprint 2"
+                         },
+                         content: {
+                              html: sprint2Html
+                         },
+                         summary: {
+                              html: '25th November — 8th December 2020'
+                         }
+                    },
+                    {
+                         heading: {
+                              text: "Sprint 1"
+                         },
+                         content: {
+                              html: sprint1Html
+                         },
+                         summary: {
+                              html: '11th November — 24th November 2020'
+                         }
+                    }
+               ]
+          }) }}
+
+
+     </div>
+  <!-- Sprints section ends -->
+</div>
+
+<!-- Main content ends -->
+{% endblock %}
