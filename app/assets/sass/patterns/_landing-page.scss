@@ -1,3 +1,24 @@
+.pt-Panels {
+     list-style-type: none;
+     margin: 0;
+     padding-inline-start: 0;
+     display:flex;
+     flex-direction: row;
+     li {
+          background-color:  govuk-colour("purple");
+          margin:1rem;
+          padding: 2rem;
+          color: govuk-colour("light-grey");
+          p, h2 {
+               color: govuk-colour("light-grey");
+          }
+          a, a:visited {
+               font-weight: 800;
+               color: govuk-colour("yellow");
+          }
+     }
+}
+
 #home-boxes {
      display: flex;
      #home-boxes-left, #home-boxes-right {
