@@ -1,0 +1,173 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation-confirmed-b.html" %}
+
+{% block pageScripts %}
+<!--  <script src="/public/javascripts/step-by-step-nav.js"></script>-->
+<!--  <script type="text/javascript">-->
+<!--    var $element = $('#step-by-step-navigation')-->
+<!--    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()-->
+<!--    stepByStepNavigation.start($element)-->
+
+<!--  </script>-->
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+     <div class="govuk-width-container">
+
+     </div>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container " id="landing-page-section">
+    <a href=""  class=" history govuk-back-link">Back</a>
+     <div class="govuk-grid-row govuk-!-margin-top-6">
+         <div class="govuk-grid-column-three-quarters">
+
+            <h1 class="govuk-heading-l">My progress
+            <span class="govuk-hint">
+                Game programmer
+            </span>
+            </h1>
+                <div class="govuk-!-margin-bottom-9">
+                    <p>This shows your progress against the list of knowledge, skills and behaviours (KSBs) needed to complete this apprenticeship.</p>
+<!--                    <p>12 -->
+<!--                        <span class="govuk-tag govuk-tag&#45;&#45;turquoise">In Progress</span> 24 -->
+<!--                        <span class="govuk-tag govuk-tag&#45;&#45;blue">Completed</span>  39 -->
+<!--                        <span class="govuk-tag govuk-tag&#45;&#45;grey">To do</span>-->
+<!--                    </p>-->
+                </div>
+             <div class="govuk-form-group">
+                 <fieldset class="govuk-fieldset">
+                     <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                         <div class="govuk-checkboxes__item">
+                             <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                             <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                                 show only recorded progress items
+                             </label>
+                         </div>
+                     </div>
+                 </fieldset>
+             </div>
+
+              <table class="govuk-table data-tble">
+                  <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <p id=K1>
+                          <strong>K1</strong>: How to approach the development of interactive, real-time applications for gaming platforms, including an awareness of industry-standard programming languages, application programming interfaces (APIs), tools, engines and frameworks.
+                          </p>
+
+                      </th>
+                      <td class="govuk-table__cell">
+                          <span class="govuk-tag govuk-tag--turquoise">On track</span>
+                      </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <p id=K2>
+                              <strong>K2</strong>: The syntax and structure of an industry-standard programming language (above and beyond visual programming languages) used for the development of games (for example C++, C#).
+                          </p>
+
+                      </th>
+                      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--blue">Ready for EPA</span></td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <p id=K1>
+                              <strong>K1</strong>: How to approach the development of interactive, real-time applications for gaming platforms, including an awareness of industry-standard programming languages, application programming interfaces (APIs), tools, engines and frameworks.
+                          </p>
+                      </th>
+                      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Not started</span></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <p id=K3>
+                              <strong>K3</strong>: The fundamental graphical and mathematical principles that underpin the operation of real-time graphics in two and three-dimensions.
+
+                              <br />
+                          </p>
+                      </th>
+                      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Not started</span></td>
+                  </tr>
+
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <p id=K4>
+                              <strong>K4</strong>: The characteristics of modern hardware platforms and how they support the efficient function of interactive, real-time graphical applications.
+                              <br />
+                          </p>
+                      </th>
+                      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Not started</span></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <p id=K4>
+                              <strong>K4</strong>: The characteristics of modern hardware platforms and how they support the efficient function of interactive, real-time graphical applications.
+                              <br />
+                          </p>
+                      </th>
+                      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Not started</span></td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <p id=K5>
+                              <strong>K5</strong>: Approaches to balancing quality and performance requirements to achieve, monitor and maintain acceptable frame rates and memory footprints for a real-time interactive application.
+                              <br />
+                          </p>
+                      </th>
+                      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Not started</span> </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <p id=S4>
+                              <strong>S4</strong>: Track memory usage and identify opportunities for reducing requirements.
+
+                              <br />
+                          </p>
+                      </th>
+                      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Not started</span> </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <p id=S2>
+                              <strong>S2</strong>: Implement and adapt contemporary real-time algorithms in two and three-dimensional games.
+                          </p>
+                      </th>
+                      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Not started</span> </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <p id=S5>
+                              <strong>S5</strong>: Write code informed by the characteristics of modern hardware platforms (e.g. shader programming, multi-threading).
+                          </p>
+                      </th>
+                      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Not started</span> </td>
+                  </tr>
+                  <tr class="govuk-table__row">
+                      <th scope="row" class="govuk-table__header">
+                          <p id=S7>
+                              <strong>S7</strong>: Use continuous integration workflow within the deployment lifecycle as part of a multi-disciplinary software team.
+                          </p>
+                      </th>
+                      <td class="govuk-table__cell"><span class="govuk-tag govuk-tag--grey">Not started</span> </td>
+                  </tr>
+                  </tbody>
+              </table>
+          </div>
+     </div>
+
+     </div>
+<div class="help-modal-container govuk-visually-hidden">
+    <div class="help-modal">
+    </div>
+</div>
+{% endblock %}

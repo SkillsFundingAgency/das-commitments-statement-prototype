@@ -1,0 +1,130 @@
+{% extends "layout-landing-employer.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../employer/includes/navigation-employer.html" %}
+
+<a onClick='window.history.back()' class="image-demo">
+
+
+</a>
+
+
+<div id="service-title-section" class="landing-page  ">
+</div>
+<main class="govuk-main-wrapper " id="main-content" role="main">
+
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-width-container">
+
+
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-">
+                    <div class="govuk-width-container">
+                        <h1 class="govuk-heading-xl">Apprentice requests</h1>
+
+                        <a href="/WRN97X/unapproved/Inform" class="govuk-button"> Add new apprentice </a>
+
+                        <div class="das-tabs-boxes">
+                            <ul class="das-tabs-boxes__list">
+
+                                <li class="das-tabs-boxes__list-item">
+                                    <a class="das-tabs-boxes__tab" href="/WRN97X/unapproved/review" id="Review">
+                                        <span class="das-tabs-boxes__figure">0</span>
+                                        <span class="das-tabs-boxes__text das-text-capitalise">Ready to review</span>
+                                    </a>
+                                </li>
+
+
+
+                                <li class="das-tabs-boxes__list-item  das-tabs-boxes__list-item--selected">
+        <span class="das-tabs-boxes__tab" href="/WRN97X/unapproved/with-training-provider" id="WithProvider">
+            <span class="das-tabs-boxes__figure">3</span>
+            <span class="das-text-capitalise">With training providers</span>
+        </span>
+                                </li>
+
+
+
+                                <li class="das-tabs-boxes__list-item">
+                                    <a class="das-tabs-boxes__tab" href="/WRN97X/unapproved/draft" id="Draft">
+                                        <span class="das-tabs-boxes__figure">2</span>
+                                        <span class="das-tabs-boxes__text das-text-capitalise">Drafts</span>
+                                    </a>
+                                </li>
+
+
+
+                                <li class="das-tabs-boxes__list-item">
+                                    <a class="das-tabs-boxes__tab" href="/WRN97X/unapproved/with-transfer-sender" id="WithTransferSender">
+                                        <span class="das-tabs-boxes__figure">0</span>
+                                        <span class="das-tabs-boxes__text das-text-capitalise">With transfer sending employers</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <table class="govuk-table das-table--responsive">
+                <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header das-table-cell-width-25">Training provider</th>
+                    <th scope="col" class="govuk-table__header das-table-cell-width-10">Reference</th>
+                    <th scope="col" class="govuk-table__header das-table-cell-width-25 govuk-table__header--numeric">Number of apprentices</th>
+                    <th scope="col" class="govuk-table__header das-table-cell-width-25">Last Message</th>
+                    <th scope="col" class="govuk-table__header govuk-table__header--numeric das-table-cell-width-15"></th>
+
+                </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+
+                <tr class="govuk-table__row" data-cohort="YJWLP4">
+                    <td class="govuk-table__cell" data-label="Training provider">EDUC8 TRAINING (ENGLAND) LIMITED</td>
+                    <td class="govuk-table__cell" data-label="Reference">YJWLP4</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                    <td class="govuk-table__cell" data-label="Last Message">No message added</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                        <a class="govuk-link cohort-details-link" href="/WRN97X/unapproved/YJWLP4">Details</a>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row" data-cohort="KKWYY4">
+                    <td class="govuk-table__cell" data-label="Training provider">EDUC8 TRAINING (ENGLAND) LIMITED</td>
+                    <td class="govuk-table__cell" data-label="Reference">KKWYY4</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">2</td>
+                    <td class="govuk-table__cell" data-label="Last Message">AshHenry</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                        <a class="govuk-link cohort-details-link" href="/WRN97X/unapproved/KKWYY4">Details</a>
+                    </td>
+                </tr>
+                <tr class="govuk-table__row" data-cohort="PNDL4W">
+                    <td class="govuk-table__cell" data-label="Training provider">EDUC8 TRAINING (ENGLAND) LIMITED</td>
+                    <td class="govuk-table__cell" data-label="Reference">PNDL4W</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">0</td>
+                    <td class="govuk-table__cell" data-label="Last Message">testxcc</td>
+                    <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                        <a class="govuk-link cohort-details-link" href="/WRN97X/unapproved/PNDL4W">Details</a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+
+</main>
+
+
+
+{% endblock %}

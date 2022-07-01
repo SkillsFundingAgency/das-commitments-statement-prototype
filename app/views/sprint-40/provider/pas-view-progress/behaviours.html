@@ -1,0 +1,62 @@
+{% extends "layout-landing-provider.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../../provider/includes/navigation-provider.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+<script src="/public/javascripts/ksbs-game-programmer.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="ksb-list">
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+     <div class="govuk-grid-row govuk-!-margin-top-6">
+          <div class="govuk-grid-column-three-quarters">
+              <h1 class="govuk-heading-l">Edit behaviours progress
+                  <span class="govuk-hint">Rufus Kelly:Game programmer</span>
+              </h1>
+              <p class=" govuk-!-margin-bottom-9 govuk-body-m">
+                  For each of the required behaviours for this apprenticeship, record whether the apprentice is on track or ready for end-point assessment (EPA).
+              </p>
+              <div>
+                  <ul class="govuk-list ksb-b-list2"></ul>
+              </div>
+
+              <div>
+              <div class="govuk-form-group govuk-!-margin-top-6">
+
+
+              </div>
+
+
+
+                  <a href="check-your-answers.html" class="govuk-button">Continue</a>
+              </div>
+          </div>
+
+
+
+<!--         <div class="govuk-grid-column-one-third">-->
+
+<!--         </div>-->
+     </div>
+
+     </div>
+
+{% endblock %}

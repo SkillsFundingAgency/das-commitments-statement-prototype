@@ -4,10 +4,12 @@
      padding-inline-start: 0;
      display:flex;
      flex-direction: row;
+     flex-wrap: wrap;
      li {
           background-color:  govuk-colour("purple");
           margin:1rem;
           padding: 2rem;
+          max-width: 31%;
           color: govuk-colour("light-grey");
           p, h2 {
                color: govuk-colour("light-grey");

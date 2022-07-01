@@ -1,0 +1,87 @@
+{% extends "layout-landing-provider.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../provider/includes/navigation-provider.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+<script src="/public/javascripts/ksbs-game-programmer.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+     <div class="govuk-width-container">
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+     <div class="govuk-grid-row govuk-!-margin-top-6">
+          <div class="govuk-grid-column-three-quarters">
+              <h1 class="govuk-heading-l">Record knowledge progress
+                  <span class="govuk-hint">Rufus Kelly:Game programmer</span>
+              </h1>
+              <p class=" govuk-!-margin-bottom-9 govuk-body-m">
+                  For each of the required knowledge statements for this apprenticeship, record whether the apprentice is on track or ready for end-point assessment (EPA).
+              </p>
+
+              <div>
+                  <ul class="govuk-list ksb-k-list"></ul>
+              </div>
+<!--              <div class="">-->
+<!--                  {% include "../provider/includes/knowledge-list.html" %}-->
+<!--              </div>-->
+              <div>
+              <div class="govuk-form-group govuk-!-margin-top-6">
+
+<!--                  <fieldset class="govuk-fieldset">-->
+<!--                      <legend class="govuk-fieldset__legend govuk-fieldset__legend&#45;&#45;m">-->
+<!--                          Have you completed this section?-->
+<!--                      </legend>-->
+<!--                      <div class="govuk-radios" data-module="govuk-radios">-->
+<!--                          <div class="govuk-radios__item">-->
+<!--                              <input class="govuk-radios__input" id="have-you-completed-this-section" name="have-you-completed-this-section" type="radio" value="yes">-->
+<!--                              <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section">-->
+<!--                                  Yes, I’ve completed this section-->
+<!--                              </label>-->
+<!--                          </div>-->
+<!--                          <div class="govuk-radios__item">-->
+<!--                              <input class="govuk-radios__input" id="have-you-completed-this-section-2" name="have-you-completed-this-section" type="radio" value="no">-->
+<!--                              <label class="govuk-label govuk-radios__label" for="have-you-completed-this-section-2">-->
+<!--                                  No, I’ll come back to it later-->
+<!--                              </label>-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                  </fieldset>-->
+              </div>
+
+
+
+                  <a href="record-progress-tl-mvs.html" class="govuk-button">Continue</a>
+              </div>
+          </div>
+
+
+
+<!--         <div class="govuk-grid-column-one-third">-->
+
+<!--         </div>-->
+     </div>
+
+     </div>
+
+{% endblock %}

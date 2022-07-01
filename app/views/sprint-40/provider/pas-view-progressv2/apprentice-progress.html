@@ -1,0 +1,190 @@
+{% extends "layout-landing-provider.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../../provider/includes/navigation-provider.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+
+     <div class="govuk-width-container">
+  <!--
+          <div class="govuk-grid-row dashboard-title">
+               <div class="govuk-grid-column-two-thirds">
+                    <h1 class="govuk-heading-xl">
+                         Your apprenticeship
+                    </h1>
+
+                   <details class="govuk-details" data-module="govuk-details">
+                         <summary class="govuk-details__summary">
+                              <span class="govuk-details__summary-text">What this service can do for you</span>
+                         </summary>
+                         <div class="govuk-details__text">
+                              <p class="govuk-body">You can use your apprenticeship account to:</p>
+                              <ul class="govuk-list govuk-list--bullet">
+                                   <li>track your apprenticeship progress estimate</li>
+                                   <li>get support with your apprenticeship</li>
+                                   <li>find out how to prepare for your next milestones</li>
+                                   <li>tell us how you feel about your apprenticeship</li>
+                              </ul>
+
+                         </div>
+                    </details>
+
+               </div>
+
+               <div class="govuk-grid-column-one-third">
+
+                    <div class="confirmation">
+                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
+                         <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
+                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
+                         <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
+                    </div>
+
+               </div>-->
+
+          </div>
+
+     </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+        <a href="details-rp-4.html" class="govuk-back-link">Back</a>
+
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+            <div class="govuk-grid-row">
+                <div class="govuk-grid-column-two-thirds-from-desktop">
+
+                    <h1 class="govuk-heading-l">Progress recorded for Rufus Kelly</h1>
+
+                    <h2 class="govuk-heading-m">Knowledge</h2>
+
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                <span class="govuk-tag govuk-tag--red">not on track</span>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <strong>K2</strong>: The syntax and structure of an industry-standard programming language (above and beyond visual programming languages) used for the development of games (for example C++, C#).
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="record-progress.html">
+                                    Edit<span class="govuk-visually-hidden"> name</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                <span class="govuk-tag govuk-tag--green">on track</span>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <strong>K4</strong>: The characteristics of modern hardware platforms and how they support the efficient function of interactive, real-time graphical applications.
+
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="record-progress.html">
+                                    Edit<span class="govuk-visually-hidden">change</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                <span class="govuk-tag govuk-tag--green">on track</span>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <strong>K3</strong>: The fundamental graphical and mathematical principles that underpin the operation of real-time graphics in two and three-dimensions.
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="record-progress.html">
+                                    Edit<span class="govuk-visually-hidden"> change</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+                    <h2 class="govuk-heading-m">Skills</h2>
+
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                <span class="govuk-tag govuk-tag--completed">Ready for EPA</span>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <strong>S1</strong>: Program interactive, real-time applications for gaming platforms using an industry-standard programming language, incorporating APIs, tools, engines or frameworks appropriate to employer requirements.
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="record-progress.html">
+                                    Edit<span class="govuk-visually-hidden">change</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                <span class="govuk-tag govuk-tag--completed">Ready for EPA</span>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <strong>S2</strong>: Implement and adapt contemporary real-time algorithms in two and three-dimensional games.
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="record-progress.html">
+                                    Edit<span class="govuk-visually-hidden">change</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+
+                    <h2 class="govuk-heading-m">Behaviours</h2>
+
+                    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                <span class="govuk-tag govuk-tag--green"> on track</span>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <strong>B1</strong>: Reliable, objective and capable of independent working.
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="behaviours.html">
+                                    Edit<span class="govuk-visually-hidden">change</span>
+                                </a>
+                            </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                            <dt class="govuk-summary-list__key">
+                                <span class="govuk-tag govuk-tag--red">Not on track</span>
+                            </dt>
+                            <dd class="govuk-summary-list__value">
+                                <strong>B2</strong>: Initiative and personal responsibility to overcome challenges and take ownership for project solutions.
+                            </dd>
+                            <dd class="govuk-summary-list__actions">
+                                <a class="govuk-link" href="behaviours.html">
+                                    Edit<span class="govuk-visually-hidden">change</span>
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+
+{% endblock %}

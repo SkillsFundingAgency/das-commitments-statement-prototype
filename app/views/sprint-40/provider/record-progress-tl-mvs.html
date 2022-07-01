@@ -1,0 +1,123 @@
+{% extends "layout-landing-provider.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../provider/includes/navigation-provider.html" %}
+
+{% block pageScripts %}
+  <script src="/public/javascripts/step-by-step-nav.js"></script>
+  <script type="text/javascript">
+    var $element = $('#step-by-step-navigation')
+    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
+    stepByStepNavigation.start($element)
+
+  </script>
+{% endblock %}
+
+<div id="service-title-section" class="landing-page ">
+     <div class="govuk-width-container">
+     </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+    <div class="govuk-grid-row govuk-!-margin-top-6">
+        <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Record progress for Rufus Kelly
+            <span class="govuk-hint">Game programmer</span>
+        </h1>
+        <p>For each of the required knowledge, skills and behaviours (KSBs), record whether the apprentice has made progress or is ready for end-point assessment (EPA).</p>
+        <h2 class="govuk-heading-m">KSBs</h2>
+        </div>
+    </div>
+     <div class="govuk-grid-row ">
+          <div class="govuk-grid-column-two-thirds">
+
+              <div>
+                  <div class="govuk-grid-row">
+                      <div class="">
+                          <ol class="app-task-list">
+                              <li>
+                                  <h2 class="app-task-list__section">
+                                      <span class="app-task-list__section-number"></span> Knowledge statements (27)
+<!--                                      <span class="govuk-hint">5 of 27 items are being tracked.</span>-->
+                                  </h2>
+                                  <ul class="app-task-list__items govuk-!-margin-bottom-6">
+                                      <li class="app-task-list__item ">
+                                          <span class="app-task-list__task-name">
+                                            <a href="knowledge" aria-describedby="eligibility-status">
+                                             Record knowledge progress
+                                            </a><br>
+<!--                                              <span class="govuk-hint govuk-!-padding-0 govuk-!-margin-0">Last updated 12 Jun 2022</span>-->
+                                          </span>
+<!--                                          <span class=" govuk-!-margin-0 govuk-!-padding-left-9">2 items updated</span>-->
+<!--                                          <strong class="govuk-tag govuk-tag&#45;&#45;green app-task-list__tag" id="eligibility-status">4 updated</strong>-->
+                                      </li>
+
+                                  </ul>
+                              </li>
+
+                              <li>
+                                  <h2 class="app-task-list__section">
+                                      <span class="app-task-list__section-number"></span> Skill statements (25)
+<!--                                      <span class="govuk-hint">0 of 25 items are being tracked.</span>-->
+                                  </h2>
+                                  <ul class="app-task-list__items govuk-!-margin-bottom-6">
+                                      <li class="app-task-list__item">
+                                          <span class="app-task-list__task-name">
+                                            <a href="skills.html" aria-describedby="list-convictions-status">
+                                              Record skills progress
+                                            </a>
+                                          </span>
+<!--                                          <strong class="govuk-tag govuk-tag&#45;&#45;grey app-task-list__tag" id="list-convictions-status">0 recorded</strong>-->
+                                      </li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <h2 class="app-task-list__section">
+                                      <span class="app-task-list__section-number"></span> Behaviour statements (7)
+<!--                                      <span class="govuk-hint">0 of 8 items are being tracked.</span>-->
+                                  </h2>
+                                  <ul class="app-task-list__items">
+                                      <li class="app-task-list__item">
+                                          <span class="app-task-list__task-name">
+                                            <a href="behaviours.html" aria-describedby="list-convictions-status">
+                                              Record behaviours progress
+                                            </a><br>
+<!--                                               <span class="govuk-hint govuk-!-padding-0 govuk-!-margin-0">Last updated 12 Apr 2022</span>-->
+                                          </span>
+<!--                                          <strong class="govuk-tag govuk-tag&#45;&#45;blue app-task-list__tag" id="list-convictions-status">2 recorded</strong>-->
+                                      </li>
+                                  </ul>
+                              </li>
+                          </ol>
+                          <div class="govuk-!-padding-left-6">
+<!--                              <h2 class="govuk-heading-m">Save the apprentice's progress</h2>-->
+<!--                              <p>You can check the progress you have recorded on the next page before you submit the update and notify the apprentice.</p>-->
+<!--                              <a href="check-your-answers.html" class="govuk-button">Continue</a>-->
+                          </div>
+                      </div>
+
+                  </div>
+
+              </div>
+          </div>
+
+<!--         <div class="govuk-grid-column-one-third govuk-!-padding-left-9">-->
+<!--             <h2 class="govuk-heading-m">Overall progress</h2>-->
+<!--                <span  class="govuk-tag govuk-tag&#45;&#45;blue"> 12 on track</span>-->
+<!--             <br>-->
+<!--                <span  class="govuk-tag govuk-tag&#45;&#45;red"> 2 not on track</span>-->
+<!--             <br>-->
+<!--                <span  class="govuk-tag govuk-tag&#45;&#45;grey"> 50 not started</span>-->
+
+<!--         </div>-->
+     </div>
+
+     </div>
+
+{% endblock %}
