@@ -1,64 +1,16 @@
 {% extends "layout-landing-provider.html" %}
 
 {% block pageTitle %}
-     GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
 {% include "../../provider/includes/navigation-provider-rp.html" %}
 
-{% block pageScripts %}
-  <script src="/public/javascripts/step-by-step-nav.js"></script>
-  <script type="text/javascript">
-    var $element = $('#step-by-step-navigation')
-    var stepByStepNavigation = new GOVUK.Modules.AppStepNav()
-    stepByStepNavigation.start($element)
-
-  </script>
-{% endblock %}
-
 <div id="service-title-section" class="landing-page ">
 
-     <div class="govuk-width-container">
-  <!--
-          <div class="govuk-grid-row dashboard-title">
-               <div class="govuk-grid-column-two-thirds">
-                    <h1 class="govuk-heading-xl">
-                         Your apprenticeship
-                    </h1>
-
-                   <details class="govuk-details" data-module="govuk-details">
-                         <summary class="govuk-details__summary">
-                              <span class="govuk-details__summary-text">What this service can do for you</span>
-                         </summary>
-                         <div class="govuk-details__text">
-                              <p class="govuk-body">You can use your apprenticeship account to:</p>
-                              <ul class="govuk-list govuk-list--bullet">
-                                   <li>track your apprenticeship progress estimate</li>
-                                   <li>get support with your apprenticeship</li>
-                                   <li>find out how to prepare for your next milestones</li>
-                                   <li>tell us how you feel about your apprenticeship</li>
-                              </ul>
-
-                         </div>
-                    </details>
-
-               </div>
-
-               <div class="govuk-grid-column-one-third">
-
-                    <div class="confirmation">
-                         <h2 class="govuk-heading-s">Who has committed so far:</h2>
-                         <p><span class="icon cross" id="apprentice-committed"></span>You, the apprentice</p>
-                         <p><span class="icon tick green"></span>Training provider<a href="#">View commitment</a></p>
-                         <p><span class="icon tick green"></span>The employer<a href="#">View commitment</a></p>
-                    </div>
-
-               </div>-->
-
-          </div>
-
-     </div>
+  <div class="govuk-width-container">
+  </div>
 
 </div>
 {% endblock %}
@@ -66,132 +18,146 @@
 {% block content %}
 <div class="govuk-width-container " id="landing-page-section">
 
-     <div class="govuk-grid-row govuk-!-margin-top-6">
-          <div class="govuk-grid-column-three-quarters">
-              <h1 class="govuk-heading-l">EDUC8 TRAINING (ENGLAND) LIMITED
-                  <span class="govuk-hint">UKPRN: 10005310</span>
-              </h1>
-             <div class="">
-                  <main role="main" id="content">
-                    <ul class="dashboard-nav">
-                        <li class="dashboard-one">
-                            <div class="box govuk-body">
-                                <h2 class="heading-medium">
-                                    <a href="https://securefunding.pp-pas.apprenticeships.education.gov.uk/10005310/reservations">Add new apprentices</a>
-                                </h2>
-                                <ul>
-                                    <li>upload a CSV file</li>
-                                    <li>manually enter details</li>
-                                    <li>create a new cohort</li>
-                                    <li>add to an existing cohort</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="dashboard-one">
-                            <div class="box">
-                                <h2 class="heading-medium">
-                                    <a href="https://securefunding.pp-pas.apprenticeships.education.gov.uk/10005310/reservations">Get funding for non-levy employers</a>
-                                </h2>
-                                <p>Secure funding for a non-levy employer to train an apprentice.</p>
-                            </div>
-                        </li>
-                        <li class="dashboard-one">
-                            <div class="box">
-                                <h2 class="heading-medium">
-                                    <a href="https://approvals.pp-pas.apprenticeships.education.gov.uk/10005310/unapproved">Apprentice requests</a>
-                                </h2>
-                                <p>Review, edit, approve and add apprentices.</p>
-                            </div>
-                        </li>
-                        <li class="dashboard-one">
-                            <div class="box">
-                                <h2 class="heading-medium">
-                                    <a href="https://securefunding.pp-pas.apprenticeships.education.gov.uk/10005310/reservations/manage">Manage your funding reserved for non-levy employers</a>
-                                </h2>
-                                <p>Add apprentice information to funding you have already reserved for non-levy employers.</p>
-                            </div>
-                        </li>
-                        <li class="dashboard-one">
-                            <div class="box">
-                                <h2 class="heading-medium">
-                                    <a href="alert-column1.html">Manage your apprentices</a>
-                                </h2>
-                                <p>View and update approved apprentice records, and record apprentice progress.</p>
-                            </div>
-                        </li>
-                        <li class="dashboard-one">
-                            <div class="box">
-                                <h2 class="heading-medium">
-                                    <a href="https://recruit.pp-pas.apprenticeships.education.gov.uk/10005310">Recruit apprentices</a>
-                                </h2>
-                                <p>Create a vacancy to recruit an apprentice and manage applications.</p>
-                            </div>
-                        </li>
-                        <li class="dashboard-one">
-                            <div class="box">
-                                <h2 class="heading-medium">
-                                    <a href="https://find-employers.pp-pas.apprenticeships.education.gov.uk/10005310/find-apprenticeship-opportunities">Find employers that need a training provider</a>
-                                </h2>
-                                <p>View employers and share your contact details with them.</p>
-                            </div>
-                        </li>
-                        <li class="dashboard-one">
-                            <div class="box">
-                                <h2 class="heading-medium">
-                                    <a href="/10005310/agreements">Organisations and agreements</a>
-                                </h2>
-                                <p>Find and view organisations and their agreement IDs.</p>
-                            </div>
-                        </li>
-                        <li class="dashboard-one">
-                            <div class="box">
-                                <h2 class="heading-medium">
-                                    <a href="https://providerregistrations.pp-pas.apprenticeships.education.gov.uk/10005310/registration/startaccountsetup">Set up employer account</a>
-                                </h2>
-                                <p>Start setting up an apprenticeship service account for an employer</p>
-                                <p>
-                                    <a href="https://providerregistrations.pp-pas.apprenticeships.education.gov.uk/10005310/registration/invitedemployers">View invited employers</a>
-                                </p>
-                            </div>
-                        </li>
-<!--                        <li class="dashboard-one">-->
-<!--                            <div class="box">-->
-<!--                                <h2 class="heading-medium">-->
-<!--                                    <a href="list.html">Record apprentice progress</a>-->
-<!--                                </h2>-->
-<!--                                <p>Record, view and edit an apprentice's progress</p>-->
-
-<!--                            </div>-->
-<!--                        </li>-->
-                    </ul>
-                      <div class="grid-row">
-                          <div class="column-two-thirds govuk-body">
-                              <h3 class="govuk-heading-m">Instructions for the apprentices' employer</h3>
-                              <p>Employers need to <a href="https://www.gov.uk/guidance/manage-apprenticeship-funds" target="_blank" title="Register to manage their apprenticeship funds">register to manage their apprenticeship funds</a>. </p>
-                              <p>Once they've registered they need to:</p>
-                              <ol class="list list-number">
-                                  <li>Add the PAYE schemes that the apprentices will be paid through.</li>
-                                  <li>Add the employer organisations that will contract with the training provider.</li>
-                                  <li>Accept agreements for their organisations so that they can spend levy funds.</li>
-                                  <li>Add apprentices to their account so they can authorise payments to you. </li>
-                              </ol>
-                          </div>
-                      </div>
-
-                      <div class="grid-row">
-                          <div class="column-two-thirds">
-                              <hr>
-                              <h3 class="govuk-heading-s">Coronavirus (COVID-19)</h3>
-                              <p>To find out how we can support you, including changes we're making to help your apprentices continue learning, <a href="https://www.gov.uk/government/publications/coronavirus-covid-19-apprenticeship-programme-response?es_c=7B651DDC6B6986102E8BBB7918A20DDF&amp;es_cl=53BFD9FD1669BCDAEBD12D5CDF1D9AB8&amp;es_id=9d%c2%a3o3C" target="_blank">read our updated guidance</a>.</p>
-                          </div>
-                      </div>
-
-                  </main>
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-three-quarters">
+      <h1 class="govuk-heading-l">EDUC8 TRAINING (ENGLAND) LIMITED
+        <span class="govuk-hint">UKPRN: 10005310</span>
+      </h1>
+      <div class="">
+        <main role="main" id="content">
+          <ul class="dashboard-nav">
+            <li class="dashboard-one">
+              <div class="box ">
+                <h2 class="heading-medium">
+                  <a href="https://securefunding.pp-pas.apprenticeships.education.gov.uk/10005310/reservations">Add new
+                    apprentices</a>
+                </h2>
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>upload a CSV file</li>
+                  <li>manually enter details</li>
+                  <li>create a new cohort</li>
+                  <li>add to an existing cohort</li>
+                </ul>
               </div>
+            </li>
+            <li class="dashboard-one">
+              <div class="box">
+                <h2 class="heading-medium">
+                  <a href="https://securefunding.pp-pas.apprenticeships.education.gov.uk/10005310/reservations">Get
+                    funding for non-levy employers</a>
+                </h2>
+                <p>Secure funding for a non-levy employer to train an apprentice.</p>
+              </div>
+            </li>
+            <li class="dashboard-one">
+              <div class="box">
+                <h2 class="heading-medium">
+                  <a href="https://approvals.pp-pas.apprenticeships.education.gov.uk/10005310/unapproved">Apprentice
+                    requests</a>
+                </h2>
+                <p>Review, edit, approve and add apprentices.</p>
+              </div>
+            </li>
+            <li class="dashboard-one">
+              <div class="box">
+                <h2 class="heading-medium">
+                  <a href="https://securefunding.pp-pas.apprenticeships.education.gov.uk/10005310/reservations/manage">Manage
+                    your funding reserved for non-levy employers</a>
+                </h2>
+                <p>Add apprentice information to funding you have already reserved for non-levy employers.</p>
+              </div>
+            </li>
+            <li class="dashboard-one">
+              <div class="box">
+                <h2 class="heading-medium">
+                  <a href="alert-column1.html">Manage your apprentices</a>
+                </h2>
+                <p>View and update approved apprentice records, and record apprentice progress.</p>
+              </div>
+            </li>
+            <li class="dashboard-one">
+              <div class="box">
+                <h2 class="heading-medium">
+                  <a href="https://recruit.pp-pas.apprenticeships.education.gov.uk/10005310">Recruit apprentices</a>
+                </h2>
+                <p>Create a vacancy to recruit an apprentice and manage applications.</p>
+              </div>
+            </li>
+            <li class="dashboard-one">
+              <div class="box">
+                <h2 class="heading-medium">
+                  <a
+                    href="https://find-employers.pp-pas.apprenticeships.education.gov.uk/10005310/find-apprenticeship-opportunities">Find
+                    employers that need a training provider</a>
+                </h2>
+                <p>View employers and share your contact details with them.</p>
+              </div>
+            </li>
+            <li class="dashboard-one">
+              <div class="box">
+                <h2 class="heading-medium">
+                  <a href="/10005310/agreements">Organisations and agreements</a>
+                </h2>
+                <p>Find and view organisations and their agreement IDs.</p>
+              </div>
+            </li>
+            <li class="dashboard-one">
+              <div class="box">
+                <h2 class="heading-medium">
+                  <a
+                    href="https://providerregistrations.pp-pas.apprenticeships.education.gov.uk/10005310/registration/startaccountsetup">Set
+                    up employer account</a>
+                </h2>
+                <p>Start setting up an apprenticeship service account for an employer</p>
+                <p>
+                  <a
+                    href="https://providerregistrations.pp-pas.apprenticeships.education.gov.uk/10005310/registration/invitedemployers">View
+                    invited employers</a>
+                </p>
+              </div>
+            </li>
+            <li class="dashboard-one">
+              <div class="box">
+                <h2 class="heading-medium">
+                  <a href="api">Developer APIs</a>
+                </h2>
+                <p>Integrate our APIs to create vacancies or track apprentice progress using your own systems. You can display adverts on multiple sites or automatically up date training records.</p>
+              </div>
+            </li>
+          </ul>
+          <div class="grid-row">
+            <div class="column-two-thirds govuk-body">
+              <h3 class="govuk-heading-m">Instructions for the apprentices' employer</h3>
+              <p>Employers need to <a href="https://www.gov.uk/guidance/manage-apprenticeship-funds" target="_blank"
+                  title="Register to manage their apprenticeship funds">register to manage their apprenticeship
+                  funds</a>. </p>
+              <p>Once they've registered they need to:</p>
+              <ol class="list list-number">
+                <li>Add the PAYE schemes that the apprentices will be paid through.</li>
+                <li>Add the employer organisations that will contract with the training provider.</li>
+                <li>Accept agreements for their organisations so that they can spend levy funds.</li>
+                <li>Add apprentices to their account so they can authorise payments to you. </li>
+              </ol>
+            </div>
           </div>
 
-     </div>
+          <div class="grid-row">
+            <div class="column-two-thirds">
+              <hr>
+              <h3 class="govuk-heading-s">Coronavirus (COVID-19)</h3>
+              <p>To find out how we can support you, including changes we're making to help your apprentices continue
+                learning, <a
+                  href="https://www.gov.uk/government/publications/coronavirus-covid-19-apprenticeship-programme-response?es_c=7B651DDC6B6986102E8BBB7918A20DDF&amp;es_cl=53BFD9FD1669BCDAEBD12D5CDF1D9AB8&amp;es_id=9d%c2%a3o3C"
+                  target="_blank">read our updated guidance</a>.</p>
+            </div>
+          </div>
 
-     </div>
+        </main>
+      </div>
+    </div>
+
+  </div>
+
+</div>
 
 {% endblock %}

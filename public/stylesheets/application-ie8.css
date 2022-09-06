@@ -8191,32 +8191,43 @@ p.small-text {
   text-align: center;
 }
 
-#service-title-section, #action-title-section {
+#service-title-section,
+#action-title-section {
   background: #f0f3f7;
   padding: 0 0 3em 0;
 }
-#service-title-section.account-page, #action-title-section.account-page {
+#service-title-section.account-page,
+#action-title-section.account-page {
   padding: 0;
 }
-#service-title-section.standard-details-page .govuk-back-link, #action-title-section.standard-details-page .govuk-back-link {
+#service-title-section.standard-details-page .govuk-back-link,
+#action-title-section.standard-details-page .govuk-back-link {
   margin-bottom: 5px;
 }
-#service-title-section.standard-details-page .govuk-heading-xl, #action-title-section.standard-details-page .govuk-heading-xl {
+#service-title-section.standard-details-page .govuk-heading-xl,
+#action-title-section.standard-details-page .govuk-heading-xl {
   margin-top: 0;
 }
-#service-title-section.landing-page, #action-title-section.landing-page {
+#service-title-section.landing-page,
+#action-title-section.landing-page {
   padding: 0;
 }
-#service-title-section.landing-page .govuk-heading-xl, #action-title-section.landing-page .govuk-heading-xl {
+#service-title-section.landing-page .govuk-heading-xl,
+#action-title-section.landing-page .govuk-heading-xl {
   margin: 0;
 }
-#service-title-section.landing-page .govuk-back-link, #action-title-section.landing-page .govuk-back-link {
+#service-title-section.landing-page .govuk-back-link,
+#action-title-section.landing-page .govuk-back-link {
   margin-bottom: 0;
 }
-#service-title-section.dashboard-page .govuk-heading-xl, #action-title-section.dashboard-page .govuk-heading-xl {
+#service-title-section.dashboard-page .govuk-heading-xl,
+#action-title-section.dashboard-page .govuk-heading-xl {
   position: relative;
 }
-#service-title-section.dashboard-page .govuk-heading-xl .download, #service-title-section.dashboard-page .govuk-heading-xl .share, #action-title-section.dashboard-page .govuk-heading-xl .download, #action-title-section.dashboard-page .govuk-heading-xl .share {
+#service-title-section.dashboard-page .govuk-heading-xl .download,
+#service-title-section.dashboard-page .govuk-heading-xl .share,
+#action-title-section.dashboard-page .govuk-heading-xl .download,
+#action-title-section.dashboard-page .govuk-heading-xl .share {
   font-size: 16px;
   padding-left: 1.5em;
   background: url("../images/download-blue.svg") no-repeat 0% 50%;
@@ -8224,49 +8235,61 @@ p.small-text {
   float: right;
   margin-top: 1.5em;
 }
-#service-title-section.dashboard-page .govuk-heading-xl .share, #action-title-section.dashboard-page .govuk-heading-xl .share {
+#service-title-section.dashboard-page .govuk-heading-xl .share,
+#action-title-section.dashboard-page .govuk-heading-xl .share {
   background: url("../images/share-blue.svg") no-repeat 0% 50%;
   background-size: contain;
 }
-#service-title-section .dashboard-title, #action-title-section .dashboard-title {
+#service-title-section .dashboard-title,
+#action-title-section .dashboard-title {
   margin-top: -0.25em;
   display: flex;
   align-items: center;
 }
-#service-title-section .dashboard-title .confirmation, #action-title-section .dashboard-title .confirmation {
+#service-title-section .dashboard-title .confirmation,
+#action-title-section .dashboard-title .confirmation {
   margin: 1.5em 0;
   background: #dfe6ee;
   padding: 1em;
   border-radius: 8px;
 }
-#service-title-section .dashboard-title .confirmation .govuk-heading-s, #action-title-section .dashboard-title .confirmation .govuk-heading-s {
+#service-title-section .dashboard-title .confirmation .govuk-heading-s,
+#action-title-section .dashboard-title .confirmation .govuk-heading-s {
   margin-bottom: 10px;
 }
-#service-title-section .dashboard-title .confirmation p, #action-title-section .dashboard-title .confirmation p {
+#service-title-section .dashboard-title .confirmation p,
+#action-title-section .dashboard-title .confirmation p {
   margin: 0 0 0.75em 0;
   font-size: 14px;
 }
-#service-title-section .dashboard-title .confirmation p .icon, #action-title-section .dashboard-title .confirmation p .icon {
+#service-title-section .dashboard-title .confirmation p .icon,
+#action-title-section .dashboard-title .confirmation p .icon {
   margin-left: 0;
   margin-right: 0.5em;
   border-radius: 50px;
 }
-#service-title-section .dashboard-title .confirmation p .icon.tick, #action-title-section .dashboard-title .confirmation p .icon.tick {
+#service-title-section .dashboard-title .confirmation p .icon.tick,
+#action-title-section .dashboard-title .confirmation p .icon.tick {
   background-size: 0.85em;
 }
-#service-title-section .dashboard-title .confirmation p .icon.cross, #action-title-section .dashboard-title .confirmation p .icon.cross {
+#service-title-section .dashboard-title .confirmation p .icon.cross,
+#action-title-section .dashboard-title .confirmation p .icon.cross {
   background-size: 0.65em;
 }
-#service-title-section .dashboard-title .confirmation p a, #action-title-section .dashboard-title .confirmation p a {
+#service-title-section .dashboard-title .confirmation p a,
+#action-title-section .dashboard-title .confirmation p a {
   float: right;
 }
-#service-title-section details, #action-title-section details {
+#service-title-section details,
+#action-title-section details {
   margin-bottom: 0;
 }
-#service-title-section details .govuk-details__text, #action-title-section details .govuk-details__text {
+#service-title-section details .govuk-details__text,
+#action-title-section details .govuk-details__text {
   padding-bottom: 0;
 }
-#service-title-section .change-employer, #action-title-section .change-employer {
+#service-title-section .change-employer,
+#action-title-section .change-employer {
   display: inline-block;
   width: auto;
   float: right;
@@ -8276,7 +8299,8 @@ p.small-text {
   margin: 5em 0 0 0;
   text-align: center;
 }
-#service-title-section .change-employer .govuk-button, #action-title-section .change-employer .govuk-button {
+#service-title-section .change-employer .govuk-button,
+#action-title-section .change-employer .govuk-button {
   margin: 0;
 }
 
@@ -8425,7 +8449,8 @@ hr.hr-sep {
   position: relative;
 }
 
-.hide-show-password, .hide-show-confirm {
+.hide-show-password,
+.hide-show-confirm {
   position: absolute;
   display: inline-block;
   width: 3em;
@@ -8436,10 +8461,14 @@ hr.hr-sep {
   line-height: 1;
   margin: 0;
 }
-.hide-show-password:hover, .hide-show-password:active, .hide-show-password:focus, .hide-show-confirm:hover, .hide-show-confirm:active, .hide-show-confirm:focus {
+.hide-show-password:hover, .hide-show-password:active, .hide-show-password:focus,
+.hide-show-confirm:hover,
+.hide-show-confirm:active,
+.hide-show-confirm:focus {
   cursor: pointer;
 }
-#hide-show-password, #hide-show-confirm {
+#hide-show-password,
+#hide-show-confirm {
   display: none;
 }
 
@@ -8457,7 +8486,11 @@ table.data-table tr th:first-of-type {
   width: 35%;
 }
 
-.check-to-confirm, .employer-confirmed, .provider-confirmed, .ready-to-sign, .confirmed-panel {
+.check-to-confirm,
+.employer-confirmed,
+.provider-confirmed,
+.ready-to-sign,
+.confirmed-panel {
   border-left: 10px solid #1d70b8;
   background: #f3f2f1;
   padding: 1em 3.5%;
@@ -8465,17 +8498,30 @@ table.data-table tr th:first-of-type {
   display: inline-block;
   width: 92%;
 }
-.check-to-confirm.govuk-form-group--error, .employer-confirmed.govuk-form-group--error, .provider-confirmed.govuk-form-group--error, .ready-to-sign.govuk-form-group--error, .confirmed-panel.govuk-form-group--error {
+.check-to-confirm.govuk-form-group--error,
+.employer-confirmed.govuk-form-group--error,
+.provider-confirmed.govuk-form-group--error,
+.ready-to-sign.govuk-form-group--error,
+.confirmed-panel.govuk-form-group--error {
   border-left: 10px solid #d4351c;
 }
 
-.employer-confirmed, .provider-confirmed, .ready-to-sign, .confirmed-panel {
+.employer-confirmed,
+.provider-confirmed,
+.ready-to-sign,
+.confirmed-panel {
   border-left: 10px solid #00703c;
 }
-.employer-confirmed .govuk-warning-text, .provider-confirmed .govuk-warning-text, .ready-to-sign .govuk-warning-text, .confirmed-panel .govuk-warning-text {
+.employer-confirmed .govuk-warning-text,
+.provider-confirmed .govuk-warning-text,
+.ready-to-sign .govuk-warning-text,
+.confirmed-panel .govuk-warning-text {
   margin: 0;
 }
-.employer-confirmed .govuk-warning-text .govuk-confirm__icon, .provider-confirmed .govuk-warning-text .govuk-confirm__icon, .ready-to-sign .govuk-warning-text .govuk-confirm__icon, .confirmed-panel .govuk-warning-text .govuk-confirm__icon {
+.employer-confirmed .govuk-warning-text .govuk-confirm__icon,
+.provider-confirmed .govuk-warning-text .govuk-confirm__icon,
+.ready-to-sign .govuk-warning-text .govuk-confirm__icon,
+.confirmed-panel .govuk-warning-text .govuk-confirm__icon {
   display: inline-block;
   width: 35px;
   height: 35px;
@@ -8484,11 +8530,15 @@ table.data-table tr th:first-of-type {
   background: url("../images/tick-green.svg") no-repeat 50% 50%;
   background-size: contain;
 }
-.employer-confirmed .govuk-button, .provider-confirmed .govuk-button, .ready-to-sign .govuk-button, .confirmed-panel .govuk-button {
+.employer-confirmed .govuk-button,
+.provider-confirmed .govuk-button,
+.ready-to-sign .govuk-button,
+.confirmed-panel .govuk-button {
   margin: 0.5em 0 0.25em 0;
 }
 
-#cs-signed .govuk-form-group, #cs-agreed .govuk-form-group {
+#cs-signed .govuk-form-group,
+#cs-agreed .govuk-form-group {
   margin-top: 0;
 }
 
@@ -8496,12 +8546,14 @@ table.data-table tr th:first-of-type {
   margin-top: 0;
 }
 
-.key-policies .govuk-checkboxes__item, .agreements .govuk-checkboxes__item {
+.key-policies .govuk-checkboxes__item,
+.agreements .govuk-checkboxes__item {
   margin-top: 1em;
   padding-bottom: 1em;
   border-bottom: 1px solid #b1b4b6;
 }
-.key-policies .govuk-checkboxes__item:first-of-type, .agreements .govuk-checkboxes__item:first-of-type {
+.key-policies .govuk-checkboxes__item:first-of-type,
+.agreements .govuk-checkboxes__item:first-of-type {
   padding-top: 0;
 }
 
@@ -8721,7 +8773,8 @@ table.data-table tr th:first-of-type {
   padding: 7px 15px 7px 0;
   font-size: 15px;
 }
-.employer-overide .das-table--condensed .govuk-table__header, .employer-overide .das-table--condensed .govuk-table__cell {
+.employer-overide .das-table--condensed .govuk-table__header,
+.employer-overide .das-table--condensed .govuk-table__cell {
   padding: 7px 15px 7px 0;
   font-size: 15px;
 }
@@ -8775,7 +8828,8 @@ table.data-table tr th:first-of-type {
   position: relative;
   padding-left: 18px;
 }
-.employer-overide .das-table__sort:before, .employer-overide .das-table__sort:after {
+.employer-overide .das-table__sort:before,
+.employer-overide .das-table__sort:after {
   position: absolute;
 }
 .employer-overide .das-table__sort:visited {
@@ -8814,4 +8868,22 @@ table.data-table tr th:first-of-type {
   margin-bottom: 20px;
   padding: 20px 20px 0 20px;
   border: 5px solid #532498;
+}
+
+.das-table-cell-width-15 {
+  width: 15%;
+}
+
+.das-button--inline-link {
+  color: #1d70b8;
+  text-decoration: underline;
+  font-size: inherit;
+  font-weight: inherit;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: left;
+  display: inline;
 }

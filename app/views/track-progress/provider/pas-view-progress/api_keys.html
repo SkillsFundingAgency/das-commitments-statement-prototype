@@ -1,0 +1,112 @@
+{% extends "layout-landing-provider.html" %}
+
+{% block pageTitle %}
+Get started with our APIs
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../../provider/includes/navigation-provider-rp.html" %}
+
+<div id="service-title-section" class="landing-page ">
+
+  <div class="govuk-width-container">
+  </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+
+      <main class="govuk-main-wrapper " id="main-content" role="main">
+
+          <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">API list</h1>
+
+            <table class="govuk-table">
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th class="govuk-table__header das-table-cell-width-85" scope="col"> API name </th>
+                  <th class="govuk-table__header das-table-cell-width-15" scope="col"> Action </th>
+                </tr>
+              </thead>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    Track Apprenticeship Progress API
+                    <span class="govuk-caption-m"></span>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <form method="post" action="/10001259/subscriptions/TrackProgressOuterApi/create">
+                      <button id="get-key-for-TrackProgressOuterApi" type="submit" draggable="false"
+                        class="das-button--inline-link">
+                        Get key <span class="govuk-visually-hidden">for the Track Apprenticeship Progress API</span>
+                      </button>
+                      <input name="__RequestVerificationToken" type="hidden"
+                        value="CfDJ8MGlgOl-I-5MpaJ74kI230lnuPcaYrJZVmL9Mc0PzUqZRdEPJPBC2UC0Z803q5OTndpD1GhSGRa6VH7M6kgYvvU3aeqUfBlZK7dFcn1wYPriSU7-dQPw3O0cPH-wwILXd0wzp7RnyuK3sLLLaZ1j0559LjGFy_9QxTcXu6fu3UUrHOxPnjIeIjesBMGDhXjcPA" />
+                    </form>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    Recruitment API
+                    <span class="govuk-caption-m">Create an advert on Find an apprenticeship using your existing
+                      systems.</span>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <form method="post" action="/10001259/subscriptions/VacanciesManageOuterApi/create">
+                      <button id="get-key-for-VacanciesManageOuterApi" type="submit" draggable="false"
+                        class="das-button--inline-link">
+                        Get key <span class="govuk-visually-hidden">for the Recruitment API</span>
+                      </button>
+                      <input name="__RequestVerificationToken" type="hidden"
+                        value="CfDJ8MGlgOl-I-5MpaJ74kI230lnuPcaYrJZVmL9Mc0PzUqZRdEPJPBC2UC0Z803q5OTndpD1GhSGRa6VH7M6kgYvvU3aeqUfBlZK7dFcn1wYPriSU7-dQPw3O0cPH-wwILXd0wzp7RnyuK3sLLLaZ1j0559LjGFy_9QxTcXu6fu3UUrHOxPnjIeIjesBMGDhXjcPA" />
+                    </form>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    Recruitment API Sandbox
+                    <span class="govuk-caption-m">Test creating an advert on Find an apprenticeship using your existing
+                      systems.</span>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <form method="post" action="/10001259/subscriptions/VacanciesManageOuterApi-Sandbox/create">
+                      <button id="get-key-for-VacanciesManageOuterApi-Sandbox" type="submit" draggable="false"
+                        class="das-button--inline-link">
+                        Get key <span class="govuk-visually-hidden">for the Recruitment API Sandbox</span>
+                      </button>
+                      <input name="__RequestVerificationToken" type="hidden"
+                        value="CfDJ8MGlgOl-I-5MpaJ74kI230lnuPcaYrJZVmL9Mc0PzUqZRdEPJPBC2UC0Z803q5OTndpD1GhSGRa6VH7M6kgYvvU3aeqUfBlZK7dFcn1wYPriSU7-dQPw3O0cPH-wwILXd0wzp7RnyuK3sLLLaZ1j0559LjGFy_9QxTcXu6fu3UUrHOxPnjIeIjesBMGDhXjcPA" />
+                    </form>
+                  </td>
+                </tr>
+                <tr class="govuk-table__row">
+                  <td class="govuk-table__cell">
+                    Display advert API
+                    <span class="govuk-caption-m">Display recruitment adverts from Find an apprenticeship.</span>
+                  </td>
+                  <td class="govuk-table__cell">
+                    <form method="post" action="/10001259/subscriptions/VacanciesOuterApi/create">
+                      <button id="get-key-for-VacanciesOuterApi" type="submit" draggable="false"
+                        class="das-button--inline-link">
+                        Get key <span class="govuk-visually-hidden">for the Display advert API</span>
+                      </button>
+                      <input name="__RequestVerificationToken" type="hidden"
+                        value="CfDJ8MGlgOl-I-5MpaJ74kI230lnuPcaYrJZVmL9Mc0PzUqZRdEPJPBC2UC0Z803q5OTndpD1GhSGRa6VH7M6kgYvvU3aeqUfBlZK7dFcn1wYPriSU7-dQPw3O0cPH-wwILXd0wzp7RnyuK3sLLLaZ1j0559LjGFy_9QxTcXu6fu3UUrHOxPnjIeIjesBMGDhXjcPA" />
+                    </form>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+      </main>
+
+  </div>
+
+</div>
+
+{% endblock %}
