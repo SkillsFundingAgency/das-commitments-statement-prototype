@@ -1,0 +1,102 @@
+{% extends "layout-landing.html" %}
+
+{% block pageTitle %}
+My Apprenticeship
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/navigation-confirmed-b.html" %}
+
+
+<div id="service-title-section" class="landing-page ">
+
+  <div class="govuk-width-container">
+  </div>
+
+</div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">My apprenticeship
+        <span class="govuk-caption-m">Game programmer</span>
+      </h1>
+
+      <table class="govuk-table data-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Current employer</th>
+            <td class="govuk-table__cell">Electronic Arts</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Training provider</th>
+            <td class="govuk-table__cell">Guildford Training Ltd.</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Level</th>
+            <td class="govuk-table__cell">Level 4 </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <div>Planned training start date
+
+              </div>
+            </th>
+            <td class="govuk-table__cell"> January 2021</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              Planned training end date
+            </th>
+            <td class="govuk-table__cell">January 2023<br /></td>
+          </tr>
+
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <div>Delivery model
+
+              </div>
+            </th>
+            <td class="govuk-table__cell">Portable flexi-job</td>
+          </tr>
+
+        </tbody>
+      </table>
+      <hr class="govuk-section-break govuk-section-break--l">
+
+      <ul class="dashboard-nav">
+
+        <li class="dashboard-one">
+          <a href="../3-roles/1-apprentice-role-playback.html">
+            <h2 class="govuk-heading-m">Roles and responsibilities</h2>
+            <p>You can read through the roles and responsibilities for you, your employer and your training provider.
+            </p>
+          </a>
+        </li>
+        <li class="dashboard-one">
+          <a href="../1-apprenticeship-details/1-apprenticeship-training-new.html">
+            <h2 class="govuk-heading-m">How your apprenticeship will be delivered</h2>
+            <p>View details of how your apprenticeship will be delivered.</p>
+          </a>
+        </li>
+      </ul>
+
+      {% include "../includes/confirmations-and-changes-portable-filter-timeline-c.html" %}
+
+    </div>
+
+  </div>
+
+</div>
+<div class="help-modal-container govuk-visually-hidden">
+  <div class="help-modal">
+  </div>
+</div>
+{% endblock %}
