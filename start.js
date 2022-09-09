@@ -52,6 +52,8 @@ function createSessionDataDefaults () {
 }
 
 (async () => {
+
+console.log('createSessionDataDefaults');
   createSessionDataDefaults()
   await collectDataUsage()
   await buildWatchAndServe()
