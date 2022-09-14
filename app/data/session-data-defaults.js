@@ -22,7 +22,9 @@ module.exports = {
   // Insert values here
 
 }
-
+/* 
+// this is called twice as the kit initialises, but doesn't appear to be used in the prototype
+// removed 13/09/2022
 require("request").get("https://www.instituteforapprenticeships.org/api/apprenticeshipstandards", (error, response, body) => {
     var _apiData = JSON.parse(body),
         _versionTypes = {}
@@ -32,3 +34,4 @@ require("request").get("https://www.instituteforapprenticeships.org/api/apprenti
     });
     console.log(_versionTypes)
 });
+ */
