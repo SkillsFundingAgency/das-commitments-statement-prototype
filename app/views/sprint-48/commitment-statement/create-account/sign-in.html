@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-     GOV.UK Prototype Kit
+GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -11,42 +11,41 @@
 {% block content %}
 <div class="govuk-width-container">
 
-     <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">Sign in to My apprenticeship</h1>
+      <form method="post" action="create-login" class="check-answers-page">
 
-               <h1 class="govuk-heading-l">Sign in to My apprenticeship</h1>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="apprentice-email">Email address</label>
+          <input class="govuk-input govuk-input--width-20" id="apprentice-email" name="apprentice-email" type="text">
+        </div>
 
-               <form method="post" action="enter-code" class="check-answers-page">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="apprentice-password">Password</label>
+          <div class="password-wrapper">
+            <input class="govuk-input govuk-input--width-20" id="apprentice-password" name="apprentice-password"
+              type="password">
+            <input type="checkbox" onclick="showPassword()" id="hide-show-password">
+            <label class="hide-show-password" for="hide-show-password">
 
-                    <div class="govuk-form-group">
-                         <label class="govuk-label" for="apprentice-email">Email address</label>
-                         <input class="govuk-input govuk-input--width-20" id="apprentice-email" name="apprentice-email" type="text">
-                    </div>
-
-                    <div class="govuk-form-group">
-                         <label class="govuk-label" for="apprentice-password">Password</label>
-                         <div class="password-wrapper">
-                              <input class="govuk-input govuk-input--width-20" id="apprentice-password" name="apprentice-password" type="password">
-                              <input type="checkbox" onclick="showPassword()" id="hide-show-password">
-                              <label class="hide-show-password" for="hide-show-password">
-
-                              </label>
-                         </div>
-                    </div>
-
-                    {% from "govuk/components/button/macro.njk" import govukButton %}
-
-                    {{ govukButton({
-                         text: "Sign in",
-                         href: ""
-                    }) }}
-
-               </form>
-               <h2 class="govuk-heading-s">Problems signing in</h2>
-                   <a href="" class="" data-module="govuk-button" id="">I have forgotten my password</a><br />
-
+            </label>
           </div>
-     </div>
+        </div>
+
+        {% from "govuk/components/button/macro.njk" import govukButton %}
+
+        {{ govukButton({
+        text: "Sign in",
+        href: ""
+        }) }}
+
+      </form>
+      <h2 class="govuk-heading-s">Problems signing in</h2>
+      <a href="" class="" data-module="govuk-button" id="">I have forgotten my password</a><br />
+
+    </div>
+  </div>
 
 </div>
 {% endblock %}
