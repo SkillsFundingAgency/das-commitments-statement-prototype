@@ -9,3 +9,5 @@ $(document).ready(function () {
   window.GOVUKFrontend.initAll()
 })
 
+// todo - handle this is the template
+$('#service-title-section, #action-title-section').parent().addClass('title-overide');
