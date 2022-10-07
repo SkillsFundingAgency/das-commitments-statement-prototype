@@ -8131,7 +8131,7 @@ h1 span {
 }
 
 #main-content {
-  padding-top: 0;
+  /*   padding-top: 0; */
 }
 #main-content .govuk-back-link {
   margin-bottom: 3em;
@@ -8886,4 +8886,57 @@ table.data-table tr th:first-of-type {
   cursor: pointer;
   text-align: left;
   display: inline;
+}
+
+.apprentice-details {
+  width: 100%;
+}
+
+.govuk-label--show-hide {
+  cursor: pointer;
+  letter-spacing: -0.2px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.das-user-navigation__link {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid transparent;
+}
+
+.das-user-navigation__list-item {
+  float: left;
+  position: relative;
+}
+
+.das-account-header {
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.31579;
+}
+
+.das-account-header {
+  font-family: "GDS Transport", arial, sans-serif;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.govuk-main-wrapper {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.homepage .dashboard__status-tag {
+  position: relative;
+  top: -5px;
 }
