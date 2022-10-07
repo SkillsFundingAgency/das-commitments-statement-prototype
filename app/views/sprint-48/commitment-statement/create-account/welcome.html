@@ -11,70 +11,64 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-<div class="govuk-width-container ">
-  <main class="govuk-main-wrapper--autosspacing homepage" id="main-content" role="main">
-    <div id="" class="dashboard-page">
-      <div class="govuk-width-container">
-        <div class="govuk-grid-row dashboard-title">
-          <div class="govuk-grid-column-full">
-            <h1 class="govuk-heading-l">
-              Welcome, Mason Stone
-              <span class="govuk-caption-m">Stonemason</span>
-            </h1>
-          </div>
-        </div>
+<div id="" class="dashboard-page">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row dashboard-title">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">
+          Welcome, Mason Stone
+          <span class="govuk-caption-m">Stonemason</span>
+        </h1>
       </div>
     </div>
+  </div>
+</div>
 
 
-    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
-      aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-      <div class="govuk-notification-banner__header">
-        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-          Success
-        </h2>
-      </div>
-      <div class="govuk-notification-banner__content">
-        <h3 class="govuk-notification-banner__heading">
-          You have created an account and we have found your apprenticeship.
-        </h3>
-        <p class="govuk-body">You now need to <a href="#">confirm
-            your apprenticeship details</a></p>
-      </div>
+<div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+  aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+      You have created an account and we have found your apprenticeship.
+    </h3>
+    <p class="govuk-body">You now need to <a href="#">confirm
+        your apprenticeship details</a></p>
+  </div>
+</div>
+
+
+
+<div class="govuk-width-container" id="dashboard-section">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <ul class="dashboard-nav dashboard-li">
+        <li>
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link govuk-link--no-visited-state" href="#">
+              Confirm my apprenticeship details
+            </a>
+          </h2>
+          <strong class="dashboard__status-tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+          <p>Confirm details of your employer, training provider and apprenticeship.</p>
+
+        </li>
+
+
+        <li>
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link govuk-link--no-visited-state" model="Model" href="/HelpAndSupport">
+              Help and support
+            </a>
+          </h2>
+          <p>Who to contact if you have questions or concerns during your apprenticeship.</p>
+        </li>
+      </ul>
     </div>
-
-
-
-    <div class="govuk-width-container" id="dashboard-section">
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <ul class="dashboard-nav dashboard-li">
-            <li>
-              <h2 class="govuk-heading-m">
-                <a class="govuk-link govuk-link--no-visited-state"
-                  href="#">
-                  Confirm my apprenticeship details
-                </a>
-              </h2>
-              <strong class="dashboard__status-tag govuk-tag govuk-tag--yellow">Incomplete</strong>
-              <p>Confirm details of your employer, training provider and apprenticeship.</p>
-
-            </li>
-
-
-            <li>
-              <h2 class="govuk-heading-m">
-                <a class="govuk-link govuk-link--no-visited-state" model="Model" href="/HelpAndSupport">
-                  Help and support
-                </a>
-              </h2>
-              <p>Who to contact if you have questions or concerns during your apprenticeship.</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </main>
-  </main>
+  </div>
 </div>
 {% endblock %}

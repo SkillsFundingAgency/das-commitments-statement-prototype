@@ -11172,10 +11172,15 @@ h1 span {
 }
 
 #main-content {
-  /*   padding-top: 0; */
+  padding-top: 0;
 }
 #main-content .govuk-back-link {
   margin-bottom: 3em;
+}
+
+#main-content.version1 {
+  padding-top: 40px;
+  /* restore default GDS spacing w/o breaking all the other pages */
 }
 
 .no-bottom-margin {

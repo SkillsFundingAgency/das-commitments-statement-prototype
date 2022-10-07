@@ -9,79 +9,84 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block content %}
-<div class="govuk-width-container ">
-  <main class="govuk-main-wrapper " id="main-content" role="main">
-      
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">Create My apprenticeship account</h1>
+    <h1 class="govuk-heading-l">Create My apprenticeship account</h1>
 
-          <p>
-              Enter your name and date of birth to complete the set-up of your account. You can then confirm your apprenticeship details.
-          </p>
+    <p>
+      Enter your name and date of birth to complete the set-up of your account. You can then confirm your apprenticeship
+      details.
+    </p>
 
-      
 
-      <h2 class="govuk-heading-m">Account details</h2>
 
-      <form method="post" class="check-answers-page" id="identity-assurance" action="terms-of-use">
+    <h2 class="govuk-heading-m">Account details</h2>
 
-          <div id="FirstNameFieldRow" class="govuk-form-group">
-              <div validation-row-status>
-                  <label class="govuk-label govuk-label--s" for="FirstName">First name</label>
-                  <span class="govuk-error-message field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
-                  <input class="govuk-input govuk-input--width-20" type="text" id="FirstName" name="FirstName" value="">
+    <form method="post" class="check-answers-page" id="identity-assurance" action="terms-of-use">
+
+      <div id="FirstNameFieldRow" class="govuk-form-group">
+        <div validation-row-status>
+          <label class="govuk-label govuk-label--s" for="FirstName">First name</label>
+          <span class="govuk-error-message field-validation-valid" data-valmsg-for="FirstName"
+            data-valmsg-replace="true"></span>
+          <input class="govuk-input govuk-input--width-20" type="text" id="FirstName" name="FirstName" value="">
+        </div>
+      </div>
+
+      <div id="LastNameFieldRow" class="govuk-form-group">
+        <div validation-row-status>
+          <label class="govuk-label govuk-label--s" for="LastName">Last name</label>
+          <span class="govuk-error-message field-validation-valid" data-valmsg-for="LastName"
+            data-valmsg-replace="true"></span>
+          <input class="govuk-input govuk-input--width-20" type="text" id="LastName" name="LastName" value="">
+        </div>
+      </div>
+
+      <div id="DateOfBirth" class="govuk-form-group">
+        <div validation-row-status>
+          <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint date-of-birth-error">
+            <label class="govuk-label govuk-label--s" for="DateOfBirth">
+              Date of birth
+            </label>
+            <div id="date-of-birth-hint" class="govuk-hint">
+              For example, 12 11 2007
+            </div>
+            <span class="govuk-error-message field-validation-valid" data-valmsg-for="DateOfBirth"
+              data-valmsg-replace="true"></span>
+            <div class="govuk-date-input" id="date-of-birth">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label govuk-date-input__label" for="DateOfBirth_Day">Day</label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2 length-limit" type="text"
+                    autocomplete="bday-day" pattern="[0-9]*" inputmode="numeric" maxlength="2" min="1" max="31"
+                    id="DateOfBirth_Day" name="DateOfBirth.Day" value="">
+                </div>
               </div>
-          </div>
-
-          <div id="LastNameFieldRow" class="govuk-form-group">
-              <div validation-row-status>
-                  <label class="govuk-label govuk-label--s" for="LastName">Last name</label>
-                  <span class="govuk-error-message field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
-                  <input class="govuk-input govuk-input--width-20" type="text" id="LastName" name="LastName" value="">
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label govuk-date-input__label" for="DateOfBirth_Month">Month</label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-2 length-limit" type="text"
+                    autocomplete="bday-month" pattern="[0-9]*" inputmode="numeric" maxlength="2" min="1" max="12"
+                    id="DateOfBirth_Month" name="DateOfBirth.Month" value="">
+                </div>
               </div>
-          </div>
-
-          <div id="DateOfBirth" class="govuk-form-group">
-              <div validation-row-status>
-                  <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint date-of-birth-error">
-                      <label class="govuk-label govuk-label--s" for="DateOfBirth">
-                          Date of birth
-                      </label>
-                      <div id="date-of-birth-hint" class="govuk-hint">
-                          For example, 12 11 2007
-                      </div>
-                      <span class="govuk-error-message field-validation-valid" data-valmsg-for="DateOfBirth" data-valmsg-replace="true"></span>
-                      <div class="govuk-date-input" id="date-of-birth">
-                          <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                  <label class="govuk-label govuk-label govuk-date-input__label" for="DateOfBirth_Day">Day</label>
-                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2 length-limit" type="text" autocomplete="bday-day" pattern="[0-9]*" inputmode="numeric" maxlength="2" min="1" max="31" id="DateOfBirth_Day" name="DateOfBirth.Day" value="">
-                              </div>
-                          </div>
-                          <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                  <label class="govuk-label govuk-label govuk-date-input__label" for="DateOfBirth_Month">Month</label>
-                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2 length-limit" type="text" autocomplete="bday-month" pattern="[0-9]*" inputmode="numeric" maxlength="2" min="1" max="12" id="DateOfBirth_Month" name="DateOfBirth.Month" value="">
-                              </div>
-                          </div>
-                          <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                  <label class="govuk-label govuk-label govuk-date-input__label" for="DateOfBirth_Year">Year</label>
-                                  <input class="govuk-input govuk-date-input__input govuk-input--width-4 length-limit" type="text" autocomplete="bday-year" pattern="[0-9]*" inputmode="numeric" maxlength="4" min="1900" max="9999" id="DateOfBirth_Year" name="DateOfBirth.Year" value="">
-                              </div>
-                          </div>
-                      </div>
-                  </fieldset>
+              <div class="govuk-date-input__item">
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-label govuk-date-input__label" for="DateOfBirth_Year">Year</label>
+                  <input class="govuk-input govuk-date-input__input govuk-input--width-4 length-limit" type="text"
+                    autocomplete="bday-year" pattern="[0-9]*" inputmode="numeric" maxlength="4" min="1900" max="9999"
+                    id="DateOfBirth_Year" name="DateOfBirth.Year" value="">
+                </div>
               </div>
-          </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
 
-          <button class="govuk-button" data-module="govuk-button" id="identity-assurance-btn">Continue</button>
-</form>
+      <button class="govuk-button" data-module="govuk-button" id="identity-assurance-btn">Continue</button>
+    </form>
   </div>
 </div>
 
-  </main>
-</div>
 {% endblock %}

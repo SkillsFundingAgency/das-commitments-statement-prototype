@@ -4,59 +4,61 @@
 Sign in to My apprenticeship
 {% endblock %}
 
-{% block beforeContent %}
-<p>&nbsp;</p>
-{% endblock %}
 
 {% block content %}
-<main class="govuk-main-wrapper " id="main-content" role="main">
-  <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-          <h1 class="govuk-heading-l">Sign in to My apprenticeship</h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Sign in to My apprenticeship</h1>
 
-          <form action="sign-in" method="post">
+    <form action="sign-in" method="post">
 
-              <div class="govuk-form-group">
-                  <label class="govuk-label govuk-label--m" for="Username">
-                      Email address
-                  </label>
-                  <input class="govuk-input govuk-input--width-20" type="text" autocomplete="username" data-val="true" data-val-required="Enter an email address" id="Username" name="Username" value="">
-              </div>
-
-              <div class="govuk-form-group">
-                  <label class="govuk-label govuk-label--m" for="Password">
-                      Password
-                  </label>
-                  <div class="show-password-container">
-                      <input class="govuk-input govuk-input--width-20 show-hide-password-input" type="password" autocomplete="current-password" data-show-hide="password" data-val="true" data-val-required="Enter a password" id="Password" name="Password" />
-                      <div class="show-password-control-container">
-                          <input type="checkbox" class="show-hide-checkbox" name="show-hide" id="show-hide" />
-                          <label for="show-hide" class="govuk-label govuk-label--show-hide"><span class="govuk-label__show-hide-text">show</span><span class="govuk-visually-hidden"> password</span></label>
-                      </div>
-                  </div>
-              </div>
-
-
-              <div class="govuk-inset-text">
-                  By continuing you confirm you have:
-                  <ul class="govuk-list govuk-list--bullet">
-                      <li>read the service <a class="govuk-link" target="_blank" rel="noopener noreferrer" href="/Privacy">privacy statement</a></li>
-                  </ul>
-              </div>
-              <button type="submit" class="govuk-button">
-                  Sign in
-              </button>
-              <p class="govuk-body">
-                  You can
-                  <a class="govuk-link" href="/ForgottenPassword/">change your password</a>
-                  if you've forgotten it.
-              </p>
-              <p class="govuk-body">
-                  <a class="govuk-link" href="create-login">Create an account</a>
-                  if you do not have one.
-              </p>
-        </form>
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="Username">
+          Email address
+        </label>
+        <input class="govuk-input govuk-input--width-20" type="text" autocomplete="username" data-val="true"
+          data-val-required="Enter an email address" id="Username" name="Username" value="">
       </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label govuk-label--m" for="Password">
+          Password
+        </label>
+        <div class="show-password-container">
+          <input class="govuk-input govuk-input--width-20 show-hide-password-input" type="password"
+            autocomplete="current-password" data-show-hide="password" data-val="true"
+            data-val-required="Enter a password" id="Password" name="Password" />
+          <div class="show-password-control-container">
+            <input type="checkbox" class="show-hide-checkbox" name="show-hide" id="show-hide" />
+            <label for="show-hide" class="govuk-label govuk-label--show-hide"><span
+                class="govuk-label__show-hide-text">show</span><span class="govuk-visually-hidden">
+                password</span></label>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="govuk-inset-text">
+        By continuing you confirm you have:
+        <ul class="govuk-list govuk-list--bullet">
+          <li>read the service <a class="govuk-link" target="_blank" rel="noopener noreferrer" href="/Privacy">privacy
+              statement</a></li>
+        </ul>
+      </div>
+      <button type="submit" class="govuk-button">
+        Sign in
+      </button>
+      <p class="govuk-body">
+        You can
+        <a class="govuk-link" href="/ForgottenPassword/">change your password</a>
+        if you've forgotten it.
+      </p>
+      <p class="govuk-body">
+        <a class="govuk-link" href="create-login">Create an account</a>
+        if you do not have one.
+      </p>
+    </form>
   </div>
-</main>
+</div>
+
 {% endblock %}
