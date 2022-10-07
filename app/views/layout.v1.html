@@ -51,6 +51,15 @@
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing version1") %}
 
+{% block main %}
+<div class="{{ containerClasses }}">
+  {% block beforeContent %}{% endblock %}
+  <main class="govuk-main-wrapper {{ mainClasses }}" id="main-content" role="main"{% if mainLang %} lang="{{ mainLang }}"{% endif %}>
+    {% block content %}{% endblock %}
+  </main>
+</div>
+{% endblock %}
+
 {% if useAutoStoreData %}
   {% block footer %}
     {{ govukFooter({

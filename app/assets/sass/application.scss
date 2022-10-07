@@ -24,6 +24,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "patterns/email";
 @import "patterns/dashboard";
 @import "patterns/navigation";
+@import "patterns/primary_nav";
 @import "patterns/tabs";
 @import "patterns/standard-details";
 @import "patterns/landing-page";
@@ -979,4 +980,20 @@ table {
 .homepage .dashboard__status-tag {
   position: relative;
   top: -5px;
+}
+/* 
+.app-navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.app-navigation__list-item {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 10px 0;
+  border: none;
+} */
+
+.app-user-header {
+  background-color: #1d70b8;
 }
