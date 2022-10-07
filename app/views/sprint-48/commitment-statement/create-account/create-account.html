@@ -1,11 +1,13 @@
 {% extends "layout.v1.html" %}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Create My apprenticeship account
 {% endblock %}
 
+{% set headerText="Welcome" %}
 {% block beforeContent %}
 {% include "../includes/account-header.html" %}
+{% include "includes/beta-phase-banner.html" %}
 {% endblock %}
 
 {% block content %}

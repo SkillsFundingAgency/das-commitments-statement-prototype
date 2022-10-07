@@ -5,7 +5,9 @@
 {{ pageTitle }}
 {% endblock %}
 
-{% from "govuk/components/button/macro.njk" import govukButton %}
+{% block beforeContent %}
+{% include "includes/beta-phase-banner.html" %}
+{% endblock %}
 
 {% block content %}
 <div class="govuk-grid-row">

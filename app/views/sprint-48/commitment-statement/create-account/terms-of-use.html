@@ -1,11 +1,13 @@
 {% extends "layout.v1.html" %}
 
 {% block pageTitle %}
-GOV.UK Prototype Kit
+Terms of use
 {% endblock %}
 
+{% set headerText="Mason Stone" %}
 {% block beforeContent %}
-
+{% include "../includes/account-header.html" %}
+{% include "includes/beta-phase-banner.html" %}
 {% endblock %}
 
 {% block content %}
