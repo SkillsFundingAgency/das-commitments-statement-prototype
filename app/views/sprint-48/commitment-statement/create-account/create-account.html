@@ -5,86 +5,83 @@ GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
+{% include "../includes/account-header.html" %}
 {% endblock %}
 
 {% block content %}
-<div class="govuk-width-container">
+<div class="govuk-width-container ">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+      
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h1 class="govuk-heading-l">Create a My apprenticeship account</h1>
-      <p class="govuk-body">Creating an account will give you access so you can confirm your apprenticeship.</p>
+      <h1 class="govuk-heading-l">Create My apprenticeship account</h1>
 
-      <form method="post" action="terms-of-use" class="check-answers-page">
-        <h2 class="govuk-heading-m">Account details</h2>
+          <p>
+              Enter your name and date of birth to complete the set-up of your account. You can then confirm your apprenticeship details.
+          </p>
 
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="full-name">
-            First name
-          </label>
-          <input class="govuk-input govuk-!-width-three-quarters" id="full-name" name="full-name" value="" type="text"
-            spellcheck="false" autocomplete="name">
-        </div>
+      
 
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="full-name">
-            Last Name
-          </label>
-          <input class="govuk-input govuk-!-width-three-quarters" id="full-name" name="full-name" value="" type="text"
-            spellcheck="false" autocomplete="name">
-        </div>
+      <h2 class="govuk-heading-m">Account details</h2>
 
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-            <legend class="govuk-fieldset__legend">
-              Date of birth
-            </legend>
-            <div id="passport-issued-hint" class="govuk-hint">
-              For example, 12 11 2007
-            </div>
-            <div class="govuk-date-input" id="passport-issued">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
-                    Day
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day"
-                    name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric">
-                </div>
+      <form method="post" class="check-answers-page" id="identity-assurance" action="terms-of-use">
+
+          <div id="FirstNameFieldRow" class="govuk-form-group">
+              <div validation-row-status>
+                  <label class="govuk-label govuk-label--s" for="FirstName">First name</label>
+                  <span class="govuk-error-message field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+                  <input class="govuk-input govuk-input--width-20" type="text" id="FirstName" name="FirstName" value="">
               </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
-                    Month
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month"
-                    name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric">
-                </div>
+          </div>
+
+          <div id="LastNameFieldRow" class="govuk-form-group">
+              <div validation-row-status>
+                  <label class="govuk-label govuk-label--s" for="LastName">Last name</label>
+                  <span class="govuk-error-message field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+                  <input class="govuk-input govuk-input--width-20" type="text" id="LastName" name="LastName" value="">
               </div>
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
-                    Year
-                  </label>
-                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year"
-                    name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric">
-                </div>
+          </div>
+
+          <div id="DateOfBirth" class="govuk-form-group">
+              <div validation-row-status>
+                  <fieldset class="govuk-fieldset" role="group" aria-describedby="date-of-birth-hint date-of-birth-error">
+                      <label class="govuk-label govuk-label--s" for="DateOfBirth">
+                          Date of birth
+                      </label>
+                      <div id="date-of-birth-hint" class="govuk-hint">
+                          For example, 12 11 2007
+                      </div>
+                      <span class="govuk-error-message field-validation-valid" data-valmsg-for="DateOfBirth" data-valmsg-replace="true"></span>
+                      <div class="govuk-date-input" id="date-of-birth">
+                          <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-label govuk-date-input__label" for="DateOfBirth_Day">Day</label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2 length-limit" type="text" autocomplete="bday-day" pattern="[0-9]*" inputmode="numeric" maxlength="2" min="1" max="31" id="DateOfBirth_Day" name="DateOfBirth.Day" value="">
+                              </div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-label govuk-date-input__label" for="DateOfBirth_Month">Month</label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2 length-limit" type="text" autocomplete="bday-month" pattern="[0-9]*" inputmode="numeric" maxlength="2" min="1" max="12" id="DateOfBirth_Month" name="DateOfBirth.Month" value="">
+                              </div>
+                          </div>
+                          <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-label govuk-date-input__label" for="DateOfBirth_Year">Year</label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-4 length-limit" type="text" autocomplete="bday-year" pattern="[0-9]*" inputmode="numeric" maxlength="4" min="1900" max="9999" id="DateOfBirth_Year" name="DateOfBirth.Year" value="">
+                              </div>
+                          </div>
+                      </div>
+                  </fieldset>
               </div>
-            </div>
+          </div>
 
-          </fieldset>
-        </div>
-        {% from "govuk/components/button/macro.njk" import govukButton %}
-
-        {{ govukButton({
-        text: "Save and continue",
-        href: ""
-        }) }}
-      </form>
-
-    </div>
+          <button class="govuk-button" data-module="govuk-button" id="identity-assurance-btn">Continue</button>
+</form>
   </div>
+</div>
 
-
+  </main>
 </div>
 {% endblock %}
