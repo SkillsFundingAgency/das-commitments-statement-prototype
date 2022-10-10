@@ -17,31 +17,33 @@ Confirm my apprenticeship details
   <div>
     <h1 class="govuk-heading-l">Confirm my apprenticeship details</h1>
 
-<!--     
-    <div class="app-notification-banner app-notification-banner--success">
+  
+    {% if (data.employerStatus == "complete" and data.providerStatus == "complete"
+          and data.apprenticeStatus == "complete" and data.deliveryStatus == "complete"
+          and data.rolesStatus == "complete" ) %}
+    <div class="app-notification-banner app-notification-banner--success govuk-!-margin-bottom-6">
       <div class="app-notification-banner--icon-content-wrap">
         <span class="app-notification-banner__icon das-text--success-icon"></span>
         Your apprenticeship is now ready to confirm
       </div>
     </div>
- -->
+    {% else %}
+      <p>Read through each section below to confirm your apprenticeship.
+        If you ever need to check on the details of your
+        apprenticeship, you can come back here.</p>
 
-    <p>Read through each section below to confirm your apprenticeship.
-      If you ever need to check on the details of your
-      apprenticeship, you can come back here.</p>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          <span>
+            You have 14 days to confirm your apprenticeship details
+          </span>
+        </strong>
+      </div>
 
-    <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-warning-text__assistive">Warning</span>
-        <span>
-          You have 14 days to confirm your apprenticeship details
-        </span>
-
-      </strong>
-    </div>
-
-    <p>Your answers will save automatically, so you can leave and come back if you need to.</p>
+      <p>Your answers will save automatically, so you can leave and come back if you need to.</p>
+    {% endif %}
 
   </div>
 
