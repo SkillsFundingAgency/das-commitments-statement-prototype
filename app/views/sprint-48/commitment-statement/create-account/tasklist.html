@@ -96,21 +96,29 @@ Confirm my apprenticeship details
           </div>
         </a></li>
       <li class="app-status-list__list-item"><a href="how-your-apprenticeship-is-delivered"
-          class="app-status-list__link ">
+          class="app-status-list__link {{data.deliveryStatus}}">
           <div class="app-status-list__link-content">
             <p class="app-status-list__link-text">
               How your apprenticeship will be delivered
             </p>
+            {% if (data.deliveryStatus == "complete") %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--green">Complete</strong>
+            {% else %}
             <strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+            {% endif %}
           </div>
         </a></li>
       <li class="app-status-list__list-item"><a href="roles-apprentice"
-          class="app-status-list__link ">
+          class="app-status-list__link  {{data.rolesStatus}}">
           <div class="app-status-list__link-content">
             <p class="app-status-list__link-text">
               Roles and responsibilities
             </p>
+            {% if (data.rolesStatus == "complete") %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--green">Complete</strong>
+            {% else %}
             <strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+            {% endif %}
           </div>
         </a></li>
 

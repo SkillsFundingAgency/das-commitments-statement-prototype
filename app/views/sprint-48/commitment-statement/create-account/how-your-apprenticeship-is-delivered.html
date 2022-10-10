@@ -82,7 +82,8 @@ Confirm your employer
       </p>
 
 
-      <form action="tasklist" method="post">
+      <form action="tasklist" method="get">
+        <input type="hidden" name="deliveryStatus" value="complete" />
         <button class="govuk-button" data-module="govuk-button" id="apprentice-delivered-confirm">Continue</button>
 
       </form>
