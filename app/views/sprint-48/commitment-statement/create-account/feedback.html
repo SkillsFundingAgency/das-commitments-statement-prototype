@@ -1,0 +1,60 @@
+{% extends "layout.v1.html" %}
+
+{% block pageTitle %}
+Confirm my apprenticeship details
+{% endblock %}
+
+{% set headerText="Mason Stone" %}
+{% block beforeContent %}
+{% include "../includes/account-header.html" %}
+{% include "includes/beta-phase-banner.html" %}
+{% include "../includes/navigation.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l"> Select a training provider </h1>
+
+            <p class="govuk-body"> Select one of your current training providers to give feedback on. </p>
+
+            <div class="govuk-inset-text">
+                <p> Feedback can be given once every 3 weeks for each training provider. </p>
+                <p> You can start giving feedback from 3 months after your planned training start date. </p>
+            </div>
+
+            <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                        Why can't I see all my training providers?
+                    </span>
+                </summary>
+                <div class="govuk-details__text">
+                    <p> The list includes all the training providers for your current apprenticeship and any that you have recently completed.</p>
+                    <p> If your current apprenticeship is not listed this may be because your training provider hasn't yet submitted the required data to your learner record.</p>
+                    <p> The list does not include any training providers from previous apprenticeships that you completed or withdrew from over 3 months ago.</p>
+                </div>
+            </details>
+
+            <table class="govuk-table">
+                <caption class="govuk-table__caption govuk-table__caption--m">Your training providers</caption>
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header"> Training provider </th>
+                        <th scope="col" class="govuk-table__header"> Feedback status </th>
+                        <th scope="col" class="govuk-table__header govuk-table__header--numeric"> Date submitted </th>
+                        <th scope="col" class="govuk-table__header"> Action </th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                </tbody>
+            </table>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

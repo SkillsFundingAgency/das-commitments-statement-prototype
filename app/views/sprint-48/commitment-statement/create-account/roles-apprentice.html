@@ -1,0 +1,109 @@
+{% extends "layout.v1.html" %}
+
+{% block pageTitle %}
+Confirm my apprenticeship details
+{% endblock %}
+
+{% set headerText="Mason Stone" %}
+{% block beforeContent %}
+{% include "../includes/account-header.html" %}
+{% include "includes/beta-phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+    
+    <div class="govuk-grid-column-two-thirds">
+        
+        
+
+        <h1 class="govuk-heading-l" id="roles-text">
+            Your responsibilities as an apprentice
+            <span class="govuk-hint">Step 1 of 3</span>
+        </h1>
+        
+<p>
+    These roles and responsibilities set out what is expected of you.
+</p>
+
+<p>
+    <strong>I have:</strong>
+</p>
+
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>read and signed my apprenticeship agreement</li>
+
+        <li>discussed my training plan with my current employer and my training provider</li>
+        <li>told my current employer and my training provider about any learning needs or health issues I have</li>
+
+    <li>been told when my apprenticeship training starts and ends</li>
+
+        <li>understood that this is a portable flexi-job apprenticeship and that I will move between different jobs during my apprenticeship</li>
+        <li>understood the roles of my employers and training provider during my apprenticeship</li>
+        <li>understood that I need to complete the off-the-job training hours stated in my training plan during my normal working hours</li>
+
+    <li>understood that I will be assessed by an end-point assessor at the end of my apprenticeship training</li>
+</ul>
+
+<p>
+    <strong>I will:</strong>
+</p>
+
+<ul class="govuk-list govuk-list--bullet">
+
+        <li>take part in regular progress reviews with my employer and training provider every 12 weeks</li>
+
+    <li>attend all my off-the-job training and provide evidence of my recorded hours where needed</li>
+    <li>complete all of my learning activities, assignments and exams</li>
+
+        <li>share my learning and progress to date with each new employer</li>
+        <li>find my next job when the current job ends, until I am ready to complete my end-point assessment</li>
+
+    <li>tell my employer in advance when I cannot attend work</li>
+    <li>tell my training provider in advance when I cannot attend my off-the-job training</li>
+    <li>agree with my employer and training provider when I am ready to complete my end-point assessment</li>
+
+        <li>raise any concerns or complaints through my employer and training providers</li>
+
+</ul>
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    </div>
+</div>
+
+<form id="form-section-confirmation-Id" method="post">
+
+    <input type="hidden" value="13158" data-val="true" data-val-required="The RevisionId field is required." id="RevisionId" name="RevisionId" />
+    
+    <div class="govuk-form-group">
+        <div validation-row-status>
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                    <span class="govuk-fieldset__heading">
+                        Confirmation
+                    </span>
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <span class="govuk-error-message field-validation-valid" data-valmsg-for="SectionConfirmed" data-valmsg-replace="true"></span>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox" data-val="true" data-val-required="The SectionConfirmed field is required." id="SectionConfirmed" name="SectionConfirmed" value="true">
+                        <label class="govuk-label govuk-checkboxes__label" for="SectionConfirmed">
+                            I confirm I have read the roles and responsibilities.
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <button class="govuk-button" data-module="govuk-button" id="roles-responsibilities-confirm">Continue</button>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8MGlgOl-I-5MpaJ74kI230mXF9XoJWlWvIf2YpFr-cKNEn-9X-GBvQbzzigtHCxaY9e4Y741f5MsYTACfCsAelVB22BkIAahoFwGR3jUoXw7wM7c6WMla8ekoDRHowPlcW7WPKQtDMruZGe7lInHz1TqXmPvWfyoOHhoEglVsDezhotSnMw4PhKgkM4W4jS_xQ" /><input name="SectionConfirmed" type="hidden" value="false"></form>
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "layout.v1.html" %}
+
+{% block pageTitle %}
+Confirm my apprenticeship details
+{% endblock %}
+
+{% set headerText="Mason Stone" %}
+{% block beforeContent %}
+{% include "../includes/account-header.html" %}
+{% include "includes/beta-phase-banner.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+        <h1 class="govuk-heading-l">You have confirmed that this is not your employer.</h1>
+
+        <div>
+            <p>
+                To change these details you need to speak to your training provider. You'll be alerted when your employer has been corrected.
+            </p>
+            <p>
+                You should come back to confirm the rest of your apprenticeship details when your employer has been corrected.
+            </p>
+        </div>
+
+        
+
+        
+
+        
+
+        <form action="/apprenticeships/V44R66">
+            <button class="govuk-button" data-module="govuk-button">
+                My apprenticeship details
+            </button>
+        </form>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}
