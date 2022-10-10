@@ -49,32 +49,6 @@ Confirm my apprenticeship details
 
   <div>
     <ol class="govuk-list app-status-list">
-<!-- 
-      <li class="app-status-list__list-item"><a href="/apprenticeships/V44R66/confirmyouremployer"
-          class="app-status-list__link complete">
-          <div class="app-status-list__link-content">
-            <p class="app-status-list__link-text">
-              Your employer
-            </p><strong class="app-status-list__tag govuk-tag govuk-tag--green">Complete</strong>
-          </div>
-        </a></li>
-        <li class="app-status-list__list-item"><a href="/apprenticeships/V44R66/confirmyourtrainingprovider"
-          class="app-status-list__link incorrect">
-          <div class="app-status-list__link-content">
-            <p class="app-status-list__link-text">
-              Your training provider
-            </p><strong class="app-status-list__tag govuk-tag govuk-tag--red">Waiting for<br />correction</strong>
-          </div>
-        </a></li>
-        <li class="app-status-list__list-item"><a href="/apprenticeships/V44R66/yourapprenticeshipdetails"
-          class="app-status-list__link incorrect">
-          <div class="app-status-list__link-content">
-            <p class="app-status-list__link-text">
-              Your apprenticeship details
-            </p><strong class="app-status-list__tag govuk-tag govuk-tag--red">Waiting for<br />correction</strong>
-          </div>
-        </a></li>
-      -->
       
       <li class="app-status-list__list-item"><a href="confirm-your-employer"
         class="app-status-list__link {{data.employerStatus}}">
@@ -92,19 +66,33 @@ Confirm my apprenticeship details
         </div>
         </a></li>
       <li class="app-status-list__list-item"><a href="confirm-your-training-provider"
-          class="app-status-list__link ">
+          class="app-status-list__link {{data.providerStatus}}">
           <div class="app-status-list__link-content">
             <p class="app-status-list__link-text">
               Your training provider
-            </p><strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+            </p>
+            {% if (data.providerStatus == "complete") %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--green">Complete</strong>
+            {% elif (data.providerStatus == "incorrect") %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--red">Waiting for<br />correction</strong>
+            {% else %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+            {% endif %}
           </div>
         </a></li>
       <li class="app-status-list__list-item"><a href="your-apprenticeship-details"
-          class="app-status-list__link ">
+          class="app-status-list__link {{data.apprenticeStatus}}">
           <div class="app-status-list__link-content">
             <p class="app-status-list__link-text">
               Your apprenticeship details
-            </p><strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+            </p>
+            {% if (data.apprenticeStatus == "complete") %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--green">Complete</strong>
+            {% elif (data.apprenticeStatus == "incorrect") %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--red">Waiting for<br />correction</strong>
+            {% else %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+            {% endif %}
           </div>
         </a></li>
       <li class="app-status-list__list-item"><a href="how-your-apprenticeship-is-delivered"
@@ -112,7 +100,8 @@ Confirm my apprenticeship details
           <div class="app-status-list__link-content">
             <p class="app-status-list__link-text">
               How your apprenticeship will be delivered
-            </p><strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+            </p>
+            <strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
           </div>
         </a></li>
       <li class="app-status-list__list-item"><a href="roles-apprentice"
@@ -120,7 +109,8 @@ Confirm my apprenticeship details
           <div class="app-status-list__link-content">
             <p class="app-status-list__link-text">
               Roles and responsibilities
-            </p><strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+            </p>
+            <strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
           </div>
         </a></li>
 
