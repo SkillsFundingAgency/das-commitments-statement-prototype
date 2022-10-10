@@ -1,7 +1,7 @@
 {% extends "layout.v1.html" %}
 
 {% block pageTitle %}
-Confirm my apprenticeship details
+Confirmed your apprenticeship details
 {% endblock %}
 
 {% set headerText="Mason Stone" %}
@@ -9,12 +9,14 @@ Confirm my apprenticeship details
 {% include "../includes/account-header.html" %}
 {% include "includes/beta-phase-banner.html" %}
 {% include "../includes/navigation-post-confirmation.html" %}
+<div class="govuk-width-container">
+  {% include "includes/back-link.html" %}
+</div>
 {% endblock %}
 
 {% block content %}
 
 <div class="govuk-width-container">
-
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 

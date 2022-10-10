@@ -8,7 +8,9 @@ Confirm your employer
 {% block beforeContent %}
 {% include "../includes/account-header.html" %}
 {% include "includes/beta-phase-banner.html" %}
-{% include "../includes/navigation.html" %}
+<div class="govuk-width-container">
+  {% include "includes/back-link.html" %}
+</div>
 {% endblock %}
 
 {% block content %}
