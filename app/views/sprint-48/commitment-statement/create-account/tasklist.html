@@ -58,7 +58,7 @@ Confirm my apprenticeship details
             </p><strong class="app-status-list__tag govuk-tag govuk-tag--green">Complete</strong>
           </div>
         </a></li>
-      <li class="app-status-list__list-item"><a href="/apprenticeships/V44R66/confirmyourtrainingprovider"
+        <li class="app-status-list__list-item"><a href="/apprenticeships/V44R66/confirmyourtrainingprovider"
           class="app-status-list__link incorrect">
           <div class="app-status-list__link-content">
             <p class="app-status-list__link-text">
@@ -66,7 +66,7 @@ Confirm my apprenticeship details
             </p><strong class="app-status-list__tag govuk-tag govuk-tag--red">Waiting for<br />correction</strong>
           </div>
         </a></li>
-      <li class="app-status-list__list-item"><a href="/apprenticeships/V44R66/yourapprenticeshipdetails"
+        <li class="app-status-list__list-item"><a href="/apprenticeships/V44R66/yourapprenticeshipdetails"
           class="app-status-list__link incorrect">
           <div class="app-status-list__link-content">
             <p class="app-status-list__link-text">
@@ -74,15 +74,22 @@ Confirm my apprenticeship details
             </p><strong class="app-status-list__tag govuk-tag govuk-tag--red">Waiting for<br />correction</strong>
           </div>
         </a></li>
- -->
-
+      -->
+      
       <li class="app-status-list__list-item"><a href="confirm-your-employer"
-          class="app-status-list__link ">
-          <div class="app-status-list__link-content">
-            <p class="app-status-list__link-text">
-              Your employer
-            </p><strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
-          </div>
+        class="app-status-list__link {{data.employerStatus}}">
+        <div class="app-status-list__link-content">
+          <p class="app-status-list__link-text">
+            Your employer
+          </p>
+          {% if (data.employerStatus == "complete") %}
+          <strong class="app-status-list__tag govuk-tag govuk-tag--green">Complete</strong>
+          {% elif (data.employerStatus == "incorrect") %}
+          <strong class="app-status-list__tag govuk-tag govuk-tag--red">Waiting for<br />correction</strong>
+          {% else %}
+          <strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+          {% endif %}
+        </div>
         </a></li>
       <li class="app-status-list__list-item"><a href="confirm-your-training-provider"
           class="app-status-list__link ">
