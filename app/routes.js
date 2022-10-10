@@ -1,5 +1,9 @@
 const express = require('express')
 const router = express.Router()
+// add radio redirect to simplify branching
+// https://www.npmjs.com/package/radio-button-redirect
+const radioButtonRedirect = require('radio-button-redirect')
+router.use(radioButtonRedirect)
 
 // Add your routes here - above the module.exports line
 
