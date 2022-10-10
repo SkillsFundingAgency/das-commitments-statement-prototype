@@ -10759,3 +10759,22 @@ li.app-status-list__list-item {
   background-repeat: no-repeat;
   background-size: 23px 22px;
 }
+
+.show-password-container {
+  display: inline;
+}
+
+.show-hide-checkbox {
+  display: none;
+}
+
+.show-password-container {
+  position: relative;
+}
+
+.show-password-control-container {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: -2px;
+}

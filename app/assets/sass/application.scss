@@ -944,6 +944,7 @@ table {
   text-transform: uppercase;
 }
 
+
 .das-user-navigation__link {
   color: #fff;
   text-decoration: none;
@@ -2363,3 +2364,18 @@ table {
   background-size: 23px 22px;
 }
 /////////////////////////////////////////////
+.show-password-container {
+  display: inline;
+}
+.show-hide-checkbox {
+  display: none;
+}
+.show-password-container {
+  position: relative;
+}
+.show-password-control-container {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: -2px;
+}

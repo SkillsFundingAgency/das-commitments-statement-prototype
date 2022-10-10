@@ -29,10 +29,7 @@ Confirm my apprenticeship details
         <p>
           To change these details you need to speak to your 
           {% if (data.details == "training provider") %}
-          employer
-          {% else %}
-          training provider
-          {% endif %}. 
+          employer{% else %}training provider{% endif %}. 
           You'll be alerted when your {{data.details}} 
           {% if (data.details == "apprenticeship details") %} have {% else %} has 
           {% endif %}
