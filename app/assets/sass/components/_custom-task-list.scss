@@ -1,0 +1,110 @@
+.app-status-list {
+  counter-reset:number
+ }
+ .app-status-list__list-item,
+ li.app-status-list__list-item {
+  margin-bottom:15px;
+  counter-increment:number
+ }
+ @media (min-width: 40.0625em) {
+  .app-status-list__list-item,
+  li.app-status-list__list-item {
+   margin-bottom:25px
+  }
+ }
+ .app-status-list__link {
+  display:flex;
+  border-radius:10px;
+  text-decoration:none;
+  box-shadow:0 0 10px 0 rgba(11,12,12,0.2);
+  border:2px solid #f9f8f8
+ }
+ .app-status-list__link:link,
+ .app-status-list__link:hover,
+ .app-status-list__link:active,
+ .app-status-list__link:visited {
+  color:#1d70b8
+ }
+ .app-status-list__link:hover,
+ .app-status-list__link:focus {
+  background:#fd0;
+  color:#0b0c0c
+ }
+ .app-status-list__link:focus {
+  box-shadow:0 0 #fd0,0 3px #0b0c0c;
+  color:#0b0c0c;
+  border-color:#fd0;
+  outline:3px solid transparent
+ }
+ .app-status-list__link:before {
+  content:counter(number);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:bold;
+  background:#f9f8f8;
+  color:#505a5f;
+  width:1.85em;
+  border-radius:9px 0 0 9px;
+  font-size:1.5rem
+ }
+ @media (min-width: 40.0625em) {
+  .app-status-list__link:before {
+   font-size:2.5rem
+  }
+ }
+ .app-status-list__link.complete {
+  border-color:#cce2d8
+ }
+ .app-status-list__link.complete:before {
+  color:#005a30;
+  background:#cce2d8
+ }
+ .app-status-list__link.complete:focus {
+  box-shadow:0 0 #fd0,0 3px #0b0c0c;
+  color:#0b0c0c;
+  border-color:#fd0;
+  outline:3px solid transparent
+ }
+ .app-status-list__link.incorrect {
+  border-color:#f6d7d2
+ }
+ .app-status-list__link.incorrect:before {
+  color:#942514;
+  background:#f6d7d2
+ }
+ .app-status-list__link.incorrect:focus {
+  box-shadow:0 0 #fd0,0 3px #0b0c0c;
+  color:#0b0c0c;
+  border-color:#fd0;
+  outline:3px solid transparent
+ }
+ .app-status-list__link-content {
+  padding:15px;
+  width:100%
+ }
+ @media (min-width: 40.0625em) {
+  .app-status-list__link-content {
+   padding:25px
+  }
+ }
+ .app-status-list__link-text {
+  text-decoration:underline;
+  margin:0
+ }
+ @media (min-width: 40.0625em) {
+  .app-status-list__link-text {
+   float:left
+  }
+ }
+ .app-status-list__tag {
+  margin-top:10px
+ }
+ @media (min-width: 40.0625em) {
+  .app-status-list__tag {
+   float:right;
+   margin-top:0;
+   margin-left:15px
+  }
+ }
+
