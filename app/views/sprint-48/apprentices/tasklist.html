@@ -1,7 +1,7 @@
 {% extends "layout.v1.html" %}
 
 {% block pageTitle %}
-Confirm my apprenticeship details
+Confirm my apprenticeship
 {% endblock %}
 
 {% set headerText="Mason Stone" %}
@@ -15,7 +15,7 @@ Confirm my apprenticeship details
 
 <div class="govuk-width-container">
   <div>
-    <h1 class="govuk-heading-l">Confirm my apprenticeship details</h1>
+    <h1 class="govuk-heading-l">Confirm my apprenticeship</h1>
 
   
     {% if (data.employerStatus == "complete" and data.providerStatus == "complete"
@@ -28,9 +28,7 @@ Confirm my apprenticeship details
       </div>
     </div>
     {% else %}
-      <p>Read through each section below to confirm your apprenticeship.
-        If you ever need to check on the details of your
-        apprenticeship, you can come back here.</p>
+      <p>Please carefully read each section below to confirm your apprenticeship. You will still see these details here after you have confirmed.</p>
 
       <div class="govuk-warning-text">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -82,7 +80,7 @@ Confirm my apprenticeship details
             {% endif %}
           </div>
         </a></li>
-      <li class="app-status-list__list-item"><a href="your-apprenticeship-details"
+      <li class="app-status-list__list-item"><a href="confirm-your-apprenticeship"
           class="app-status-list__link {{data.apprenticeStatus}}">
           <div class="app-status-list__link-content">
             <p class="app-status-list__link-text">
@@ -138,8 +136,7 @@ Confirm my apprenticeship details
 
   <div class="govuk-heading-m">
     <h2 class="govuk-heading-m">Help and support</h2>
-    <p>If you have any questions or need support using this service, you can <a href="#"
-        onclick="zE.activate();return false;" class="govuk-link">contact us</a>.</p>
+    <p><a href="help-and-support#" class="govuk-link">Contact us</a> if you have any questions or need support using this service.</p>
   </div>
 
 </div>
