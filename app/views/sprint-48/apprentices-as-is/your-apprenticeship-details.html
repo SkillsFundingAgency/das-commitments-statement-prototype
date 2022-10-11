@@ -1,0 +1,114 @@
+{% extends "layout.v1.html" %}
+
+{% block pageTitle %}
+Confirm your employer
+{% endblock %}
+
+{% set headerText="Mason Stone" %}
+{% block beforeContent %}
+{% include "./includes/account-header.html" %}
+{% include "includes/beta-phase-banner.html" %}
+<div class="govuk-width-container">
+  {% include "includes/back-link.html" %}
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Confirm the details of your portable flexi-job apprenticeship</h1>
+
+      <p>These are the details that your current employer and your training provider have agreed with you and have given
+        to us.</p>
+      <p><strong>It's important to check these details</strong> 
+        because you'll be assessed on the knowledge, skills and
+        behaviours you will have learnt on your apprenticeship.</p>
+      <table class="govuk-table data-table">
+        <caption class="govuk-visually-hidden">Apprenticeship details</caption>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Delivery model</th>
+            <td class="govuk-table__cell">Portable flexi-job</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Apprenticeship</th>
+            <td class="govuk-table__cell">Stonemason</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Level</th>
+            <td class="govuk-table__cell">2</td>
+          </tr>
+
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Planned training start date</th>
+            <td class="govuk-table__cell">September 2022</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Planned training end date</th>
+            <td class="govuk-table__cell">September 2025</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Job end date</th>
+            <td class="govuk-table__cell">September 2023</td>
+          </tr>
+        </tbody>
+      </table>
+      <h2 class="govuk-heading-m">
+        Things you need to know about a portable flexi-job apprenticeship
+      </h2>
+      <p>
+        During your portable flexi-job apprenticeship, you will find different jobs and may move between employers.
+        Each job will last a minimum of 3 months and you may return to the same employer multiple times throughout your
+        apprenticeship.
+      </p>
+      <p>
+        Your planned training start date and estimated duration should:
+      </p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>include the time you will spend in off-the-job training across all employers</li>
+        <li>not include when your end point assessment will take place</li>
+      </ul>
+      <div class="govuk-inset-text">
+        <p>The estimated duration of your apprenticeship may change during your apprenticeship after discussions with
+          each employer and your training provider.</p>
+      </div>
+
+
+
+      <form method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Are your apprenticeship details correct?
+            </legend>
+            <span class="govuk-error-message field-validation-valid" data-valmsg-for="Confirmed"
+              data-valmsg-replace="true"></span>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="Confirmed" name="Confirmed" type="radio" value="true~tasklist?apprenticeStatus=complete">
+                <label class="govuk-label govuk-radios__label" for="Confirmed">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="NotConfirmed" name="Confirmed" type="radio" value="false~cannot-confirm?details=apprenticeship%20details&apprenticeStatus=incorrect">
+                <label class="govuk-label govuk-radios__label" for="NotConfirmed">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button" id="employer-provider-confirm">Confirm</button>
+      </form>
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

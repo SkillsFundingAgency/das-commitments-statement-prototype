@@ -1,0 +1,77 @@
+{% extends "layout.v1.html" %}
+
+{% block pageTitle %}
+Welcome
+{% endblock %}
+
+{% set headerText="Mason Stone" %}
+{% block beforeContent %}
+{% include "./includes/account-header.html" %}
+{% include "includes/beta-phase-banner.html" %}
+{% include "./includes/navigation.html" %}
+{% endblock %}
+
+{% block content %}
+<div id="" class="dashboard-page">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row dashboard-title">
+      <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-l">
+          Welcome, Mason Stone
+          <span class="govuk-caption-m">Stonemason</span>
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="govuk-width-container">
+  <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
+    aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        Success
+      </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+      <h3 class="govuk-notification-banner__heading">
+        You have created an account and we have found your apprenticeship.
+      </h3>
+      <p class="govuk-body">You now need to <a href="tasklist">confirm
+          your apprenticeship details</a></p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="govuk-width-container" id="dashboard-section">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <ul class="dashboard-nav dashboard-li">
+        <li>
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link govuk-link--no-visited-state" href="tasklist">
+              Confirm my apprenticeship details
+            </a>
+          </h2>
+          <strong class="dashboard__status-tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+          <p>Confirm details of your employer, training provider and apprenticeship.</p>
+
+        </li>
+
+
+        <li>
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link govuk-link--no-visited-state" model="Model" href="/HelpAndSupport">
+              Help and support
+            </a>
+          </h2>
+          <p>Who to contact if you have questions or concerns during your apprenticeship.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
