@@ -8543,6 +8543,107 @@ li.app-status-list__list-item {
     margin-left: 15px;
   }
 }
+.app-notification-banner {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #0b0c0c;
+  padding: 20px;
+  margin-bottom: 20px;
+  clear: both;
+  border-left: 10px solid #b1b4b6;
+  font-weight: 700;
+  background: #f3f2f1;
+  position: relative;
+}
+
+@media print {
+  .app-notification-banner {
+    font-family: sans-serif;
+  }
+}
+@media (min-width: 40.0625em) {
+  .app-notification-banner {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.31579;
+  }
+}
+@media print {
+  .app-notification-banner {
+    font-size: 14pt;
+    line-height: 1.15;
+  }
+}
+@media print {
+  .app-notification-banner {
+    color: #000;
+  }
+}
+@media (min-width: 40.0625em) {
+  .app-notification-banner {
+    margin-bottom: 30px;
+  }
+}
+.app-notification-banner:first-child {
+  margin-top: 0;
+}
+
+.app-notification-banner:only-child,
+.app-notification-banner:last-child {
+  margin-bottom: 0;
+}
+
+.app-notification-banner--with-icon {
+  position: relative;
+  padding-left: 65px;
+}
+
+.app-notification-banner--icon-content-wrap {
+  padding-left: 45px;
+}
+
+.app-notification-banner--success {
+  border-left-color: #00703c;
+}
+
+.app-notification-banner__icon {
+  box-sizing: border-box;
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  min-width: 35px;
+  min-height: 35px;
+  margin-top: -7px;
+  border: 3px solid #0b0c0c;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 30px;
+  line-height: 29px;
+  background-position: center;
+  background-size: 20px;
+}
+
+@media (min-width: 40.0625em) {
+  .app-notification-banner__icon {
+    margin-top: -5px;
+  }
+}
+.app-notification-banner--success .app-notification-banner__icon {
+  border-color: #00703c;
+}
+
+.das-text--success-icon {
+  padding-left: 30px;
+  background-image: url("../images/icon-tick--green.svg");
+  background-repeat: no-repeat;
+  background-size: 23px 22px;
+}
+
 h1 span {
   color: #1d70b8;
 }
