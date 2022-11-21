@@ -9132,7 +9132,7 @@ table.data-table tr th:first-of-type {
   background-color: #fff;
 }
 .govuk-notification-banner .govuk-notification-banner__heading {
-  font-size: 19px;
+  /* font-size: 19px; */
   line-height: 1.25;
   font-family: "GDS Transport", arial, sans-serif;
   -webkit-font-smoothing: antialiased;

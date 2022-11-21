@@ -1,0 +1,60 @@
+{% extends "layout.v1.html" %}
+
+{% block pageTitle %}
+Confirm my apprenticeship details
+{% endblock %}
+
+{% set headerText="Chittur Gopalakrishnan Kaashi Vishwanathan" %}
+{% block beforeContent %}
+{% include "./includes/account-header.html" %}
+{% include "includes/beta-phase-banner.html" %}
+<div class="govuk-width-container">
+  {% include "includes/back-link.html" %}
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        {% if (data.details == "apprenticeship details") %}
+        You have confirmed that your apprenticeship details are not correct.
+        {% else %}
+        You have confirmed that this is not your {{data.details}}.
+        {% endif %}
+      </h1>
+
+      <div>
+        <p>
+          To change these details you need to speak to your 
+          {% if (data.details == "training provider") %}
+          employer{% else %}training provider{% endif %}. 
+          You'll be alerted when your {{data.details}} 
+          {% if (data.details == "apprenticeship details") %} have {% else %} has 
+          {% endif %}
+          been corrected.
+        </p>
+        <p>
+          You should come back to confirm the rest of your apprenticeship details when your {{data.details}}  
+          {% if (data.details == "apprenticeship details") %} have {% else %} has 
+          {% endif %}
+          been corrected.
+        </p>
+      </div>
+
+      <form action="tasklist">
+        <button class="govuk-button" data-module="govuk-button">
+          My apprenticeship details
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

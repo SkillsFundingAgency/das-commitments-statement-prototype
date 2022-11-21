@@ -1,0 +1,148 @@
+{% extends "layout.v1.html" %}
+
+{% block pageTitle %}
+Confirm my apprenticeship details
+{% endblock %}
+
+{% set headerText="Chittur Gopalakrishnan Kaashi Vishwanathan" %}
+{% block beforeContent %}
+{% include "./includes/account-header.html" %}
+{% include "includes/beta-phase-banner.html" %}
+{% include "./includes/navigation.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <div>
+    <h1 class="govuk-heading-l">Confirm my apprenticeship details</h1>
+
+  
+    {% if (data.employerStatus == "complete" and data.providerStatus == "complete"
+          and data.apprenticeStatus == "complete" and data.deliveryStatus == "complete"
+          and data.rolesStatus == "complete" ) %}
+    <div class="app-notification-banner app-notification-banner--success govuk-!-margin-bottom-6">
+      <div class="app-notification-banner--icon-content-wrap">
+        <span class="app-notification-banner__icon das-text--success-icon"></span>
+        Your apprenticeship is now ready to confirm
+      </div>
+    </div>
+    {% else %}
+      <p>Read through each section below to confirm your apprenticeship.
+        If you ever need to check on the details of your
+        apprenticeship, you can come back here.</p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          <span>
+            You have 14 days to confirm your apprenticeship details
+          </span>
+        </strong>
+      </div>
+
+      <p>Your answers will save automatically, so you can leave and come back if you need to.</p>
+    {% endif %}
+
+  </div>
+
+
+
+  <div>
+    <ol class="govuk-list app-status-list">
+      
+      <li class="app-status-list__list-item"><a href="confirm-your-employer"
+        class="app-status-list__link {{data.employerStatus}}">
+        <div class="app-status-list__link-content">
+          <p class="app-status-list__link-text">
+            Your employer
+          </p>
+          {% if (data.employerStatus == "complete") %}
+          <strong class="app-status-list__tag govuk-tag govuk-tag--green">Complete</strong>
+          {% elif (data.employerStatus == "incorrect") %}
+          <strong class="app-status-list__tag govuk-tag govuk-tag--red">Waiting for<br />correction</strong>
+          {% else %}
+          <strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+          {% endif %}
+        </div>
+        </a></li>
+      <li class="app-status-list__list-item"><a href="confirm-your-training-provider"
+          class="app-status-list__link {{data.providerStatus}}">
+          <div class="app-status-list__link-content">
+            <p class="app-status-list__link-text">
+              Your training provider
+            </p>
+            {% if (data.providerStatus == "complete") %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--green">Complete</strong>
+            {% elif (data.providerStatus == "incorrect") %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--red">Waiting for<br />correction</strong>
+            {% else %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+            {% endif %}
+          </div>
+        </a></li>
+      <li class="app-status-list__list-item"><a href="confirm-your-apprenticeship"
+          class="app-status-list__link {{data.apprenticeStatus}}">
+          <div class="app-status-list__link-content">
+            <p class="app-status-list__link-text">
+              Your apprenticeship details
+            </p>
+            {% if (data.apprenticeStatus == "complete") %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--green">Complete</strong>
+            {% elif (data.apprenticeStatus == "incorrect") %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--red">Waiting for<br />correction</strong>
+            {% else %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+            {% endif %}
+          </div>
+        </a></li>
+      <li class="app-status-list__list-item"><a href="how-your-apprenticeship-is-delivered"
+          class="app-status-list__link {{data.deliveryStatus}}">
+          <div class="app-status-list__link-content">
+            <p class="app-status-list__link-text">
+              How your apprenticeship will be delivered
+            </p>
+            {% if (data.deliveryStatus == "complete") %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--green">Complete</strong>
+            {% else %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+            {% endif %}
+          </div>
+        </a></li>
+      <li class="app-status-list__list-item"><a href="roles-apprentice"
+          class="app-status-list__link  {{data.rolesStatus}}">
+          <div class="app-status-list__link-content">
+            <p class="app-status-list__link-text">
+              Roles and responsibilities
+            </p>
+            {% if (data.rolesStatus == "complete") %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--green">Complete</strong>
+            {% else %}
+            <strong class="app-status-list__tag govuk-tag govuk-tag--yellow">Incomplete</strong>
+            {% endif %}
+          </div>
+        </a></li>
+
+
+      <li class="app-status-list__list-item">
+        <a class="app-status-list__link inactive" href="transaction-complete">
+          <div class="app-status-list__link-content">
+            <p class="app-status-list__link-text">Confirm your apprenticeship</p>
+            <strong class="app-status-list__tag govuk-tag govuk-tag--grey">Incomplete</strong>
+          </div>
+        </a>
+      </li>
+    </ol>
+  </div>
+
+  <div class="govuk-heading-m">
+    <h2 class="govuk-heading-m">Help and support</h2>
+    <p>If you have any questions or need support using this service, you can <a href="#"
+        onclick="zE.activate();return false;" class="govuk-link">contact us</a>.</p>
+  </div>
+
+</div>
+
+
+{% endblock %}

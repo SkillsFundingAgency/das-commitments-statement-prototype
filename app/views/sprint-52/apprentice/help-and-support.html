@@ -1,0 +1,95 @@
+{% extends "layout.v1.html" %}
+
+{% block pageTitle %}
+Confirm my apprenticeship details
+{% endblock %}
+
+{% set headerText="Chittur Gopalakrishnan Kaashi Vishwanathan" %}
+{% block beforeContent %}
+{% include "./includes/account-header.html" %}
+{% include "includes/beta-phase-banner.html" %}
+{% include "./includes/navigation.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+            Help and support
+        </h1>
+
+        <p>How to get help if you have questions or concerns during your apprenticeship.</p>
+
+        <h2 class="govuk-heading-m">Speak to your day-to-day contact at your employer</h2>
+        <p class="govuk-body">
+            You should have a day-to-day contact or manager who can answer any
+            questions or concerns you may have. You can contact them by:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>arrange a face-to-face meeting</li>
+            <li>phone</li>
+            <li>email</li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Speak to your training provider</h2>
+        <p>
+            If you can't resolve your questions or concerns with your employer, you should
+            speak to your main contact at your training provider.
+        </p>
+        <p class="govuk-body">Speak to them next time you do your off-the-job training or by:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>phone</li>
+            <li>email</li>
+        </ul>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <h2 class="govuk-heading-m">Contact the Department for Education (DfE)</h2>
+        <p>
+            If you haven't been able to get the help you need from your training provider
+            or employer, or if you need to make a complaint, you can contact us at the
+            Department for Education (DfE).
+        </p>
+
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-0">Telephone</h4>
+        <p class="govuk-body">If you have a unique reference number, have it with you when you call.</p>
+
+        <p class="govuk-body">Available 8am to 8pm Monday to Friday. You can:</p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>call us on 08000 150 600</li>
+            <li>text us on 07588 690018</li>
+        </ul>
+
+        <p>You cannot send us photos or videos via text.</p>
+
+        <p>Your phone company may charge you separately, standard SMS rates apply.</p>
+        <p class="govuk-body">
+            <a class="govuk-link" href="https://www.gov.uk/call-charges" target="_blank" rel="noopener noreferrer">Find out about call charges</a>
+        </p>
+
+        <h4 class="govuk-heading-s govuk-!-margin-bottom-0">Email</h4>
+
+        <p class="govuk-body govuk-!-padding-bottom-0">
+            Send an email to <a href="mailto:helpdesk@manage-apprenticeships.service.gov.uk" class="govuk-link">helpdesk@manage-apprenticeships.service.gov.uk</a>.
+        </p>
+
+        <p class="govuk-body">
+            During our opening times, we'll reply within 4 hours.
+        </p>
+
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+        <a class="govuk-button" data-module="govuk-button" href="https://pp-aas.apprenticeships.education.gov.uk/Home">
+            Go back to the dashboard
+        </a>
+    </div>
+</div>
+
+</div>
+
+{% endblock %}

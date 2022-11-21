@@ -1,0 +1,85 @@
+{% extends "layout.v1.html" %}
+
+{% block pageTitle %}
+Confirm your employer
+{% endblock %}
+
+{% set headerText="Chittur Gopalakrishnan Kaashi Vishwanathan" %}
+{% block beforeContent %}
+{% include "./includes/account-header.html" %}
+{% include "includes/beta-phase-banner.html" %}
+<div class="govuk-width-container">
+  {% include "includes/back-link.html" %}
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Confirm your employer</h1>
+      <h2 class="govuk-heading-m">TEST &amp; MAINTAIN LIMITED</h2>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help if you do not recognise your employer's name
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          TEST &amp; MAINTAIN LIMITED is your employer's legal name registered with Companies House. You may know them
+          by their trading name instead.
+        </div>
+      </details>
+
+      <h3 class="govuk-heading-s">Things you need to know</h3>
+      <div class="govuk-inset-text">
+
+        <p class="govuk-body">This is a portable flexi-job apprenticeship and you will move between different jobs
+          during the apprenticeship.</p>
+        <p class="govuk-body">Before starting with each employer, they should have given you a:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>copy of your apprenticeship agreement signed by you and them, if you have not received this agreement
+            please speak to your employer</li>
+          <li>day-to-day contact or manager who will support you through your apprenticeship</li>
+        </ul>
+      </div>
+
+      <form method="post">
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              Is TEST &amp; MAINTAIN LIMITED your employer?
+            </legend>
+            <span class="govuk-error-message field-validation-valid" data-valmsg-for="Confirmed"
+              data-valmsg-replace="true"></span>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="Confirmed" name="Confirmed" type="radio" value="true~tasklist?employerStatus=complete">
+                <label class="govuk-label govuk-radios__label" for="Confirmed">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="NotConfirmed" name="Confirmed" type="radio" value="false~cannot-confirm?details=employer&employerStatus=incorrect">
+                <label class="govuk-label govuk-radios__label" for="NotConfirmed">
+                  No
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <button class="govuk-button" data-module="govuk-button" id="employer-provider-confirm">Confirm</button>
+      </form>
+
+    </div>
+  </div>
+
+
+</div>
+
+{% endblock %}
