@@ -1,0 +1,64 @@
+{% extends "layout.v1.html" %}
+
+{% block pageTitle %}
+Welcome
+{% endblock %}
+
+{% set headerText="Chittur Gopalakrishnan Kaashi Vishwanathan" %}
+{% block beforeContent %}
+{% include "./includes/account-header.html" %}
+{% include "includes/beta-phase-banner.html" %}
+{% include "./includes/navigation-post-confirmation.html" %}
+{% endblock %}
+
+{% block content %}
+<div id="" class="dashboard-page">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row dashboard-title">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          Welcome, {{headerText}}
+          <span class="govuk-caption-m">Construction site supervisor</span>
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="govuk-width-container" id="dashboard-section">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <ul class="dashboard-nav dashboard-li">
+        <li>
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link govuk-link--no-visited-state" href="tasklist">
+              My apprenticeship details
+            </a>
+          </h2>
+          <p>Confirm details of your employer, training provider and apprenticeship.</p>
+        </li>
+
+        <li>
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link govuk-link--no-visited-state" href="progress">
+              My progress
+            </a>
+          </h2>
+          <p>Your overall progress towards completing your apprenticeship.</p>
+        </li>
+
+
+        <li>
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link govuk-link--no-visited-state" model="Model" href="/HelpAndSupport">
+              Help and support
+            </a>
+          </h2>
+          <p>Who to contact if you have questions or concerns during your apprenticeship.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}

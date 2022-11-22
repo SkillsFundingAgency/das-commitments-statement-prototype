@@ -1,0 +1,93 @@
+{% extends "layout.v1.html" %}
+
+{% block pageTitle %}
+GOV.UK Prototype Kit
+{% endblock %}
+
+{% set headerText="Chittur Gopalakrishnan Kaashi Vishwanathan" %}
+{% block beforeContent %}
+{% include "./includes/account-header.html" %}
+{% include "includes/beta-phase-banner.html" %}
+{% include "./includes/navigation-post-confirmation.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container " id="landing-page-section">
+  <a href="" class=" history govuk-back-link">Back</a>
+  <div class="govuk-grid-row govuk-!-margin-top-6">
+    <div class="govuk-grid-column-three-quarters">
+
+      <h1 class="govuk-heading-l">My progress
+        <span class="govuk-caption-m">Construction site supervisor ({{data.standards.larsCode}})</span>
+      </h1>
+
+      <div class="govuk-!-margin-bottom-9">
+        <p>This shows your progress against the list of knowledge, skills and behaviours (KSBs) needed to complete this
+          apprenticeship.</p>
+      </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+              <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                show only recorded progress items
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <table class="govuk-table data-tble">
+        <tbody class="govuk-table__body">
+
+          {% for knowledge in data.standards.knowledges %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <p id=K{{loop.index}}>
+                <strong>K{{loop.index}}</strong>: {{knowledge.detail}}
+              </p>
+            </th>
+            <td class="govuk-table__cell">
+              <span class="govuk-tag govuk-tag--turquoise">On track</span>
+            </td>
+          </tr>
+          {% endfor %}
+
+
+          {% for skill in data.standards.skills %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <p id=K{{loop.index}}>
+                <strong>S{{loop.index}}</strong>: {{skill.detail}}
+              </p>
+            </th>
+            <td class="govuk-table__cell">
+              <span class="govuk-tag govuk-tag--blue">Ready for EPA</span>
+            </td>
+          </tr>
+          {% endfor %}
+
+
+          {% for behaviour in data.standards.behaviours %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <p id=K{{loop.index}}>
+                <strong>B{{loop.index}}</strong>: {{behaviour.detail}}
+              </p>
+            </th>
+            <td class="govuk-table__cell">
+              <span class="govuk-tag govuk-tag--grey">Not started</span>
+            </td>
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

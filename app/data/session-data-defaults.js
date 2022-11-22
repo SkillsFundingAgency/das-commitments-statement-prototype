@@ -17,10 +17,14 @@ Example usage:
 
 */
 
+var standards = require('./ifate_standard_502.json')
+
+console.log(standards);
+
 module.exports = {
 
   // Insert values here
-
+  "standards" : standards,
 }
 /* 
 // this is called twice as the kit initialises, but doesn't appear to be used in the prototype
