@@ -55,14 +55,16 @@ My progress - {{serviceName}} - GOV.UK
               </p>
             </th>
             <td class="govuk-table__cell width-one-fifth">
-              <!-- <span class="govuk-tag govuk-tag--turquoise">On track</span> -->
-              {% if knowledge_scores[loop.index0] == 0 %}
+              <!--  comment out tags  -->
+              {# if knowledge_scores[loop.index0] == 0 %}
               <span class="govuk-tag govuk-tag--grey">Not started</span>
               {% elif knowledge_scores[loop.index0] == 100 %}
               <span class="govuk-tag govuk-tag--blue">Ready for EPA</span>
               {% else %}
               {{ knowledge_scores[loop.index0] }}
-              {% endif %}
+              {% endif #}
+              {{ knowledge_scores[loop.index0] }}
+              <!-- <span class="govuk-tag govuk-tag--turquoise">On track</span> -->
             </td>
           </tr>
           {% endfor %}
@@ -80,13 +82,15 @@ My progress - {{serviceName}} - GOV.UK
               </p>
             </th>
             <td class="govuk-table__cell width-one-fifth">
-              {% if skill_scores[loop.index0] == 0 %}
+              <!--  comment out tags  -->
+              {# if skill_scores[loop.index0] == 0 %}
               <span class="govuk-tag govuk-tag--grey">Not started</span>
               {% elif skill_scores[loop.index0] == 100 %}
               <span class="govuk-tag govuk-tag--blue">Ready for EPA</span>
               {% else %}
               {{ skill_scores[loop.index0] }}
-              {% endif %}
+              {% endif #}
+              {{ skill_scores[loop.index0] }}
             </td>
           </tr>
           {% endfor %}
@@ -104,13 +108,15 @@ My progress - {{serviceName}} - GOV.UK
               </p>
             </th>
             <td class="govuk-table__cell width-one-fifth">
-              {% if behaviour_scores[loop.index0] == 0 %}
+              <!--  comment out tags  -->
+              {# if behaviour_scores[loop.index0] == 0 %}
               <span class="govuk-tag govuk-tag--grey">Not started</span>
               {% elif behaviour_scores[loop.index0] == 100 %}
               <span class="govuk-tag govuk-tag--blue">Ready for EPA</span>
               {% else %}
               {{ behaviour_scores[loop.index0] }}
-              {% endif %}
+              {% endif #}
+              {{ behaviour_scores[loop.index0] }}
             </td>
           </tr>
           {% endfor %}
