@@ -5,9 +5,9 @@ My progress - {{serviceName}} - GOV.UK
 {% endblock %}
 
 {% set headerText="Chittur Gopalakrishnan Kaashi Vishwanathan" %}
-{% set knowledge_scores=[100, 100, 0, 0, 0, 1, 20] %}
-{% set skill_scores=[40, 100, 40, 0, 60, 0, 40] %}
-{% set behaviour_scores=[100, 40, 100, 60, 80, 80, 40] %}
+{% set knowledge_scores=[100, 100, 0, 0, 0, 1, 20, 20, 20, 20, 100, 0] %}
+{% set skill_scores=[40, 100, 40, 0, 60, 0, 40, 100, 60, 80, 80, 40, 100, 60, 80, 80, 60] %}
+{% set behaviour_scores=[100, 40, 100, 60, 80, 80, 40 ,40, 60] %}
 {% block beforeContent %}
 {% include "./includes/account-header.html" %}
 {% include "includes/beta-phase-banner.html" %}
@@ -21,14 +21,14 @@ My progress - {{serviceName}} - GOV.UK
     <div class="govuk-grid-column-three-quarters">
 
       <h1 class="govuk-heading-l">My progress
-        <span class="govuk-caption-m">Construction site supervisor</span>
+        <span class="govuk-caption-m">Software developer</span>
       </h1>
 
       <div class="">
         <p>This shows your progress against the list of knowledge, skills and behaviours (KSBs) needed to complete this
           apprenticeship.</p>
         <p><a
-            href="https://www.instituteforapprenticeships.org/apprenticeship-standards/construction-site-supervisor-v1-0"
+            href="https://www.instituteforapprenticeships.org/apprenticeship-standards/software-developer/"
             class="govuk-link">View the full IFATE standard (opens in new tab)</a></p>
       </div>
       <div class="govuk-form-group">
@@ -47,7 +47,7 @@ My progress - {{serviceName}} - GOV.UK
       <h2 class="govuk-heading-m">Knowledge</h2>
       <table class="govuk-table data-tble">
         <tbody class="govuk-table__body">
-          {% for knowledge in data.standards.knowledges %}
+          {% for knowledge in data.standards_developer.knowledges %}
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">
               <p id=K{{loop.index}}>
@@ -74,7 +74,7 @@ My progress - {{serviceName}} - GOV.UK
       <h2 class="govuk-heading-m">Skills</h2>
       <table class="govuk-table data-tble">
         <tbody class="govuk-table__body">
-          {% for skill in data.standards.skills %}
+          {% for skill in data.standards_developer.skills %}
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">
               <p id=K{{loop.index}}>
@@ -100,7 +100,7 @@ My progress - {{serviceName}} - GOV.UK
       <h2 class="govuk-heading-m">Behaviours</h2>
       <table class="govuk-table data-tble">
         <tbody class="govuk-table__body">
-          {% for behaviour in data.standards.behaviours %}
+          {% for behaviour in data.standards_developer.behaviours %}
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">
               <p id=K{{loop.index}}>

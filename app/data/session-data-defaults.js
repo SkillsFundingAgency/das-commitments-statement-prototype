@@ -18,9 +18,11 @@ Example usage:
 */
 
 var standards = require('./ifate_standard_502.json')
+var standards_developer = require('./ifate_standard_2.json')
 
 module.exports = {
-  "standards" : standards,
+  standards : standards,
+  standards_developer : standards_developer,
 }
 
 /* 
