@@ -11685,6 +11685,320 @@ li.app-status-list__list-item {
   background-size: 23px 22px;
 }
 
+.mc-chart, .mc-chart {
+  font-family: "GDS Transport", arial, sans-serif;
+  font-size: 16px;
+  display: table;
+  width: 100%;
+  border-spacing: 0 5px;
+  border: 1px solid #fff;
+  padding: 0;
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.mc-chart .mc-caption, .mc-chart .mc-caption {
+  display: table-caption;
+  font-size: 16px;
+  text-align: center;
+  caption-side: top;
+  margin: 16px 0;
+}
+
+.mc-chart .mc-thead, .mc-chart .mc-thead {
+  background-color: #fff;
+  display: table-header-group;
+  padding: 5px;
+  border: 1px solid #fff;
+}
+
+.mc-chart .mc-thead .mc-th, .mc-chart .mc-thead .mc-th {
+  display: none;
+}
+
+.mc-chart .mc-thead .mc-key-header, .mc-chart .mc-thead .mc-key-header {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: 100%;
+  padding-left: 5px;
+  border-left: 16px solid;
+  text-align: left;
+  font-weight: normal;
+  width: 100%;
+}
+
+.mc-chart .mc-thead .mc-key-header:last-child, .mc-chart .mc-thead .mc-key-header:last-child {
+  margin-bottom: 0;
+}
+
+.mc-chart .mc-thead .mc-key-1, .mc-chart .mc-thead .mc-key-1 {
+  border-left-color: #12436d;
+}
+
+.mc-chart .mc-thead .mc-key-2, .mc-chart .mc-thead .mc-key-2 {
+  border-left-color: #28a197;
+}
+
+.mc-chart .mc-thead .mc-key-3, .mc-chart .mc-thead .mc-key-3 {
+  border-left-color: #801650;
+}
+
+.mc-chart .mc-thead .mc-key-4, .mc-chart .mc-thead .mc-key-4 {
+  border-left-color: #f46a25;
+}
+
+.mc-chart .mc-thead .mc-key-5, .mc-chart .mc-thead .mc-key-5 {
+  border-left-color: #3d3d3d;
+}
+
+.mc-chart .mc-thead .mc-key-6, .mc-chart .mc-thead .mc-key-6 {
+  border-left-color: #a285d1;
+}
+
+.mc-chart.right-key .mc-thead, .mc-chart.left-key .mc-thead, .mc-chart.right-key .mc-thead, .mc-chart.left-key .mc-thead {
+  position: absolute;
+  top: 100px;
+}
+
+.mc-chart.right-key .mc-thead .mc-key-header, .mc-chart.left-key .mc-thead .mc-key-header, .mc-chart.right-key .mc-thead .mc-key-header, .mc-chart.left-key .mc-thead .mc-key-header {
+  margin-left: 0;
+}
+
+.mc-chart.right-key .mc-thead, .mc-chart.right-key .mc-thead {
+  right: 26px;
+}
+
+.mc-chart.left-key .mc-thead, .mc-chart.left-key .mc-thead {
+  left: 26px;
+}
+
+.mc-chart.no-key .mc-thead, .mc-chart.no-key .mc-thead {
+  display: none;
+}
+
+.mc-chart .mc-tbody, .mc-chart .mc-tbody {
+  display: table-row-group;
+}
+
+.mc-chart .mc-tbody .mc-tr, .mc-chart .mc-tbody .mc-tr {
+  display: table-row;
+}
+
+.mc-chart .mc-tbody .mc-tr .mc-bar-cell, .mc-chart .mc-tbody .mc-tr .mc-key-cell, .mc-chart .mc-tbody .mc-tr .mc-bar-cell, .mc-chart .mc-tbody .mc-tr .mc-key-cell {
+  padding-right: 5px;
+  margin-right: 1px;
+  box-sizing: border-box;
+  border: 0 solid;
+}
+
+.mc-chart .mc-tbody .mc-tr .mc-bar-cell, .mc-chart .mc-tbody .mc-tr .mc-bar-cell {
+  display: block;
+  text-align: left;
+  padding: 8px 0;
+  margin-bottom: 1px;
+  color: #fff;
+  text-indent: 8px;
+}
+
+.mc-chart .mc-tbody .mc-tr .mc-bar-1, .mc-chart .mc-tbody .mc-tr .mc-bar-1 {
+  background-color: #12436d;
+  color: #fff;
+}
+
+.mc-chart .mc-tbody .mc-tr .mc-bar-2, .mc-chart .mc-tbody .mc-tr .mc-bar-2 {
+  background-color: #28a197;
+  color: #fff;
+}
+
+.mc-chart .mc-tbody .mc-tr .mc-bar-3, .mc-chart .mc-tbody .mc-tr .mc-bar-3 {
+  background-color: #801650;
+  color: #fff;
+}
+
+.mc-chart .mc-tbody .mc-tr .mc-bar-4, .mc-chart .mc-tbody .mc-tr .mc-bar-4 {
+  background-color: #f46a25;
+  color: #0b0c0c;
+}
+
+.mc-chart .mc-tbody .mc-tr .mc-bar-5, .mc-chart .mc-tbody .mc-tr .mc-bar-5 {
+  background-color: #3d3d3d;
+  color: #fff;
+}
+
+.mc-chart .mc-tbody .mc-tr .mc-bar-6, .mc-chart .mc-tbody .mc-tr .mc-bar-6 {
+  background-color: #a285d1;
+  color: #0b0c0c;
+}
+
+.mc-chart .mc-tbody .mc-tr .mc-bar-negative, .mc-chart .mc-tbody .mc-tr .mc-bar-negative {
+  text-align: right;
+  padding-right: 8px;
+}
+
+.mc-chart .mc-tbody .mc-tr .mc-value-overflow, .mc-chart .mc-tbody .mc-tr .mc-value-overflow {
+  text-indent: -99999px !important;
+}
+
+.mc-chart .mc-tbody .mc-tr .mc-key-cell, .mc-chart .mc-tbody .mc-tr .mc-key-cell {
+  width: 40%;
+  text-indent: 26px;
+  text-align: right;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.mc-chart.mc-stacked .mc-stacked-header, .mc-chart.mc-stacked .mc-stacked-header {
+  display: none;
+}
+
+.mc-chart.mc-stacked .mc-th:nth-last-child(2), .mc-chart.mc-stacked .mc-th:nth-last-child(2) {
+  margin-bottom: 0;
+}
+
+.mc-chart.mc-stacked .mc-stacked-total, .mc-chart.mc-stacked .mc-stacked-total {
+  padding: 8px 0;
+  background-color: transparent !important;
+  color: #0b0c0c;
+  display: inline-block;
+  text-indent: 5px;
+}
+
+.mc-chart.mc-stacked .mc-tbody .mc-bar-cell, .mc-chart.mc-stacked .mc-tbody .mc-bar-cell {
+  display: inline-block;
+}
+
+.mc-chart.compact .mc-td.mc-bar-cell, .mc-chart.compact .mc-td.mc-bar-cell {
+  font-size: 12px;
+  text-indent: 2px;
+  padding: 0;
+}
+
+.mc-chart .mc-tr .mc-td.mc-bar-cell.mc-bar-1, .mc-chart .mc-tr .mc-td.mc-bar-cell.mc-bar-1 {
+  background-color: #12436d;
+}
+
+.mc-chart .mc-tr .mc-th.mc-key-1, .mc-chart .mc-tr .mc-th.mc-key-1 {
+  border-left-color: #12436d;
+}
+
+.mc-chart .mc-tr .mc-td.mc-bar-cell.mc-bar-2, .mc-chart .mc-tr .mc-td.mc-bar-cell.mc-bar-2 {
+  background-color: #28a197;
+}
+
+.mc-chart .mc-tr .mc-th.mc-key-2, .mc-chart .mc-tr .mc-th.mc-key-2 {
+  border-left-color: #28a197;
+}
+
+.mc-chart .mc-tr .mc-td.mc-bar-cell.mc-bar-3, .mc-chart .mc-tr .mc-td.mc-bar-cell.mc-bar-3 {
+  background-color: #801650;
+}
+
+.mc-chart .mc-tr .mc-th.mc-key-3, .mc-chart .mc-tr .mc-th.mc-key-3 {
+  border-left-color: #801650;
+}
+
+.mc-chart .mc-tr .mc-td.mc-bar-cell.mc-bar-4, .mc-chart .mc-tr .mc-td.mc-bar-cell.mc-bar-4 {
+  background-color: #f46a25;
+}
+
+.mc-chart .mc-tr .mc-th.mc-key-4, .mc-chart .mc-tr .mc-th.mc-key-4 {
+  border-left-color: #f46a25;
+}
+
+.mc-chart .mc-tr .mc-td.mc-bar-cell.mc-bar-5, .mc-chart .mc-tr .mc-td.mc-bar-cell.mc-bar-5 {
+  background-color: #3d3d3d;
+}
+
+.mc-chart .mc-tr .mc-th.mc-key-5, .mc-chart .mc-tr .mc-th.mc-key-5 {
+  border-left-color: #3d3d3d;
+}
+
+.mc-chart .mc-tr .mc-td.mc-bar-cell.mc-bar-6, .mc-chart .mc-tr .mc-td.mc-bar-cell.mc-bar-6 {
+  background-color: #a285d1;
+}
+
+.mc-chart .mc-tr .mc-th.mc-key-6, .mc-chart .mc-tr .mc-th.mc-key-6 {
+  border-left-color: #a285d1;
+}
+
+.mc-chart .mc-td, .mc-chart .mc-th, .mc-chart .mc-td, .mc-chart .mc-th {
+  padding: 0;
+  padding-right: 5px;
+  margin-right: 1px;
+  border: 0 solid;
+}
+
+.mc-chart .mc-td.mc-bar-cell, .mc-chart .mc-th.mc-bar-cell, .mc-chart .mc-td.mc-bar-cell, .mc-chart .mc-th.mc-bar-cell {
+  display: block;
+  background-color: #0b0c0c;
+  text-align: left;
+  padding: 8px 0;
+  margin-bottom: 1px;
+  color: #fff;
+  text-indent: 4px;
+  line-height: 0.6;
+}
+
+.mc-chart .mc-bar-outdented span, .mc-chart .mc-bar-outdented span {
+  color: #0b0c0c;
+}
+
+.mc-chart caption, .mc-chart caption {
+  caption-side: top;
+}
+
+.mc-chart .mc-td.mc-key-cell, .mc-chart .mc-td.mc-key-cell {
+  width: 40%;
+  text-indent: 26px;
+  text-align: right;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.mc-chart.mc-outdented .mc-tr .mc-bar-cell, .mc-chart.mc-outdented .mc-tr .mc-bar-cell {
+  color: #0b0c0c;
+}
+
+.mc-chart.mc-outdented .mc-tr .mc-bar-negative, .mc-chart.mc-outdented .mc-tr .mc-bar-negative {
+  text-align: left;
+}
+
+.mc-chart.mc-negative .mc-td.mc-key-cell, .mc-chart.mc-negative .mc-td.mc-key-cell {
+  padding-right: 25px;
+}
+
+.mc-outdented .mc-bar-cell.mc-bar-negative, .mc-outdented .mc-bar-cell.mc-bar-negative {
+  text-align: left;
+}
+
+.mc-toggle-button, .mc-toggle-button {
+  border: 1px solid #b1b4b6;
+  color: #1d70b8;
+  cursor: pointer;
+  margin: 0;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.mc-toggle-button:hover, .mc-toggle-button:hover {
+  background-color: #f3f2f1;
+  color: #003078;
+}
+
+.mc-toggle-button:focus, .mc-toggle-button:focus {
+  outline: 3px solid transparent;
+  color: #0b0c0c;
+  background-color: #fd0;
+  box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+  text-decoration: none;
+  background-color: #fd0;
+  border-color: transparent;
+}
+
+.mc-hidden, .mc-hidden caption, .mc-hidden, .mc-hidden caption {
+  display: none;
+}
+
 h1 span {
   color: #1d70b8;
 }
