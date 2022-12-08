@@ -11840,7 +11840,7 @@ li.app-status-list__list-item {
 }
 
 .mc-chart .mc-tbody .mc-tr .mc-key-cell, .mc-chart .mc-tbody .mc-tr .mc-key-cell {
-  width: 40%;
+  /*   width: 40%; */
   text-indent: 26px;
   text-align: right;
   display: table-cell;
@@ -11948,7 +11948,7 @@ li.app-status-list__list-item {
 }
 
 .mc-chart .mc-td.mc-key-cell, .mc-chart .mc-td.mc-key-cell {
-  width: 40%;
+  /*   width: 40%; */
   text-indent: 26px;
   text-align: right;
   display: table-cell;
@@ -12890,4 +12890,14 @@ table.data-table tr th:first-of-type {
 
 .width-one-fifth {
   width: 20%;
+}
+
+.gem-c-medium-number__value {
+  font-family: "GDS Transport", arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 700;
+  line-height: 1;
+  font-size: 80px;
+  font-size: 2rem;
 }

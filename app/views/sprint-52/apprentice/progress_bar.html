@@ -5,7 +5,7 @@ My progress - {{serviceName}} - GOV.UK
 {% endblock %}
 
 {% set headerText="Chittur Gopalakrishnan Kaashi Vishwanathan" %}
-{% set knowledge_scores=[100, 100, 1, 1, 1, 1, 20] %}
+{% set knowledge_scores=[100, 100, 1, 1, 15, 1, 20] %}
 {% set skill_scores=[40, 100, 40, 1, 60, 1, 40] %}
 {% set behaviour_scores=[100, 40, 100, 60, 80, 80, 40] %}
 {% block beforeContent %}
@@ -48,37 +48,47 @@ My progress - {{serviceName}} - GOV.UK
         <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-m">Summary</h2>
 
+      <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Knowledge</h3>
       <div class="mc-chart-container" aria-labelledby="mc-chart-not-accessible-0">
         <div aria-hidden="true" class="js-barchart-table mc-auto-outdent mc-chart mc-multiple">
           <div class="mc-thead">
-<!--             <div class="mc-tr">
-              <div class="mc-th">Shop</div>
-              <div class="mc-th mc-key-header mc-key-1">Apples</div>
-              <div class="mc-th mc-key-header mc-key-2">Bananas</div>
-            </div> -->
           </div>
           <div class="mc-tbody">
             <div class="mc-tr">
 <!--               <div class="mc-td mc-key-cell"></div> -->
           {% for knowledge in data.standards.knowledges %}
             {% if knowledge_scores[loop.index0] == 1 %}
-              <div class="mc-td mc-bar-cell mc-bar-1 mc-bar-indented" style="width: 1%; color:black"><span><strong>K{{loop.index}}</strong>:0 </span></div>
+              <div class="mc-td mc-bar-cell mc-bar-1 mc-bar-indented" style="width: 0.5%; color:black"><span><strong>K{{loop.index}}</strong>:0 </span></div>
             {% else %}
               <div class="mc-td mc-bar-cell mc-bar-1 mc-bar-indented" style="width: {{knowledge_scores[loop.index0]}}%;"><span><strong>K{{loop.index}}</strong>: {{knowledge_scores[loop.index0]}} </span></div>
             {% endif %}
             
           {% endfor %}
             </div>
+            </div>
+            </div>
+
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Skills</h3>
+            <div class="mc-chart-container" aria-labelledby="mc-chart-not-accessible-0">
+              <div aria-hidden="true" class="js-barchart-table mc-auto-outdent mc-chart mc-multiple">
+
             <div class="mc-tr">
 <!--               <div class="mc-td mc-key-cell"></div> -->
               {% for knowledge in data.standards.skills %}
                {% if skill_scores[loop.index0] == 1 %}
-              <div class="mc-td mc-bar-cell mc-bar-2 mc-bar-indented" style="width: 1%; color:black"><span><strong>S{{loop.index}}</strong>:0 </span></div>
+              <div class="mc-td mc-bar-cell mc-bar-2 mc-bar-indented" style="width: 0.5%; color:black"><span><strong>S{{loop.index}}</strong>:0 </span></div>
             {% else %}
             <div class="mc-td mc-bar-cell mc-bar-2" style="width: {{skill_scores[loop.index0]}}%;"><span><strong>S{{loop.index}}</strong>: {{skill_scores[loop.index0]}} </span></div>
             {% endif %}
               {% endfor %}
             </div>
+
+          </div>
+        </div>
+
+        <h3 class="govuk-heading-s govuk-!-margin-bottom-0">Behaviours</h3>
+        <div class="mc-chart-container" aria-labelledby="mc-chart-not-accessible-0">
+          <div aria-hidden="true" class="js-barchart-table mc-auto-outdent mc-chart mc-multiple">
             <div class="mc-tr">
  <!--              <div class="mc-td mc-key-cell"></div> -->
               {% for knowledge in data.standards.behaviours %}
@@ -86,7 +96,9 @@ My progress - {{serviceName}} - GOV.UK
               {% endfor %}
             </div>
           </div>
-        </div><span class="mc-hidden" id="mc-chart-not-accessible-0">This content is not accessible - switch to
+        </div>
+        
+        <span class="mc-hidden" id="mc-chart-not-accessible-0">This content is not accessible - switch to
           table</span>
       </div>
     </div>
@@ -98,21 +110,13 @@ My progress - {{serviceName}} - GOV.UK
           {% for knowledge in data.standards.knowledges %}
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">
-              <p id=K{{loop.index}}>
-                <strong>K{{loop.index}}</strong>: {{knowledge.detail}}
-              </p>
+                <strong>K{{loop.index}}</strong>
             </th>
-            <td class="govuk-table__cell width-one-fifth">
-              <!--  comment out tags  -->
-              {# if knowledge_scores[loop.index0] == 0 %}
-              <span class="govuk-tag govuk-tag--grey">Not started</span>
-              {% elif knowledge_scores[loop.index0] == 100 %}
-              <span class="govuk-tag govuk-tag--blue">Ready for EPA</span>
-              {% else %}
-              {{ knowledge_scores[loop.index0] }}
-              {% endif #}
-              {{ knowledge_scores[loop.index0] }}
-              <!-- <span class="govuk-tag govuk-tag--turquoise">On track</span> -->
+            <td class="govuk-table__cell">
+                {{knowledge.detail}}
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
+              <span class="">{{ knowledge_scores[loop.index0] }}</span>
             </td>
           </tr>
           {% endfor %}
@@ -125,20 +129,13 @@ My progress - {{serviceName}} - GOV.UK
           {% for skill in data.standards.skills %}
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">
-              <p id=K{{loop.index}}>
-                <strong>S{{loop.index}}</strong>: {{skill.detail}}
-              </p>
+              <strong>S{{loop.index}}</strong>
             </th>
-            <td class="govuk-table__cell width-one-fifth">
-              <!--  comment out tags  -->
-              {# if skill_scores[loop.index0] == 0 %}
-              <span class="govuk-tag govuk-tag--grey">Not started</span>
-              {% elif skill_scores[loop.index0] == 100 %}
-              <span class="govuk-tag govuk-tag--blue">Ready for EPA</span>
-              {% else %}
-              {{ skill_scores[loop.index0] }}
-              {% endif #}
-              {{ skill_scores[loop.index0] }}
+            <td class="govuk-table__cell">
+                {{skill.detail}}
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
+              <span class="">{{ skill_scores[loop.index0] }}</span>
             </td>
           </tr>
           {% endfor %}
@@ -151,20 +148,13 @@ My progress - {{serviceName}} - GOV.UK
           {% for behaviour in data.standards.behaviours %}
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">
-              <p id=K{{loop.index}}>
-                <strong>B{{loop.index}}</strong>: {{behaviour.detail}}
-              </p>
+              <strong>B{{loop.index}}</strong>
             </th>
-            <td class="govuk-table__cell width-one-fifth">
-              <!--  comment out tags  -->
-              {# if behaviour_scores[loop.index0] == 0 %}
-              <span class="govuk-tag govuk-tag--grey">Not started</span>
-              {% elif behaviour_scores[loop.index0] == 100 %}
-              <span class="govuk-tag govuk-tag--blue">Ready for EPA</span>
-              {% else %}
-              {{ behaviour_scores[loop.index0] }}
-              {% endif #}
-              {{ behaviour_scores[loop.index0] }}
+            <td class="govuk-table__cell">
+                {{behaviour.detail}}
+             </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
+              <span class="">{{ behaviour_scores[loop.index0] }}</span>
             </td>
           </tr>
           {% endfor %}
