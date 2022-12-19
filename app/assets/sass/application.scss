@@ -43,6 +43,7 @@ $govuk-assets-path: '/govuk/assets/';
 @import "components/custom-task-list";
 @import "components/notification-banner";
 @import "components/chart";
+@import "components/account-header";
 
 h1 {
   span {
@@ -1033,4 +1034,18 @@ table {
   line-height: 1;
   font-size: 80px;
   font-size: 2rem;
+}
+
+
+// provider homepage custom layout
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+.box {
+  margin: 15px;
+  width: calc(50% - 30px);
+  box-sizing: border-box;
+  border-bottom: 1px solid #bfc1c3;
 }
