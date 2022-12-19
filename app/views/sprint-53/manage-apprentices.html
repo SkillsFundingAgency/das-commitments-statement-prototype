@@ -14,7 +14,7 @@
   <div class="govuk-width-container">
     <ul class="das-navigation__list ">
       <li class="das-navigation__list-item">
-        <a class="das-navigation__link das-navigation__link--current" href="index">Home</a>
+        <a class="das-navigation__link" href="index">Home</a>
       </li>
       <li class="das-navigation__list-item">
         <a class="das-navigation__link" href="approvals/apprentice-requests">Apprentice requests</a>
@@ -23,7 +23,7 @@
         <a class="das-navigation__link " href="reserve-reservations-pro">Manage funding</a>
       </li>
       <li class="das-navigation__list-item">
-        <a class="das-navigation__link" href="approvals/manage-apprentices">Manage your apprentices</a>
+        <a class="das-navigation__link das-navigation__link--current" href="approvals/manage-apprentices">Manage your apprentices</a>
       </li>
       <li class="das-navigation__list-item">
         <a class="das-navigation__link" href="{{ version }}/#">Recruit apprentices</a>
@@ -42,12 +42,8 @@
 
 {% block content %}
 <div class="govuk-width-container " id="landing-page-section">
-<a onClick='window.history.back()' class="image-demo">
-
-
-</a>
+<a onClick='window.history.back()' class="image-demo"></a>
 <main class="govuk-main-wrapper employer-overide govuk-!-padding-top-8" id="main-content" role="main">
-
 
 <h1 class="govuk-heading-xl">Manage your apprentices</h1>
 
