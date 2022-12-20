@@ -39,7 +39,7 @@
   </div>
 </nav>
 <div class="govuk-width-container " id="">
-  <a href="#" class="govuk-back-link">Back</a>
+  <a href="#"  onclick="history.go(-1)" class="govuk-back-link">Back</a>
 </div>
 {% endblock %}
 
@@ -125,7 +125,7 @@
         </div>
         <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet"  style="text-align: right !important;">
           <a id="edit-apprentice-link"
-            href="edit-details?apprentice={{data.apprentice}}"
+            href="edit-details-as-is?apprentice={{data.apprentice}}"
             class="govuk-link govuk-body">Edit apprentice</a>
         </div>
       </div>

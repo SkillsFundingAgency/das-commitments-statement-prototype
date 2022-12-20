@@ -14,20 +14,20 @@ Manage your apprenticeships
   <div class="govuk-width-container">
     <ul class="das-navigation__list ">
       <li class="das-navigation__list-item">
-        <a class="das-navigation__link" href="index">Home</a>
+        <a class="das-navigation__link" href="home">Home</a>
       </li>
       <li class="das-navigation__list-item">
-        <a class="das-navigation__link" href="approvals/apprentice-requests">Apprentice requests</a>
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
       </li>
       <li class="das-navigation__list-item">
-        <a class="das-navigation__link " href="reserve-reservations-pro">Manage funding</a>
+        <a class="das-navigation__link " href="#">Manage funding</a>
       </li>
       <li class="das-navigation__list-item">
-        <a class="das-navigation__link das-navigation__link--current" href="approvals/manage-apprentices">Manage your
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
           apprentices</a>
       </li>
       <li class="das-navigation__list-item">
-        <a class="das-navigation__link" href="{{ version }}/#">Recruit apprentices</a>
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
       </li>
       <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
           href="{{ version }}/#">More</a>
@@ -41,7 +41,7 @@ Manage your apprenticeships
   </div>
 </nav>
 <div class="govuk-width-container " id="">
-  <a href="#" class="govuk-back-link">Back</a>
+  <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
 </div>
 {% endblock %}
 
@@ -130,7 +130,7 @@ Manage your apprenticeships
         <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6" />
 
         <div class="govuk-form-group">
-          <p class="govuk-!-font-weight-bold govuk-!-margin-bottom-1">Apprenticeship delivery model</p>
+          <p class="govuk-!-font-weight-bold govuk-!-margin-bottom-1">Unique learner number</p>
           <p class="govuk-body">7230452014</p>
         </div>
 
