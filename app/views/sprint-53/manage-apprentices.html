@@ -324,9 +324,11 @@ Manage your apprenticeships
         {% for app in data.apprentices %}
         <tr class="govuk-table__row">
           <td class="govuk-table__cell" data-label="Apprentice name">
-            <a class="govuk-link" href="apprentice-details">
-              {{app.name}}
-            </a>
+            {% if loop.index0 == 1 %}
+            <a class="govuk-link" href="apprentice-details-as-is?apprentice={{loop.index0}}">{{app.name}}</a>
+            {% else %}
+            <a class="govuk-link" href="apprentice-details?apprentice={{loop.index0}}">{{app.name}}</a>
+            {% endif %}
           </td>
           <td class="govuk-table__cell" data-label="ULN">
             {{app.ULN}}

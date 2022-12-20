@@ -125,16 +125,17 @@
         </div>
         <div class="govuk-grid-column-one-third das-!-text-align-right--from-tablet"  style="text-align: right !important;">
           <a id="edit-apprentice-link"
-            href="edit-details"
+            href="edit-details?apprentice={{data.apprentice}}"
             class="govuk-link govuk-body">Edit apprentice</a>
         </div>
       </div>
-
+ 
       <table class="govuk-table">
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header govuk-!-width-one-half">Name</th>
-            <td id="apprentice-name" class="govuk-table__cell">Rufus Kelly</td>
+            <td id="apprentice-name" class="govuk-table__cell">
+              {{data.apprentices[data.apprentice].name or 'Rufus Kelly' }}</td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Email</th>
@@ -150,7 +151,8 @@
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Apprenticeship training course</th>
-            <td id="apprentice-course" class="govuk-table__cell">Actuarial technician, Level: 4 (Standard)</td>
+            <td id="apprentice-course" class="govuk-table__cell">
+              {{data.apprentices[data.apprentice].standard or 'Actuarial technician, Level: 4 (Standard)' }}</td>
             <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
@@ -166,13 +168,15 @@
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Planned training start date</th>
-            <td id="apprentice-start-date" class="govuk-table__cell">Sep 2022</td>
+            <td id="apprentice-start-date" class="govuk-table__cell">
+              {{data.apprentices[data.apprentice].start or 'Sep 2022' }}</td>
             <td class="govuk-table__cell"></td>
           </tr>
 
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Planned training end date</th>
-            <td id="apprentice-end-date" class="govuk-table__cell">Apr 2029</td>
+            <td id="apprentice-end-date" class="govuk-table__cell">
+              {{data.apprentices[data.apprentice].end or 'Apr 2029' }}</td>
             <td class="govuk-table__cell"></td>
           </tr>
 
