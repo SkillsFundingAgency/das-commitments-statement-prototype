@@ -1,0 +1,119 @@
+{% extends "layout.v1.html" %}
+
+{% block pageTitle %}
+My apprenticeship details - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% set headerText="Gibson Edgerunner" %}
+{% block beforeContent %}
+{% include "./includes/account-header.html" %}
+{% include "includes/beta-phase-banner.html" %}
+{% include "./includes/navigation-post-confirmation.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+
+  <div class="govuk-width-container" id="dashboard-section">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          My apprenticeship
+          <span class="govuk-caption-m">Software developer</span>
+        </h1>
+      </div>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+        <div class="govuk-!-padding-bottom-2">
+          <table class="govuk-table data-table">
+            <caption></caption>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Current employer</th>
+                <td class="govuk-table__cell">Tessier-Ashpool SA</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Training provider</th>
+                <td class="govuk-table__cell">CENTRAL CHIBA CITY ACADEMY LIMITED</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Level</th>
+                <td class="govuk-table__cell">4</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Planned training start date</th>
+                <td class="govuk-table__cell">September 2022</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Planned training end date</th>
+                <td class="govuk-table__cell">September 2025</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Current job end date</th>
+                <td class="govuk-table__cell">September 2023</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Delivery model</th>
+                <td class="govuk-table__cell">Portable flexi-job</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+<!--     <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        {% include "./portable-timeline.html" %}
+      </div>
+    </div> -->
+
+<!-- 
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-s">
+          Roles and responsibilities
+
+        </h2>
+        <p class="">
+          You can <a class="govuk-link" href="roles-all">
+            read through the roles and responsibilities
+          </a> for you, your employer and your training provider.
+        </p>
+        <hr class="govuk-section-break govuk-section-break--visible  govuk-section-break--l" />
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-s">
+          How your apprenticeship will be delivered
+
+        </h2>
+        <p class="">
+          <a class="govuk-link" href="how-your-apprenticeship-is-delivered">
+            View details
+          </a> of how your apprenticeship will be delivered.
+        </p>
+        <hr class="govuk-section-break govuk-section-break--visible  govuk-section-break--l" />
+      </div>
+
+    </div>
+ -->
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <h2 class="govuk-heading-s">
+          How to change these details
+        </h2>
+        <p>To change any of these details you need to speak to your training provider.
+          You'll be alerted when your apprenticeship details have been corrected.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}
