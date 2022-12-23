@@ -1,0 +1,95 @@
+{% extends "layout.v1.html" %}
+
+{% block pageTitle %}
+Home - {{serviceName}} - GOV.UK
+{% endblock %}
+
+{% set headerText="Gibson Edgerunner" %}
+{% block beforeContent %}
+{% include "./includes/account-header.html" %}
+{% include "includes/beta-phase-banner.html" %}
+{% include "./includes/navigation-post-confirmation.html" %}
+{% endblock %}
+
+{% block content %}
+<div id="" class="dashboard-page">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-row dashboard-title">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          Welcome, {{headerText}}
+          <span class="govuk-caption-m">Software developer</span>
+        </h1>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="govuk-width-container" id="dashboard-section">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Important
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+            The details of your apprenticeship have changed. Please check the changes.<br>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-width-container" id="dashboard-section">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <ul class="dashboard-nav dashboard-li">
+        <li>
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link govuk-link--no-visited-state" href="view-details-regular">
+              My apprenticeship details
+            </a>
+          </h2>
+          <p>Details of your employer, training provider and apprenticeship.</p>
+        </li>
+
+        <li>
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link govuk-link--no-visited-state" href="progress">
+              Find an Apprenticeship
+            </a>
+          </h2>
+          <p>Manage your applications and get alerts about new apprenticeships.</p>
+        </li>
+
+
+        <li>
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link govuk-link--no-visited-state" model="Model" href="/HelpAndSupport">
+              Help and support
+            </a>
+          </h2>
+          <p>Who to contact if you have questions or concerns during your apprenticeship.</p>
+        </li>
+
+
+        <li>
+          <h2 class="govuk-heading-m">
+            <a class="govuk-link govuk-link--no-visited-state" model="Model" href="feedback">
+              Feedback on your training provider
+            </a>
+          </h2>
+          <p>Let us know how your apprenticeship is going, to help your training provider to improve.</p>
+        </li>
+
+
+      </ul>
+    </div>
+  </div>
+</div>
+{% endblock %}
