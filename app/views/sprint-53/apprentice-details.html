@@ -168,14 +168,14 @@ Manage your apprenticeships
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Duration reduction due to prior learning</th>
             <td id="rpl-duration" class="govuk-table__cell" colspan="2">
-              13 weeks
+              {{data.RPL or '14'}} weeks
             </td>
             <td class="govuk-table__cell"></td>
           </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">Price reduction due to prior learning</th>
             <td id="rpl-cost" class="govuk-table__cell" colspan="2">
-              £2,000 </td>
+              £{{data.RPL_cost or '2,000'}} </td>
             <td class="govuk-table__cell"></td>
           </tr>
 

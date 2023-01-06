@@ -41,7 +41,7 @@ Manage your apprenticeships
   </div>
 </nav>
 <div class="govuk-width-container " id="">
-  <a href="#"  onclick="history.go(-1)" class="govuk-back-link">Back</a>a>
+  <a href="#"  onclick="history.go(-1)" class="govuk-back-link">Back</a>
 </div>
 {% endblock %}
 
@@ -59,7 +59,7 @@ Manage your apprenticeships
         </p>
       </div>
 
-      <form id="apprentice-details" novalidate="" method="post">
+      <form id="apprentice-details" novalidate="" method="post" action="apprentice-details">
         <input id="ReservationId" name="ReservationId" type="hidden" value="">
         <input type="hidden" data-val="true" data-val-required="The HasStandardOptions field is required."
           id="HasStandardOptions" name="HasStandardOptions" value="False">
@@ -226,29 +226,29 @@ Manage your apprenticeships
         <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6" />
      
         <div class="govuk-form-group ">
-          <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Duration reduction due to prior
+          <label class="govuk-label govuk-!-font-weight-bold" for="RPL">Duration reduction due to prior
             learning</label>
           <span id="price-hint" class="govuk-hint">
             Enter the number of weeks that the training has been reduced by.
           </span>
-          <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true"
-            id="error-message-Cost"></span>
+          <span class="field-validation-valid govuk-error-message" data-valmsg-for="RPL" data-valmsg-replace="true"
+            id="error-message-RPL"></span>
           <input class="govuk-input govuk-input--width-5"
-            type="number" id="Cost" name="Cost" value="13">
+            type="number" id="RPL" name="RPL" value="{{data.RPL or '14'}}">
         </div>
 
         <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6" />
      
         <div class="govuk-form-group ">
-          <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Price reduction due to prior learning</label>
+          <label class="govuk-label govuk-!-font-weight-bold" for="RPL_cost">Price reduction due to prior learning</label>
           <span id="price-hint" class="govuk-hint">
             Enter the price reduction, in whole pounds. For example, for £1,500 enter
             1500
           </span>
-          <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true"
-            id="error-message-Cost"></span>
+          <span class="field-validation-valid govuk-error-message" data-valmsg-for="RPL_cost" data-valmsg-replace="true"
+            id="error-message-RPL_cost"></span>
           <span class="govuk-body govuk-!-font-weight-bold">£ </span><input class="govuk-input govuk-input--width-5"
-            type="number" id="Cost" name="Cost" value="2000">
+            type="number" id="RPL_cost" name="RPL_cost" value="{{data.RPL_cost or '2000'}}">
         </div>
 
         <hr class="govuk-section-break govuk-section-break--visible govuk-!-margin-top-6 govuk-!-margin-bottom-6" />
