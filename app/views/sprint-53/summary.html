@@ -1,0 +1,150 @@
+{% extends "layout-provider.v1.html" %}
+
+{% set serviceName %}
+Manage apprenticeships
+{% endset%}
+{% set knowledge_scores=[100, 100, 0, 0, 0, 1, 20] %}
+{% set skill_scores=[40, 100, 40, 0, 60, 0, 40] %}
+{% set behaviour_scores=[100, 40, 100, 60, 80, 80, 40] %}
+{% block pageTitle %}
+Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+{% include "./includes/training-provider-account-header.html" %}
+<nav class="das-navigation" style="">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="{{ version }}/#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="{{ version }}/#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="govuk-width-container " id="">
+  <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters govuk-!-margin-top-6">
+      <h1 class="govuk-heading-xl">Check your answers</h1>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+
+      <h2 class="govuk-heading-m">Knowledge</h2>
+      <table class="govuk-table data-tble">
+        <tbody class="govuk-table__body">
+          {% for knowledge in data.standards.knowledges %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <strong>K{{loop.index}}</strong>
+            </th>
+            <td class="govuk-table__cell">
+              {{knowledge.detail}}
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
+              <span class="">{{ knowledge_scores[loop.index0] }}</span>
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
+              <a class="govuk-link" href="review-knowledge.html">
+                Change<span class="govuk-visually-hidden"> knowledge</span>
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <h2 class="govuk-heading-m">Skills</h2>
+      <table class="govuk-table data-tble">
+        <tbody class="govuk-table__body">
+          {% for skill in data.standards.skills %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <strong>S{{loop.index}}</strong>
+            </th>
+            <td class="govuk-table__cell">
+              {{skill.detail}}
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
+              <span class="">{{ skill_scores[loop.index0] }}</span>
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
+              <a class="govuk-link" href="review-skills.html">
+                Change<span class="govuk-visually-hidden"> skills</span>
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <h2 class="govuk-heading-m">Behaviours</h2>
+      <table class="govuk-table data-tble">
+        <tbody class="govuk-table__body">
+          {% for behaviour in data.standards.behaviours %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <strong>B{{loop.index}}</strong>
+            </th>
+            <td class="govuk-table__cell">
+              {{behaviour.detail}}
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
+              <span class="">{{ behaviour_scores[loop.index0] }}</span>
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
+              <a class="govuk-link" href="review-behaviours.html">
+                Change<span class="govuk-visually-hidden"> behaviours</span>
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+
+
+
+      <input type="hidden" name="answers-checked" value="true">
+
+      <a href="confirmation.html" class="govuk-button" data-module="govuk-button">
+        Save
+      </a>
+
+
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

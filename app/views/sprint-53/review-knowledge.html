@@ -1,0 +1,98 @@
+{% extends "layout-provider.v1.html" %}
+
+{% set serviceName %}
+Manage apprenticeships
+{% endset%}
+
+{% block pageTitle %}
+Manage your apprenticeships
+{% endblock %}
+
+{% block beforeContent %}
+{% include "./includes/training-provider-account-header.html" %}
+<nav class="das-navigation" style="">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="{{ version }}/#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="{{ version }}/#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="govuk-width-container " id="">
+  <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters govuk-!-margin-top-6">
+        <h1 class="govuk-heading-xl">Review the knowledge required for this apprenticeship standard </h1>
+    </div>
+
+    <div class="govuk-grid-column-three-quarters">
+
+
+
+      <div class="">
+        <p>This shows the duties split into the detailed of knowledge, skills and behaviours (KSBs) needed to complete this apprenticeship.</p>
+        <p>Review each </p>
+        <p><a
+            href="https://www.instituteforapprenticeships.org/apprenticeship-standards/construction-site-supervisor-v1-0"
+            class="govuk-link">View the full IFATE standard (opens in new tab)</a></p>
+      </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          </div>
+        </fieldset>
+      </div>
+
+      <h2 class="govuk-heading-m">Knowledge</h2>
+      <table class="govuk-table data-tble">
+        <tbody class="govuk-table__body">
+          {% for knowledge in data.standards.knowledges %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <strong>K{{loop.index}}</strong>
+            </th>
+            <td class="govuk-table__cell">
+              {{knowledge.detail}}
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
+              <span class="">{{ knowledge_scores[loop.index0] }}</span>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      <a href="review-skills" class="govuk-button">Continue</a>
+    </div>
+
+
+  </div>
+
+</div>
+{% endblock %}
