@@ -1,4 +1,4 @@
-{% extends "layout-provider.v1.html" %}
+{% extends "layout.html" %}
 
 {% set serviceName %}
 Manage apprenticeships
@@ -9,37 +9,6 @@ Manage your apprenticeships
 {% endblock %}
 
 {% block beforeContent %}
-{% include "./includes/training-provider-account-header.html" %}
-<nav class="das-navigation" style="">
-  <div class="govuk-width-container">
-    <ul class="das-navigation__list ">
-      <li class="das-navigation__list-item">
-        <a class="das-navigation__link" href="home">Home</a>
-      </li>
-      <li class="das-navigation__list-item">
-        <a class="das-navigation__link" href="#">Apprentice requests</a>
-      </li>
-      <li class="das-navigation__list-item">
-        <a class="das-navigation__link " href="#">Manage funding</a>
-      </li>
-      <li class="das-navigation__list-item">
-        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
-          apprentices</a>
-      </li>
-      <li class="das-navigation__list-item">
-        <a class="das-navigation__link" href="#">Recruit apprentices</a>
-      </li>
-      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
-          href="{{ version }}/#">More</a>
-        <ul class="das-navigation__priority-list govuk-visually-hidden">
-          <li class="das-navigation__list-item">
-            <a class="das-navigation__link" href="{{ version }}/#">Organisations and agreements</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</nav>
 <div class="govuk-width-container " id="">
   <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
 </div>
@@ -57,6 +26,7 @@ Manage your apprenticeships
                      <span class="field-validation-valid govuk-error-message" data-valmsg-for="CourseCode" data-valmsg-replace="true" id="error-message-CourseCode"></span>
                      <select class="govuk-select govuk-!-width-three-quarters" aria-describedby="course-name-hint" id="CourseCode" name="CourseCode">
                          <option value="">Please select an option</option>
+                         <option value="502">Construction site supervisor, Level: 4</option>
                          <option value="274">Abattoir worker, Level: 2</option>
                          <option value="34">Able seafarer (deck), Level: 2</option>
                          <option value="272">Academic professional, Level: 7</option>
