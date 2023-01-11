@@ -71,24 +71,53 @@ Manage your apprenticeships
       </div>
 
       <h2 class="govuk-heading-m">Behaviours</h2>
-      <table class="govuk-table data-tble">
-        <tbody class="govuk-table__body">
           {% for behaviour in data.standards.behaviours %}
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">
-              <strong>B{{loop.index}}</strong>
-            </th>
-            <td class="govuk-table__cell">
-              {{behaviour.detail}}
-            </td>
-            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
-              <span class="">{{ behaviour_scores[loop.index0] }}</span>
-            </td>
-          </tr>
+            <!--  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint"> -->
+               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                 <h3 class="govuk-hint">
+                  <strong>B{{loop.index}}: </strong>{{behaviour.detail}}
+                 </h3>
+               </legend>
+    <!--                 <div id="changed-name-hint" class="govuk-hint">
+                 <strong>B{{loop.index}}</strong> {{knowledge.detail}}
+               </div> -->
+               <div class="govuk-radios  govuk-radios--small govuk-radios--inline govuk-!-margin-bottom-6" data-module="govuk-radios">
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="changed-name" name="B{{loop.index}}" type="radio" value="yes">
+                   <label class="govuk-label govuk-radios__label" for="changed-name1">
+                     1
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="changed-name-2" name="B{{loop.index}}" type="radio" value="no">
+                   <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                     2
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="changed-name-2" name="B{{loop.index}}" type="radio" value="no">
+                   <label class="govuk-label govuk-radios__label" for="changed-name-3">
+                     3
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="changed-name-2" name="B{{loop.index}}" type="radio" value="no">
+                   <label class="govuk-label govuk-radios__label" for="changed-name4">
+                     4
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="changed-name-2" name="B{{loop.index}}" type="radio" value="no">
+                   <label class="govuk-label govuk-radios__label" for="changed-name-5">
+                     5
+                   </label>
+                 </div>
+               </div>
+
+         </tr>
           {% endfor %}
 
-        </tbody>
-      </table>
 
       <a href="summary" class="govuk-button">Continue</a>
 

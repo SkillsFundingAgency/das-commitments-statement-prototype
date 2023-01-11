@@ -52,9 +52,7 @@ Manage your apprenticeships
         <h1 class="govuk-heading-xl">Review the skills required for this apprenticeship standard </h1>
     </div>
 
-    <div class="govuk-grid-column-three-quarters">
-
-
+    <div class="govuk-grid-column-two-thirds">
 
       <div class="">
         <p>This shows the duties split into the detailed of knowledge, skills and behaviours (KSBs) needed to complete this apprenticeship.</p>
@@ -71,24 +69,53 @@ Manage your apprenticeships
       </div>
 
       <h2 class="govuk-heading-m">Skills</h2>
-      <table class="govuk-table data-tble">
-        <tbody class="govuk-table__body">
-          {% for skill in data.standards.skills %}
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">
-              <strong>S{{loop.index}}</strong>
-            </th>
-            <td class="govuk-table__cell">
-              {{skill.detail}}
-            </td>
-            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
-              <span class="">{{ skill_scores[loop.index0] }}</span>
-            </td>
-          </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-
+      {% for skill in data.standards.skills %}
+      <tr class="govuk-table__row">
+        <!--  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint"> -->
+           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+             <h1 class="govuk-hint">
+              <strong>S{{loop.index}}: </strong>{{skill.detail}}
+             </h1>
+           </legend>
+<!--                 <div id="changed-name-hint" class="govuk-hint">
+             <strong>S{{loop.index}}</strong> {{knowledge.detail}}
+           </div> -->
+           <div class="govuk-radios  govuk-radios--small govuk-radios--inline govuk-!-margin-bottom-6" data-module="govuk-radios">
+             <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="changed-name" name="S{{loop.index}}" type="radio" value="yes">
+               <label class="govuk-label govuk-radios__label" for="changed-name1">
+                 1
+               </label>
+             </div>
+             <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="changed-name-2" name="S{{loop.index}}" type="radio" value="no">
+               <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                 2
+               </label>
+             </div>
+             <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="changed-name-2" name="S{{loop.index}}" type="radio" value="no">
+               <label class="govuk-label govuk-radios__label" for="changed-name-3">
+                 3
+               </label>
+             </div>
+             <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="changed-name-2" name="S{{loop.index}}" type="radio" value="no">
+               <label class="govuk-label govuk-radios__label" for="changed-name4">
+                 4
+               </label>
+             </div>
+             <div class="govuk-radios__item">
+               <input class="govuk-radios__input" id="changed-name-2" name="S{{loop.index}}" type="radio" value="no">
+               <label class="govuk-label govuk-radios__label" for="changed-name-5">
+                 5
+               </label>
+             </div>
+           </div>
+           
+        <!--  </fieldset> -->
+     </tr>
+      {% endfor %}
       <a href="review-behaviours" class="govuk-button">Continue</a>
     </div>
 
