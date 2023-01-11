@@ -1,7 +1,7 @@
 {% extends "layout-provider.v1.html" %}
 
 {% set serviceName %}
-Summary of prior experience
+Manage apprenticeships
 {% endset%}
 {% set knowledge_scores=[100, 100, 0, 0, 0, 1, 20] %}
 {% set skill_scores=[40, 100, 40, 0, 60, 0, 40] %}
@@ -51,9 +51,9 @@ Check your answers
 <div class="govuk-width-container " id="landing-page-section">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-three-quarters govuk-!-margin-top-6">
-      <h1 class="govuk-heading-xl">Summary of prior experience
-      <span class="govuk-caption-m">Construction site supervisor, level 4</span>
-    </h1>
+      <h1 class="govuk-heading-xl">Check your answers
+        <span class="govuk-caption-m">Construction site supervisor, level 4</span>
+        </h1>
     </div>
   </div>
 
@@ -76,6 +76,11 @@ Check your answers
             <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
               <span class="">{{ knowledge_scores[loop.index0] }}</span>
             </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
+              <a class="govuk-link" href="review-knowledge.html">
+                Change<span class="govuk-visually-hidden"> knowledge</span>
+              </a>
+            </td>
           </tr>
           {% endfor %}
         </tbody>
@@ -94,6 +99,11 @@ Check your answers
             </td>
             <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
               <span class="">{{ skill_scores[loop.index0] }}</span>
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
+              <a class="govuk-link" href="review-skills.html">
+                Change<span class="govuk-visually-hidden"> skills</span>
+              </a>
             </td>
           </tr>
           {% endfor %}
@@ -114,6 +124,11 @@ Check your answers
             <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
               <span class="">{{ behaviour_scores[loop.index0] }}</span>
             </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
+              <a class="govuk-link" href="review-behaviours.html">
+                Change<span class="govuk-visually-hidden"> behaviours</span>
+              </a>
+            </td>
           </tr>
           {% endfor %}
 
@@ -124,7 +139,7 @@ Check your answers
 
       <input type="hidden" name="answers-checked" value="true">
 
-      <a href="confirmation.html" class="govuk-button" data-module="govuk-button">
+      <a href="summary.html" class="govuk-button" data-module="govuk-button">
         Save
       </a>
 
