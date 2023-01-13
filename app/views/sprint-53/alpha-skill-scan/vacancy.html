@@ -1,0 +1,344 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+Summary of prior experience
+{% endset%}
+{% set knowledge_scores=["4 weeks", "4 weeks", "No reduction","No reduction", "No reduction", "No reduction", "No
+reduction"] %}
+{% set skill_scores=["No reduction", "4 weeks", "No reduction", "No reduction", "No reduction", "No reduction", "No
+reduction"] %}
+{% set behaviour_scores=["4 weeks", "No reduction", "4 weeks", "6 weeks", "4 weeks", "4 weeks", "No reduction"] %}
+{% block pageTitle %}
+Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container " id="">
+  <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half sfa-navigation">
+
+      <div id="bannerSignedOut">
+        <a href="/signin?ReturnUrl=%2Fapprenticeship%2F1000118395" id="loginLink" title="Sign in / Create account"><i
+            class="govuk-fa fa-sign-in"></i>Sign in / Create account</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- 
+<div class="govuk-covid-banner">
+  <h2 class="govuk-heading-m">
+    Coronavirus (COVID-19): to find out how we can support you with your apprenticeship including if you have been
+    affected by redundancy, <a href="https://www.gov.uk/guidance/redundancy-support-for-apprentices"
+      target="_blank">read our updated information</a>.
+  </h2>
+</div> -->
+
+
+
+
+
+
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl" id="vacancy-title" itemprop="title">
+        Digital Marketer Apprentice (500more Digital)
+        <span class="govuk-caption-l">500MORE DIGITAL LTD </span>
+      </h1>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <ul class="govuk-list sfa-align-right-tablet sfa-xlarge-top-margin">
+        <li>
+          <a href="/apprenticeships?SearchField=All&amp;Keywords=digital&amp;Location=sy3%200er&amp;WithinDistance=0&amp;ApprenticeshipLevel=All&amp;DisabilityConfidentOnly=false&amp;Latitude=&amp;Longitude=&amp;Hash=-176847271&amp;SearchMode=Keyword&amp;Category=&amp;LocationType=NonNational&amp;"
+            title="Return to search results" id="lnk-return-search-results">Return to search results</a>
+        </li>
+
+        <li class="govuk-hide-nojs">
+          <a class="govuk-print-trigger" href=""><i class="govuk-fa fa-print"></i>Print this page</a>
+        </li>
+
+        <li>
+          <a href="/apprenticeship/reportthisvacancy/1000118395" id="lnk-report-this-vacancy">Report this vacancy</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <section class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div itemprop="description">
+        <p id="vacancy-description" class="govuk-preserve-formatting">We now want to build on our sales and marketing
+          activity by adding a marketing assistant who can support the development of digital and social content,
+          develop and implement lead generation strategies and help to build a steady pipeline of opportunities for the
+          company to expand and grow.</p>
+      </div>
+    </div>
+    <div class="govuk-grid-column-one-third">
+
+
+      <a role="button" id="apply-button" class="govuk-button button-with-hint" title="Sign in to apply"
+        href="review-knowledge">Sign in to apply</a>
+
+      <p id="vacancy-closing-date" class="govuk-font-xsmall">Closing date: 23 Jan 2023</p>
+
+    </div>
+  </section>
+  <section class="govuk-grid-row" id="vacancy-info">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">Apprenticeship summary</h2>
+    </div> 
+    <div class="govuk-grid-column-one-third">
+      <ul class="govuk-list govuk-list--bullet">
+        <li class="govuk-sfa-if-first">
+          <h3 class="govuk-heading-s">Annual wage</h3>
+
+          <p id="vacancy-wage">
+            £12,000.00
+          </p>
+
+
+
+
+
+
+
+        </li>
+        <li>
+          <h3 class="govuk-heading-s">Working week</h3>
+          <p id="vacancy-working-week" itemprop="workHours" class="govuk-sfa-small-bottom-margin">Days and shifts to be
+            confirmed.</p>
+          <p id="total-hours-per-week">Total hours per week: 37.0</p>
+        </li>
+        <li>
+          <h3 class="govuk-heading-s">Expected duration</h3>
+          <p id="vacancy-expected-duration">17 Months</p>
+        </li>
+        <li>
+          <h3 class="govuk-heading-s">Possible start date</h3>
+          <p id="vacancy-start-date">30 Jan 2023</p>
+        </li>
+        <li>
+          <h3 class="govuk-heading-s">Date posted</h3>
+          <p id="vacancy-posted-date">22 Dec 2022</p>
+        </li>
+        <li>
+          <h3 class="govuk-heading-s">Distance</h3>
+          <p id="vacancy-distance">81.5 miles</p>
+        </li>
+        <li>
+          <h3 class="govuk-heading-s">Apprenticeship level</h3>
+          <p id="vacancy-type" itemprop="employmentType">
+            Advanced
+            <br>Level 3 (A level)
+          </p>
+        </li>
+        <li>
+          <h3 class="govuk-heading-s">Reference number</h3>
+          <p id="vacancy-reference-id">VAC1000118395</p>
+        </li>
+        <li>
+          <h3 class="govuk-heading-s">Positions</h3>
+          <p id="number-of-positions">1 available</p>
+        </li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <div itemprop="responsibilities" class="govuk-sfa-if-first">
+        <div id="vacancy-full-descrpition" class="govuk-sfa-text-editor-generated preserve-formatting">
+          <h3 class="govuk-heading-s">What will the apprentice be doing?</h3>
+          <p class="govuk-body">Your duties and responsibilities in this role will consist of:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>Be part of the process around developing and publishing content on our website and social accounts,
+              which will include the various activities we undertake to bring new content to the attention of our
+              audience and start to build a conversation around it</li>
+            <li>Help to develop valuable content that will generate conversion.</li>
+            <li>Support the process to identify potential leads and cultivate our relationship with them</li>
+            <li>Implement systems to capture contact details from our website into our CRM and map that onto a lifecycle
+              for new leads.</li>
+            <li>Put in place reporting against key metrics so we can see how effective our activities are</li>
+          </ul>
+
+          <h3 class="govuk-heading-s">What training will the apprentice take and what qualification will the
+            apprentice get at the end?</h3>
+          <p class="govuk-body">Estio apprenticeship training programmes are delivered virtually by our fully qualified and industry
+            experienced training team. Using their expert knowledge, we’ve purposefully built our programmes around the
+            real-world use of modern technology, so that the skills we create can be directly applied in the workplace.
+          </p>
+          <p class="govuk-body">Throughout the apprenticeship learners receive coaching, help and guidance from a dedicated team who are
+            there to ensure they get the most from their work experience.</p>
+          <p class="govuk-body">Successful completion of this apprenticeship gives you an accredited Level 3 Digital Marketer, with
+            training in how to:</p>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>Source, plan, develop and deploy digital content across a variety of channels including your website and
+              social media</li>
+            <li>Execute multi-channel digital campaigns using online platforms.</li>
+            <li>Monitor and evaluate channel and campaign performance using different analytical tools</li>
+            <li>Adopt a test and learn approach to digital marketing activities, making recommendations for improvement
+            </li>
+          </ul>
+
+          <h3 class="govuk-heading-s">What is the expected career progression after this apprenticeship?</h3>
+          <p class="govuk-body">The role offers long term security and the opportunity to progress into a permanent position.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  <section class="govuk-grid-row" id="course-info">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">Requirements and prospects</h2>
+    </div>
+    <div class="govuk-grid-column-one-half">
+      <div class="govuk-sfa-if-first">
+        <h3 class="govuk-heading-s">Desired skills and personal qualities</h3>
+        <div id="vacancy-skills-required" class="govuk-sfa-text-editor-generated preserve-formatting" itemprop="skills">
+          <p class="govuk-body">
+          Attention to detail, Team working, Competent using Excel, Communicate effectively, Good analytical skills,
+          Ability to digest data, Highly motivated, Interest in digital marketing, Comfortable with numbers, Willingness
+          to learn, Presentable and professional, Punctual and reliable
+        </p>
+        </div>
+      </div>
+      <div class="govuk-sfa-if-first">
+        <h3 class="govuk-heading-s">Qualifications</h3>
+        <div id="vacancy-qualifications-required" class="govuk-sfa-text-editor-generated " itemprop="qualifications">
+          <p class="govuk-body">
+          GCSE or equivalent English (Grade A*-C/9-4 or equivalent) Essential<br>GCSE or equivalent maths (Grade
+          A*-C/9-4 or equivalent) Essential
+        </p>
+        </div>
+      </div>
+    </div>
+    <div class="govuk-grid-column-one-half ">
+      <div class="govuk-sfa-if-first">
+        <h3 class="govuk-heading-s">Things to consider</h3>
+        <div id="vacancy-reality-check" class="govuk-sfa-text-editor-generated preserve-formatting"
+          itemprop="incentives">
+          <p class="govuk-body">
+          Competent with email and general understanding of excel spreadsheets.
+          Comfortable with numbers and data.
+          The ability to communicate effectively in English, both verbally and in written communications.
+        </p>
+        </div>
+      </div>
+
+        <a role="button" id="apply-button" class="govuk-button button-with-hint" title="Sign in to apply"
+          href="review-knowledge">Sign in to apply</a>
+  
+        <p id="vacancy-closing-date" class="govuk-font-xsmall">Closing date: 23 Jan 2023</p>
+ 
+
+
+    </div>
+  </section>
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  <section class="govuk-grid-row" id="employer-info">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">About the employer</h2>
+    </div>
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <div>
+            <div id="vacancy-employer-description" class="govuk-sfa-text-editor-generated preserve-formatting">
+              <p class="govuk-body">
+              500 More is a digital agency, specialising in projects relating to health, wellbeing, and social purpose.
+              We acquire clients through a mixture of referral, networking, and social marketing.
+              We use our content and online presence to make potential clients aware of us and to start the journey of
+              becoming our customers. The journey continues through introductory workshops, complementary consultations,
+              and into the digital product development lifecycle.
+              We want to be known as experts in the field of digital innovation. We want to build our audience of
+              potential clients, collaborators and supports through:
+              • Publishing content relevant to our targets.
+              • Developing our audience on key social media platforms (LinkedIn).
+              • Promoting new content through targeted emails.
+              • Harvesting contact details from our website to populate our CRM.
+            </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="govuk-grid-column-full">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <div>
+            <h3 class="govuk-heading-s">Employer</h3>
+            <p id="vacancy-employer-name" class="govuk-">500MORE DIGITAL LTD </p>
+
+
+            <p class="govuk-body"></p>
+            <div id="vacancy-address" itemscope="" itemtype="http://schema.org/PostalAddress">
+              <h3 class="govuk-heading-s">Address</h3>
+              <div itemprop="address">
+                <p class="govuk-sfa-small-bottom-margin" itemprop="streetAddress">FUTURESPACE UWE NORTH GATE</p>
+                <p class="govuk-sfa-small-bottom-margin" itemprop="streetAddress">FILTON ROAD</p>
+                <p class="govuk-sfa-small-bottom-margin" itemprop="streetAddress">BRISTOL</p>
+                <p class="govuk-sfa-small-bottom-margin" itemprop="addressLocality"></p>
+                <p class="govuk-sfa-small-bottom-margin" itemprop="addressRegion"></p>
+                <p class="govuk-sfa-small-bottom-margin" itemprop="postalCode">BS34 8RB</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-grid-column-one-half hide-print">
+          <div id="vacancy-map" class="govuk-ad-details__map">
+            <div class="govuk-map-overlay"></div>
+
+            <p class="govuk-nojs-notice">You must have JavaScript enabled to view a map of the location</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  <section class="govuk-grid-row" id="provider-info">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">Training</h2>
+    </div>
+    <div class="govuk-grid-column-one-half">
+      <div>
+        <h3 class="govuk-heading-s">Training provider</h3>
+        <p id="vacancy-provider-name">ESTIO TRAINING LIMITED</p>
+      </div>
+
+      <h3 class="govuk-heading-s">Contact</h3>
+      <p id="employer-contact-name">Jack Taylor</p>
+      <p class="govuk-body">
+        <a id="employer-contact-email" href="mailto:Jack.Taylor@estio.co.uk">Jack.Taylor@estio.co.uk</a>
+      </p>
+      <p id="employer-contact-phone">01133500333</p>
+    </div>
+    <div class="govuk-grid-column-one-half">
+      <div>
+        <h3 class="govuk-heading-s">Apprenticeship standard</h3>
+        <p id="vacancy-framework">
+          Digital marketer <br>
+          Level 3 (A level) </p>
+      </div>
+    </div>
+  </section>
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+  <section id="before-apply" class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <h2 class="govuk-heading-l">Before you apply</h2>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <p class="govuk-body">Before you apply for an apprenticeship you must first create an account. If you already have an account you'll
+        need to sign in.</p>
+    </div>
+  </section>
+  <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+</div>
+
+</div>
+
+{% endblock %}
