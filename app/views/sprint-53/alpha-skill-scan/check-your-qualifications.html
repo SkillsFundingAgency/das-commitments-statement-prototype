@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+Manage apprenticeships
+{% endset%}
+{% set qualifications=[
+  {vendor:"CIM (CIM level 4 award in Digital Marketing)", duration:"8-12"},
+  {vendor:"CIM (CIM level 4 award in Digital Marketing)", duration:"2-4"},
+  {vendor:"CIW – Site Development Associate", duration:"4-8"},
+  {vendor:"CIW – Internet Business Associate", duration:"8-12"},
+  {vendor:"CIW – Data Analytics", duration:"2-4"},
+  {vendor:"CIW – Social Media", duration:"2-4"},
+  {vendor:"Dot Native", duration:"12-24"},
+  {vendor:"Google Analytics IQ",  duration:"2-4"},
+  {vendor:"Google Squared", duration:"12-48"},
+  {vendor:"MTA HTML 5", duration:"4-8"}
+  ] %}
+
+{% block pageTitle %}
+Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container " id="">
+  <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters govuk-!-margin-top-6">
+      <h1 class="govuk-heading-xl">
+        Confirm your previous qualifications
+        <span class="govuk-caption-m">Digital marketer, level 3</span>
+        </h1>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <p class="govuk-body">
+        Confirm which qualifications you already have from this list of courses for the role of Digital marketer.
+      </p>
+
+      <h2 class="govuk-heading-m">Qualifications</h2>
+      <table class="govuk-table" data-module="moj-multi-select" data-multi-select-checkbox="#select-all">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th class="govuk-table__header" scope="col" id="select-all"></th>
+            <th class="govuk-table__header" scope="col">Qualification</th>
+            <th class="govuk-table__header" scope="col">Estimated duration / acceleration</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          {% for item in qualifications %}
+          <tr class="govuk-table__row govuk-table__row--selected">
+            <td class="govuk-table__cell">
+              <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                <input type="checkbox" class="govuk-checkboxes__input" id="qualification{{loop.index}}">
+                <label class="govuk-label govuk-checkboxes__label" for="qualification{{loop.index}}">
+                  <span class="govuk-visually-hidden">Select {{item.vendor}}</span>
+                </label>
+              </div>
+            </td>
+            <td class="govuk-table__cell">{{item.vendor}}</td>
+            <td class="govuk-table__cell">{{item.duration}} weeks</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      
+      
+
+
+      <input type="hidden" name="answers-checked" value="true">
+
+      <a href="confirmation_saved.html" class="govuk-button" data-module="govuk-button">
+        Save
+      </a>
+
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
