@@ -292,8 +292,11 @@ Digital marketing, Digital marketing strategy, Digital marketer, Digital support
       <p class="govuk-body">
         Assess your existing knowledge, skills and behaviours against those required for the role.
       </p>
-      <a role="button" id="apply-button" class="govuk-button button-with-hint" title="Sign in to apply"
-        href="check-your-qualification">Sign in to self-evaluate and apply</a>
+      {% if data.skillscan=='true' %}
+      <a role="button" id="apply-button" class="govuk-button button-with-hint" title="Sign in to apply" href="review-knowledge">Sign in to self-evaluate and apply</a>
+      {% else %}
+      <a role="button" id="apply-button" class="govuk-button button-with-hint" title="Sign in to apply" href="check-your-qualifications">Sign in to self-evaluate and apply</a>
+      {% endif %}
 
       <p id="vacancy-closing-date" class="govuk-font-xsmall">Closing date: 14 Feb 2023</p>
 

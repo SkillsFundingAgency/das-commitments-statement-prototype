@@ -23,14 +23,14 @@ Manage your apprenticeships
           </h1>
     </div>
 
-    <div class="govuk-grid-column-three-quarters">
+    <div class="govuk-grid-column-full">
 
-      <div class="">
+      <div class="govuk-grid-column-three-quarters">
         <p>This shows the duties split into the detailed of knowledge, skills and behaviours (KSBs) needed to complete this apprenticeship.</p>
-        <p>Review each </p>
         <p><a
-            href="https://www.instituteforapprenticeships.org/apprenticeship-standards/construction-site-supervisor-v1-0"
-            class="govuk-link">View the full IFATE standard (opens in new tab)</a></p>
+          href="https://www.instituteforapprenticeships.org/apprenticeship-standards/construction-site-supervisor-v1-0"
+          class="govuk-link">View the full IFATE standard (opens in new tab)</a></p>
+          <p>Rate your prior learning in each of these required areas. Be honest with yourself when completing it – you will be need to provide the evidence when you meet with your training provider.</p>
       </div>
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
@@ -43,11 +43,14 @@ Manage your apprenticeships
           {% for behaviour in data.standards.behaviours %}
           <tr class="govuk-table__row">
             <!--  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint"> -->
-               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                 <h3 class="govuk-hint">
-                  <strong>B{{loop.index}}: </strong>{{behaviour.detail}}
-                 </h3>
-               </legend>
+              
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                  <div class="govuk-grid-column-three-quarters">
+                  <h3 class="govuk-hint">
+                    <strong>B{{loop.index}}: </strong>{{behaviour.detail}} (Where 1 is no experience and 9 is expert)
+                  </h3>
+                </div>
+                </legend>
     <!--                 <div id="changed-name-hint" class="govuk-hint">
                  <strong>B{{loop.index}}</strong> {{knowledge.detail}}
                </div> -->
@@ -80,6 +83,30 @@ Manage your apprenticeships
                    <input class="govuk-radios__input" id="changed-name-2" name="B{{loop.index}}" type="radio" value="no">
                    <label class="govuk-label govuk-radios__label" for="changed-name-5">
                      5
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="changed-name-2" name="B{{loop.index}}" type="radio" value="no">
+                   <label class="govuk-label govuk-radios__label" for="changed-name-6">
+                     6
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="changed-name-2" name="B{{loop.index}}" type="radio" value="no">
+                   <label class="govuk-label govuk-radios__label" for="changed-name-7">
+                     7
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="changed-name-2" name="B{{loop.index}}" type="radio" value="no">
+                   <label class="govuk-label govuk-radios__label" for="changed-name-8">
+                     8
+                   </label>
+                 </div>
+                 <div class="govuk-radios__item">
+                   <input class="govuk-radios__input" id="changed-name-2" name="B{{loop.index}}" type="radio" value="no">
+                   <label class="govuk-label govuk-radios__label" for="changed-name-9">
+                     9
                    </label>
                  </div>
                </div>
