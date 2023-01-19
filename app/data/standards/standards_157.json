@@ -1,0 +1,112 @@
+{
+    "templateType": "Apprenticeship Standard",
+    "larsCode": 157,
+    "referenceNumber": "ST0213",
+    "title": "Hair professional",
+    "status": "Retired",
+    "url": "https://www.instituteforapprenticeships.org/api/apprenticeshipstandards/157",
+    "versionNumber": "1.0",
+    "change": "Retired",
+    "changedDate": "2018-10-02T00:00:00",
+    "earliestStartDate": "2016-12-21T00:00:00",
+    "latestStartDate": "2018-10-02T00:00:00",
+    "latestEndDate": null,
+    "overviewOfRole": "Working as a barber or hairdresser to provide hair cutting, styling and grooming services for men and women.",
+    "level": 2,
+    "typicalDuration": 24,
+    "maxFunding": 9000,
+    "route": "Hair and beauty",
+    "keywords": [
+        "barbering",
+        "hairdressing",
+        "hair grooming",
+        "cutting and styling",
+        "barber shop",
+        "hairdressers"
+    ],
+    "jobRoles": [
+        "hairdresser",
+        "hair dresser",
+        "barber",
+        "stylist",
+        "hairdressing",
+        "hair dressing"
+    ],
+    "entryRequirements": "",
+    "assessmentPlanUrl": "https://www.instituteforapprenticeships.org/media/3444/st0213_hair_professional_l2_minor_amend_for-publication_100919.pdf",
+    "ssa1": "7 Retail and Commercial Enterprise",
+    "ssa2": "7.3 Service enterprises",
+    "version": "1.0",
+    "standardInformation": "",
+    "occupationalSummary": "",
+    "knowledges": [],
+    "behaviours": [],
+    "skills": [],
+    "options": [],
+    "optionsUnstructuredTemplate": [
+        "Barbering",
+        "Hairdressing"
+    ],
+    "proposalApproved": "",
+    "standardApproved": "",
+    "epaApprovalDate": "",
+    "fundingApprovalDate": "",
+    "eQAProvider": {
+        "providerName": "Ofqual",
+        "contactName": "Claire Gill / Steve Walker",
+        "contactAddress": "Ofqual <br>Earlsdon Park, 53-55 Butts Road, Coventry, CV1 3BH",
+        "contactEmail": "public.enquiries@ofqual.gov.uk",
+        "webLink": "https://www.gov.uk/government/organisations/ofqual"
+    },
+    "approvedForDelivery": "2016-12-21T00:00:00 +00:00",
+    "integratedApprenticeship": false,
+    "integratedDegree": "",
+    "tbReference": "TB0044",
+    "tbMainContact": "wendycummins3@gmail.com, Caroline.Larissey@nhf.info, hilary.hall@nhf.info",
+    "involvedEmployers": "Richard Ward Hair and Metrospa, Urban Retreat, Regis UK, SAKS, Toni & Guy, Philosophy Hairdressing, UR Beautiful Ltd, Fusion Hair & Beauty, Rogers of Chell Barber Shops, Phaze 1 Hair and Nail and Beauty Lounge Ltd, That Nail Place, Armonia, RG Hairdressing, Alan D Hairdressing, Andrew Collinge, Lady PJ Hairdressing, Rubies Hairdressing, The Master Barber Shop",
+    "regulated": false,
+    "regulatedBody": "",
+    "coreAndOptions": true,
+    "typicalJobTitles": [
+        "hairdresser",
+        "hair dresser",
+        "barber",
+        "stylist",
+        "hairdressing",
+        "hair dressing"
+    ],
+    "greenJobTitles": [],
+    "englishAndMathsQualifications": "",
+    "reviewDetails": "",
+    "pathway": "Hair, Beauty and Aesthetics",
+    "cluster": "Hair Specialist",
+    "createdDate": "2020-10-02T10:11:04 +00:00",
+    "lastUpdated": "2018-10-02T00:00:00 +00:00",
+    "occupationalStandardUrl": "https://www.instituteforapprenticeships.org/apprenticeship-standards/hair-professional-v1-0?view=standard#OccupationalStandard",
+    "standardPageUrl": "https://www.instituteforapprenticeships.org/apprenticeship-standards/hair-professional-v1-0",
+    "qualifications": [],
+    "professionalRecognition": [],
+    "duties": [],
+    "regulationDetail": [],
+    "optionsUnstructuredKsbMapping": [
+        {
+            "coreOrOptionTitle": "Core",
+            "mappedBehaviour": [],
+            "mappedKnowledge": [],
+            "mappedSkills": []
+        },
+        {
+            "coreOrOptionTitle": "Barbering",
+            "mappedBehaviour": [],
+            "mappedKnowledge": [],
+            "mappedSkills": []
+        },
+        {
+            "coreOrOptionTitle": "Hairdressing",
+            "mappedBehaviour": [],
+            "mappedKnowledge": [],
+            "mappedSkills": []
+        }
+    ],
+    "careerStarter": false
+}
