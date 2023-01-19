@@ -111,3 +111,45 @@ require("request").get("https://www.instituteforapprenticeships.org/api/apprenti
   'status Retired': 259
 }
 */
+var standards = require('./app/data/apprenticeshipstandards.json')
+const { listenerCount } = require('process')
+//console.log(standards);
+
+//loop thru standards and get those with / wo KSB
+
+var _list = [];
+standards.forEach(function(_standard, index) {
+  if(_standard.knowledges.length == 0 && _standard.status=="Approved for delivery"){
+    console.log(_standard.larsCode, _standard.status, _standard.knowledges.length, _standard.knowledges);
+   // _ksb ++;
+   _list.push(_standard.larsCode);
+   }
+})
+
+console.log(_list);
+/* require("request").get("data/apprenticeshipstandards", (error, response, body) => {
+    var _apiData = JSON.parse(body),
+        _versionTypes = {},
+        _ksb = 0,
+        _status = {};
+
+    console.log(_apiData.length + " standards in API (https://www.instituteforapprenticeships.org/api/apprenticeshipstandards)");
+
+    _apiData.forEach(function(_standard, index) {
+
+      _status["status " + _standard.status] = (_status["status " + _standard.status] || 0) + 1;   
+      _versionTypes["version " + _standard.version] = (_versionTypes["version " + _standard.version] || 0) + 1;
+
+       if(_standard.knowledges.length>0 && _standard.status=="Approved for delivery"){
+        console.log(_standard.larsCode, _standard.status, _standard.knowledges.length, _standard.knowledges);
+        _ksb ++;
+       }
+
+    });
+
+    console.log(_versionTypes);
+    console.log(_status);
+    console.log(_ksb);
+});
+
+ */
