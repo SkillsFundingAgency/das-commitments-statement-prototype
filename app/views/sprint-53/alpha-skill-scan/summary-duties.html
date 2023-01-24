@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+Summary of prior experience
+{% endset%}
+{% set knowledge_scores=["4 weeks", "4 weeks", "No reduction","No reduction", "No reduction", "No reduction", "No reduction"] %}
+{% set skill_scores=["No reduction", "4 weeks", "No reduction", "No reduction", "No reduction", "No reduction", "No reduction"] %}
+{% set behaviour_scores=["4 weeks", "No reduction", "4 weeks", "6 weeks", "4 weeks", "4 weeks", "No reduction"] %}
+{% block pageTitle %}
+Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container " id="">
+  <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters govuk-!-margin-top-6">
+      <h1 class="govuk-heading-xl">Summary of prior experience
+      <span class="govuk-caption-m">Construction site supervisor, level 4</span>
+    </h1>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+
+      <h2 class="govuk-heading-m">Duties</h2>
+      <table class="govuk-table data-tble">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Duty</th>
+            <th scope="col" class="govuk-table__header">Description</th>
+            <th scope="col" class="govuk-table__header">Estimated reduction in duration</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          {% for duty in data.standards.duties %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <strong>{{loop.index}}</strong>
+            </th>
+            <td class="govuk-table__cell">
+              {{duty.dutyDetail}}
+            </td>
+            <td class="govuk-table__cell width-one-fifth">
+              <span class="">{{ knowledge_scores[loop.index0] }}</span>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+
+
+      <input type="hidden" name="answers-checked" value="true">
+
+      <a href="confirmation.html" class="govuk-button" data-module="govuk-button">
+        Save
+      </a>
+
+
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}

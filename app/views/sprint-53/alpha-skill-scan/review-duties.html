@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+Manage apprenticeships
+{% endset%}
+
+{% block pageTitle %}
+Review your prior experience
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container " id="">
+  <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters govuk-!-margin-top-6">
+      <h1 class="govuk-heading-xl">Review the duties required
+        <span class="govuk-caption-m">Construction site supervisor, level 4</span>
+      </h1>
+    </div>
+
+    <div class="govuk-grid-column-full">
+
+      <div class="govuk-grid-column-three-quarters">
+        <p>This shows the duties split into the detailed of knowledge, skills and behaviours (KSBs) needed to complete
+          this apprenticeship.</p>
+        <p><a
+            href="https://www.instituteforapprenticeships.org/apprenticeship-standards/construction-site-supervisor-v1-0"
+            class="govuk-link">View the full IFATE standard (opens in new tab)</a></p>
+
+      </div>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-grid-column-three-quarters">
+        <h2 class="govuk-heading-m">Duties</h2>
+
+        <p>Rate your prior learning in each of these required areas. Be honest with yourself when completing it – you
+          will be need to provide the evidence when you meet with your training provider.</p>
+
+
+        {% for duty in data.standards.duties %}
+
+        <!--  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint"> -->
+
+        <p class="govuk-body">
+          <strong>Duty {{loop.index}}: </strong>{{duty.dutyDetail}}
+        </p>
+
+
+
+        <div class="govuk-radios  govuk-radios--small govuk-radios--inline govuk-!-margin-bottom-6"
+          data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name" name="K{{loop.index}}" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="changed-name1">
+              None
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name-2" name="K{{loop.index}}" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+              Basic
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name-2" name="K{{loop.index}}" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="changed-name-3">
+              Strong
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name-2" name="K{{loop.index}}" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="changed-name4">
+              Expert
+            </label>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+
+  <a href="check-your-answers-duties" class="govuk-button">Continue</a>
+
+</div>
+
+
+</div>
+
+</div>
+{% endblock %}

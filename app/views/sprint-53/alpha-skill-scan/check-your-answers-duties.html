@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% set serviceName %}
+Manage apprenticeships
+{% endset%}
+{% set knowledge_scores=[100, 100, 0, 0, 0, 1, 20] %}
+{% set skill_scores=[40, 100, 40, 0, 60, 0, 40] %}
+{% set behaviour_scores=[100, 40, 100, 60, 80, 80, 40] %}
+{% block pageTitle %}
+Check your answers
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-width-container " id="">
+  <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters govuk-!-margin-top-6">
+      <h1 class="govuk-heading-xl">Check your answers
+        <span class="govuk-caption-m">Construction site supervisor, level 4</span>
+        </h1>
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+
+      <h2 class="govuk-heading-m">Duties</h2>
+      <table class="govuk-table data-tble">
+        <tbody class="govuk-table__body">
+          {% for duty in data.standards.duties %}
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              <strong>Duty {{loop.index}}</strong>
+            </th>
+            <td class="govuk-table__cell">
+              {{duty.dutyDetail}}
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
+              <span class="">{{ knowledge_scores[loop.index0] }}</span>
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric width-one-fifth">
+              <a class="govuk-link" href="review-duties.html">
+                Change<span class="govuk-visually-hidden"> duty</span>
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <input type="hidden" name="answers-checked" value="true">
+
+      <a href="summary-duties.html" class="govuk-button" data-module="govuk-button">
+        Save
+      </a>
+
+
+
+    </div>
+  </div>
+
+</div>
+{% endblock %}
