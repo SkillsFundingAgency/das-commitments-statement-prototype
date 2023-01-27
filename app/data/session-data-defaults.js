@@ -20,7 +20,18 @@ Example usage:
 var standards = require('./ifate_standard_502.json')
 var standards_developer = require('./ifate_standard_2.json')
 var apprentices = require('./apprentices.json')
+/* 
+standards.knowledges.forEach(function(_standard, index) {
+console.log("K"+index+" " +_standard.detail);
+});
+standards.skills.forEach(function(_standard, index) {
+  console.log("S"+index+" " +_standard.detail);
+  });
+standards.behaviours.forEach(function(_standard, index) {
+  console.log("B"+index+" " +_standard.detail);
+  });
 
+ */
 module.exports = {
   standards : standards,
   standards_developer : standards_developer,
