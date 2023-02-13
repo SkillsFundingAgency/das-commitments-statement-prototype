@@ -1,0 +1,89 @@
+{% extends "layout-provider.v1.html" %}
+
+{% block pageTitle %}
+     GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation" >
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+     <div class="govuk-grid-row govuk-!-margin-top-6">
+          <div class="govuk-grid-column-two-thirds">
+              <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                      <label class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                          <h1 class="govuk-fieldset__heading">
+                              Select apprenticeship delivery model
+                          </h1>
+                      </label>
+                      <div class="govuk-hint">
+                          Select the delivery model
+                      </div>
+                      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                          <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                              <label class="govuk-label govuk-radios__label" for="changed-name">
+                                  Regular
+                              </label>
+                              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                                  The apprentice will have a single employment contract
+                              </div>
+                          </div>
+                          <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                  Portable flexi-job
+                              </label>
+                              <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+                                  The apprentice will move between multiple employment contracts
+                              </div>
+                          </div>
+                      </div>
+
+                  </fieldset>
+                  <a href="add-apprentice-rpl.html" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
+                      Continue
+                  </a>
+              </div>
+          </div>
+
+
+     </div>
+
+     </div>
+
+{% endblock %}
