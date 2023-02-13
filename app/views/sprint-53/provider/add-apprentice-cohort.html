@@ -6,7 +6,7 @@ GOV.UK Prototype Kit
 
 {% block beforeContent %}
 {% include "../includes/training-provider-account-header.html" %}
-<nav class="das-navigation">
+<nav class="das-navigation" >
   <div class="govuk-width-container">
     <ul class="das-navigation__list ">
       <li class="das-navigation__list-item">
@@ -38,18 +38,15 @@ GOV.UK Prototype Kit
 </nav>
 {% endblock %}
 
-
-
 {% block content %}
 <div class="govuk-width-container " id="landing-page-section">
-
-  <div class="govuk-grid-row ">
-    <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-row govuk-!-margin-bottom-2">
+    <div class="govuk-grid-column-three-quarters">
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset govuk-!-margin-top-6" aria-describedby="sign-in-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Recognition of prior learning (RPL)
+              Add apprentice details
             </h1>
           </legend>
           <div id="sign-in-hint" class="govuk-hint">
@@ -60,32 +57,30 @@ GOV.UK Prototype Kit
               <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway"
                 aria-describedby="sign-in-item-hint">
               <label class="govuk-label govuk-radios__label" for="sign-in">
-                Yes
+                Add to an existing cohort
               </label>
-              <!--                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">-->
-              <!--                        You’ll have a user ID if you’ve registered for Self Assessment or filed a tax return online before.-->
-              <!--                    </div>-->
+
             </div>
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify"
                 aria-describedby="sign-in-2-item-hint">
               <label class="govuk-label govuk-radios__label" for="sign-in-2">
-                No
+                Create a new cohort
               </label>
-              <!--                    <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">-->
-              <!--                        You’ll have an account if you’ve already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity.-->
-              <!--                    </div>-->
+
             </div>
           </div>
 
         </fieldset>
-        <a href="rpl-details.html" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
+        <a href="delivery-method.html" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
           Save and continue
         </a>
       </div>
     </div>
-
   </div>
+
+
+
 </div>
 
 {% endblock %}
