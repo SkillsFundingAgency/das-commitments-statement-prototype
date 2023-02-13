@@ -116,17 +116,30 @@ const { listenerCount } = require('process')
 //console.log(standards);
 
 //loop thru standards and get those with / wo KSB
-
+/* 
 var _list = [];
 standards.forEach(function(_standard, index) {
-  if(_standard.knowledges.length == 0 && _standard.status=="Approved for delivery"){
-    console.log(_standard.larsCode, _standard.status, _standard.knowledges.length, _standard.knowledges);
-   // _ksb ++;
-   _list.push(_standard.larsCode);
+  if(_standard.larsCode != 0 ){
+    let obj = {larsCode:_standard.larsCode , title:_standard.title, level:  _standard.level };
+   _list.push(obj);
    }
 })
 
-console.log(_list);
+_list.sort(function(a, b) {
+  if ( a.title < b.title ){
+    return -1;
+  }
+  if ( a.title > b.title ){
+    return 1;
+  }
+  return 0;
+})
+ */
+//console.log(_list);
+/* _list.forEach(function(_standard, index) {
+  console.log('<option value="' + _standard.larsCode + '">' + _standard.title + ', Level: ' + _standard.level + '</option>');
+}); */
+
 /* require("request").get("data/apprenticeshipstandards", (error, response, body) => {
     var _apiData = JSON.parse(body),
         _versionTypes = {},
