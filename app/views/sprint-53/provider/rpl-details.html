@@ -56,21 +56,16 @@ GOV.UK Prototype Kit
         <div class="govuk-form-group  ">
           <fieldset class="govuk-fieldset" aria-describedby="finish-date-hint" role="group">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-              What is the reduction in off-the-job hours during the apprenticeship due to RPL?
+              How many hours have you reduced the apprenticeship duration by due to RPL?
             </legend>
             <span id="finish-date-hint" class="govuk-hint">
               Enter the reduction in hours
             </span>
             <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate"
               data-valmsg-replace="true" id="error-message-EndDate"></span>
-            <div class="govuk-date-input">
-              <div class="govuk-date-input__item">
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-date-input__label" for="EndMonth">Hours</label>
-                  <input min="1" max="12" class="govuk-input govuk-date-input__input govuk-input--width-2" type="number"
-                    id="EndMonth" name="EndMonth" value="">
-                </div>
-              </div>
+              <div class="govuk-input__wrapper">
+                <input class="govuk-input govuk-input--width-5" type="number" id="ReducedDuration" name="ReducedDuration" value="">
+                <div class="govuk-input__suffix" aria-hidden="true"> hours</div>
             </div>
           </fieldset>
 
@@ -85,6 +80,29 @@ GOV.UK Prototype Kit
             <span class="govuk-body govuk-!-font-weight-bold">£ </span><input class="govuk-input govuk-input--width-5"
               type="number" id="Cost" name="Cost" value="">
           </div>
+
+          <div class="govuk-form-group govuk-!-margin-top-6">
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">What is the KSB weighted reduction of content, duration and cost for the apprenticeship due to RPL?</label>
+            <span id="price-hint" class="govuk-hint">
+              Enter the reduction as a percentage. For example, for 12% enter 12
+            </span>
+            <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true"
+              id="error-message-Cost"></span>
+            <span class="govuk-body govuk-!-font-weight-bold"> </span><input class="govuk-input govuk-input--width-5"
+              type="number" id="Cost" name="Cost" value="">
+          </div>
+
+          <div class="govuk-form-group govuk-!-margin-top-6">
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">What qualifications have contributed to the reduction in content due to RPL?</label>
+            <span id="price-hint" class="govuk-hint">
+              List any formal qualifications that form the prior learning
+            </span>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+            </div>
+          </div>
+
+ 
+
         </div>
         <a href="rpl-error.html" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
           Save and continue
