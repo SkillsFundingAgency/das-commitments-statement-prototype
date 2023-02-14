@@ -88,8 +88,11 @@ GOV.UK Prototype Kit
             </span>
             <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true"
               id="error-message-Cost"></span>
-            <span class="govuk-body govuk-!-font-weight-bold"> </span><input class="govuk-input govuk-input--width-5"
-              type="number" id="Cost" name="Cost" value="">
+              <div class="govuk-input__wrapper">
+                <input class="govuk-input govuk-input--width-5" type="number" id="ReducedWeighting"
+                  name="ReducedWeighting" value="">
+                <div class="govuk-input__suffix" aria-hidden="true"> %</div>
+              </div>
           </div>
 
           <div class="govuk-form-group govuk-!-margin-top-6">
