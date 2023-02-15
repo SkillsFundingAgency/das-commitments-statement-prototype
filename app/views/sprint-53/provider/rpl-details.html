@@ -49,7 +49,7 @@ Provide details of recognition of prior learning - Apprenticeships
         <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Provide details of recognition of prior learning 
+              Provide details of recognition of prior learning
             </h1>
           </legend>
         </fieldset>
@@ -63,9 +63,10 @@ Provide details of recognition of prior learning - Apprenticeships
             </span>
             <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate"
               data-valmsg-replace="true" id="error-message-EndDate"></span>
-              <div class="govuk-input__wrapper">
-                <input class="govuk-input govuk-input--width-5" type="number" id="ReducedDuration" name="ReducedDuration" value="">
-                <div class="govuk-input__suffix" aria-hidden="true"> hours</div>
+            <div class="govuk-input__wrapper">
+              <input class="govuk-input govuk-input--width-5" type="number" id="ReducedDuration" name="ReducedDuration"
+                value="">
+              <div class="govuk-input__suffix" aria-hidden="true"> hours</div>
             </div>
           </fieldset>
 
@@ -82,38 +83,50 @@ Provide details of recognition of prior learning - Apprenticeships
           </div>
 
           <div class="govuk-form-group govuk-!-margin-top-6">
-            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">What is the KSB weighted reduction of content, duration and cost for the apprenticeship due to RPL?</label>
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">What is the KSB weighted reduction of
+              content, duration and cost for the apprenticeship due to RPL?</label>
             <span id="price-hint" class="govuk-hint">
               Enter the reduction as a percentage. For example, for 12% enter 12
             </span>
             <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true"
               id="error-message-Cost"></span>
-              <div class="govuk-input__wrapper">
-                <input class="govuk-input govuk-input--width-5" type="number" id="ReducedWeighting"
-                  name="ReducedWeighting" value="">
-                <div class="govuk-input__suffix" aria-hidden="true"> %</div>
-              </div>
-          </div>
-
-          <div class="govuk-form-group govuk-!-margin-top-6">
-            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">What qualifications have contributed to the reduction in content due to RPL?</label>
-            <span id="price-hint" class="govuk-hint">
-              List any formal qualifications that form the prior learning
-            </span>
-            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+            <div class="govuk-input__wrapper">
+              <input class="govuk-input govuk-input--width-5" type="number" id="ReducedWeighting"
+                name="ReducedWeighting" value="">
+              <div class="govuk-input__suffix" aria-hidden="true"> %</div>
             </div>
           </div>
 
- 
+          <div class="govuk-form-group govuk-!-margin-top-6">
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">What qualifications have contributed to the
+              reduction in content due to RPL?</label>
+            <span id="price-hint" class="govuk-hint">
+              List any formal qualifications that form the prior learning
+            </span>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="2"
+              aria-describedby="more-detail-hint"></textarea>
+          </div>
+
+          <div class="govuk-form-group govuk-!-margin-top-6">
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">What it the reason for this amount of
+              RPL?</label>
+            <span id="price-hint" class="govuk-hint">
+              <!-- List any formal qualifications that form the prior learning -->
+            </span>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="2"
+              aria-describedby="more-detail-hint"></textarea>
+          </div>
 
         </div>
-        <a href="rpl-error.html" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
-          Save and continue
-        </a>
-      </div>
-    </div>
 
+        </div>
+          <a href="rpl-error.html" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
+            Save and continue
+          </a>
+
+    </div>
   </div>
+  
 </div>
 
 {% endblock %}
