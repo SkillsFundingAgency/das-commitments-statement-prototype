@@ -77,7 +77,10 @@ Provide details of recognition of prior learning
               Enter the reduction in hours
             </span>
             <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate"
-              data-valmsg-replace="true" id="error-message-EndDate"></span>
+              data-valmsg-replace="true" id="error-message-EndDate">
+              <span class="govuk-visually-hidden">Error:</span> The reduction in hours for RPL needs to match the funding rules based on the 
+              weighted reduction compared to the max funding band for this standard
+            </span>
             <div class="govuk-input__wrapper">
               <input class="govuk-input govuk-input--width-5" type="number" id="ReducedDuration" name="ReducedDuration"
                 value="400">
@@ -129,7 +132,7 @@ Provide details of recognition of prior learning
           </div>
 
           <div class="govuk-form-group govuk-!-margin-top-6">
-            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">What it the reason for this amount of
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">What is the reason for this amount of
               RPL?</label>
             <span id="price-hint" class="govuk-hint">
               <!-- List any formal qualifications that form the prior learning -->
