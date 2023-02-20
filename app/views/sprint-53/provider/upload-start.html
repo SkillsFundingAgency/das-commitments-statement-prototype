@@ -46,32 +46,24 @@ Recognition of prior learning - Apprenticeships
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-            <div class="govuk-error-summary das-hide" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary" id="validationSummary">
-        <h2 class="govuk-error-summary__title" id="error-summary-title">
-            There is a problem
-        </h2>
-        <div class="govuk-error-summary__body">
-            <ul class="govuk-list govuk-error-summary__list" id="validationSummaryErrorList">
+      <form method="post" enctype="multipart/form-data">
+        <h1 class="govuk-heading-xl">Upload a CSV file</h1>
+        <div class="govuk-form-group govuk-!-margin-top-6">
+          <label class="govuk-label" for="file-upload-1">
+            Your CSV file should not have more than 100 rows
+          </label>
 
-            </ul>
+          <span class="field-validation-valid govuk-error-message" data-valmsg-for="Attachment"
+            data-valmsg-replace="true" id="error-message-Attachment"></span>
+          <input class="govuk-file-upload" id="attachment" accept=".csv" type="file" name="Attachment">
         </div>
+
+        <a href="upload-cya.html" class="govuk-button" data-module="govuk-button">
+          Continue
+        </a>
+      </form>
     </div>
-
-        <form method="post" enctype="multipart/form-data">
-            <h1 class="govuk-heading-xl">Upload a CSV file</h1>
-            <div class="govuk-form-group govuk-!-margin-top-6">
-                <label class="govuk-label" for="file-upload-1">
-                    Your CSV file should not have more than 100 rows
-                </label>
-
-                <span class="field-validation-valid govuk-error-message" data-valmsg-for="Attachment" data-valmsg-replace="true" id="error-message-Attachment"></span>
-                <input class="govuk-file-upload" id="attachment" accept=".csv" type="file" name="Attachment">
-            </div>
-
-            <input class="button govuk-button" data-module="govuk-button" type="submit" value="Continue" id="submit-upload-apprentices">
-        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MP_mMqVpxxFtt80SHTBCamyeL0oVHWc_Htx4cRlH6Re7YioFT58a_dv8XKNH6xS7ASjYXCYBCxvRKMlmXk294zHHB_6jGKSL349dlbOgIYmrfcT6BLe9z8jE_cV-M2JujZPcvCOndHZKGD9Gb9GU3s69Mq9eKyA2QyQY9lLVXpu_Cueu2PlWt5G13ro7MkPhA" /></form>
-    </div>
-</div>
+  </div>
 
 </div>
 
