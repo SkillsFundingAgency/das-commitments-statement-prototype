@@ -1,0 +1,140 @@
+{% extends "layout-provider.v1.html" %}
+
+{% block pageTitle %}
+Recognition of prior learning - Apprenticeships
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-width-container">
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                    <div class="govuk-error-summary das-hide" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary" id="validationSummary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+            There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list" id="validationSummaryErrorList">
+
+            </ul>
+        </div>
+    </div>
+
+                <h1 class="govuk-heading-xl  govuk-!-margin-top-4">Check new apprentice records</h1>
+
+                <div class="govuk-warning-text">
+                    <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+                    <strong class="govuk-warning-text__text">
+                        <span class="govuk-warning-text__assistive">Warning</span>
+                        If you need to correct any records, you need to amend the data in your LMS, then <a href="/10001259/unapproved/add/file-upload/amended-file?CacheRequestId=547ddfcf-bc9f-4417-95e0-7f870f8cb685" class="govuk-link--no-visited-state" id="upload-amended-file-link">upload your CSV file again</a>. This will avoid data locks.
+                    </strong>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+
+                    <div class="bu-employer-details">
+                        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-margin-bottom-8">
+                        <div class="group-header">
+                            <h2 class="govuk-heading-l group-title bu-employer-name">
+                                TEST &amp; MAINTAIN LIMITED
+                                <span class="govuk-caption-l bu-agreementId">Agreement ID: R5WE96</span>
+                            </h2>
+                        </div>
+
+                            <p class="govuk-body-m bu-cohort-ref">Cohort: This will be created when you save or send to employers</p>
+                            <p class="govuk-paragraph-body bu-apprentice-count">2 apprentices, total cost: &#xA3;24,000</p>
+                            <a href="/10001259/unapproved/add/file-upload/review-cohort?CacheRequestId=547ddfcf-bc9f-4417-95e0-7f870f8cb685&amp;AgreementId=R5WE96" class="govuk-link govuk-link--no-visited-state govuk-!-font-size-19">Review apprentices</a><br><br><br>
+                            <p></p>
+                    </div>
+
+                <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible govuk-!-width-two-thirds">
+                <form method="post">
+                    <div class="govuk-form-group ">
+                        <fieldset class="govuk-fieldset">
+                            <h2 class="govuk-heading-l govuk-!-margin-top-4">
+                                Choose an option
+                            </h2>
+                            <span class="field-validation-valid govuk-error-message" data-valmsg-for="SelectedOption" data-valmsg-replace="true" id="error-message-SelectedOption"></span>
+                            <div class="govuk-radios">
+                                    <div class="govuk-radios__item">
+                                        <input class="govuk-radios__input" id="details-approve" name="SelectedOption" type="radio" value="ApproveAndSend">
+                                        <label class="govuk-label govuk-radios__label" for="details-approve">
+                                            Approve all and send to employer(s)
+                                        </label>
+                                    </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="details-save" name="SelectedOption" type="radio" value="SaveButDontSend">
+                                <label class="govuk-label govuk-radios__label" for="details-save">
+                                    Save all but don't send to employer(s)
+                                </label>
+                            </div>
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="details-new-file" name="SelectedOption" type="radio" value="UploadAmendedFile">
+                                    <label class="govuk-label govuk-radios__label" for="details-new-file">
+                                        Upload an amended file
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </div>
+                    <button class="govuk-button" data-module="govuk-button" type="submit" id="continue-button">
+                        Continue
+                    </button>
+                <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MP_mMqVpxxFtt80SHTBCalYvgjKqCt7eb7EqcLZS8Wz34YSpPdvUH0cHm4l2Zw6-8YgNCa_poStj8NuSPxSdcd1jMMV0tkBNH2EKhMt5Q8oqiqXpJ_SJD7v-xsWVQBN06BVqE8fv0IU6yc-C5YvzPSX3mGlUFgtBb8BiXX62Eau8HkndHm5Hg-wIRYJuaek3w" /></form>
+                <p class="gov-body govuk-!-margin-bottom-8"><a class="govuk-link" id="cancel-upload-link" href="/10001259/unapproved/add/file-upload/discard-file?CacheRequestId=547ddfcf-bc9f-4417-95e0-7f870f8cb685&amp;RedirectTo=Home">Cancel and discard the upload</a></p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,102 @@
+{% extends "layout-provider.v1.html" %}
+
+{% block pageTitle %}
+Recognition of prior learning - Apprenticeships
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-error-summary das-hide" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary" id="validationSummary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+            There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list" id="validationSummaryErrorList">
+
+            </ul>
+        </div>
+    </div>
+
+        <form method="post">
+            
+            <input data-val="true" data-val-required="The ProviderId field is required." id="ProviderId" name="ProviderId" type="hidden" value="10001259" />
+            <div class="govuk-form-group ">
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+                        <h1 class="govuk-fieldset__heading">
+                            Add apprentice details
+                        </h1>
+                    </legend>
+                    <span class="field-validation-valid govuk-error-message" data-valmsg-for="Selection" data-valmsg-replace="true" id="error-message-Selection"></span>
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input value="BulkCsv" type="radio" class="govuk-radios__input" id="confirm-BulkCsv" data-val="true" data-val-required="You need to select how you want to add apprentice details" name="Selection" />
+                            <label class="govuk-label govuk-radios__label" for="confirm-BulkCsv">
+                                Upload a CSV file
+                            </label>
+                            <div id="upload-csv-hint" class="govuk-hint govuk-radios__hint">You can add new apprentices into existing or new cohorts from a file. The file can contain apprentices for 1 or more employers.</div>
+                        </div>
+
+                        <div class="govuk-radios__item">
+                            <input value="Manual" type="radio" class="govuk-radios__input" id="confirm-Manual" name="Selection" />
+                            <label class="govuk-label govuk-radios__label" for="confirm-Manual">
+                                Manually
+                            </label>
+                            <div id="manual-input-hint" class="govuk-hint govuk-radios__hint">You can add details of new apprentices into an existing cohort or create a new one.</div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="govuk-button" type="submit" data-module="govuk-button">
+                Continue
+            </button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8MP_mMqVpxxFtt80SHTBCaleoBsYpmY_brr0cwJsEUEfK7LFQxzx95bYEKgN9Xd8PbEByivD89A7gEyDdYtNf3E3gk3zR0fzO5BHz5euEkGBPpXXQzFcUjGdX2_vPYgcksghWOR_yUpgvEYSlZsqWImvN-x02i0slh1B5VsMKR-wIXi1zO7hvX1rlOsFkn2w9A" /></form>
+    </div>
+</div>
+
+
+
+</div>
+
+{% endblock %}
