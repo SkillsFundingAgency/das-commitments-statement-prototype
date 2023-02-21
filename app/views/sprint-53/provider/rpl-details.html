@@ -1,7 +1,7 @@
 {% extends "layout-provider.v1.html" %}
 
 {% block pageTitle %}
-Provide details of recognition of prior learning - Apprenticeships
+Add recognition of prior learning details - Apprenticeships
 {% endblock %}
 
 {% block beforeContent %}
@@ -49,14 +49,14 @@ Provide details of recognition of prior learning - Apprenticeships
         <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Provide details of recognition of prior learning
+              Add recognition of prior learning details
             </h1>
           </legend>
         </fieldset>
         <div class="govuk-form-group  ">
           <fieldset class="govuk-fieldset" aria-describedby="finish-date-hint" role="group">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-              How many hours have you reduced the apprenticeship duration by due to recognition of prior learning (RPL)?
+              Total reduction in apprenticeship training time due to recognition of prior learning (RPL)
             </legend>
             <span id="finish-date-hint" class="govuk-hint">
               Enter the reduction in hours
@@ -71,8 +71,7 @@ Provide details of recognition of prior learning - Apprenticeships
           </fieldset>
 
           <div class="govuk-form-group govuk-!-margin-top-6">
-            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">How much have you reduced the apprenticeship
-              price by due to RPL?</label>
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Total price reduction due to RPL</label>
             <span id="price-hint" class="govuk-hint">
               Enter the price in whole pounds. For example, for £1,500 enter 1500
             </span>
@@ -83,8 +82,8 @@ Provide details of recognition of prior learning - Apprenticeships
           </div>
 
           <div class="govuk-form-group govuk-!-margin-top-6">
-            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">What is the KSB weighted reduction of
-              content, duration and cost for the apprenticeship due to RPL?</label>
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Total KSB weighted reduction of
+              training and cost for the apprenticeship due to RPL</label>
             <span id="price-hint" class="govuk-hint">
               Enter the reduction as a percentage. For example, for 12% enter 12
             </span>
@@ -98,20 +97,19 @@ Provide details of recognition of prior learning - Apprenticeships
           </div>
 
           <div class="govuk-form-group govuk-!-margin-top-6">
-            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">What qualifications have contributed to the
-              reduction in content due to RPL?</label>
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Qualifications that contributed to the
+              reduction in apprenticeship training time</label>
             <span id="price-hint" class="govuk-hint">
-              List any formal qualifications that form the prior learning
+              List any qualifications that are being recognised as a reduction in training time
             </span>
             <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"
               aria-describedby="more-detail-hint"></textarea>
           </div>
 
           <div class="govuk-form-group govuk-!-margin-top-6">
-            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">What is the reason for this amount of
-              RPL?</label>
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Reasons for reductions</label>
             <span id="price-hint" class="govuk-hint">
-              <!-- List any formal qualifications that form the prior learning -->
+              Explain why you have reduced cost and training time for this apprentice
             </span>
             <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"
               aria-describedby="more-detail-hint"></textarea>
