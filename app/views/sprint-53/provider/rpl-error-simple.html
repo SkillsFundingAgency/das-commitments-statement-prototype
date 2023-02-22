@@ -1,7 +1,7 @@
 {% extends "layout-provider.v1.html" %}
 
 {% block pageTitle %}
-Add recognition of prior learning details - Apprenticeships
+Add recognition of prior learning details - Apprentices
 {% endblock %}
 
 {% block beforeContent %}
@@ -46,13 +46,27 @@ Add recognition of prior learning details - Apprenticeships
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h1 class="govuk-fieldset__heading">
-              Add recognition of prior learning details
-            </h1>
-          </legend>
-        </fieldset>
+
+        <h1 class="govuk-heading-xl">
+          Add recognition of prior learning details
+        </h1>
+
+
+        <div class="govuk-error-summary" data-module="govuk-error-summary">
+          <div role="alert">
+            <h2 class="govuk-error-summary__title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#price-hint">Enter the reduction as a percentage between 0 and 100</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
         <div class="govuk-form-group  ">
           <fieldset class="govuk-fieldset" aria-describedby="finish-date-hint" role="group">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -61,11 +75,13 @@ Add recognition of prior learning details - Apprenticeships
             <span id="finish-date-hint" class="govuk-hint">
               Enter the reduction in hours
             </span>
-            <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate"
-              data-valmsg-replace="true" id="error-message-EndDate"></span>
+<!--             <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate"
+              data-valmsg-replace="true" id="error-message-EndDate">
+              <span class="govuk-visually-hidden">Error:</span> The reduction in price corresponds to 60 hours reduction for RPL.
+            </span> -->
             <div class="govuk-input__wrapper">
               <input class="govuk-input govuk-input--width-5" type="number" id="ReducedDuration" name="ReducedDuration"
-                value="">
+                value="400">
               <div class="govuk-input__suffix" aria-hidden="true"> hours</div>
             </div>
           </fieldset>
@@ -75,22 +91,26 @@ Add recognition of prior learning details - Apprenticeships
             <span id="price-hint" class="govuk-hint">
               Enter the price in whole pounds. For example, for £1,500 enter 1500
             </span>
-            <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true"
-              id="error-message-Cost"></span>
+<!--             <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true"
+              id="error-message-Cost">
+              <span class="govuk-visually-hidden">Error:</span> The minimum reduction in price for RPL for this standard is £1500 (based on 400 hours and a max funding band of £12,000)
+            </span> -->
             <span class="govuk-body govuk-!-font-weight-bold">£ </span><input class="govuk-input govuk-input--width-5"
-              type="number" id="Cost" name="Cost" value="">
+              type="number" id="Cost" name="Cost" value="1000">
           </div>
 
           <div class="govuk-form-group govuk-!-margin-top-6">
-            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Total KSB weighted reduction of
+            <label class="govuk-label govuk-!-font-weight-bold" for="ReducedWeighting">Total KSB weighted reduction of
               training and cost for the apprenticeship due to RPL</label>
             <span id="price-hint" class="govuk-hint">
               Enter the reduction as a percentage. For example, for 12% enter 12
             </span>
-            <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true"
-              id="error-message-Cost"></span>
+            <span class="field-validation-valid govuk-error-message" data-valmsg-for="ReducedWeighting"
+              data-valmsg-replace="true" id="error-message-ReducedWeighting">
+              <span class="govuk-visually-hidden">Error:</span> Enter the reduction as a percentage between 0 and 100
+            </span>
             <div class="govuk-input__wrapper">
-              <input class="govuk-input govuk-input--width-5" type="number" id="ReducedWeighting"
+              <input class="govuk-input govuk-input--width-5 govuk-input--error" type="number" id="ReducedWeighting"
                 name="ReducedWeighting" value="">
               <div class="govuk-input__suffix" aria-hidden="true"> %</div>
             </div>
@@ -117,14 +137,18 @@ Add recognition of prior learning details - Apprenticeships
 
         </div>
 
-        </div>
-          <a href="rpl-error-simple.html" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
-            Save and continue
-          </a>
+      </div>
+      <a href="approve.html" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
+        Save and continue
+      </a>
 
     </div>
   </div>
-  
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"/>
+  <a href="rpl-error-complex.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6" >
+    Complex validation error
+  </a>
+
 </div>
 
 {% endblock %}
