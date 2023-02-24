@@ -1058,3 +1058,11 @@ table {
 .half-column{
   width: 50%;
 }
+.das-inset-text--highlight {
+  border-left-color: #1d70b8;
+}
+.das-table-cell--highlight {
+  border-bottom: 5px solid #1d70b8;
+  padding-bottom: 5px;
+  margin-bottom: -5px;
+}
