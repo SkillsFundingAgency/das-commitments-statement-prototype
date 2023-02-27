@@ -1061,6 +1061,11 @@ table {
 .das-inset-text--highlight {
   border-left-color: #1d70b8;
 }
+.das-inset-text--highlight-vertical {
+  border-left:  10px solid#1d70b8;
+  padding-left: 10px;
+  margin-left: -10px;
+}
 .das-table-cell--highlight {
   border-bottom: 5px solid #1d70b8;
   padding-bottom: 5px;
