@@ -123,51 +123,15 @@ Add recognition of prior learning details - Apprenticeships
             <option value="274">Level 8</option>
             <option value="274">Level 9</option>
             </select>
-
-            <label class="govuk-label govuk-!-font-weight-bold govuk-!-margin-top-3" for="Cost">Qualification type</label>
-            <p><span id="price-hint" class="govuk-hint">
-              List the specific qualification type
-            </span></p>
-            <select class="govuk-select govuk-!-width-three-quarters" aria-describedby="course-name-hint"
-            id="CourseCode" name="CourseCode">
-            <option value="">Please select the qualification type</option>
-            <option value="274">A level</option>
-            <option value="274">access to higher education diploma</option>
-            <option value="274">advanced apprenticeship</option>
-            <option value="274">AS level</option>
-            <option value="274">international Baccalaureate diploma</option>
-            <option value="274">level 3 award</option>
-            <option value="274">level 3 certificate</option>
-            <option value="274">level 3 diploma</option>
-            <option value="274">level 3 national certificate</option>
-            <option value="274">level 3 national diploma</option>
-            <option value="274">level 3 NVQ</option>
-            <option value="274">T Level</option>
-            <option value="274">tech level</option>
-            </select>
-
-            <label class="govuk-label govuk-!-font-weight-bold govuk-!-margin-top-3" for="Cost">Industry sector</label>
-            <select class="govuk-select govuk-!-width-three-quarters" aria-describedby="course-name-hint"
-            id="CourseCode" name="CourseCode">
-            <option value="">Please select the industry</option>
-            <option value="274">Agriculture, environmental and animal care </option>
-            <option value="274">Business and administration </option>
-            <option value="274">Care services </option>
-            <option value="274">Catering and hospitality </option>
-            <option value="274">Construction and the built environment </option>
-            <option value="274">Creative and design </option>
-            <option value="274">Digital </option>
-            <option value="274">Education and childcare </option>
-            <option value="274">Engineering and manufacturing </option>
-            <option value="274">Hair and beauty </option>
-            <option value="274">Health and science </option>
-            <option value="274">Legal finance and accounting </option>
-            <option value="274">Protective services </option>
-            <option value="274">Sales marketing and procurement </option>
-            <option value="274">Transport and logistics </option>
-            </select>
           </div>
-
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="qualification" name="qualification" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="qualification">
+                Qualification was in same industry
+              </label>
+            </div>
+          </div>
 
           <div class="govuk-form-group govuk-!-margin-top-9">
             <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Experience that contributed to the
@@ -197,15 +161,6 @@ Add recognition of prior learning details - Apprenticeships
               </label>
             </div>
           </div>
-        </div>
-
-        <div class="govuk-form-group govuk-!-margin-top-6">
-          <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Reasons for reductions</label>
-          <span id="price-hint" class="govuk-hint">
-            Explain why you have reduced cost and training time for this apprentice
-          </span>
-          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"
-            aria-describedby="more-detail-hint"></textarea>
         </div>
 
         </div>
