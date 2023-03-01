@@ -38,6 +38,21 @@ Recognition of prior learning - Apprenticeships
 </nav>
 {% endblock %}
 
+{% set reduction = data.ReducedDuration or 72  %}
+{% set total = data.TotalDuration or 1035  %}
+{% set cost = data.Cost or 700  %}
+
+{% set percentage = reduction / total * 100  %}
+{% set halfPercentage = percentage / 2 %}
+{% set maxFunding = 21000 %}
+{% set minReduction = maxFunding * halfPercentage / 100 %}
+
+{% set isBelowFunding = false %}
+{% if cost < minReduction  %}
+{% set isBelowFunding = true %}
+{% endif %}
+
+
 
 
 {% block content %}
@@ -46,6 +61,7 @@ Recognition of prior learning - Apprenticeships
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <h1 class="govuk-heading-l">Check your recognised prior learning funding calculation</h1>
 
+      {% if isBelowFunding == true %}
       <div class="govuk-inset-text das-inset-text--highlight">
         <h3 id="funding-band-text" class="govuk-heading-s">Actual price is below funding rules amount</h3>
         <p>
@@ -53,7 +69,7 @@ Recognition of prior learning - Apprenticeships
             Check this amount is correct. You'll need to&hellip; - this can't be funded from their account.
         </p>
     </div>
-
+    {% endif %}
 
       <h2 class="govuk-heading-m">Funding calculation</h2>
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
@@ -62,7 +78,7 @@ Recognition of prior learning - Apprenticeships
             Total reduction in apprenticeship training time due to RPL
           </dt>
           <dd class="govuk-summary-list__value govuk-table__cell--numeric">
-            100 hours
+            {{reduction}} hours
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="rpl-details">
@@ -74,8 +90,8 @@ Recognition of prior learning - Apprenticeships
           <dt class="govuk-summary-list__key">
             Total training time for this apprenticeship standard
           </dt>
-          <dd class="govuk-summary-list__value">
-            <p class="govuk-body govuk-table__cell--numeric">400 hours</p>
+          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
+              {{total}} hours
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="rpl-details">
@@ -88,8 +104,8 @@ Recognition of prior learning - Apprenticeships
           <dt class="govuk-summary-list__key">
             Percentage of RPL (A)
           </dt>
-          <dd class="govuk-summary-list__value">
-            <p class="govuk-body govuk-table__cell--numeric">25 %</p>
+          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
+            {{ percentage | fixed }} %
           </dd>
           <dd class="govuk-summary-list__actions">
           </dd>
@@ -100,7 +116,7 @@ Recognition of prior learning - Apprenticeships
             Max funding amount (B)
           </dt>
           <dd class="govuk-summary-list__value">
-            <p class="govuk-body govuk-table__cell--numeric">£ 10,000</p>
+            <p class="govuk-body govuk-table__cell--numeric">£ {{maxFunding}}</p>
           </dd>
           <dd class="govuk-summary-list__actions">
           </dd>
@@ -111,7 +127,7 @@ Recognition of prior learning - Apprenticeships
             Minimum price reduction <br />(50% of A as a percentage of B)
           </dt>
           <dd class="govuk-summary-list__value">
-            <p class="govuk-body govuk-table__cell--numeric">£ 1,250</p>
+            <p class="govuk-body govuk-table__cell--numeric">£ {{ minReduction | fixed(0) }}</p>
           </dd>
           <dd class="govuk-summary-list__actions">
           </dd>
@@ -129,11 +145,11 @@ Recognition of prior learning - Apprenticeships
         </div>
  -->
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key das-inset-text--highlight-vertical">
+          <dt class="govuk-summary-list__key       {% if isBelowFunding == true %}das-inset-text--highlight-vertical{% endif %}">
             Actual price reduction due to RPL
           </dt>
           <dd class="govuk-summary-list__value ">
-            <p class="govuk-body govuk-table__cell--numeric">£ 1,200</p>
+            <p class="govuk-body govuk-table__cell--numeric">£ {{cost}}</p>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="rpl-details">
@@ -148,7 +164,7 @@ Recognition of prior learning - Apprenticeships
             Final agreed price
           </dt>
           <dd class="govuk-summary-list__value">
-            <p class="govuk-body govuk-table__cell--numeric">£ 7,500</p>
+            <p class="govuk-body govuk-table__cell--numeric">£ 17,500</p>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="add-apprentice-details">

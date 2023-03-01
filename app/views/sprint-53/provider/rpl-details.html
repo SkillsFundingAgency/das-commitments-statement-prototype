@@ -53,6 +53,7 @@ Add recognition of prior learning details - Apprenticeships
             </h1>
           </legend>
         </fieldset>
+        <form action="check-your-answers">
         <div class="govuk-form-group govuk-!-margin-top-6">
           <fieldset class="govuk-fieldset" aria-describedby="finish-date-hint" role="group">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -80,7 +81,7 @@ Add recognition of prior learning details - Apprenticeships
             <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate"
               data-valmsg-replace="true" id="error-message-EndDate"></span>
             <div class="govuk-input__wrapper">
-              <input class="govuk-input govuk-input--width-5" type="number" id="ReducedDuration" name="ReducedDuration"
+              <input class="govuk-input govuk-input--width-5" type="number" id="TotalDuration" name="TotalDuration"
                 value="">
               <div class="govuk-input__suffix" aria-hidden="true"> hours</div>
             </div>
@@ -201,10 +202,8 @@ Add recognition of prior learning details - Apprenticeships
 
 
         </div>
-          <a href="check-your-answers.html" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
-            Save and continue
-          </a>
-
+          <button class="govuk-button govuk-!-margin-top-6" data-module="govuk-button" id="employer-details">Save and continue</button>
+        </form>
     </div>
   </div>
   <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"/>
