@@ -46,6 +46,7 @@ Recognition of prior learning - Apprenticeships
 {% set halfPercentage = percentage / 2 %}
 {% set maxFunding = 21000 %}
 {% set minReduction = maxFunding * halfPercentage / 100 %}
+{% set newMaxFunding = maxFunding - minReduction %}
 
 {% set isBelowFunding = false %}
 {% if cost < minReduction  %}
@@ -132,18 +133,7 @@ Recognition of prior learning - Apprenticeships
           <dd class="govuk-summary-list__actions">
           </dd>
         </div>
-<!-- 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            New maximum funding amount
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <p class="govuk-body govuk-table__cell--numeric">£ 8,750</p>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          </dd>
-        </div>
- -->
+
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key       {% if isBelowFunding == true %}das-inset-text--highlight-vertical{% endif %}">
             Actual price reduction due to RPL
@@ -158,13 +148,23 @@ Recognition of prior learning - Apprenticeships
           </dd>
         </div>
 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            New maximum funding amount
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body govuk-table__cell--numeric">£ {{ newMaxFunding | fixed(0)  }}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Final agreed price
           </dt>
           <dd class="govuk-summary-list__value">
-            <p class="govuk-body govuk-table__cell--numeric">£ 17,500</p>
+            <p class="govuk-body govuk-table__cell--numeric">£ 17500</p>
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="add-apprentice-details">
