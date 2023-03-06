@@ -1071,3 +1071,17 @@ table {
   padding-bottom: 5px;
   margin-bottom: -5px;
 }
+
+.das-inset-text--error {
+  border-left-color: #d4351c;
+}
+.das-inset-text--error-vertical {
+  border-left:  10px solid#d4351c;
+  padding-left: 10px;
+  margin-left: -10px;
+}
+.das-table-cell--error {
+  border-bottom: 5px solid #d4351c;
+  padding-bottom: 5px;
+  margin-bottom: -5px;
+}
