@@ -12,3 +12,32 @@
 {% endif %}
 
 <script src="/public/javascripts/application.v1.js"></script>
+
+<script>
+console.log('cookieee');
+var level1 = ["first certificate", "GCSE - grades 3, 2, 1 or grades D, E, F, G", "level 1 award", "level 1 certificate", "level 1 diploma", "level 1 ESOL", "level 1 essential skills", "level 1 functional skills", "level 1 national vocational qualification (NVQ)", "music grades 1, 2 and 3", "other"];
+var level2 = ["CSE - grade 1", "GCSE - grades 9, 8, 7, 6, 5, 4 or grades A*, A, B, C", "intermediate apprenticeship", "level 2 award", "level 2 certificate", "level 2 diploma", "level 2 ESOL", "level 2 essential skills", "level 2 functional skills", "level 2 national certificate", "level 2 national diploma", "level 2 NVQ", "music grades 4 and 5", "O level - grade A, B or C"];
+var level3 = ["A level", "access to higher education diploma", "advanced apprenticeship", "applied general", "AS level", "international Baccalaureate diploma", "level 3 award", "level 3 certificate", "level 3 diploma", "level 3 ESOL", "level 3 national certificate", "level 3 national diploma", "level 3 NVQ", "music grades 6, 7 and 8", "T Level", "tech level"];
+var level4 = ["certificate of higher education (CertHE)", "higher apprenticeship", "higher national certificate (HNC)", "level 4 award", "level 4 certificate", "level 4 diploma", "level 4 NVQ"];
+var level5 = ["diploma of higher education (DipHE)", "foundation degree", "higher national diploma (HND)", "level 5 award", "level 5 certificate", "level 5 diploma", "level 5 NVQ"];
+var level6 = ["degree apprenticeship", "degree with honours - for example bachelor of the arts (BA) hons, bachelor of science (BSc) hons", "graduate certificate", "graduate diploma", "level 6 award", "level 6 certificate", "level 6 diploma", "level 6 NVQ", "ordinary degree without honours"];
+var level7 = ["integrated master’s degree, for example master of engineering (MEng)", "level 7 award", "level 7 certificate", "level 7 diploma", "level 7 NVQ", "master’s degree, for example master of arts (MA), master of science (MSc)", "postgraduate certificate", "postgraduate certificate in education (PGCE)", "postgraduate diploma"];
+var level8 = ["doctorate, for example doctor of philosophy (PhD or DPhil)", "level 8 award", "level 8 certificate", "level 8 diploma"];
+var level9 = [];
+
+
+$('#qualificationLevel').on('change', function(){
+  var selected = $('option:selected', this).val();
+  var menuOption = 'level'+selected;
+  var menuOptionList = '<option value="">Please select the qualification type</option>';
+
+  console.log(window[menuOption]);
+  $('#qualificationType').empty();
+
+  $(window[menuOption]).each(function(idx, ele){
+    menuOptionList += "<option value='"+idx+"'>"+ele+"</option>";
+  })
+  $('#qualificationType').html(menuOptionList);
+  
+})
+</script>
