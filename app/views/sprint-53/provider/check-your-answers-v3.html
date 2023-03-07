@@ -103,19 +103,6 @@ Recognition of prior learning - Apprenticeships
             </a>
           </dd>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Actual training time for this apprentice
-          </dt>
-          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
-              {{remaining}} hours
-          </dd>
-          <dd class="govuk-summary-list__actions">
-            <a class="govuk-link" href="rpl-details">
-              Change<span class="govuk-visually-hidden"> contact details</span>
-            </a>
-          </dd>
-        </div>
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
@@ -141,14 +128,32 @@ Recognition of prior learning - Apprenticeships
         
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Final actual price
+            Minimum price reduction <br />(50% of A as a percentage of B)
           </dt>
           <dd class="govuk-summary-list__value">
-            <p class="govuk-body govuk-table__cell--numeric">£ {{actualPrice}}</p>
+            <p class="govuk-body govuk-table__cell--numeric">£ {{ minReduction | fixed(0) }}</p>
           </dd>
           <dd class="govuk-summary-list__actions">
           </dd>
         </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            New maximum funding amount
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body govuk-table__cell--numeric">£ {{ newMaxFunding | fixed(0)  }}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+
+        </dl>
+
+    
+    <h2 class="govuk-heading-m">Actual prices</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key       {% if isBelowFunding == true %}das-inset-text--error-vertical{% endif %}">
@@ -166,21 +171,10 @@ Recognition of prior learning - Apprenticeships
 
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Minimum price reduction <br />(50% of A as a percentage of B)
+            Final price to employer
           </dt>
           <dd class="govuk-summary-list__value">
-            <p class="govuk-body govuk-table__cell--numeric">£ {{ minReduction | fixed(0) }}</p>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            New maximum funding amount
-          </dt>
-          <dd class="govuk-summary-list__value">
-            <p class="govuk-body govuk-table__cell--numeric">£ {{ newMaxFunding | fixed(0)  }}</p>
+            <p class="govuk-body govuk-table__cell--numeric">£ {{actualPrice}}</p>
           </dd>
           <dd class="govuk-summary-list__actions">
           </dd>
@@ -202,8 +196,8 @@ Recognition of prior learning - Apprenticeships
 
     
   <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
-  <a href="check-your-answers-v3.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
-    Alternative version
+  <a href="check-your-answers.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+    Original version
   </a>
 
 </div>
