@@ -130,6 +130,17 @@ Add recognition of prior learning details - Apprenticeships
 
 
           <div class="govuk-form-group govuk-!-margin-top-6">
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Average total price for this apprenticeship</label>
+            <span id="price-hint" class="govuk-hint">
+              Enter the average price in whole pounds. For example, for £1,500 enter 1500
+            </span>
+            <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true"
+              id="error-message-Cost"></span>
+            <span class="govuk-body govuk-!-font-weight-bold">£ </span><input class="govuk-input govuk-input--width-5"
+              type="number" id="averageCost" name="averageCost" value="">
+          </div>
+
+          <div class="govuk-form-group govuk-!-margin-top-6">
             <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Total price reduction due to RPL</label>
             <span id="price-hint" class="govuk-hint">
               Enter the price in whole pounds. For example, for £1,500 enter 1500
@@ -144,7 +155,7 @@ Add recognition of prior learning details - Apprenticeships
             <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Qualifications that contributed to the
               reduction in apprenticeship training time</label>
             <p><span id="price-hint" class="govuk-hint">
-                List the highest level qualification that is being recognised as a reduction in training time
+                List the qualification that offers the most RPL for a reduction in training time
                 <a href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels"
                   class="govuk-link" target="_blank">What qualification levels mean (opens in new tab)</a>
 

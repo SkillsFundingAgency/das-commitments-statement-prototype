@@ -38,191 +38,198 @@ Recognition of prior learning - Apprenticeships
 </nav>
 {% endblock %}
 
-{% set reduction = data.ReducedDuration or 72 %}
-{% set total = data.TotalDuration or 1035 %}
-{% set remaining = total - reduction %}
-{% set cost = data.Cost or 900 %}
+{% set reduction = data.ReducedDuration or 72  %}
+{% set total = data.TotalDuration or 1035  %}
+{% set remaining = total - reduction  %}
+{% set cost = 800  %}
 
 {% set percentage = reduction / total * 100 | fixed(0) %}
 {% set halfPercentage = percentage / 2 %}
 {% set maxFunding = 21000 %}
-{% set actualPrice = 20500 %}
+{% set actualPrice = 20400  %}
 {% set minReduction = maxFunding * halfPercentage / 100 %}
 {% set newMaxFunding = maxFunding - minReduction %}
 
 {% set isBelowFunding = false %}
-{% if cost < minReduction %} {% set isBelowFunding=true %} {% endif %} {% set isAboveMax=false %} {% if actualPrice>
-  newMaxFunding %}
-  {% set isAboveMax = true %}
-  {% endif %}
+{% if cost < minReduction  %}
+{% set isBelowFunding = true %}
+{% endif %}
+
+{% set isAboveMax=false %}
+{% if actualPrice > newMaxFunding %}
+{% set isAboveMax = true %}
+{% endif %}
 
 
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-l">Check your recognised prior learning funding calculation</h1>
 
-
-  {% block content %}
-  <div class="govuk-width-container " id="landing-page-section">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds-from-desktop">
-        <h1 class="govuk-heading-l">Check your recognised prior learning funding calculation</h1>
-
-        {% if isBelowFunding == true %}
-        <div class="govuk-inset-text das-inset-text--error">
-          <h3 id="funding-band-text" class="govuk-heading-s">Actual price reduction is below the minimum funding rules
-            amount</h3>
-          <p>
-            The actual price reduction for this apprenticeship is below the minimum amount specified in <a
-              target="_blank" href="https://www.gov.uk/government/publications/apprenticeship-funding-bands"
-              rel="noopener">the funding rules (opens in a new tab)</a>.
+      {% if isBelowFunding == true %}
+      <div class="govuk-inset-text das-inset-text--error">
+        <h3 id="funding-band-text" class="govuk-heading-s">Actual price reduction is below the minimum funding rules amount</h3>
+        <p>
+            The actual price reduction for this apprenticeship is below the minimum amount specified in <a target="_blank" href="https://www.gov.uk/government/publications/apprenticeship-funding-bands" rel="noopener">the funding rules (opens in a new tab)</a>.
             Check this amount is correct. You'll need to&hellip; - this can't be funded from their account.
-          </p>
-        </div>
-        {% endif %}
-
-        {% if isAboveMax == true %}
-        <div class="govuk-inset-text das-inset-text--error">
-          <h3 id="funding-band-text" class="govuk-heading-s">Actual price reduction is below the minimum funding rules
-            amount</h3>
-          <p>
-            The actual price reduction for this apprenticeship is below the minimum amount specified in <a
-              target="_blank" href="https://www.gov.uk/government/publications/apprenticeship-funding-bands"
-              rel="noopener">the funding rules (opens in a new tab)</a>.
-            Check this amount is correct. You'll need to&hellip; - this can't be funded from their account.
-          </p>
-        </div>
-        {% endif %}
-
-        <h2 class="govuk-heading-m">Funding calculation</h2>
-        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key half-column">
-              Total training time for this apprenticeship standard
-            </dt>
-            <dd class="govuk-summary-list__value govuk-table__cell--numeric">
-              {{total}} hours
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="rpl-details">
-                Change<span class="govuk-visually-hidden"> contact details</span>
-              </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row ">
-            <dt class="govuk-summary-list__key">
-              Total reduction in apprenticeship training time due to RPL
-            </dt>
-            <dd class="govuk-summary-list__value govuk-table__cell--numeric">
-              {{reduction}} hours
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="rpl-details">
-                Change<span class="govuk-visually-hidden"> name</span>
-              </a>
-            </dd>
-          </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Actual training time for this apprentice
-            </dt>
-            <dd class="govuk-summary-list__value govuk-table__cell--numeric">
-              {{remaining}} hours
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="rpl-details">
-                Change<span class="govuk-visually-hidden"> contact details</span>
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Percentage of RPL (A)
-            </dt>
-            <dd class="govuk-summary-list__value govuk-table__cell--numeric">
-              {{ percentage | fixed(0) }} %
-            </dd>
-            <dd class="govuk-summary-list__actions">
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Max funding amount (B)
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <p class="govuk-body govuk-table__cell--numeric">£ {{maxFunding}}</p>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Final actual price
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <p class="govuk-body govuk-table__cell--numeric">£ {{actualPrice}}</p>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt
-              class="govuk-summary-list__key       {% if isBelowFunding == true %}das-inset-text--error-vertical{% endif %}">
-              Actual price reduction due to RPL
-            </dt>
-            <dd class="govuk-summary-list__value ">
-              <p class="govuk-body govuk-table__cell--numeric">£ {{cost}}</p>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="rpl-details">
-                Change<span class="govuk-visually-hidden"> contact details</span>
-              </a>
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              Minimum price reduction <br />(50% of A as a percentage of B)
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <p class="govuk-body govuk-table__cell--numeric">£ {{ minReduction | fixed(0) }}</p>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-            </dd>
-          </div>
-
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              New maximum funding amount
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <p class="govuk-body govuk-table__cell--numeric">£ {{ newMaxFunding | fixed(0) }}</p>
-            </dd>
-            <dd class="govuk-summary-list__actions">
-            </dd>
-          </div>
-
-        </dl>
-
-        <!-- <h2 class="govuk-heading-m">Now send your application</h2> -->
-        <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the
-          details you are providing are correct.</p>
-        <form action="approve" method="post" novalidate>
-          <input type="hidden" name="answers-checked" value="true">
-          <button class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
-            Accept and continue
-          </button>
-        </form>
-      </div>
+        </p>
     </div>
+    {% endif %}
+
+    {% if isAboveMax == true %}
+    <div class="govuk-inset-text das-inset-text--error">
+      <h3 id="funding-band-text" class="govuk-heading-s">The total actual price is above the new maximum funding amount after taking RPL reduction into account</h3>
+      <p>
+        The total actual price is above below the new maximum funding amount after taking RPL reduction into account as specified in <a
+          target="_blank" href="https://www.gov.uk/government/publications/apprenticeship-funding-bands"
+          rel="noopener">the funding rules (opens in a new tab)</a>.
+        Check this amount is correct. You'll need to&hellip; - this can't be funded from their account.
+      </p>
+    </div>
+    {% endif %}
+
+      <h2 class="govuk-heading-m">Funding calculation</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key half-column">
+            Total training time for this apprenticeship standard
+          </dt>
+          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
+              {{total}} hours
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details">
+              Change<span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row ">
+          <dt class="govuk-summary-list__key">
+            Total reduction in apprenticeship training time due to RPL
+          </dt>
+          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
+            {{reduction}} hours
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Actual training time for this apprentice
+          </dt>
+          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
+              {{remaining}} hours
+          </dd>
+          <dd class="govuk-summary-list__actions">
+           </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Percentage of RPL (A)
+          </dt>
+          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
+            {{ percentage | fixed(0) }} %
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Max funding amount (B)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body govuk-table__cell--numeric">£ {{maxFunding}}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
 
 
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
-    <a href="check-your-answers-v3.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
-      Alternative version
-    </a>
 
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Minimum price reduction <br />(50% of A as a percentage of B)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body govuk-table__cell--numeric">£ {{ minReduction | fixed(0) }}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            New maximum funding amount
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body govuk-table__cell--numeric">£ {{ newMaxFunding | fixed(0)  }}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+        
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key {% if isBelowFunding == true %}das-inset-text--error-vertical{% endif %}">
+            Actual price reduction due to RPL
+          </dt>
+          <dd class="govuk-summary-list__value ">
+            <p class="govuk-body govuk-table__cell--numeric">£ {{cost}}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details">
+              Change<span class="govuk-visually-hidden"> actual price reduction</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key {% if isAboveMax == true %}das-inset-text--error-vertical{% endif %}">
+            Total agreed apprenticeship price (excluding VAT)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body govuk-table__cell--numeric">£ {{actualPrice}}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="add-apprentice-details-v2">
+              Change<span class="govuk-visually-hidden"> final actual price</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <!-- <h2 class="govuk-heading-m">Now send your application</h2> -->
+      <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the
+        details you are providing are correct.</p>
+      <form action="approve" method="post" novalidate>
+        <input type="hidden" name="answers-checked" value="true">
+        <button class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
+          Accept and continue
+        </button>
+      </form>
+    </div>
   </div>
-  {% endblock %}
+
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
+  <a href="check-your-answers.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+    Original version
+  </a>
+  <br/>
+  <a href="check-your-answers-v3.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+    Alternative version
+  </a>
+  <br/>
+  <a href="check-your-answers-max-funding.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+    Max funding validation error
+  </a>
+
+</div>
+{% endblock %}
