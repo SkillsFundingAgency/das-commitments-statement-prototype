@@ -1,0 +1,153 @@
+{% extends "layout-provider.v1.html" %}
+
+{% block pageTitle %}
+Add recognition of prior learning details - Apprentices
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+
+        <h1 class="govuk-heading-xl">
+          Add recognition of prior learning details
+        </h1>
+
+
+        <div class="govuk-error-summary" data-module="govuk-error-summary">
+          <div role="alert">
+            <h2 class="govuk-error-summary__title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#price-hint">Enter the reduction as a percentage between 0 and 100</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="govuk-form-group  ">
+          <fieldset class="govuk-fieldset" aria-describedby="finish-date-hint" role="group">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+              Total reduction in apprenticeship training time due to recognition of prior learning (RPL)
+            </legend>
+            <span id="finish-date-hint" class="govuk-hint">
+              Enter the reduction in hours
+            </span>
+<!--             <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate"
+              data-valmsg-replace="true" id="error-message-EndDate">
+              <span class="govuk-visually-hidden">Error:</span> The reduction in price corresponds to 60 hours reduction for RPL.
+            </span> -->
+            <div class="govuk-input__wrapper">
+              <input class="govuk-input govuk-input--width-5" type="number" id="ReducedDuration" name="ReducedDuration"
+                value="400">
+              <div class="govuk-input__suffix" aria-hidden="true"> hours</div>
+            </div>
+          </fieldset>
+
+          <div class="govuk-form-group govuk-!-margin-top-6">
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Total price reduction due to RPL</label>
+            <span id="price-hint" class="govuk-hint">
+              Enter the price in whole pounds. For example, for £1,500 enter 1500
+            </span>
+
+            <div class="govuk-input__wrapper">
+              <div class="govuk-input__prefix" aria-hidden="true">£</div>
+              <input class="govuk-input govuk-input--width-5" id="cost-per-item" name="cost-per-item" type="text" spellcheck="false">
+            </div>
+          </div>
+
+          <div class="govuk-form-group govuk-!-margin-top-6">
+            <label class="govuk-label govuk-!-font-weight-bold" for="ReducedWeighting">Total KSB weighted reduction of
+              training and cost for the apprenticeship due to RPL</label>
+            <span id="price-hint" class="govuk-hint">
+              Enter the reduction as a percentage. For example, for 12% enter 12
+            </span>
+            <span class="field-validation-valid govuk-error-message" data-valmsg-for="ReducedWeighting"
+              data-valmsg-replace="true" id="error-message-ReducedWeighting">
+              <span class="govuk-visually-hidden">Error:</span> Enter the reduction as a percentage between 0 and 100
+            </span>
+            <div class="govuk-input__wrapper">
+              <input class="govuk-input govuk-input--width-5 govuk-input--error" type="number" id="ReducedWeighting"
+                name="ReducedWeighting" value="">
+              <div class="govuk-input__suffix" aria-hidden="true"> %</div>
+            </div>
+          </div>
+
+          <div class="govuk-form-group govuk-!-margin-top-6">
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Qualifications that contributed to the
+              reduction in apprenticeship training time</label>
+            <span id="price-hint" class="govuk-hint">
+              List any qualifications that are being recognised as a reduction in training time
+            </span>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"
+              aria-describedby="more-detail-hint"></textarea>
+          </div>
+
+          <div class="govuk-form-group govuk-!-margin-top-6">
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Reasons for reductions</label>
+            <span id="price-hint" class="govuk-hint">
+              Explain why you have reduced cost and training time for this apprentice
+            </span>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"
+              aria-describedby="more-detail-hint"></textarea>
+          </div>
+
+        </div>
+
+      </div>
+      <a href="approve.html" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
+        Save and continue
+      </a>
+
+    </div>
+  </div>
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"/>
+  <a href="rpl-error-complex.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6" >
+    Complex validation error
+  </a>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,281 @@
+{% extends "layout-provider.v1.html" %}
+
+{% block pageTitle %}
+Recognition of prior learning - Apprenticeships
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+  <div class="govuk-grid-row ">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+
+
+        <h1 class="govuk-heading-xl">Choose an employer</h1>
+        <p class="govuk-body">Choose an employer you want to add apprentice details on behalf of.</p>
+
+        <form method="get">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="searchTerm">Search employer name or account name</label>
+            <div class="das-search-form__group">
+              <input class="govuk-input das-search-form__input app-input-autocomplete" id="searchTerm" name="searchTerm"
+                type="text">
+              <div class="das-search-form__button-wrap">
+                <button class="govuk-button das-search-form__button" type="submit">Search</button>
+              </div>
+            </div>
+          </div>
+
+          <input type="hidden" name="SortField" />
+          <input type="hidden" value="False" name="ReverseSort" />
+
+
+          <table class="govuk-table das-table--responsive das-table--double-arrows">
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header das-table-cell-width-35">
+                  <a class="das-table__sort" title="Sort by employer name"
+                    href="/10001259/unapproved/add/select-employer?ReverseSort=False&amp;SortField=EmployerAccountLegalEntityName">
+                    Employer
+                  </a>
+
+                </th>
+                <th scope="col" class="govuk-table__header das-table-cell-width-35">
+                  <a class="das-table__sort" title="Sort by account name"
+                    href="/10001259/unapproved/add/select-employer?ReverseSort=False&amp;SortField=EmployerAccountName">
+                    Account name
+                  </a>
+                </th>
+                <th scope="col" colspan="2" class="govuk-table__header das-table-cell-width-30">
+                  Agreement ID
+                </th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">KAREN&#x27;S GLASS LIMITED</td>
+                <td class="govuk-table__cell" data-label="Account name">123 Karen&#x27;s Glass Limited</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">2BENNJ</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=2BENNJ"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">KAREN&#x27;S GLASS LIMITED</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                <td class="govuk-table__cell" data-label="Account name">THIRD ACT LIMITED</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">YGJR4D</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=YGJR4D"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">THIRD ACT LIMITED</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">TEST &amp; RESEARCH CENTRE LTD</td>
+                <td class="govuk-table__cell" data-label="Account name">TEST &amp; RESEARCH CENTRE LTD</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">EYRE4V</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=EYRE4V"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">TEST &amp; RESEARCH CENTRE LTD</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">A NAGESH LIMITED</td>
+                <td class="govuk-table__cell" data-label="Account name">A NAGESH LIMITED</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">YGXXX5</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=YGXXX5"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">A NAGESH LIMITED</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">TEST &amp; MAINTAIN LIMITED</td>
+                <td class="govuk-table__cell" data-label="Account name">TEST &amp; MAINTAIN LIMITED</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">R5WE96</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=R5WE96"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">TEST &amp; MAINTAIN LIMITED</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">CENTRAL TRAINING ACADEMY LIMITED</td>
+                <td class="govuk-table__cell" data-label="Account name">QA LIMITED</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">KZG9EK</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=KZG9EK"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">CENTRAL TRAINING ACADEMY LIMITED</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">COVENTRY AIRPORT LIMITED</td>
+                <td class="govuk-table__cell" data-label="Account name">COVENTRY AIRPORT LIMITED</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">D2P85M</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=D2P85M"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">COVENTRY AIRPORT LIMITED</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">SECOND LIMITED</td>
+                <td class="govuk-table__cell" data-label="Account name">SECOND LIMITED</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">668WVV</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=668WVV"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">SECOND LIMITED</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">QA LIMITED</td>
+                <td class="govuk-table__cell" data-label="Account name">QA LIMITED</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">XRBE26</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=XRBE26"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">QA LIMITED</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">SAM ACCESS LTD</td>
+                <td class="govuk-table__cell" data-label="Account name">SAM ACCESS LTD</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">D2ZX9Y</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=D2ZX9Y"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">SAM ACCESS LTD</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">TEST &amp; DESIGN SOLUTIONS LIMITED</td>
+                <td class="govuk-table__cell" data-label="Account name">TEST &amp; DESIGN SOLUTIONS LIMITED</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">G2W89Y</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=G2W89Y"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">TEST &amp; DESIGN SOLUTIONS LIMITED</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">QA LIMITED</td>
+                <td class="govuk-table__cell" data-label="Account name">QA LIMITED</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">5GXXXX</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=5GXXXX"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">QA LIMITED</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">TENNIS ANGELS LTD</td>
+                <td class="govuk-table__cell" data-label="Account name">TENNIS ANGELS LTD</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">WD82KV</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=WD82KV"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">TENNIS ANGELS LTD</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">QA LIMITED</td>
+                <td class="govuk-table__cell" data-label="Account name">QA LIMITED</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">VRPVVK</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=VRPVVK"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">QA LIMITED</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">TEST &amp; CARE LTD</td>
+                <td class="govuk-table__cell" data-label="Account name">TEST &amp; CARE LTD</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">JB6422</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=JB6422"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">TEST &amp; CARE LTD</span>
+                  </a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Employer">FUN TIMES LIMITED</td>
+                <td class="govuk-table__cell" data-label="Account name">FUN TIMES LIMITED</td>
+                <td class="govuk-table__cell" data-label="Agreement ID">6684KG</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Link">
+                  <a href="/10001259/unapproved/add/confirm-employer?EmployerAccountLegalEntityPublicHashedId=6684KG"
+                    class="govuk-link">
+                    Select <span class="govuk-visually-hidden">FUN TIMES LIMITED</span>
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+
+        <a href="rpl-details.html" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
+          Save and continue
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

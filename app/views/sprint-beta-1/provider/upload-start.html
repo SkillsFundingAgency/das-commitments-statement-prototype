@@ -1,0 +1,70 @@
+{% extends "layout-provider.v1.html" %}
+
+{% block pageTitle %}
+Recognition of prior learning - Apprenticeships
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <form method="post" enctype="multipart/form-data">
+        <h1 class="govuk-heading-xl">Upload a CSV file</h1>
+        <div class="govuk-form-group govuk-!-margin-top-6">
+          <label class="govuk-label" for="file-upload-1">
+            Your CSV file should not have more than 100 rows
+          </label>
+
+          <span class="field-validation-valid govuk-error-message" data-valmsg-for="Attachment"
+            data-valmsg-replace="true" id="error-message-Attachment"></span>
+          <input class="govuk-file-upload" id="attachment" accept=".csv" type="file" name="Attachment">
+        </div>
+
+        <a href="upload-cya.html" class="govuk-button" data-module="govuk-button">
+          Continue
+        </a>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

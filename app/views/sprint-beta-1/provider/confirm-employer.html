@@ -1,0 +1,112 @@
+{% extends "layout-provider.v1.html" %}
+
+{% block pageTitle %}
+Recognition of prior learning - Apprenticeships
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+  <div class="govuk-grid-row ">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+
+
+        <h1 class="govuk-heading-xl">Confirm employer</h1>
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-0">TEST &amp; MAINTAIN LIMITED</h2>
+
+        <dl class="das-definition-list das-definition-list--inline das-definition-list--muted govuk-!-font-size-20">
+          <dt class="das-definition-list__title">Account Name</dt>
+          <dd class="das-definition-list__definition">TEST &amp; MAINTAIN LIMITED</dd>
+          <dt class="das-definition-list__title">Agreement ID</dt>
+          <dd class="das-definition-list__definition">R5WE96</dd>
+        </dl>
+
+        <form method="post">
+          <fieldset class="govuk-fieldset">
+
+            <input data-val="true"
+              data-val-required="&#x27;Employer Account Legal Entity Public Hashed Id&#x27; must not be empty."
+              id="EmployerAccountLegalEntityPublicHashedId" name="EmployerAccountLegalEntityPublicHashedId"
+              type="hidden" value="R5WE96" />
+
+
+            <div class="govuk-form-group ">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  Is this the employer you'd like to add apprentice details for?
+                </legend>
+                <span class="field-validation-valid govuk-error-message" data-valmsg-for="Confirm"
+                  data-valmsg-replace="true" id="error-message-Confirm"></span>
+                <div class="govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input value="true" type="radio" class="govuk-radios__input" id="confirm-true" data-val="true"
+                      data-val-required="Please select an option" name="Confirm" />
+                    <label class="govuk-label govuk-radios__label" for="confirm-true">
+                      Yes, use TEST &amp; MAINTAIN LIMITED
+                    </label>
+
+                  </div>
+
+                  <div class="govuk-radios__item">
+                    <input value="false" type="radio" class="govuk-radios__input" id="confirm-false" name="Confirm" />
+                    <label class="govuk-label govuk-radios__label" for="confirm-false">
+                      No, choose a different employer
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+
+
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <a href="rpl-details.html" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
+      Save and continue
+    </a>
+  </div>
+</div>
+
+</div>
+</div>
+
+{% endblock %}
