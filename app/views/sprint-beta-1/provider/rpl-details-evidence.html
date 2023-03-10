@@ -87,23 +87,9 @@ Add recognition of prior learning details - Apprenticeships
             <p><span id="qualificationType-hint" class="govuk-hint">
                 List the specific qualification type
               </span></p>
-            <select class="govuk-select govuk-!-width-three-quarters" aria-describedby="qualificationType-hint"
-              id="qualificationType" name="qualificationType">
-              <option value="">Please select the qualification type</option>
-              <option value="274">A level</option>
-              <option value="274">access to higher education diploma</option>
-              <option value="274">advanced apprenticeship</option>
-              <option value="274">AS level</option>
-              <option value="274">international Baccalaureate diploma</option>
-              <option value="274">level 3 award</option>
-              <option value="274">level 3 certificate</option>
-              <option value="274">level 3 diploma</option>
-              <option value="274">level 3 national certificate</option>
-              <option value="274">level 3 national diploma</option>
-              <option value="274">level 3 NVQ</option>
-              <option value="274">T Level</option>
-              <option value="274">tech level</option>
-            </select>
+              {% block autocomplete %}
+              {% include "includes/autocomplete-qualifications.html" %}
+              {% endblock %}
 
             <label class="govuk-label govuk-!-font-weight-bold govuk-!-margin-top-3" for="Cost">Qualification industry
               sector</label>
