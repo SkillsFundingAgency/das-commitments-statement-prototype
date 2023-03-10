@@ -36,47 +36,55 @@ Recognition of prior learning - Apprenticeships
     </ul>
   </div>
 </nav>
+<div class="govuk-width-container " id="">
+  <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+</div>
 {% endblock %}
 
-{% set reduction = data.ReducedDuration or 72  %}
-{% set total = data.TotalDuration or 1035  %}
-{% set remaining = total - reduction  %}
-{% set cost = data.Cost or 750  %}
+{% set reduction = data.ReducedDuration or 72 %}
+{% set total = data.TotalDuration or 1035 %}
+{% set remaining = total - reduction %}
+{% set cost = data.Cost or 700 %}
 
 {% set percentage = reduction / total * 100 | fixed(0) %}
 {% set halfPercentage = percentage / 2 %}
 {% set maxFunding = 21000 %}
-{% set actualPrice = 20000  %}
+{% set actualPrice = 20000 %}
 {% set minReduction = maxFunding * halfPercentage / 100 %}
 {% set newMaxFunding = maxFunding - minReduction %}
 
 {% set isBelowFunding = false %}
-{% if cost < minReduction  %}
-{% set isBelowFunding = true %}
-{% endif %}
-
-
-
-
-{% block content %}
-<div class="govuk-width-container " id="landing-page-section">
+{% if cost < minReduction %} {% set isBelowFunding=true %} {% endif %} {% block content %} <div
+  class="govuk-width-container " id="landing-page-section">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds-from-desktop">
       <h1 class="govuk-heading-l">Check your recognised prior learning</h1>
 
-      {% if isBelowFunding == true %}
-      <div class="govuk-inset-text das-inset-text--error">
-        <h3 id="funding-band-text" class="govuk-heading-s">Actual price reduction due to RPL is below the minimum funding rules amount</h3>
-        <p>
-          The actual price reduction due to RPL is below the minimum amount specified in <a target="_blank" href="https://www.gov.uk/government/publications/apprenticeship-funding-bands" rel="noopener">the funding rules (opens in a new tab)</a>.
-          Check this amount is correct. 
-          <br/>
-          The actual price reduction figure is based on the values you have submitted for the total training time and the total reduction due to RPL. Check that these values are correct.
-      </p>
-    </div>
-    {% endif %}
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title"
+        data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Action required
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+            RPL price reduction error: George Ford can't be added until this is resolved.
+          </p>
+          <p class="govuk-body">
+            The price reduction you’ve provided doesn’t match with the reduced time for RPL for an apprenticeship of
+            this total time. To fix this data mismatch:
+          </p>
+          <ol class="govuk-list govuk-list--number">
+            <li>Check the price reduction figure is correct.</li>
+            <li>Check the total training time and the reduction due to RPL.</li>
+            <li>Re-enter the data for the <a class="govuk-link" href="rpl-details"> RPL reductions</a> if the details on
+              this page are incorrect.</li>
+          </ol>
+        </div>
+      </div>
 
-      <h2 class="govuk-heading-m">Reduction due to recognised prior learning</h2>
+      <h2 class="govuk-heading-m govuk-!-margin-top-9">Details of recognised prior learning</h2>
       <dl class="govuk-summary-list govuk-!-margin-bottom-9">
 
         <div class="govuk-summary-list__row">
@@ -84,7 +92,7 @@ Recognition of prior learning - Apprenticeships
             Total training time for this apprenticeship standard
           </dt>
           <dd class="govuk-summary-list__value govuk-table__cell--numeric">
-              {{total}} hours
+            {{total}} hours
           </dd>
           <dd class="govuk-summary-list__actions">
             <a class="govuk-link" href="rpl-details">
@@ -106,9 +114,10 @@ Recognition of prior learning - Apprenticeships
           </dd>
         </div>
 
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key       {% if isBelowFunding == true %}das-inset-text--error-vertical{% endif %}">
-            Normal cost of apprenticeship
+<!--         <div class="govuk-summary-list__row">
+          <dt
+            class="govuk-summary-list__key       {% if isBelowFunding == true %}das-inset-text--error-vertical{% endif %}">
+            Average total price for this apprenticeship
           </dt>
           <dd class="govuk-summary-list__value ">
             <p class="govuk-body govuk-table__cell--numeric">£ 20750</p>
@@ -118,11 +127,23 @@ Recognition of prior learning - Apprenticeships
               Change<span class="govuk-visually-hidden"> contact details</span>
             </a>
           </dd>
+        </div> -->
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Minimum price reduction due to RPL from funding rules
+          </dt>
+          <dd class="govuk-summary-list__value">
+            <p class="govuk-body govuk-table__cell--numeric">£ {{ minReduction | fixed(0) }}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
         </div>
 
         <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key       {% if isBelowFunding == true %}das-inset-text--error-vertical{% endif %}">
-            Actual price reduction due to RPL
+          <dt
+            class="govuk-summary-list__key">
+            Total price reduction due to RPL
           </dt>
           <dd class="govuk-summary-list__value ">
             <p class="govuk-body govuk-table__cell--numeric">£ {{cost}}</p>
@@ -134,9 +155,10 @@ Recognition of prior learning - Apprenticeships
           </dd>
         </div>
 
-        <div class="govuk-summary-list__row">
+
+<!--         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Final price to employer
+            Total agreed apprenticeship price (excluding VAT)
           </dt>
           <dd class="govuk-summary-list__value">
             <p class="govuk-body govuk-table__cell--numeric">£ {{actualPrice}}</p>
@@ -146,23 +168,92 @@ Recognition of prior learning - Apprenticeships
               Change<span class="govuk-visually-hidden"> final actual price</span>
             </a>
           </dd>
-        </div>
+        </div> -->
 
       </dl>
 
-      <!-- <h2 class="govuk-heading-m">Now send your application</h2> -->
-<!--       <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Help with funding calculation
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          Based on
+          the figures you have entered the minimum price reduction for RPL should be <strong>£ 730</strong>.
+
+          <!--         <h3 class="govuk-heading-s">Funding calculation</h3> -->
+          <dl class="govuk-summary-list govuk-!-margin-top-6">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key half-column">
+                Total training time for this apprenticeship standard
+              </dt>
+              <dd class="govuk-summary-list__value govuk-table__cell--numeric">
+                {{total}} hours
+              </dd>
+
+            </div>
+            <div class="govuk-summary-list__row ">
+              <dt class="govuk-summary-list__key">
+                Total reduction in apprenticeship training time due to RPL
+              </dt>
+              <dd class="govuk-summary-list__value govuk-table__cell--numeric">
+                {{reduction}} hours
+              </dd>
+
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Percentage of RPL (A)
+              </dt>
+              <dd class="govuk-summary-list__value govuk-table__cell--numeric">
+                {{ percentage | fixed(0) }} %
+              </dd>
+
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Max funding amount (B)
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body govuk-table__cell--numeric">£ {{maxFunding}}</p>
+              </dd>
+
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Minimum price reduction <br />(50% of A as a percentage of B)
+              </dt>
+              <dd class="govuk-summary-list__value">
+                <p class="govuk-body govuk-table__cell--numeric">£ {{ minReduction | fixed(0) }}</p>
+              </dd>
+
+            </div>
+
+
+          </dl>
+      </details>
+
+
+
+
+    <!-- <h2 class="govuk-heading-m">Now send your application</h2> -->
+    <!--       <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the
         details you are providing are correct.</p> -->
-      <form action="check-your-answers-rpl-error" method="post" novalidate>
-        <input type="hidden" name="answers-checked" value="true">
-        <button class="govuk-button govuk-!-margin-top-6{% if isBelowFunding == true %} govuk-button--disabled{% endif %}" data-module="govuk-button">
-          Accept and continue
-        </button>
-      </form>
-    </div>
+    <form action="index" method="post" novalidate>
+      <input type="hidden" name="answers-checked" value="true">
+      <button class="govuk-button govuk-!-margin-top-6"
+        data-module="govuk-button">
+        Save and exit
+      </button>
+    </form>
+  </div>
   </div>
 
-    
+  <!--     
   <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
   <a href="check-your-answers.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
     Original version
@@ -175,5 +266,6 @@ Recognition of prior learning - Apprenticeships
   <a href="check-your-answers-max-funding.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
     Max funding validation error
   </a>
-</div>
-{% endblock %}
+   -->
+  </div>
+  {% endblock %}
