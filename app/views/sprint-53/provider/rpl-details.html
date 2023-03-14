@@ -281,34 +281,23 @@ Add recognition of prior learning details - Apprenticeships
 
   window.addEventListener('load', function () {
 
-
-
-
-    document.querySelector('#qualificationLevel').addEventListener('change', function () {
-      console.log('cchange');
+    $('#qualificationLevel').on('change', function () {
       var selected = $('option:selected', this).val();
       var menuOption = 'level' + selected;
       var menuOptionList = '<option value="">Please select the qualification type</option>';
 
       console.log(window[menuOption]);
+      $('#qualificationType').empty();
 
-      let select = document.querySelector('#qualificationType');//.forEach(e => e.remove());
-      console.log(select);
-      select.options =[];
-
-      let options = window[menuOption];
-      console.log(options);
-
-      options.forEach(function (idx, ele) {
+      $(window[menuOption]).each(function (idx, ele) {
         menuOptionList += "<option value='" + idx + "'>" + ele + "</option>";
       })
       menuOptionList += "<option value='100'>Other</option>";
-      console.log(menuOptionList);
-      document.querySelector('#qualificationType').options = menuOptionList;
+      $('#qualificationType').html(menuOptionList);
 
     })
+  })
 
-  });
 </script>
 
 {% endblock %}
