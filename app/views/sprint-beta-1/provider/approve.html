@@ -66,34 +66,34 @@ Approve apprentice details - Apprenticeships
 
       <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-        <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
-          <dt class="govuk-summary-list__key" id="employer-label">
-            Employer
-          </dt>
-          <dd class="govuk-summary-list__value" id="employer-value">
-            TEST &amp; MAINTAIN LIMITED
-          </dd>
+          <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+            <div class="govuk-summary-list__row govuk-summary-list__row--no-actions">
+              <dt class="govuk-summary-list__key" id="employer-label">
+                Employer
+              </dt>
+              <dd class="govuk-summary-list__value" id="employer-value">
+                TEST &amp; MAINTAIN LIMITED
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key" id="course-label">
+                Cohort reference
+              </dt>
+              <dd class="govuk-summary-list__value" id="course-value">
+                N4YLKY
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key" id="course-label">
+                Status
+              </dt>
+              <dd class="govuk-summary-list__value" id="course-value">
+                New request
+              </dd>
+            </div>
+          </dl>
         </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key" id="course-label">
-            Cohort reference
-          </dt>
-          <dd class="govuk-summary-list__value" id="course-value">
-            N4YLKY
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key" id="course-label">
-            Status
-          </dt>
-          <dd class="govuk-summary-list__value" id="course-value">
-            New request
-          </dd>
-        </div>
-      </dl>
-    </div>
-  </div>
+      </div>
 
       <h2 class="govuk-heading-s">Message from TEST &amp; MAINTAIN LIMITED:</h2>
       <div class="govuk-inset-text">
@@ -113,7 +113,7 @@ Approve apprentice details - Apprenticeships
             <th scope="col" class="govuk-table__header">Unique learner number</th>
             <th scope="col" class="govuk-table__header">Date of birth</th>
             <th scope="col" class="govuk-table__header">Training dates</th>
-            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Price reduction<br/>due to RPL
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Price reduction<br />due to RPL
             </th>
             <th scope="col" class="govuk-table__header govuk-table__header--numeric">Price</th>
             <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Action</span></th>
@@ -127,7 +127,7 @@ Approve apprentice details - Apprenticeships
             </td>
             <td class="govuk-table__cell" data-label="Date of birth">9039416590</td>
             <td class="govuk-table__cell" data-label="Date of birth">31 Mar 1980</td>
-            <td class="govuk-table__cell" data-label="Training dates">30 Jan 2022 -<br/>30 Jan 2024</td>
+            <td class="govuk-table__cell" data-label="Training dates">30 Jan 2022 -<br />30 Jan 2024</td>
             <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Employment price">£1,500</td>
             <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Price">
               £10,000
@@ -154,6 +154,12 @@ Approve apprentice details - Apprenticeships
       </p>
 
       <hr class="govuk-section-break govuk-section-break--l">
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
       <form id="submitCohort" novalidate="" method="post">
         <div class="govuk-form-group  ">
 
@@ -163,50 +169,46 @@ Approve apprentice details - Apprenticeships
             </legend>
             <span class="field-validation-valid govuk-error-message" data-valmsg-for="Selection"
               data-valmsg-replace="true" id="error-message-Selection"></span>
-            <div class="govuk-radios govuk-radios--conditional" data-module="radios">
-
-
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-approve">
-                <div class="govuk-form-group">
-                  <label class="govuk-label" for="approve-details">
-                    Leave EDUC8 TRAINING (ENGLAND) LIMITED a message (optional)
-                  </label>
-                  <textarea class="govuk-textarea" id="approve-details" name="approvemessage" rows="5"></textarea>
-                </div>
-              </div>
+            <div class="govuk-radios" data-module="govuk-radios">
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="radio-send" name="selection" type="radio" value="Send"
-                  aria-controls="conditional-send" aria-expanded="false">
-                <label class="govuk-label govuk-radios__label" for="radio-send">
+                <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email"
+                  data-aria-controls="conditional-contact">
+                <label class="govuk-label govuk-radios__label" for="contact">
                   Yes, send to employer to review or add details
                 </label>
               </div>
-              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-send">
+              <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
                 <div class="govuk-form-group">
-                  <label class="govuk-label" for="send-details">
-                    Leave EDUC8 TRAINING (ENGLAND) LIMITED a message (optional)
-                  </label>
-                  <textarea class="govuk-textarea" id="send-details" name="sendmessage" rows="5"></textarea>
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="send-details">
+                      Leave TEST &amp; MAINTAIN LIMITED a message (optional)
+                    </label>
+                    <textarea class="govuk-textarea" id="send-details" name="sendmessage" rows="5"></textarea>
+                  </div>
                 </div>
               </div>
-
               <div class="govuk-radios__item">
-                <input class="govuk-radios__input" id="radio-home" name="selection" type="radio" value="Homepage">
-                <label class="govuk-label govuk-radios__label" for="radio-home">
-                  No, save and return to apprentice requests
+                <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone"
+                  data-aria-controls="conditional-contact-2">
+                <label class="govuk-label govuk-radios__label" for="contact-2">
+                  No, save and return to apprentice request
                 </label>
               </div>
-
             </div>
           </fieldset>
         </div>
 
 
       </form>
-
     </div>
-    <a href="confirm-add-apprentice.html" class="govuk-button">Accept and send</a>
+
   </div>
+  <a href="confirm-add-apprentice.html" class="govuk-button">Save and submit</a>        
+  <br />
+  <a class="govuk-link" id="save-and-exit-cohort" href="index">
+    Save and exit
+  </a>
+</div>
 
 </div>
 
