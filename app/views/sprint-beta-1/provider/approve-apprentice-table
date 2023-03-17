@@ -1,0 +1,170 @@
+<main class="govuk-main-wrapper " id="main-content" role="main">
+                
+
+
+
+
+
+
+    <div class="govuk-error-summary das-hide" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="error-summary" id="validationSummary">
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+            There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list" id="validationSummaryErrorList">
+
+            </ul>
+        </div>
+    </div>
+
+<h1 class="govuk-heading-xl">Approve apprentice details</h1>
+<dl class="das-definition-list das-definition-list--inline">
+    <dt class="das-definition-list__title govuk-!-margin-bottom-4">Employer</dt>
+    <dd class="das-definition-list__definition govuk-!-margin-bottom-4">ESFA LTD</dd>
+    <dt class="das-definition-list__title govuk-!-margin-bottom-4">Cohort reference</dt>
+    <dd class="das-definition-list__definition govuk-!-margin-bottom-4">VR8NYX</dd>
+    <dt class="das-definition-list__title govuk-!-margin-bottom-4">Status</dt>
+    <dd class="das-definition-list__definition">New request</dd>
+</dl>
+
+<h2 class="govuk-heading-s">Message:</h2>
+<div class="govuk-inset-text">
+        <span>No message added.</span>
+</div>
+
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h3 class="govuk-heading-m">
+        <span class="govuk-!-margin-right-2">1 x Academic professional, Level: 7</span>
+    </h3>
+            <div class="govuk-inset-text das-inset-text--highlight">
+                <h3 class="govuk-heading-s">1 apprenticeship above funding band maximum</h3>
+                <p>
+                    The price for this apprenticeship is above its
+                    <text><a target="_blank" href="https://www.gov.uk/government/publications/apprenticeship-funding-bands">funding band maximum</a> of &#xA3;9,000.</text>
+                    You'll need to ask the employer to pay the difference directly to you - this can't be funded from their account.
+                </p>
+            </div>
+    <table class="govuk-table das-table--responsive  das-table--condensed">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header das-table-cell-width-25">Name</th>
+                <th scope="col" class="govuk-table__header das-table-cell-width-15">Unique learner number</th>
+                <th scope="col" class="govuk-table__header das-table-cell-width-10">Date of birth</th>
+                <th scope="col" class="govuk-table__header das-table-cell-width-30">Training dates</th>
+                
+                
+                
+                <th scope="col" class="govuk-table__header das-table-cell-width-20">Price</th>
+                <th scope="col" class="govuk-table__header das-table-cell-width-5"><span class="govuk-visually-hidden">Action</span></th>
+            </tr>
+        </thead>
+    <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell" data-label="Name">
+fname lname                </td>
+                <td class="govuk-table__cell" data-label="Unique learner number">9039416590</td>
+                <td class="govuk-table__cell" data-label="Date of birth">1 Jan 2000</td>
+                <td class="govuk-table__cell" data-label="Training dates">
+Jun 2022 to Jun 2027                </td>
+                
+                
+                <td class="govuk-table__cell" data-label="Price">
+                        <span class="das-table-cell--highlight">
+                            &#xA3;10,000
+                        </span>
+                </td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">
+                    <a class="govuk-link edit-apprentice" href="/10005760/unapproved/VR8NYX/apprentices/JJR9YR/edit">
+                        Edit
+                        <span class="govuk-visually-hidden">fname lname's details</span>
+                    </a>
+                        <br /><br />
+                        <a class="govuk-link delete-apprentice"
+                           href="/10005760/unapproved/VR8NYX/apprentices/JJR9YR/Delete">
+                            Delete <span class="govuk-visually-hidden">fname lname </span>
+                        </a>
+                </td>
+            </tr>
+        </tbody>
+     </table>
+
+<table class="govuk-table">
+    <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+                <th class="govuk-table__header das-table-cell-width-80" scope="row">Total apprenticeship training price <br>(excluding VAT)</th>
+                <td class="govuk-table__cell govuk-table__header--numeric das-table-cell-width-20"><strong>&#xA3;10,000</strong></td>
+        </tr>
+    </tbody>
+</table>
+
+    <p>
+            <a class="govuk-link add-apprentice" href="/10005760/unapproved/VR8NYX/apprentices/add/reservation?AccountLegalEntityHashedId=Y6MPDW">
+                Add another apprentice
+            </a>
+        <a class="govuk-link das-float-right delete-cohort" id="delete-cohort" href="/10005760/unapproved/VR8NYX/details/delete">
+            Delete this cohort
+        </a>
+    </p>
+    <hr class="govuk-section-break govuk-section-break--l">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <form id="submitCohort" novalidate method="post">
+                <div class="govuk-form-group  ">
+                    <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                            <h3 class="govuk-fieldset__heading">Approve these details?</h3>
+                        </legend>
+                        <span class="field-validation-valid govuk-error-message" data-valmsg-for="Selection" data-valmsg-replace="true" id="error-message-Selection"></span>
+                        <div class="govuk-radios govuk-radios--conditional" data-module="radios">
+                                <div class="govuk-radios__item">
+                                    <input class="govuk-radios__input" id="radio-approve" name="selection" type="radio" value="Approve" data-aria-controls="conditional-approve">
+                                    <label class="govuk-label govuk-radios__label" for="radio-approve">
+                                        Yes, approve and notify employer
+                                    </label>
+                                </div>
+                                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-approve">
+                                    <div class="govuk-form-group">
+                                        <label class="govuk-label" for="approve-details">
+                                            Leave ESFA LTD a message (optional)
+                                        </label>
+                                        <textarea class="govuk-textarea" id="approve-details" name="approvemessage" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            <div class="govuk-radios__item">
+                                <input class="govuk-radios__input" id="radio-send" name="selection" type="radio" value="Send" data-aria-controls="conditional-send">
+                                <label class="govuk-label govuk-radios__label" for="radio-send">
+                                    No, send to employer to review or add details
+                                </label>
+                            </div>
+                            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-send">
+                                <div class="govuk-form-group">
+                                    <label class="govuk-label" for="send-details">
+                                        Leave ESFA LTD a message (optional)
+                                    </label>
+                                    <textarea class="govuk-textarea" id="send-details" name="sendmessage" rows="5"></textarea>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </fieldset>
+                </div>
+
+                <button type="submit" id="continue-button" class="govuk-button">Save and submit</button>
+                <br />
+                <a class="govuk-link" id="save-and-exit-cohort" href="/10005760/unapproved">
+                    Save and exit
+                </a>
+
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8F7YsUXWIJFCoTI4j3tPS32hvnOIYx68dTjgiBrJakJR4hCODk1fk8yZYYB-EoygHoSkbBNfOFNB3HJWTyzPJnzfA_I31Ik6twft2GRlZOr7nRgER7yCDVgkTsRVZmkmSO0Afi52bo0Bl9BVc-TwK5WZ3o3ebVTkO5Q9JTiETzPrVWCesNSKtqxlBPCaYPelXA" /></form>
+        </div>
+    </div>
+
+
+
+
+
+
+            </main>
