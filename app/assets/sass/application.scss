@@ -1086,3 +1086,36 @@ table {
   padding-bottom: 5px;
   margin-bottom: -5px;
 }
+
+.das-definition-list {
+  font-family: "GDS Transport",arial,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #0b0c0c;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.das-definition-list--inline {
+  overflow: hidden;
+}
+.das-definition-list {
+  margin-bottom: 20px;
+}
+.das-definition-list {
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.31579;
+}
+
+.das-definition-list--inline .das-definition-list__title {
+  clear: both;
+  float: left;
+  margin-right: 10px;
+}
+.das-definition-list__title {
+  font-weight: 700;
+}
