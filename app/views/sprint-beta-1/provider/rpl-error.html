@@ -1,7 +1,7 @@
 {% extends "layout-provider.v1.html" %}
 
 {% block pageTitle %}
-Add recognition of prior learning details - Apprenticeships
+Recognition of prior learning - Apprenticeships
 {% endblock %}
 
 {% block beforeContent %}
@@ -43,155 +43,49 @@ Add recognition of prior learning details - Apprenticeships
 {% block content %}
 <div class="govuk-width-container " id="landing-page-section">
 
-  <div class="govuk-grid-row">
+  <div class="govuk-grid-row ">
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-form-group">
-        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+        <fieldset class="govuk-fieldset govuk-!-margin-top-6" aria-describedby="sign-in-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Add recognition of prior learning details
+              Recognition of prior learning (RPL)
             </h1>
           </legend>
+          <div id="sign-in-hint" class="govuk-hint">
+            Is there any recognised prior learning for this apprenticeship?
+          </div>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway"
+                aria-describedby="sign-in-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in">
+                Yes
+              </label>
+              <!--                    <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">-->
+              <!--                        You’ll have a user ID if you’ve registered for Self Assessment or filed a tax return online before.-->
+              <!--                    </div>-->
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify"
+                aria-describedby="sign-in-2-item-hint">
+              <label class="govuk-label govuk-radios__label" for="sign-in-2">
+                No
+              </label>
+              <!--                    <div id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">-->
+              <!--                        You’ll have an account if you’ve already proved your identity with either Barclays, CitizenSafe, Digidentity, Experian, Post Office, Royal Mail or SecureIdentity.-->
+              <!--                    </div>-->
+            </div>
+          </div>
+
         </fieldset>
-
-
-        <div class="govuk-error-summary" data-module="govuk-error-summary">
-          <div role="alert">
-            <h2 class="govuk-error-summary__title">
-              There is a problem
-            </h2>
-            <div class="govuk-error-summary__body">
-              <ul class="govuk-list govuk-error-summary__list">
-                <li>
-                  <a href="#experience">Please give a duration of experience for the RPL </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="govuk-form-group govuk-!-margin-top-6">
-          <fieldset class="govuk-fieldset" aria-describedby="finish-date-hint" role="group">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-              Total reduction in apprenticeship training time due to recognition of prior learning (RPL)
-            </legend>
-            <span id="finish-date-hint" class="govuk-hint">
-              Enter the reduction in hours
-            </span>
-            <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate"
-              data-valmsg-replace="true" id="error-message-EndDate"></span>
-            <div class="govuk-input__wrapper">
-              <input class="govuk-input govuk-input--width-5" type="number" id="ReducedDuration" name="ReducedDuration"
-                value="">
-              <div class="govuk-input__suffix" aria-hidden="true"> hours</div>
-            </div>
-          </fieldset>
-          <div class="govuk-form-group govuk-!-margin-top-6">
-          <fieldset class="govuk-fieldset" aria-describedby="finish-date-hint" role="group">
-            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-              Total training time for this apprenticeship standard
-            </legend>
-            <span id="finish-date-hint" class="govuk-hint">
-              Enter the total training time in hours
-            </span>
-            <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate"
-              data-valmsg-replace="true" id="error-message-EndDate"></span>
-            <div class="govuk-input__wrapper">
-              <input class="govuk-input govuk-input--width-5" type="number" id="ReducedDuration" name="ReducedDuration"
-                value="">
-              <div class="govuk-input__suffix" aria-hidden="true"> hours</div>
-            </div>
-          </fieldset>
-        </div>
-
-          <div class="govuk-form-group govuk-!-margin-top-6">
-            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Total price reduction due to RPL</label>
-            <span id="price-hint" class="govuk-hint">
-              Enter the price in whole pounds. For example, for £1,500 enter 1500
-            </span>
-            <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true"
-              id="error-message-Cost"></span>
-            <span class="govuk-body govuk-!-font-weight-bold">£ </span><input class="govuk-input govuk-input--width-5"
-              type="number" id="Cost" name="Cost" value="">
-          </div>
-
-          <div class="govuk-form-group govuk-!-margin-top-9">
-            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Qualifications that contributed to the
-              reduction in apprenticeship training time</label>
-            <p><span id="price-hint" class="govuk-hint">
-              List the highest level qualification that is being recognised as a reduction in training time
-              <a
-                href="https://www.gov.uk/what-different-qualification-levels-mean/list-of-qualification-levels"
-                class="govuk-link" target="_blank">What qualification levels mean (opens in new tab)</a>
-                
-              
-            </span></p>
-            <br/>
-            <select class="govuk-select govuk-!-width-three-quarters" aria-describedby="course-name-hint"
-            id="CourseCode" name="CourseCode">
-            <option value="">Please select an option</option>
-            <option value="274">Level 1</option>
-            <option value="274">Level 2</option>
-            <option value="274">Level 3</option>
-            <option value="274">Level 4</option>
-            <option value="274">Level 5</option>
-            <option value="274">Level 6</option>
-            <option value="274">Level 7</option>
-            <option value="274">Level 8</option>
-            <option value="274">Level 9</option>
-            </select>
-          </div>
-          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-              <label class="govuk-label govuk-checkboxes__label" for="waste">
-                Qualification was in same industry
-              </label>
-            </div>
-          </div>
-
-          <div class="govuk-form-group govuk-!-margin-top-9  govuk-form-group--error">
-            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Experience that contributed to the
-              reduction in apprenticeship training time</label>
-            <span id="experience" class="govuk-hint">
-              List the duration of any experience that is being recognised as a reduction in training time
-            </span>
-            <p id="national-insurance-number-error" class="govuk-error-message">
-              <span class="govuk-visually-hidden">Error:</span> Please give a duration of experience for the RPL 
-            </p>
-            <br/>
-            <select class="govuk-select govuk-!-width-three-quarters " aria-describedby="course-name-hint"
-            id="CourseCode" name="CourseCode">
-            <option value="">Please select an option</option>
-            <option value="274">Less than 6 months</option>
-            <option value="272">6 months - 1 year</option>
-            <option value="176">1 year</option>
-            <option value="176">2 years</option>
-            <option value="176">3 years</option>
-            <option value="176">4 years</option>
-            <option value="176">5 years</option>
-            <option value="176">More than 5 years</option>
-            </select>
-          </div>
-          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-            <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-              <label class="govuk-label govuk-checkboxes__label" for="waste">
-                Experience was in same industry
-              </label>
-            </div>
-          </div>
-        </div>
-
-        </div>
-          <a href="check-your-answers.html" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
-            Save and continue
-          </a>
-
+        <a href="rpl-details-error.html" class="govuk-button govuk-!-margin-top-6" data-module="govuk-button">
+          Save and continue
+        </a>
+      </div>
     </div>
+
   </div>
-  
 </div>
 
 {% endblock %}
