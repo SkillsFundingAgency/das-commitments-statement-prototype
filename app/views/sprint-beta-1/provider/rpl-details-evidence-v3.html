@@ -82,28 +82,104 @@ Add recognition of prior learning details - Apprenticeships
               <option value="8">Level 8</option>
             </select>
 
-
-            <label class="govuk-label govuk-!-font-weight-bold govuk-!-margin-top-3" for="Cost">Qualification type</label>
-            <p><span id="price-hint" class="govuk-hint">
-              List the specific qualification type
-            </span></p>
-            <select class="govuk-select govuk-!-width-three-quarters" aria-describedby="course-name-hint"
-            id="qualificationType" name="qualificationType">
-            <option value="">Please select the qualification type</option>
-            <option value="274">A level</option>
-            <option value="274">access to higher education diploma</option>
-            <option value="274">advanced apprenticeship</option>
-            <option value="274">AS level</option>
-            <option value="274">international Baccalaureate diploma</option>
-            <option value="274">level 3 award</option>
-            <option value="274">level 3 certificate</option>
-            <option value="274">level 3 diploma</option>
-            <option value="274">level 3 national certificate</option>
-            <option value="274">level 3 national diploma</option>
-            <option value="274">level 3 NVQ</option>
-            <option value="274">T Level</option>
-            <option value="274">tech level</option>
-            </select>
+            <label class="govuk-label govuk-!-font-weight-bold govuk-!-margin-top-3" for="Cost">Qualification
+              type</label>
+            <p><span id="qualificationType-hint" class="govuk-hint">
+                List the specific qualification type
+              </span></p>
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+              
+                  <div id="wrapper" class="govuk-form-group autocomplete-wrapper" ">
+                    <label class="govuk-label" for="sort">{{country_module_label or "Search for a qualification type "}}</label>
+                    <select id="autocomplete-progressiveEnhancement" class="govuk-select govuk-!-width-three-quarters" id="sort"
+                      name="{{module_name or 'countrySelect'}}">
+                      <option value="">Please select the qualification type</option>
+                      <option value="0">First certificate</option>
+                      <option value="1">GCSE - grades 3, 2, 1 or grades D, E, F, G</option>
+                      <option value="2">Level 1 award</option>
+                      <option value="3">Level 1 certificate</option>
+                      <option value="4">Level 1 diploma</option>
+                      <option value="5">Level 1 ESOL</option>
+                      <option value="6">Level 1 essential skills</option>
+                      <option value="7">Level 1 functional skills</option>
+                      <option value="8">Level 1 national vocational qualification (NVQ)</option>
+                      <option value="9">Music grades 1, 2 and 3</option>
+                      <option value="0">CSE - grade 1</option>
+                      <option value="1">GCSE - grades 9, 8, 7, 6, 5, 4 or grades A*, A, B, C</option>
+                      <option value="2">Intermediate apprenticeship</option>
+                      <option value="3">Level 2 award</option>
+                      <option value="4">Level 2 certificate</option>
+                      <option value="5">Level 2 diploma</option>
+                      <option value="6">Level 2 ESOL</option>
+                      <option value="7">Level 2 essential skills</option>
+                      <option value="8">Level 2 functional skills</option>
+                      <option value="9">Level 2 national certificate</option>
+                      <option value="10">Level 2 national diploma</option>
+                      <option value="11">Level 2 NVQ</option>
+                      <option value="12">Music grades 4 and 5</option>
+                      <option value="13">O level - grade A, B or C</option>
+                      <option value="0">A level</option>
+                      <option value="1">Access to higher education diploma</option>
+                      <option value="2">Advanced apprenticeship</option>
+                      <option value="3">Applied general</option>
+                      <option value="4">AS level</option>
+                      <option value="5">International Baccalaureate diploma</option>
+                      <option value="6">Level 3 award</option>
+                      <option value="7">Level 3 certificate</option>
+                      <option value="8">Level 3 diploma</option>
+                      <option value="9">Level 3 ESOL</option>
+                      <option value="10">Level 3 national certificate</option>
+                      <option value="11">Level 3 national diploma</option>
+                      <option value="12">Level 3 NVQ</option>
+                      <option value="13">Music grades 6, 7 and 8</option>
+                      <option value="14">T Level</option>
+                      <option value="15">Tech level</option>
+                      <option value="0">Certificate of higher education (CertHE)</option>
+                      <option value="1">Higher apprenticeship</option>
+                      <option value="2">Higher national certificate (HNC)</option>
+                      <option value="3">Level 4 award</option>
+                      <option value="4">Level 4 certificate</option>
+                      <option value="5">Level 4 diploma</option>
+                      <option value="6">Level 4 NVQ</option>
+                      <option value="0">Diploma of higher education (DipHE)</option>
+                      <option value="1">Foundation degree</option>
+                      <option value="2">Higher national diploma (HND)</option>
+                      <option value="3">Level 5 award</option>
+                      <option value="4">Level 5 certificate</option>
+                      <option value="5">Level 5 diploma</option>
+                      <option value="6">Level 5 NVQ</option>
+                      <option value="0">Degree apprenticeship</option>
+                      <option value="1">Degree with honours - for example bachelor of the arts (BA) hons, bachelor of science (BSc)
+                        hons</option>
+                      <option value="2">Graduate certificate</option>
+                      <option value="3">Graduate diploma</option>
+                      <option value="4">Level 6 award</option>
+                      <option value="5">Level 6 certificate</option>
+                      <option value="6">Level 6 diploma</option>
+                      <option value="7">Level 6 NVQ</option>
+                      <option value="8">Ordinary degree without honours</option>
+                      <option value="0">Integrated master’s degree, for example master of engineering (MEng)</option>
+                      <option value="1">Level 7 award</option>
+                      <option value="2">Level 7 certificate</option>
+                      <option value="3">Level 7 diploma</option>
+                      <option value="4">Level 7 NVQ</option>
+                      <option value="5">Master’s degree, for example master of arts (MA), master of science (MSc)</option>
+                      <option value="6">Postgraduate certificate</option>
+                      <option value="7">Postgraduate certificate in education (PGCE)</option>
+                      <option value="8">Postgraduate diploma</option>
+                      <option value="0">Doctorate, for example doctor of philosophy (PhD or DPhil)</option>
+                      <option value="1">Level 8 award</option>
+                      <option value="2">Level 8 certificate</option>
+                      <option value="3">Level 8 diploma</option>
+                      <option value="100">Other</option>
+                    </select>
+                  </div>
+              
+                </fieldset>
+              
+              </div>
+              
 
             <label class="govuk-label govuk-!-font-weight-bold govuk-!-margin-top-3" for="Cost">Qualification industry
               sector</label>
@@ -186,39 +262,5 @@ Add recognition of prior learning details - Apprenticeships
   </div>
 
 </div>
-
-
-
-<script>
-  var level1 = ["First certificate", "GCSE - grades 3, 2, 1 or grades D, E, F, G", "Level 1 award", "Level 1 certificate", "Level 1 diploma", "Level 1 ESOL", "Level 1 essential skills", "Level 1 functional skills", "Level 1 national vocational qualification (NVQ)", "Music grades 1, 2 and 3", "other"];
-  var level2 = ["CSE - grade 1", "GCSE - grades 9, 8, 7, 6, 5, 4 or grades A*, A, B, C", "Intermediate apprenticeship", "Level 2 award", "Level 2 certificate", "Level 2 diploma", "Level 2 ESOL", "Level 2 essential skills", "Level 2 functional skills", "Level 2 national certificate", "Level 2 national diploma", "Level 2 NVQ", "Music grades 4 and 5", "O level - grade A, B or C"];
-  var level3 = ["A level", "Access to higher education diploma", "Advanced apprenticeship", "Applied general", "AS level", "International Baccalaureate diploma", "Level 3 award", "Level 3 certificate", "Level 3 diploma", "Level 3 ESOL", "Level 3 national certificate", "Level 3 national diploma", "Level 3 NVQ", "Music grades 6, 7 and 8", "T Level", "Tech level"];
-  var level4 = ["Certificate of higher education (CertHE)", "Higher apprenticeship", "Higher national certificate (HNC)", "Level 4 award", "Level 4 certificate", "Level 4 diploma", "Level 4 NVQ"];
-  var level5 = ["Diploma of higher education (DipHE)", "Foundation degree", "Higher national diploma (HND)", "Level 5 award", "Level 5 certificate", "Level 5 diploma", "Level 5 NVQ"];
-  var level6 = ["Degree apprenticeship", "Degree with honours - for example bachelor of the arts (BA) hons, bachelor of science (BSc) hons", "Graduate certificate", "Graduate diploma", "Level 6 award", "Level 6 certificate", "Level 6 diploma", "Level 6 NVQ", "Ordinary degree without honours"];
-  var level7 = ["Integrated master’s degree, for example master of engineering (MEng)", "Level 7 award", "Level 7 certificate", "Level 7 diploma", "Level 7 NVQ", "Master’s degree, for example master of arts (MA), master of science (MSc)", "Postgraduate certificate", "Postgraduate certificate in education (PGCE)", "Postgraduate diploma"];
-  var level8 = ["Doctorate, for example doctor of philosophy (PhD or DPhil)", "Level 8 award", "Level 8 certificate", "Level 8 diploma"];
-  var level9 = [];
-
-  window.addEventListener('load', function () {
-
-    $('#qualificationLevel').on('change', function () {
-      var selected = $('option:selected', this).val();
-      var menuOption = 'level' + selected;
-      var menuOptionList = '<option value="">Please select the qualification type</option>';
-
-      console.log(window[menuOption]);
-      $('#qualificationType').empty();
-
-      $(window[menuOption]).each(function (idx, ele) {
-        menuOptionList += "<option value='" + idx + "'>" + ele + "</option>";
-      })
-      menuOptionList += "<option value='100'>Other</option>";
-      $('#qualificationType').html(menuOptionList);
-
-    })
-  })
-
-</script>
 
 {% endblock %}

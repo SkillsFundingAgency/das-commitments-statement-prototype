@@ -1,0 +1,96 @@
+{% extends "layout-provider.v1.html" %}
+
+{% block pageTitle %}
+Add recognition of prior learning details - Apprenticeships
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Add level of qualification used for recognition of prior learning
+            </h1>
+          </legend>
+        </fieldset>
+
+        <form action="rpl-details-evidence-v4-2">
+
+
+          <div class="govuk-form-group govuk-!-margin-top-9">
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Qualifications that contributed to the
+              reduction in apprenticeship training time</label>
+            <p>
+              <span id="price-hint" class="govuk-hint">
+                List the qualification that offers the most RPL for a reduction in training time
+              </span>
+            </p>
+
+            <select class="govuk-select govuk-!-width-three-quarters" aria-describedby="course-name-hint"
+              id="qualificationLevel" name="qualificationLevel">
+              <option value="">Please select an option</option>
+              <option value="0">Not applicable</option>
+              <option value="1">Level 1</option>
+              <option value="2">Level 2</option>
+              <option value="3">Level 3</option>
+              <option value="4">Level 4</option>
+              <option value="5">Level 5</option>
+              <option value="6">Level 6</option>
+              <option value="7">Level 7</option>
+              <option value="8">Level 8</option>
+            </select>
+
+
+          </div>
+
+          <button class="govuk-button govuk-!-margin-top-9" data-module="govuk-button" id="employer-details">Save and
+            continue</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,93 @@
+{% extends "layout-provider.v1.html" %}
+
+{% block pageTitle %}
+Add recognition of prior learning details - Apprenticeships
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Add industry sector of qualification used for recognition of prior learning
+            </h1>
+          </legend>
+        </fieldset>
+
+        <form action="rpl-details-evidence-v4-4">
+          <div class="govuk-form-group govuk-!-margin-top-9">
+
+            <label class="govuk-label govuk-!-font-weight-bold govuk-!-margin-top-3" for="Cost">Qualification industry
+              sector</label>
+            <select class="govuk-select govuk-!-width-three-quarters" aria-describedby="course-name-hint"
+              id="CourseCode" name="CourseCode">
+              <option value="">Please select the industry</option>
+              <option value="274">Agriculture, environmental and animal care </option>
+              <option value="274">Business and administration </option>
+              <option value="274">Care services </option>
+              <option value="274">Catering and hospitality </option>
+              <option value="274">Construction and the built environment </option>
+              <option value="274">Creative and design </option>
+              <option value="274">Digital </option>
+              <option value="274">Education and childcare </option>
+              <option value="274">Engineering and manufacturing </option>
+              <option value="274">Hair and beauty </option>
+              <option value="274">Health and science </option>
+              <option value="274">Legal finance and accounting </option>
+              <option value="274">Protective services </option>
+              <option value="274">Sales marketing and procurement </option>
+              <option value="274">Transport and logistics </option>
+            </select>
+          </div>
+
+          <button class="govuk-button govuk-!-margin-top-9" data-module="govuk-button" id="employer-details">Save and
+            continue</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

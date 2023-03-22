@@ -1,0 +1,185 @@
+{% extends "layout-provider.v1.html" %}
+
+{% block pageTitle %}
+Add recognition of prior learning details - Apprenticeships
+{% endblock %}
+
+{% set level = data.qualificationLevel %}
+
+
+
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Add type of qualification used for recognition of prior learning
+            </h1>
+          </legend>
+        </fieldset>
+
+        <form action="rpl-details-evidence-v4-3">
+
+
+          <div class="govuk-form-group govuk-!-margin-top-9">
+            <label class="govuk-label govuk-!-font-weight-bold govuk-!-margin-top-3" for="Cost">Qualification
+              type</label>
+            <p>
+              <span id="qualificationType-hint" class="govuk-hint">
+                List the specific qualification type
+              </span>
+            </p>
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+
+                <div id="wrapper" class="govuk-form-group autocomplete-wrapper" ">
+                    <label class=" govuk-label" for="sort">{{country_module_label or "Search for a qualification type
+                  "}}</label>
+                  <select id="autocomplete-progressiveEnhancement" class="govuk-select govuk-!-width-three-quarters"
+                    id="sort" name="">
+                    <option value="">Please select the qualification type</option>
+                    {% if level == 1  %}
+                    <option value="0">First certificate</option>
+                    <option value="1">GCSE - grades 3, 2, 1 or grades D, E, F, G</option>
+                    <option value="2">Level 1 award</option>
+                    <option value="3">Level 1 certificate</option>
+                    <option value="4">Level 1 diploma</option>
+                    <option value="5">Level 1 ESOL</option>
+                    <option value="6">Level 1 essential skills</option>
+                    <option value="7">Level 1 functional skills</option>
+                    <option value="8">Level 1 national vocational qualification (NVQ)</option>
+                    <option value="9">Music grades 1, 2 and 3</option>
+                    {% elif level == 2  %}
+                    <option value="0">CSE - grade 1</option>
+                    <option value="1">GCSE - grades 9, 8, 7, 6, 5, 4 or grades A*, A, B, C</option>
+                    <option value="2">Intermediate apprenticeship</option>
+                    <option value="3">Level 2 award</option>
+                    <option value="4">Level 2 certificate</option>
+                    <option value="5">Level 2 diploma</option>
+                    <option value="6">Level 2 ESOL</option>
+                    <option value="7">Level 2 essential skills</option>
+                    <option value="8">Level 2 functional skills</option>
+                    <option value="9">Level 2 national certificate</option>
+                    <option value="10">Level 2 national diploma</option>
+                    <option value="11">Level 2 NVQ</option>
+                    <option value="12">Music grades 4 and 5</option>
+                    <option value="13">O level - grade A, B or C</option>
+                    {% elif level == 3  %}
+                    <option value="0">A level</option>
+                    <option value="1">Access to higher education diploma</option>
+                    <option value="2">Advanced apprenticeship</option>
+                    <option value="3">Applied general</option>
+                    <option value="4">AS level</option>
+                    <option value="5">International Baccalaureate diploma</option>
+                    <option value="6">Level 3 award</option>
+                    <option value="7">Level 3 certificate</option>
+                    <option value="8">Level 3 diploma</option>
+                    <option value="9">Level 3 ESOL</option>
+                    <option value="10">Level 3 national certificate</option>
+                    <option value="11">Level 3 national diploma</option>
+                    <option value="12">Level 3 NVQ</option>
+                    <option value="13">Music grades 6, 7 and 8</option>
+                    <option value="14">T Level</option>
+                    <option value="15">Tech level</option>
+                    {% elif level == 4  %}
+                    <option value="0">Certificate of higher education (CertHE)</option>
+                    <option value="1">Higher apprenticeship</option>
+                    <option value="2">Higher national certificate (HNC)</option>
+                    <option value="3">Level 4 award</option>
+                    <option value="4">Level 4 certificate</option>
+                    <option value="5">Level 4 diploma</option>
+                    <option value="6">Level 4 NVQ</option>
+                    {% elif level == 5  %}
+                    <option value="0">Diploma of higher education (DipHE)</option>
+                    <option value="1">Foundation degree</option>
+                    <option value="2">Higher national diploma (HND)</option>
+                    <option value="3">Level 5 award</option>
+                    <option value="4">Level 5 certificate</option>
+                    <option value="5">Level 5 diploma</option>
+                    <option value="6">Level 5 NVQ</option>
+                    {% elif level == 6  %}
+                    <option value="0">Degree apprenticeship</option>
+                    <option value="1">Degree with honours - for example bachelor of the arts (BA) hons, bachelor of
+                      science (BSc)
+                      hons</option>
+                    <option value="2">Graduate certificate</option>
+                    <option value="3">Graduate diploma</option>
+                    <option value="4">Level 6 award</option>
+                    <option value="5">Level 6 certificate</option>
+                    <option value="6">Level 6 diploma</option>
+                    <option value="7">Level 6 NVQ</option>
+                    <option value="8">Ordinary degree without honours</option>
+                    {% elif level == 7  %}
+                    <option value="0">Integrated master’s degree, for example master of engineering (MEng)</option>
+                    <option value="1">Level 7 award</option>
+                    <option value="2">Level 7 certificate</option>
+                    <option value="3">Level 7 diploma</option>
+                    <option value="4">Level 7 NVQ</option>
+                    <option value="5">Master’s degree, for example master of arts (MA), master of science (MSc)</option>
+                    <option value="6">Postgraduate certificate</option>
+                    <option value="7">Postgraduate certificate in education (PGCE)</option>
+                    <option value="8">Postgraduate diploma</option>
+                    {% elif level == 8  %}
+                    <option value="0">Doctorate, for example doctor of philosophy (PhD or DPhil)</option>
+                    <option value="1">Level 8 award</option>
+                    <option value="2">Level 8 certificate</option>
+                    <option value="3">Level 8 diploma</option>
+                    {% endif %}
+                    <option value="100">Other</option>
+                  </select>
+                </div>
+              </fieldset>
+            </div>
+
+            <button class="govuk-button govuk-!-margin-top-9" data-module="govuk-button" id="employer-details">Save and
+              continue</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}
