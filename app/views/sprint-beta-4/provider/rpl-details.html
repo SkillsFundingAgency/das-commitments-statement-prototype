@@ -54,25 +54,7 @@ Add recognition of prior learning details - Apprenticeships
           </legend>
         </fieldset>
 
-        <form action="rpl-details-evidence-v2">
-
-          <div class="govuk-form-group govuk-!-margin-top-6">
-            <fieldset class="govuk-fieldset" aria-describedby="finish-date-hint" role="group">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                Total off-the-job training time for this apprenticeship standard
-              </legend>
-              <span id="finish-date-hint" class="govuk-hint">
-                The training an apprentice on this standard receives away from their job role, before any reductions. Enter the total in hours
-              </span>
-              <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate"
-                data-valmsg-replace="true" id="error-message-EndDate"></span>
-              <div class="govuk-input__wrapper">
-                <input class="govuk-input govuk-input--width-5" type="number" id="TotalDuration" name="TotalDuration"
-                  value="">
-                <div class="govuk-input__suffix" aria-hidden="true"> hours</div>
-              </div>
-            </fieldset>
-          </div>
+        <form action="rpl-details-evidence">
 
           <div class="govuk-form-group govuk-!-margin-top-6">
             <fieldset class="govuk-fieldset" aria-describedby="finish-date-hint" role="group">
@@ -134,16 +116,6 @@ Add recognition of prior learning details - Apprenticeships
 
 
 
-          <div class="govuk-form-group govuk-!-margin-top-6">
-            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Total price for this apprenticeship standard</label>
-            <span id="price-hint" class="govuk-hint">
-              The amount you charge before any reductions. Enter the price in whole pounds. For example, for £1,500 enter 1500
-            </span>
-            <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true"
-              id="error-message-Cost"></span>
-            <span class="govuk-body govuk-!-font-weight-bold">£ </span><input class="govuk-input govuk-input--width-5"
-              type="number" id="averageCost" name="averageCost" value="">
-          </div>
 
           <div class="govuk-form-group govuk-!-margin-top-6">
             <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Total price reduction due to RPL</label>
@@ -166,10 +138,6 @@ Add recognition of prior learning details - Apprenticeships
   <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
   <a href="funding-calculation-error.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
     Funding calculation example 
-  </a>
-  <br/>
-  <a href="funding-calculation-max-error.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
-    Maximum funding calculation example 
   </a>
 </div>
 {% endblock %}
