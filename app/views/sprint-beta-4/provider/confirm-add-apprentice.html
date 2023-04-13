@@ -1,0 +1,90 @@
+{% extends "layout-provider.v1.html" %}
+
+{% block pageTitle %}
+Cohort confirmation - Apprenticeships
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+     <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+               <div class="govuk-panel govuk-panel--confirmation">
+                    <h1 class="govuk-panel__title">Cohort sent to employer for review</h1>
+               </div>
+
+               <table class="govuk-table">
+                    <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                         <th scope="row" class="govuk-table__header das-table-cell-width-45">Cohort reference</th>
+                         <td id="apprenticeship-employer" class="govuk-table__cell das-table-cell-width-40">N4YLKY</td>
+                         <td class="govuk-table__cell das-table-cell-width-15 govuk-table__cell--numeric">
+                         </td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                         <th scope="row" class="govuk-table__header">Sent to</th>
+                         <td id="apprenticeship-reference" class="govuk-table__cell">TEST & MAINTAIN LIMITED</td>
+                         <td class="govuk-table__cell"></td>
+                    </tr>
+
+                    <tr class="govuk-table__row">
+                         <th scope="row" class="govuk-table__header">On behalf of</th>
+                         <td id="apprenticeship-agreement-id" class="govuk-table__cell">CENTRAL TRAINING ACADEMY</td>
+                         <td class="govuk-table__cell"></td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                         <th scope="row" class="govuk-table__header">Message</th>
+                         <td id="apprenticeship-message" class="govuk-table__cell">No message added</td>
+                         <td class="govuk-table__cell"></td>
+                    </tr>
+                    </tbody>
+               </table>
+
+               <h2 class="govuk-heading-m">What happens next</h2>
+               <!-- <p class="govuk-body">The cohort will appear in the employer's account for them to review.</p> -->
+               <p class="govuk-body">The employer will review the cohort and either approve it or contact you with an update.</p>
+
+               <ul class="govuk-list">
+                    <li><a href="#">Go to apprentice requests</a></li>
+                    <li><a href="index">Go to homepage</a></li>
+               </ul>
+
+          </div>
+     </div>
+</div>
+{% endblock %}

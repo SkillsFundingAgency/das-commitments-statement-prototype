@@ -1,0 +1,220 @@
+{% extends "layout-provider.v1.html" %}
+
+{% block pageTitle %}
+Recognition of prior learning - Apprenticeships
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="govuk-width-container " id="">
+  <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+</div>
+{% endblock %}
+
+{% set reduction = data.ReducedDuration or 100 %}
+{% set total = data.TotalDuration or 1000 %}
+{% set remaining = total - reduction %}
+{% set cost = data.Cost or 480 %}
+
+{% set percentage = reduction / total * 100 | fixed(0) %}
+{% set halfPercentage = percentage / 2 %}
+{% set maxFunding = 10000 %}
+{% set actualPrice = 20000 %}
+{% set minReduction = maxFunding * halfPercentage / 100 %}
+{% set newMaxFunding = maxFunding - minReduction %}
+
+{% set isBelowFunding = false %}
+{% if cost < minReduction %} {% set isBelowFunding=true %} {% endif %} {% block content %} <div
+  class="govuk-width-container " id="landing-page-section">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-l">Check your recognised prior learning</h1>
+
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title"
+        data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Action required
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+          <p class="govuk-notification-banner__heading">
+            RPL price reduction error: Bobby Newmark can't be added until this is resolved.
+          </p>
+          <p class="govuk-body">
+            The price reduction you’ve provided is lower than the minimum reduction based on the reduction in off-the-job training time that you have entered. 
+          </p>
+          <ol class="govuk-list govuk-list--number">
+            <li>Check the price reduction figure is correct.</li>
+            <li>Check the total off-the-job training time and the reduction due to RPL.</li>
+            <li>Re-enter the data for the <a class="govuk-link" href="rpl-details"> RPL reductions</a> if the details on
+              this page are incorrect.</li>
+          </ol>
+        </div>
+      </div>
+
+      <h2 class="govuk-heading-m govuk-!-margin-top-9">Check the details of recognised prior learning</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+
+        <div class="govuk-summary-list__row">
+          <dt
+            class="govuk-summary-list__key half-column">
+            Price reduction due to RPL
+          </dt>
+          <dd class="govuk-summary-list__value ">
+            <p class="govuk-body govuk-table__cell--numeric">£ {{cost}}</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details">
+              Change<span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Total off-the-job training time for this apprenticeship standard
+          </dt>
+          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
+            {{total}} hours
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details">
+              Change<span class="govuk-visually-hidden"> contact details</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row ">
+          <dt class="govuk-summary-list__key">
+            Total reduction in off-the-job training time due to RPL
+          </dt>
+          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
+            {{reduction}} hours
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+
+      </dl>
+
+      <p class="govuk-body">
+        Based on the figures you have entered the minimum price reduction due to RPL should be 
+        <strong>£ {{ minReduction | fixed(0) }}</strong>.
+      </p>
+      <p class="govuk-body">
+        Details of this funding calculation are shown below.
+      </p>
+
+      <h3 class="govuk-heading-s ">Funding calculation</h3>
+
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key half-column">
+            Percentage of prior learning <br/>(from funding rules P25.5.1)
+          </dt>
+          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
+            {{reduction}} /  {{total}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row ">
+          <dt class="govuk-summary-list__key">
+            Percentage figure
+          </dt>
+          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
+            {{ percentage | fixed(0) }} %
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Minimum percentage reduction due to RPL (from funding rules P25.5.2)
+          </dt>
+          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
+            <p class="govuk-body">{{ halfPercentage | fixed(0) }} %</p>
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Maximum funding band
+          </dt>
+          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
+            £ {{maxFunding}}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+
+
+        <div class="govuk-summary-list__row">
+          <dt
+            class="govuk-summary-list__key">
+            Minimum price reduction due to RPL
+          </dt>
+          <dd class="govuk-summary-list__value  govuk-table__cell--numeric">
+            £ {{ minReduction | fixed(0) }}
+          </dd>
+          <dd class="govuk-summary-list__actions">
+          </dd>
+        </div>
+
+      </dl>
+
+      <p class="govuk-body">
+        If the figures you have entered are correct then you need to re-check your funding calculation for the minimum price reduction due to RPL to ensure it follows the funding rules.
+      </p>
+
+
+    <form action="rpl-details-evidence" method="post" novalidate>
+      <input type="hidden" name="answers-checked" value="true">
+      <button class="govuk-button govuk-!-margin-top-6"
+        data-module="govuk-button">
+        Save and continue
+      </button>
+    </form>
+  </div>
+  </div>
+
+  </div>
+  {% endblock %}
