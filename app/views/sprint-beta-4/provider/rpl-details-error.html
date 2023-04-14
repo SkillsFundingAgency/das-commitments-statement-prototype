@@ -1,0 +1,163 @@
+{% extends "layout-provider.v1.html" %}
+
+{% block pageTitle %}
+Add recognition of prior learning details - Apprenticeships
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Add recognition of prior learning details
+            </h1>
+          </legend>
+        </fieldset>
+
+
+        <div class="govuk-error-summary" data-module="govuk-error-summary">
+          <div role="alert">
+            <h2 class="govuk-error-summary__title">
+              There is a problem
+            </h2>
+            <div class="govuk-error-summary__body">
+              <ul class="govuk-list govuk-error-summary__list">
+                <li>
+                  <a href="#">Total reduction in off-the-job training time due to RPL is too large</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <form action="rpl-details-evidence">
+
+          <div class="govuk-form-group govuk-!-margin-top-6 govuk-form-group--error">
+            <fieldset class="govuk-fieldset" aria-describedby="finish-date-hint" role="group">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                Total reduction in off-the-job training time due to RPL
+              </legend>
+              <span id="finish-date-hint" class="govuk-hint">
+                All reductions based on the apprentice's prior learning. Enter the reduction in hours
+              </span>
+              <p id="cost-per-item-error-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The total training hours remaining on the course after RPL reduction must be over 278 hours.
+              </p>
+              <span class="field-validation-valid govuk-error-message" data-valmsg-for="EndDate"
+                data-valmsg-replace="true" id="error-message-EndDate"></span>
+              <div class="govuk-input__wrapper">
+                <input class="govuk-input govuk-input--width-5 govuk-input--error" type="number" id="ReducedDuration"
+                  name="ReducedDuration" value="150">
+                <div class="govuk-input__suffix" aria-hidden="true"> hours</div>
+              </div>
+              <div class="govuk-character-count__message govuk-character-count__status govuk-error-message" aria-hidden="true">You have 40 hours too many.</div>
+            </fieldset>
+          </div>
+
+
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                <h1 class="govuk-fieldset__heading">
+                  Will the duration of the apprenticeship be shorter due to RPL? 
+                </h1>
+              </legend>
+              <div id="contact-hint" class="govuk-hint">
+                <!-- Select one option. -->
+              </div>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Yes
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                      How many weeks was the apprenticeship reduced by?
+                    </label>
+                    <div class="govuk-input__wrapper">
+                      <input class="govuk-input govuk-input--width-5" type="number" id="ReducedWeeks"
+                        name="ReducedWeeks" value="">
+                      <div class="govuk-input__suffix" aria-hidden="true"> weeks</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    No
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+
+
+
+          <div class="govuk-form-group govuk-!-margin-top-6">
+            <label class="govuk-label govuk-!-font-weight-bold" for="Cost">Total price reduction due to RPL</label>
+            <span id="price-hint" class="govuk-hint">
+              All reductions based on the apprentice's prior learning. Enter the price in whole pounds. For example, for £1,500 enter 1500
+            </span>
+            <span class="field-validation-valid govuk-error-message" data-valmsg-for="Cost" data-valmsg-replace="true"
+              id="error-message-Cost"></span>
+            <span class="govuk-body govuk-!-font-weight-bold">£ </span><input class="govuk-input govuk-input--width-5"
+              type="number" id="Cost" name="Cost" value="">
+          </div>
+
+          <button class="govuk-button govuk-!-margin-top-9" data-module="govuk-button" id="employer-details">Save and
+            continue</button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
+  <a href="funding-calculation-error.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+    Funding calculation example 
+  </a>
+</div>
+{% endblock %}
