@@ -139,69 +139,29 @@ Recognition of prior learning - Apprenticeships
         Details of this funding calculation are shown below.
       </p>
 
-      <h3 class="govuk-heading-s ">Funding calculation</h3>
-
-      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key half-column">
-            Percentage of prior learning <br/>(from funding rules P25.5.1)
-          </dt>
-          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
-            {{reduction}} /  {{total}}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          </dd>
-        </div>
-        <div class="govuk-summary-list__row ">
-          <dt class="govuk-summary-list__key">
-            Percentage figure
-          </dt>
-          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
-            {{ percentage | fixed(0) }} %
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Minimum percentage reduction due to RPL (from funding rules P25.5.2)
-          </dt>
-          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
-            <p class="govuk-body">{{ halfPercentage | fixed(0) }} %</p>
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          </dd>
-        </div>
-
-        <div class="govuk-summary-list__row">
-          <dt class="govuk-summary-list__key">
-            Maximum funding band
-          </dt>
-          <dd class="govuk-summary-list__value govuk-table__cell--numeric">
-            £ {{maxFunding}}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          </dd>
-        </div>
-
-
-        <div class="govuk-summary-list__row">
-          <dt
-            class="govuk-summary-list__key">
-            Minimum price reduction due to RPL
-          </dt>
-          <dd class="govuk-summary-list__value  govuk-table__cell--numeric">
-            £ {{ minReduction | fixed(0) }}
-          </dd>
-          <dd class="govuk-summary-list__actions">
-          </dd>
-        </div>
-
-      </dl>
+      <h3 class="govuk-heading-m ">Funding calculation</h3>
 
       <p class="govuk-body">
+        <strong>Percentage of prior learning (from funding rules P25.5.1)</strong>
+        <br/><br/>
+        {{reduction}} hours /  {{total}} hours = {{ percentage | fixed(0) }} %
+      </p>
+      <p class="govuk-body">
+        <strong>Minimum percentage reduction (from funding rules P25.5.2)</strong><br/><br/>
+        {{ percentage | fixed(0) }} % /  2 = {{ halfPercentage | fixed(0) }} %
+      </p>
+
+      <p class="govuk-body">
+        <strong>Minimum price reduction due to RPL</strong>
+        <br/><br/>
+        Maximum funding x percentage reduction = Minimum price reduction
+        <br/><br/>
+        £ {{maxFunding}} x {{ halfPercentage | fixed(0) }} % = £ {{ minReduction | fixed(0) }}
+      </p>
+
+
+
+      <p class="govuk-body govuk-!-margin-top-6">
         If the figures you have entered are correct then you need to re-check your funding calculation for the minimum price reduction due to RPL to ensure it follows the funding rules.
       </p>
 
@@ -220,10 +180,11 @@ Recognition of prior learning - Apprenticeships
   </div>
   </div>
 
+
   <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
-  <a href="funding-calculation-error-alt.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
-    Alt funding calculation example
+  <a href="funding-calculation-error.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+    Funding calculation example 
   </a>
 
-  </div>
+</div>
   {% endblock %}

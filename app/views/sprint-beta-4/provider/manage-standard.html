@@ -1,0 +1,637 @@
+{% extends "layout-provider.v1.html" %}
+{% set standards = [
+  {
+    larsCode: 272,
+    title: 'Academic professional',
+    duration: 432,
+    maxFunding: 9000
+  },
+  {
+    larsCode: 176,
+    title: 'Accident repair technician',
+    duration: 576,
+    maxFunding: 12000
+  },
+  {
+    larsCode: 545,
+    title: 'Advanced and creative hair professional',
+    duration: 288,
+    maxFunding: 5000
+  },
+  {
+    larsCode: 271,
+    title: 'Advanced baker',
+    duration: 576,
+    maxFunding: 9000
+  },
+  {
+    larsCode: 563,
+    title: 'Advanced beauty therapist',
+    duration: 432,
+    maxFunding: 8000
+  },
+  {
+    larsCode: 152,
+    title: 'Advanced butcher',
+    duration: 432,
+    maxFunding: 12000
+  },
+  {
+    larsCode: 152,
+    title: 'Advanced butcher',
+    duration: 432,
+    maxFunding: 12000
+  },
+  {
+    larsCode: 240,
+    title: 'Advanced carpentry and joinery',
+    duration: 288,
+    maxFunding: 9000
+  },
+  {
+    larsCode: 240,
+    title: 'Advanced carpentry and joinery',
+    duration: 360,
+    maxFunding: 11000
+  },
+  {
+    larsCode: 252,
+    title: 'Advanced clinical practitioner (integrated degree)',
+    duration: 864,
+    maxFunding: 12000
+  },
+  {
+    larsCode: 148,
+    title: 'Advanced credit controller and debt collection specialist',
+    duration: 432,
+    maxFunding: 9000
+  },
+  {
+    larsCode: 149,
+    title: 'Advanced dairy technologist',
+    duration: 864,
+    maxFunding: 27000
+  },
+  {
+    larsCode: 489,
+    title: 'Advanced forensic practitioner (custody or sexual offence)',
+    duration: 288,
+    maxFunding: 4000
+  },
+  {
+    larsCode: 489,
+    title: 'Advanced forensic practitioner (custody or sexual offence)',
+    duration: 288,
+    maxFunding: 5000
+  },
+  {
+    larsCode: 509,
+    title: 'Advanced furniture CNC technician',
+    duration: 576,
+    maxFunding: 11000
+  },
+  {
+    larsCode: 535,
+    title: 'Advanced golf greenkeeper',
+    duration: 576,
+    maxFunding: 7000
+  },
+  {
+    larsCode: 689,
+    title: 'Advanced sports turf technician',
+    duration: 576,
+    maxFunding: 8000
+  },
+  {
+    larsCode: 525,
+    title: 'Advanced upholsterer',
+    duration: 576,
+    maxFunding: 10000
+  },
+  {
+    larsCode: 373,
+    title: 'Advertising and media executive',
+    duration: 432,
+    maxFunding: 8000
+  },
+  {
+    larsCode: 37,
+    title: 'Aerospace engineer (degree)',
+    duration: 1152,
+    maxFunding: 27000
+  },
+  {
+    larsCode: 56,
+    title: 'Aerospace manufacturing electrical, mechanical and systems fitter',
+    duration: 1008,
+    maxFunding: 18000
+  },
+  {
+    larsCode: 3,
+    title: 'Aerospace manufacturing fitter',
+    duration: 1008,
+    maxFunding: 18000
+  },
+  {
+    larsCode: 38,
+    title: 'Aerospace software development engineer (degree)',
+    duration: 1152,
+    maxFunding: 27000
+  },
+  {
+    larsCode: 572,
+    title: 'Agriculture or horticulture professional adviser',
+    duration: 720,
+    maxFunding: 14000
+  },
+  {
+    larsCode: 490,
+    title: 'Air traffic controller',
+    duration: 360,
+    maxFunding: 27000
+  },
+  {
+    larsCode: 114,
+    title: 'Aircraft certifying technician',
+    duration: 1080,
+    maxFunding: 27000
+  },
+  {
+    larsCode: 114,
+    title: 'Aircraft maintenance certifying engineer',
+    duration: 1152,
+    maxFunding: 24000
+  },
+  {
+    larsCode: 113,
+    title: 'Aircraft maintenance fitter or technician (fixed and rotary wing)',
+    duration: 864,
+    maxFunding: 18000
+  },
+  {
+    larsCode: 121,
+    title: 'Airside operator',
+    duration: 288,
+    maxFunding: 3000
+  },
+  {
+    larsCode: 298,
+    title: 'Ambulance support worker (emergency, urgent and non-urgent)',
+    duration: 312,
+    maxFunding: 7000
+  },
+  {
+    larsCode: 332,
+    title: 'Animal care and welfare assistant',
+    duration: 288,
+    maxFunding: 5000
+  },
+  {
+    larsCode: 332,
+    title: 'Animal care and welfare assistant',
+    duration: 288,
+    maxFunding: 5000
+  },
+  {
+    larsCode: 179,
+    title: 'Animal technologist',
+    duration: 576,
+    maxFunding: 6000
+  },
+  {
+    larsCode: 179,
+    title: 'Animal technologist',
+    duration: 576,
+    maxFunding: 10000
+  },
+  {
+    larsCode: 379,
+    title: 'Animal trainer',
+    duration: 432,
+    maxFunding: 7000
+  },
+  {
+    larsCode: 645,
+    title: 'Anti-social behaviour and community safety officer',
+    duration: 576,
+    maxFunding: 8000
+  },
+  {
+    larsCode: 663,
+    title: 'Applications support lead',
+    duration: 576,
+    maxFunding: 17000
+  },
+  {
+    larsCode: 660,
+    title: 'Arboriculturist',
+    duration: 720,
+    maxFunding: 14000
+  },
+  {
+    larsCode: 180,
+    title: 'Arborist',
+    duration: 576,
+    maxFunding: 15000
+  },
+  {
+    larsCode: 484,
+    title: 'Archaeological specialist (degree)',
+    duration: 864,
+    maxFunding: 15000
+  },
+  {
+    larsCode: 429,
+    title: 'Archaeological technician',
+    duration: 288,
+    maxFunding: 9000
+  },
+  {
+    larsCode: 429,
+    title: 'Archaeological technician',
+    duration: 288,
+    maxFunding: 9000
+  },
+  {
+    larsCode: 300,
+    title: 'Architect (integrated degree)',
+    duration: 1152,
+    maxFunding: 21000
+  },
+  {
+    larsCode: 299,
+    title: 'Architectural assistant (integrated degree)',
+    duration: 1152,
+    maxFunding: 21000
+  },
+  {
+    larsCode: 299,
+    title: 'Architectural assistant (integrated degree)',
+    duration: 1152,
+    maxFunding: 25000
+  },
+  {
+    larsCode: 668,
+    title: 'Archivist and records manager',
+    duration: 864,
+    maxFunding: 12000
+  },
+  {
+    larsCode: 561,
+    title: 'Artificial intelligence (AI) data specialist',
+    duration: 576,
+    maxFunding: 17000
+  },
+  {
+    larsCode: 432,
+    title: 'Arts therapist (degree)',
+    duration: 576,
+    maxFunding: 17000
+  },
+  {
+    larsCode: 432,
+    title: 'Arts therapist (degree)',
+    duration: 576,
+    maxFunding: 17000
+  },
+  {
+    larsCode: 303,
+    title: 'Asbestos analyst / surveyor',
+    duration: 576,
+    maxFunding: 6000
+  },
+  {
+    larsCode: 303,
+    title: 'Asbestos analyst and surveyor',
+    duration: 576,
+    maxFunding: 12000
+  },
+  {
+    larsCode: 601,
+    title: 'Asbestos removal operative',
+    duration: 288,
+    maxFunding: 6000
+  },
+  {
+    larsCode: 401,
+    title: 'Assessor coach',
+    duration: 360,
+    maxFunding: 7000
+  },
+  {
+    larsCode: 624,
+    title: 'Asset manager',
+    duration: 432,
+    maxFunding: 9000
+  },
+  {
+    larsCode: 133,
+    title: 'Assistant accountant',
+    duration: 432,
+    maxFunding: 9000
+  },
+  {
+    larsCode: 133,
+    title: 'Assistant accountant',
+    duration: 432,
+    maxFunding: 8000
+  },
+  {
+    larsCode: 485,
+    title: 'Assistant buyer and assistant merchandiser',
+    duration: 576,
+    maxFunding: 10000
+  },
+  {
+    larsCode: 526,
+    title: 'Assistant puppet maker',
+    duration: 432,
+    maxFunding: 13000
+  },
+  {
+    larsCode: 628,
+    title: 'Assistant recording technician',
+    duration: 576,
+    maxFunding: 10000
+  },
+  {
+    larsCode: 85,
+    title: 'Assistant technical director (visual effects)',
+    duration: 432,
+    maxFunding: 9000
+  },
+  {
+    larsCode: 156,
+    title: 'Associate ambulance practitioner',
+    duration: 432,
+    maxFunding: 15000
+  },
+  {
+    larsCode: 483,
+    title: 'Associate continuing healthcare practitioner',
+    duration: 576,
+    maxFunding: 10000
+  },
+  {
+    larsCode: 128,
+    title: 'Associate project manager',
+    duration: 576,
+    maxFunding: 9000
+  },
+  {
+    larsCode: 128,
+    title: 'Associate project manager',
+    duration: 576,
+    maxFunding: 9000
+  },
+  {
+    larsCode: 128,
+    title: 'Associate project manager',
+    duration: 576,
+    maxFunding: 9000
+  },
+  {
+    larsCode: 128,
+    title: 'Associate project manager',
+    duration: 576,
+    maxFunding: 6000
+  },
+  {
+    larsCode: 684,
+    title: 'Audiovisual technician',
+    duration: 576,
+    maxFunding: 18000
+  },
+  {
+    larsCode: 283,
+    title: 'Autocare technician',
+    duration: 720,
+    maxFunding: 12000
+  },
+  {
+    larsCode: 283,
+    title: 'Autocare technician',
+    duration: 720,
+    maxFunding: 12000
+  },
+  {
+    larsCode: 474,
+    title: 'Automation and controls engineering technician',
+    duration: 1152,
+    maxFunding: 14000
+  },
+  {
+    larsCode: 304,
+    title: 'Automotive glazing technician',
+    duration: 864,
+    maxFunding: 9000
+  },
+  {
+    larsCode: 657,
+    title: 'Aviation customer service operative',
+    duration: 288,
+    maxFunding: 3500
+  },
+  {
+    larsCode: 658,
+    title: 'Aviation ground handler',
+    duration: 288,
+    maxFunding: 3500
+  },
+  {
+    larsCode: 87,
+    title: 'Aviation ground operative',
+    duration: 288,
+    maxFunding: 3000
+  },
+  {
+    larsCode: 86,
+    title: 'Aviation ground specialist',
+    duration: 432,
+    maxFunding: 6000
+  },
+  {
+    larsCode: 141,
+    title: 'Aviation maintenance mechanic (military)',
+    duration: 432,
+    maxFunding: 12000
+  },
+  {
+    larsCode: 653,
+    title: 'Aviation movement specialist',
+    duration: 432,
+    maxFunding: 7000
+  },
+  {
+    larsCode: 653,
+    title: 'Aviation movement specialist',
+    duration: 432,
+    maxFunding: 7000
+  },
+  {
+    larsCode: 123,
+    title: 'Aviation operations manager',
+    duration: 432,
+    maxFunding: 5000
+  },
+  {
+    larsCode: 123,
+    title: 'Aviation operations manager',
+    duration: 432,
+    maxFunding: 7000
+  },
+  {
+    larsCode: 544,
+    title: 'BEMS (building energy management systems) controls engineer',
+    duration: 864,
+    maxFunding: 15000
+  },
+  { larsCode: 177, title: 'Baker', duration: 432, maxFunding: 9000 },
+  { larsCode: 177, title: 'Baker', duration: 432, maxFunding: 9000 },
+  {
+    larsCode: 390,
+    title: 'Beauty and make up consultant',
+    duration: 288,
+    maxFunding: 3000
+  },
+  {
+    larsCode: 363,
+    title: 'Beauty therapist',
+    duration: 360,
+    maxFunding: 7000
+  },
+  {
+    larsCode: 521,
+    title: 'Bespoke furniture maker',
+    duration: 576,
+    maxFunding: 10000
+  },
+  {
+    larsCode: 183,
+    title: 'Bespoke saddler',
+    duration: 576,
+    maxFunding: 9000
+  },
+  {
+    larsCode: 183,
+    title: 'Bespoke saddler',
+    duration: 576,
+    maxFunding: 15000
+  }
+  ] %}
+
+{% block pageTitle %}
+Approve apprentice details - Apprenticeships
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+  <div class="govuk-grid-row ">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">Manage standards</h1>
+
+      <table class="govuk-table das-table--responsive ">
+        <thead class="govuk-table__head govuk-body-s">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Lars Code</th>
+            <th scope="col" class="govuk-table__header">Standard</th>
+            <th scope="col" class="govuk-table__header">Training hours</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Price</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Updated</th>
+            <th scope="col" class="govuk-table__header"><span class="govuk-visually-hidden">Action</span></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body govuk-body-s">
+          {% for record in standards %}
+
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell" data-label="Date of birth">
+              {{record.larsCode}}
+            </td>
+            <td class="govuk-table__cell" data-label="Date of birth">
+              {{record.title}}
+            </td>
+            <td class="govuk-table__cell" data-label="Training dates">
+              {{record.duration}}
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Employment price">
+              £{{record.maxFunding}}
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Employment price">
+              28 April 2022
+            </td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">
+              <a class="govuk-link edit-apprentice" href="">
+                Edit
+                <span class="govuk-visually-hidden">{{record.title}}</span>
+              </a>
+              <br>
+              <a class="govuk-link delete-apprentice"
+                href="">
+                Delete <span class="govuk-visually-hidden">{{record.title}}</span>
+              </a>
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+
+      <p>
+        <a href="#" class="govuk-link add-apprentice">Add new standard</a>
+      </p>
+
+      <hr class="govuk-section-break govuk-section-break--l">
+    </div>
+  </div>
+
+
+
+  <a href="confirm-add-apprentice.html" class="govuk-button">Back</a>        
+  <br />
+
+</div>
+
+</div>
+
+
+
+{% endblock %}
