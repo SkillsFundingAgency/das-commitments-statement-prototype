@@ -1,0 +1,389 @@
+{% extends "layout-provider.v1.html" %}
+
+{% block pageTitle %}
+Recognition of prior learning - Apprenticeships
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="home">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-width-container " id="landing-page-section">
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-row">
+            <div class="govuk-width-container">
+    
+                
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-">
+            <div class="govuk-width-container">
+    
+                <h1 class="govuk-heading-xl">Apprentice requests</h1>
+    
+                <div class="das-tabs-boxes">
+                    <ul class="das-tabs-boxes__list">
+                        
+        <li class="das-tabs-boxes__list-item  das-tabs-boxes__list-item--selected">
+            <span class="das-tabs-boxes__tab" href="#" id="Review">
+                <span class="das-tabs-boxes__figure">39</span>
+                <span class="das-text-capitalise">Ready for review</span>
+            </span>
+        </li>
+    
+                        
+        <li class="das-tabs-boxes__list-item">
+            <a class="das-tabs-boxes__tab" href="#" id="WithEmployer">
+                <span class="das-tabs-boxes__figure">75</span>
+                <span class="das-tabs-boxes__text das-text-capitalise">With employers</span>
+            </a>
+        </li>
+    
+    
+        <li class="das-tabs-boxes__list-item">
+            <a class="das-tabs-boxes__tab" href="#" id="Draft">
+                <span class="das-tabs-boxes__figure">18</span>
+                <span class="das-tabs-boxes__text das-text-capitalise">Drafts</span>
+            </a>
+        </li>
+                        
+        <li class="das-tabs-boxes__list-item">
+            <a class="das-tabs-boxes__tab" href="#" id="WithTransferSender">
+                <span class="das-tabs-boxes__figure">0</span>
+                <span class="das-tabs-boxes__text das-text-capitalise">With transfer sending employers</span>
+            </a>
+        </li>
+    
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+                
+    <table class="govuk-table das-table--responsive das-table--double-arrows das-table--condensed">
+        <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header das-table-cell-width-25">
+                    <a class="das-table__sort" title="Sort the table by employer" href="#">
+                        Employer
+                    </a>
+                </th>
+                <th scope="col" class="govuk-table__header das-table-cell-width-10">
+                    <a class="das-table__sort" title="Sort the table by cohort reference" href="#">
+                        Cohort reference
+                    </a>
+                </th>
+                <th scope="col" class="govuk-table__header das-table-cell-width-15">
+                    <a class="das-table__sort" title="Sort the table by date received" href="#">
+                        Date received
+                    </a>
+                </th>
+                <th scope="col" class="govuk-table__header das-table-cell-width-15 govuk-table__header--numeric">Number of apprentices</th>
+                <th scope="col" class="govuk-table__header das-table-cell-width-20">Last message</th>
+                <th scope="col" class="govuk-table__header das-table-cell-width-15 govuk-table__header--numeric"></th>
+            </tr>
+        </thead>
+          <tbody class="govuk-table__body">
+              <tr class="govuk-table__row" data-cohort="JK7NP6">
+                  <td class="govuk-table__cell" data-label="Employer">CENTRAL TRAINING ACADEMY LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">JK7NP6</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">18 Jul 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">2</td>
+                  <td class="govuk-table__cell" data-label="Last Message">No message added</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_JK7NP6" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="664978">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">664978</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">16 Aug 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">No message added</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_664978" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="P9L7KD">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">P9L7KD</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">16 Aug 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">No message added</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_P9L7KD" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="8JPWWB">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">8JPWWB</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">17 Aug 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">Apprentice Total Cost </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_8JPWWB" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="BNJ999">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">BNJ999</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">17 Aug 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">No message added</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_BNJ999" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="DDL8J9">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">DDL8J9</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">19 Aug 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">Apprentice, Total Cost </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_DDL8J9" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="L4W6BG">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">L4W6BG</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">19 Aug 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">Apprentice Total Cost </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_L4W6BG" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="P9L479">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">P9L479</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">20 Aug 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">Apprentice, Total Cost </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_P9L479" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="7G9WYX">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">7G9WYX</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">24 Sep 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">Apprentice, Total Cost </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_7G9WYX" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="DD9XNJ">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">DD9XNJ</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">24 Sep 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">Apprentice, Total Cost </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_DD9XNJ" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="G7XK48">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">G7XK48</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">24 Sep 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">Apprentice, RPL added </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_G7XK48" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="L479L8">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">L479L8</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">24 Sep 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">Apprentice, Total Cost </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_L479L8" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="N64LD6">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">N64LD6</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">24 Sep 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">Apprentice, Total Cost </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_N64LD6" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="XPDGRR">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">XPDGRR</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">24 Sep 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">Apprentice, Total Cost </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_XPDGRR" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="4GRBBR">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">4GRBBR</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">25 Sep 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">Apprentice, Adjusted Cost </td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_4GRBBR" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="L47999">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">L47999</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">25 Sep 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">No message added</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_L47999" class="govuk-link cohort-details-link" href="/10001259/unapproved/L47999/details">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="RDBWWN">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">RDBWWN</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">25 Sep 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">Awaiting documents</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_RDBWWN" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="XPDG4R">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">XPDG4R</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">26 Sep 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">Apprentice, Start date</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_XPDG4R" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="DD96YR">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">DD96YR</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">29 Sep 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">No message added</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_DD96YR" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="G7XNLK">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">G7XNLK</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">29 Sep 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">No message added</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_G7XNLK" class="govuk-link cohort-details-link" href="approve-four-people">
+                  </td>
+              </tr>
+             <tr class="govuk-table__row" data-cohort="G798WN">
+                  <td class="govuk-table__cell" data-label="Employer">COVENTRY AIRPORT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">G798WN</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">2 Feb 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">No message added</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_G798WN" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="JJPDYY">
+                  <td class="govuk-table__cell" data-label="Employer">COVENTRY AIRPORT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">JJPDYY</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">2 Feb 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">No message added</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_JJPDYY" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="7GL8GJ">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">7GL8GJ</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">9 Mar 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">No message added</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_7GL8GJ" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="WR6RKK">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">WR6RKK</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">27 Mar 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">No message added</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_WR6RKK" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="YGXGK6">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">YGXGK6</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">27 Mar 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">No message added</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_YGXGK6" class="govuk-link cohort-details-link" href="/10001259/unapproved/YGXGK6/details">Details</a>
+                  </td>
+              </tr>
+              <tr class="govuk-table__row" data-cohort="P9PJLN">
+                  <td class="govuk-table__cell" data-label="Employer">THIRD ACT LIMITED</td>
+                  <td class="govuk-table__cell" data-label="Reference">P9PJLN</td>
+                  <td class="govuk-table__cell" data-label="DateReceived">28 Mar 2022</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="Number of apprentices">1</td>
+                  <td class="govuk-table__cell" data-label="Last Message">No message added</td>
+                  <td class="govuk-table__cell govuk-table__cell--numeric" data-label="">
+                      <a id="details_link_P9PJLN" class="govuk-link cohort-details-link" href="approve-four-people">Details</a>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+</div>
+
+{% endblock %}
