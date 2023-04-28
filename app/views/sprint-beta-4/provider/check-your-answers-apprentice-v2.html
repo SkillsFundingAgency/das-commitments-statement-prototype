@@ -1,0 +1,353 @@
+{% extends "layout-provider.v1.html" %}
+
+{% block pageTitle %}
+Check your answers - Apprenticeships
+{% endblock %}
+
+{% block beforeContent %}
+{% include "../includes/training-provider-account-header.html" %}
+<nav class="das-navigation">
+  <div class="govuk-width-container">
+    <ul class="das-navigation__list ">
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="index">Home</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Apprentice requests</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link " href="#">Manage funding</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link das-navigation__link--current" href="manage-apprentices">Manage your
+          apprentices</a>
+      </li>
+      <li class="das-navigation__list-item">
+        <a class="das-navigation__link" href="#">Recruit apprentices</a>
+      </li>
+      <li class="das-navigation__priority-list-item" id="priority-list-menu"><a class="das-navigation__priority-button"
+          href="#">More</a>
+        <ul class="das-navigation__priority-list govuk-visually-hidden">
+          <li class="das-navigation__list-item">
+            <a class="das-navigation__link" href="#">Organisations and agreements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="govuk-width-container " id="">
+  <a href="#" onclick="history.go(-1)" class="govuk-back-link">Back</a>
+</div>
+{% endblock %}
+
+
+{% block content %}
+<div class="govuk-width-container">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+      <h1 class="govuk-heading-l">Check your answers for Bobby Newmark</h1>
+      <h2 class="govuk-heading-m">Apprentice personal details</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9 ">
+        <div class="govuk-summary-list__row ">
+          <dt class="govuk-summary-list__key">
+            Unique learner number
+          </dt>
+          <dd class="govuk-summary-list__value">
+            7206891313
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="add-apprentice-details">
+              Change<span class="govuk-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row ">
+          <dt class="govuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Bobby Newmark
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="add-apprentice-details-v2">
+              Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row ">
+          <dt class="govuk-summary-list__key">
+            Date of birth
+          </dt>
+          <dd class="govuk-summary-list__value">
+            5 January 1978
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="add-apprentice-details-v2">
+              Change<span class="govuk-visually-hidden"> date of birth</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Email Address
+          </dt>
+          <dd class="govuk-summary-list__value">
+            bobby.newmark@blueant.com
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="add-apprentice-details-v2">
+              Change<span class="govuk-visually-hidden"> address</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+      <h2 class="govuk-heading-m">Apprentice training details</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Employer
+          </dt>
+          <dd class="govuk-summary-list__value">
+            TEST & MAINTAIN LIMITED 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="add-apprentice-details">
+              Change<span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Training course
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Academic professional, Level: 7 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="select-standard">
+              Change<span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Course option
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Research
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="apprenticeship-options">
+              Change<span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Planned training start date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            1 March 2023
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="add-apprentice-details">
+              Change<span class="govuk-visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Planned training end date
+          </dt>
+          <dd class="govuk-summary-list__value">
+            31 August 2026
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="add-apprentice-details-v2">
+              Change<span class="govuk-visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Total agreed apprenticeship price (excluding VAT)
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £12,000
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="add-apprentice-details-v2">
+              Change<span class="govuk-visually-hidden"> licence period</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+      <h2 class="govuk-heading-m">Recognition of prior learning details</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key half-column">
+            Total off-the-job training time for this apprenticeship standard
+          </dt>
+          <dd class="govuk-summary-list__value">
+            1035 hours 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details">
+              Change<span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Total reduction in off-the-job training time due to RPL
+          </dt>
+          <dd class="govuk-summary-list__value">
+            72 hours 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details">
+              Change<span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Actual apprenticeship duration due to RPL
+          </dt>
+          <dd class="govuk-summary-list__value">
+            12 weeks
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details">
+              Change<span class="govuk-visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+<!--         <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Total price for this apprenticeship standard
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £21,000
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details">
+              Change<span class="govuk-visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div> -->
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Total price reduction due to RPL
+          </dt>
+          <dd class="govuk-summary-list__value">
+            £750
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details">
+              Change<span class="govuk-visually-hidden"> licence period</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+      <h2 class="govuk-heading-m">Evidence of recognition of prior learning</h2>
+      <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key half-column">
+            Qualification level
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Level 4 
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details-evidence">
+              Change<span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Qualification type
+          </dt>
+          <dd class="govuk-summary-list__value">
+            NVQ
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details-evidence">
+              Change<span class="govuk-visually-hidden"> previous application number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Qualification industry sector
+          </dt>
+          <dd class="govuk-summary-list__value">
+            Education and childcare
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details-evidence">
+              Change<span class="govuk-visually-hidden"> licence type</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Previous experience
+          </dt>
+          <dd class="govuk-summary-list__value">
+            3 years
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details-evidence">
+              Change<span class="govuk-visually-hidden"> home address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="govuk-summary-list__row">
+          <dt class="govuk-summary-list__key">
+            Was this experience in a relevant occupation?
+          </dt>
+          <dd class="govuk-summary-list__value">
+            No
+          </dd>
+          <dd class="govuk-summary-list__actions">
+            <a class="govuk-link" href="rpl-details-evidence">
+              Change<span class="govuk-visually-hidden"> licence period</span>
+            </a>
+          </dd>
+        </div>
+      </dl>
+
+
+<!--       <h2 class="govuk-heading-m">Now send your application</h2>
+      <p class="govuk-body">By submitting this application you are confirming that, to the best of your knowledge, the
+        details you are providing are correct.</p> -->
+
+
+      <form action="approve-four-people" method="post" novalidate>
+        <button class="govuk-button" data-module="govuk-button">
+          Save and continue
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible" />
+  <a href="check-your-answers-apprentice-v1.html" class="govuk-!-margin-top-6 govuk-!-margin-bottom-6">
+    Alternative version 
+  </a>
+
+
+</div>
+
+
+{% endblock %}
